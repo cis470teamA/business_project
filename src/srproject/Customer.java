@@ -1,123 +1,158 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package srproject;
 
-/**
- *
- * @author Bradley
- */
 public class Customer {
     
-    private static int customerId;
-    private static String billTitle;
-    private static String billFName;
-    private static String billLName;
-    private static String billStAddress;
-    private static String billStAddress2;
-    private static String billState;
-    private static int billZip;
-    private static int phoneNumber;
-    private static String emailAddr;
-    private static int faxNumber;
-    private static String shipFName;
-    private static String shipLName;
-    private static String shipStAddress;
-    private static String shipStAddress2;
-    private static String shipState;
-    private static int shipZip;
-    private static int createdBy;
-    private static String dateCreated;
+    private int customerId;
+    private String billTitle;
+    private String billFName;
+    private String billLName;
+    private String billStAddress;
+    private String billStAddress2;
+    private String billState;
+    private int billZip;
+    private int phoneNumber;
+    private String emailAddr;
+    private int faxNumber;
+    private String shipFName;
+    private String shipLName;
+    private String shipStAddress;
+    private String shipStAddress2;
+    private String shipState;
+    private int shipZip;
+    private int createdBy;
+    private String dateCreated;
     private double accountBalance;
-    
+
+    //default constructor for Customer
     public Customer (){
-        //default constructor for Customer
+        // Code goes here; 
+        // basically, do nothing since we didn't receive any constructor args
     }
+    
+    //overloaded constructor for Customer
     public Customer(int custId, String bFName, String bLName, String bStAddr, String bStAddr2, String bState,
             int bZip, int phone, String email, int fax, String sFName, String sLName, String sStAddr,
             String sStAddr2, String sState, int sZip, Employee created_by, String date_created, double acctBal){
-        //overloaded constructor for Customer
+        // Code goes to set all the instance attributes
+    }
     
+    /* 
+     * START getters and setter methods
+     */
+    public void setCustId(int value){
+        this.customerId = value;
     }
-    public static void setCustId(){
+    
+    public int getCustId(){
+        return this.customerId;
+    }
+    
+    public void setBillTitle(String value){
+        this.billTitle = value;
+    }
+    
+    public String getBillTitle(){
+        return this.billTitle;
+    }
         
+    public void setBillFName(String value){
+        this.billFName = value;
     }
-    public static int getCustId(){
-        return customerId;
+    
+    public String getBillFName(){
+        return this.billFName;
     }
-    public static void setBillFName(){
-        
+    
+    public void setBillLName(String value){
+        this.billLName = value;
     }
-    public static String getBillFName(){
-        return billFName;
+    
+    public String getBillLName(){
+        return this.billLName;
     }
-    public static void setBillLName(){
-        
+    
+    public void setBillStAddr(String value){
+        this.billStAddress = value;
     }
-    public static String getBillLName(){
-        return billLName;
+    
+    public String getBillStAddr(){
+        return this.billStAddress;
     }
-    public static void setBillStAddr(){
-        
+    
+    public void setBillStAddr2(String value){
+        this.billStAddress2 = value;
     }
-    public static String getBillStAddr(){
-        return billStAddress;
+    
+    public String getBillStAddr2(){
+        return this.billStAddress2;
     }
-    public static void setBillStAddr2(){
-        
+    
+    public void setBillState(String value){
+        this.billState = value;
     }
-    public static String getBillStAddr2(){
-        return billStAddress2;
+    
+    public String getBillState(){
+        return this.billState;
     }
-    public static void setBillState(){
-        
+    
+    public void setBillZip(int value){
+        this.billZip = value;
     }
-    public static String getBillState(){
-        return billState;
+    
+    public int getBillZip(){
+        return this.billZip;
     }
-    public static void setBillZip(){
-        
+    
+    public void setShipFName(String value){
+        this.shipFName = value;
     }
-    public static int getBillZip(){
-        return billZip;
+    
+    public String getShipFName(){
+        return this.shipFName;
     }
-    public static void setShipFName(){
-        
+    
+    public void setShipLName(String value){
+        this.shipLName = value;
     }
-    public static String getShipFName(){
-        return shipFName;
+    
+    public String getShipLName(){
+        return this.shipLName;
     }
-    public static void setShipLName(){
-        
+    
+    public void setShipStAddr(String value){
+        this.shipStAddress = value;
     }
-    public static String getShipLName(){
-        return shipLName;
+    
+    public String getShipStAddr(){
+        return this.shipStAddress;
     }
-    public static void setShipStAddr(){
-        
+    
+    public void setShipStAddr2(String value){
+        this.shipStAddress2 = value;
     }
-    public static String getShipStAddr(){
-        return shipStAddress;
+    
+    public String getShipStAddr2(){
+        return this.shipStAddress2;
     }
-    public static void setShipStAddr2(){
-        
+    
+    public void setShipState(String value){
+        this.shipState = value;
     }
-    public static String getShipStAddr2(){
-        return shipStAddress2;
+    
+    public String getShipState(){
+        return this.shipState;
     }
-    public static void setShipState(){
-        
+    
+    public void setShipZip(int value){
+        this.shipZip = value;
     }
-    public static String getShipState(){
-        return shipState;
+    
+    public int getShipZip(){
+        return this.shipZip;
     }
-    public static void setShipZip(){
-        
-    }
-    public static int getShipZip(){
-        return shipZip;
-    }
+    /*
+     * END getters and setters
+     */
     
     
 }
