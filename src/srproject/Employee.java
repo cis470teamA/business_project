@@ -1,16 +1,8 @@
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package srproject;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-/**
- *
- * @author Bradley
- */
+
 public class Employee {
     private String FName;
     private String LName;
