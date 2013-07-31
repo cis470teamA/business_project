@@ -1,7 +1,8 @@
 package srproject;
 
 public class SrProject {
-
+    public static final String appTitle = "Williams Specialty Application";
+    
     /**
      * @param args the command line arguments
      */
