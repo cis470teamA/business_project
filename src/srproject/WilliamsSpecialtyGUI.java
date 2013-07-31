@@ -1,4 +1,5 @@
 package srproject;
+import javax.swing.JFrame;
 
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
 
@@ -7,6 +8,15 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
      */
     public WilliamsSpecialtyGUI() {
         initComponents();
+    }
+    
+    protected static void createAndShowGUI() {
+        JFrame frame = new JFrame(SrProject.appTitle);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        frame.add(new WilliamsSpecialtyGUI());
+        frame.pack();
+        frame.setVisible(true);
     }
 
     /**
