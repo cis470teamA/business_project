@@ -1,4 +1,4 @@
-package srproject;
+package wsc_application;
 
 public class Order {
     Customer customer;

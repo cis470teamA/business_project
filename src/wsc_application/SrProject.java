@@ -1,4 +1,4 @@
-package srproject;
+package wsc_application;
 
 public class SrProject {
     public static final String appTitle = "Williams Specialty Application";
