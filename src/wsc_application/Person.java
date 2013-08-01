@@ -3,17 +3,17 @@ package wsc_application;
 import java.util.Date;
 
 public class Person {
-    
-    private String firstName;
-    private String lastName;
-    private String street1;
-    private String street2;
-    private String state;
-    private int zip;
-    private long phone;
-    private String email;
-    private boolean status;  // Active?
-    private Date date;
+    protected long id;
+    protected String firstName;
+    protected String lastName;
+    protected String street1;
+    protected String street2;
+    protected String state;
+    protected int zip;
+    protected long phone;
+    protected String email;
+    protected boolean status;  // Active?
+    protected Date date;
     
     // Clearly a default constructor
     public Person() {
