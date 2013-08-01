@@ -1,6 +1,6 @@
-package srproject;
+package wsc_application;
 
-public class Customer {
+public class OldCustomer {
     
     private int customerId;
     private String billTitle;
@@ -24,15 +24,15 @@ public class Customer {
     private double accountBalance;
 
     //default constructor for Customer
-    public Customer (){
+    public OldCustomer (){
         // Code goes here; 
         // basically, do nothing since we didn't receive any constructor args
     }
     
     //overloaded constructor for Customer
-    public Customer(int custId, String bFName, String bLName, String bStAddr, String bStAddr2, String bState,
+    public OldCustomer(int custId, String bFName, String bLName, String bStAddr, String bStAddr2, String bState,
             int bZip, int phone, String email, int fax, String sFName, String sLName, String sStAddr,
-            String sStAddr2, String sState, int sZip, Employee created_by, String date_created, double acctBal){
+            String sStAddr2, String sState, int sZip, OldEmployee created_by, String date_created, double acctBal){
         // Code goes to set all the instance attributes
     }
     

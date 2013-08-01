@@ -1,9 +1,9 @@
-package srproject;
+package wsc_application;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-public class Employee {
+public class OldEmployee {
     private String FName;
     private String LName;
     private int empIdNumber;
@@ -14,6 +14,5 @@ public class Employee {
     private String email;
     private String jobTitle;
     private Date hireDate;
-    
     
 }
