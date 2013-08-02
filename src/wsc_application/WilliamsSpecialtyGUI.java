@@ -1,6 +1,13 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package wsc_application;
-import javax.swing.JFrame;
 
+/**
+ *
+ * @author Bradley
+ */
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
 
     /**
@@ -8,15 +15,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
      */
     public WilliamsSpecialtyGUI() {
         initComponents();
-    }
-    
-    protected static void createAndShowGUI() {
-        JFrame frame = new JFrame(SrProject.appTitle);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        frame.add(new WilliamsSpecialtyGUI());
-        frame.pack();
-        frame.setVisible(true);
     }
 
     /**
@@ -27,76 +25,146 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         OrderPayTypeBG = new javax.swing.ButtonGroup();
         OrderTypeBG = new javax.swing.ButtonGroup();
         OrderEngMediaBG = new javax.swing.ButtonGroup();
         OrderStatusBG = new javax.swing.ButtonGroup();
         OrderMediaStatusBG = new javax.swing.ButtonGroup();
+        QAOrderContentBG = new javax.swing.ButtonGroup();
+        QAOrderMediaBG = new javax.swing.ButtonGroup();
+        QAMediaFinishBG = new javax.swing.ButtonGroup();
+        QAWorkmanshipBG = new javax.swing.ButtonGroup();
         WSCInterface = new javax.swing.JTabbedPane();
-        MediaInventoryPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        QAPanel = new javax.swing.JPanel();
-        OrderInfoPanel = new javax.swing.JPanel();
-        OrderNumberLbl = new javax.swing.JLabel();
-        OrderDeliverPayRB = new javax.swing.JRadioButton();
-        OrderAccountPayRB = new javax.swing.JRadioButton();
-        OrderDepositLbl = new javax.swing.JLabel();
-        OrderDepositText = new javax.swing.JTextField();
-        OrderNumberText = new javax.swing.JTextField();
-        OrderTypePrintRB = new javax.swing.JRadioButton();
-        OrderTypeEngrRB = new javax.swing.JRadioButton();
-        OrderTypeTrophyRB = new javax.swing.JRadioButton();
-        OrderTypePlaqueRB = new javax.swing.JRadioButton();
-        OrderContentLbl = new javax.swing.JLabel();
-        OrderContentText = new javax.swing.JTextField();
-        OrderMediaCatNumLbl = new javax.swing.JLabel();
-        OrderMediaCatNumText = new javax.swing.JTextField();
-        OrderDetailsText = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        OrderDetailsLbl = new javax.swing.JLabel();
-        OrderStatusRBLbl = new javax.swing.JLabel();
-        OrderVerifiedRB = new javax.swing.JRadioButton();
-        OrderCreatedRB = new javax.swing.JRadioButton();
-        OrderMediaHoldRB = new javax.swing.JRadioButton();
-        OrderWorkingRB = new javax.swing.JRadioButton();
-        OrderPECompleteRB = new javax.swing.JRadioButton();
-        OrderQAPassedRB = new javax.swing.JRadioButton();
-        OrderQAFailedRB = new javax.swing.JRadioButton();
-        OrderHoldForPayRB = new javax.swing.JRadioButton();
-        OrderClosedRB = new javax.swing.JRadioButton();
-        OrderMediaStatusRBLbl = new javax.swing.JLabel();
-        OrderMNotVerified = new javax.swing.JRadioButton();
-        OrderMNotRequested = new javax.swing.JRadioButton();
-        OrderMSoldRB = new javax.swing.JRadioButton();
-        OrderMOnOrderRB = new javax.swing.JRadioButton();
-        OrderMEnRouteRB = new javax.swing.JRadioButton();
-        OrderMDeliveredRB = new javax.swing.JRadioButton();
-        OrderJobTypeLbl = new javax.swing.JLabel();
-        OrderCustNumberLbl = new javax.swing.JLabel();
-        OrderCustomerNumberText = new javax.swing.JTextField();
-        OrderTrackingPanel = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
         LoginPanel = new javax.swing.JPanel();
         LoginSubmitButton = new javax.swing.JButton();
         LoginEMPIDField = new javax.swing.JTextField();
         LoginEMPIDLabel = new javax.swing.JLabel();
         LoginPASSLabel = new javax.swing.JLabel();
         LoginPasswordFieldText = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
+        OrderTP = new javax.swing.JTabbedPane();
+        OrderInfoPanel = new javax.swing.JPanel();
+        OrderNumberLbl1 = new javax.swing.JLabel();
+        OrderDeliverPayRB1 = new javax.swing.JRadioButton();
+        OrderAccountPayRB1 = new javax.swing.JRadioButton();
+        OrderDepositLbl1 = new javax.swing.JLabel();
+        OrderDepositText1 = new javax.swing.JTextField();
+        OrderTypePrintRB1 = new javax.swing.JRadioButton();
+        OrderTypeEngrRB1 = new javax.swing.JRadioButton();
+        OrderTypeTrophyRB1 = new javax.swing.JRadioButton();
+        OrderTypePlaqueRB1 = new javax.swing.JRadioButton();
+        OrderContentLbl1 = new javax.swing.JLabel();
+        OrderContentText1 = new javax.swing.JTextField();
+        OrderMediaCatNumLbl1 = new javax.swing.JLabel();
+        OrderMediaCatNumText1 = new javax.swing.JTextField();
+        OrderJobTypeLbl1 = new javax.swing.JLabel();
+        OrderCustNumberLbl1 = new javax.swing.JLabel();
+        OrderCustomerNumberText1 = new javax.swing.JTextField();
+        OrderPaymentTypeLbl1 = new javax.swing.JLabel();
+        CustCreateButton8 = new javax.swing.JButton();
+        CustCreateButton9 = new javax.swing.JButton();
+        CustFindButton4 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel14 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jComboBox7 = new javax.swing.JComboBox();
+        QAPanel = new javax.swing.JPanel();
+        CustCreateButton6 = new javax.swing.JButton();
+        CustCreateButton7 = new javax.swing.JButton();
+        CustFindButton3 = new javax.swing.JButton();
+        QACorrectContentLbl = new javax.swing.JLabel();
+        QACorrectOrderMediaLbl = new javax.swing.JLabel();
+        QAMediaFinishLbl = new javax.swing.JLabel();
+        QAEngrFinishLbl = new javax.swing.JLabel();
+        QACorrectContentPassRb = new javax.swing.JRadioButton();
+        QACorrectMediaPassRb = new javax.swing.JRadioButton();
+        QAMediaFinishPassRb = new javax.swing.JRadioButton();
+        QAWorkmanshipPassRb = new javax.swing.JRadioButton();
+        QACorrectContentFailRb = new javax.swing.JRadioButton();
+        QACorrectMediaFailRb = new javax.swing.JRadioButton();
+        QAMediaFinishFailRb = new javax.swing.JRadioButton();
+        QAWorkmanshipFailRb = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        OrderNumberLbl2 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox();
+        jLabel47 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox();
+        OrderVerifyPanel = new javax.swing.JPanel();
+        CustCreateButton10 = new javax.swing.JButton();
+        CustCreateButton11 = new javax.swing.JButton();
+        CustFindButton5 = new javax.swing.JButton();
+        QACorrectContentLbl1 = new javax.swing.JLabel();
+        QACorrectOrderMediaLbl1 = new javax.swing.JLabel();
+        QAMediaFinishLbl1 = new javax.swing.JLabel();
+        QAEngrFinishLbl1 = new javax.swing.JLabel();
+        QACorrectContentPassRb1 = new javax.swing.JRadioButton();
+        QACorrectMediaPassRb1 = new javax.swing.JRadioButton();
+        QAMediaFinishPassRb1 = new javax.swing.JRadioButton();
+        QAWorkmanshipPassRb1 = new javax.swing.JRadioButton();
+        QACorrectContentFailRb1 = new javax.swing.JRadioButton();
+        QACorrectMediaFailRb1 = new javax.swing.JRadioButton();
+        QAMediaFinishFailRb1 = new javax.swing.JRadioButton();
+        QAWorkmanshipFailRb1 = new javax.swing.JRadioButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel20 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        QACorrectContentFailRb2 = new javax.swing.JRadioButton();
+        QAMediaFinishPassRb2 = new javax.swing.JRadioButton();
+        QAMediaFinishLbl2 = new javax.swing.JLabel();
+        QACorrectContentLbl2 = new javax.swing.JLabel();
+        QAMediaFinishFailRb2 = new javax.swing.JRadioButton();
+        QACorrectMediaFailRb2 = new javax.swing.JRadioButton();
+        QACorrectOrderMediaLbl2 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        QACorrectContentPassRb2 = new javax.swing.JRadioButton();
+        QACorrectMediaPassRb2 = new javax.swing.JRadioButton();
+        jLabel24 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
         CustomerInfoPanel = new javax.swing.JPanel();
         CustBillFNameText = new javax.swing.JTextField();
         CustBillLNameText = new javax.swing.JTextField();
@@ -112,450 +180,71 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         CustBillZipText = new javax.swing.JTextField();
         CustBillCityLbl = new javax.swing.JLabel();
         CustBillZipLbl = new javax.swing.JLabel();
-        BillingLbl = new javax.swing.JLabel();
-        ShippLbl = new javax.swing.JLabel();
-        SameAsBillCheckBox = new javax.swing.JCheckBox();
-        CustShipFNameLbl = new javax.swing.JLabel();
-        CustShipZipLbl = new javax.swing.JLabel();
-        CustShipZipText = new javax.swing.JTextField();
-        CustShipCityText = new javax.swing.JTextField();
-        CustShipStreet2Text = new javax.swing.JTextField();
-        CustShipStreet1Text = new javax.swing.JTextField();
-        CustShipOrgText = new javax.swing.JTextField();
-        CustShipLNameText = new javax.swing.JTextField();
-        CustShipFNameText = new javax.swing.JTextField();
-        CustShipLNameLbl = new javax.swing.JLabel();
-        CustShipOrgLbl = new javax.swing.JLabel();
-        CustShipStreet1Lbl = new javax.swing.JLabel();
-        CustShipStreet2Lbl = new javax.swing.JLabel();
-        CustShipCityLbl = new javax.swing.JLabel();
         CustFindButton = new javax.swing.JButton();
         CustCreateButton = new javax.swing.JButton();
         CustOrderListBox = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
         CustOrderListBoxLbl = new javax.swing.JLabel();
         CustCreateButton1 = new javax.swing.JButton();
-        CustCommBox = new javax.swing.JScrollPane();
-        CustCommentText = new javax.swing.JTextArea();
-        CustCommentLbl = new javax.swing.JLabel();
         ActiveOrderLbl = new javax.swing.JLabel();
         CustNumberLbl = new javax.swing.JLabel();
         CustNumberText = new javax.swing.JTextField();
         CustShipStateComB = new javax.swing.JComboBox();
-        CustShipStateCB = new javax.swing.JComboBox();
+        jLabel9 = new javax.swing.JLabel();
+        MediaInventoryPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        CustCreateButton4 = new javax.swing.JButton();
+        CustCreateButton5 = new javax.swing.JButton();
+        CustFindButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        CustBillFNameText1 = new javax.swing.JTextField();
+        CustBillLNameText1 = new javax.swing.JTextField();
+        CustBillOrgText1 = new javax.swing.JTextField();
+        CustBillStreet1Text1 = new javax.swing.JTextField();
+        CustBillStreet2Text1 = new javax.swing.JTextField();
+        CustBillFNameLbl1 = new javax.swing.JLabel();
+        CustBillLNameLbl1 = new javax.swing.JLabel();
+        CustBillOrgLbl1 = new javax.swing.JLabel();
+        CustBillStreet1Lbl1 = new javax.swing.JLabel();
+        CustBillStreet2Lbl1 = new javax.swing.JLabel();
+        CustBillCityText1 = new javax.swing.JTextField();
+        CustBillZipText1 = new javax.swing.JTextField();
+        CustBillCityLbl1 = new javax.swing.JLabel();
+        CustBillZipLbl1 = new javax.swing.JLabel();
+        CustFindButton1 = new javax.swing.JButton();
+        CustCreateButton2 = new javax.swing.JButton();
+        CustOrderListBox1 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        CustOrderListBoxLbl1 = new javax.swing.JLabel();
+        CustCreateButton3 = new javax.swing.JButton();
+        ActiveOrderLbl1 = new javax.swing.JLabel();
+        CustNumberLbl1 = new javax.swing.JLabel();
+        CustNumberText1 = new javax.swing.JTextField();
+        CustShipStateComB1 = new javax.swing.JComboBox();
+        jLabel10 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
 
-        jLabel1.setText("Item Number");
+        setPreferredSize(new java.awt.Dimension(600, 549));
 
-        jLabel2.setText("Manufacturer");
+        WSCInterface.setPreferredSize(new java.awt.Dimension(600, 549));
 
-        jLabel3.setText("jLabel3");
-
-        jLabel6.setText("jLabel6");
-
-        jLabel7.setText("jLabel7");
-
-        javax.swing.GroupLayout MediaInventoryPanelLayout = new javax.swing.GroupLayout(MediaInventoryPanel);
-        MediaInventoryPanel.setLayout(MediaInventoryPanelLayout);
-        MediaInventoryPanelLayout.setHorizontalGroup(
-            MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
-                        .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
-                        .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel3))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(877, 877, 877))
-        );
-        MediaInventoryPanelLayout.setVerticalGroup(
-            MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addContainerGap(446, Short.MAX_VALUE))
-        );
-
-        WSCInterface.addTab("Media Inventory", MediaInventoryPanel);
-
-        javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
-        QAPanel.setLayout(QAPanelLayout);
-        QAPanelLayout.setHorizontalGroup(
-            QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1254, Short.MAX_VALUE)
-        );
-        QAPanelLayout.setVerticalGroup(
-            QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
-        );
-
-        WSCInterface.addTab("Quality Assurance", QAPanel);
-
-        OrderNumberLbl.setText("Order Number:");
-
-        OrderPayTypeBG.add(OrderDeliverPayRB);
-        OrderDeliverPayRB.setText("Payment on Delivery");
-
-        OrderPayTypeBG.add(OrderAccountPayRB);
-        OrderAccountPayRB.setText("Payment on Account");
-
-        OrderDepositLbl.setText("Deposit Amount");
-
-        OrderDepositText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderDepositTextActionPerformed(evt);
-            }
-        });
-
-        OrderTypeBG.add(OrderTypePrintRB);
-        OrderTypePrintRB.setText("Printing");
-
-        OrderTypeBG.add(OrderTypeEngrRB);
-        OrderTypeEngrRB.setText("Engraving");
-
-        OrderEngMediaBG.add(OrderTypeTrophyRB);
-        OrderTypeTrophyRB.setText("Trophy");
-
-        OrderEngMediaBG.add(OrderTypePlaqueRB);
-        OrderTypePlaqueRB.setText("Plaque");
-
-        OrderContentLbl.setText("Printing/Engraving Content:");
-
-        OrderMediaCatNumLbl.setText("Media Catalog Number:");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        OrderDetailsText.setViewportView(jTextArea1);
-
-        OrderDetailsLbl.setText("Order Details:");
-
-        OrderStatusRBLbl.setText("Order Status:");
-
-        OrderStatusBG.add(OrderVerifiedRB);
-        OrderVerifiedRB.setText("Verified");
-
-        OrderStatusBG.add(OrderCreatedRB);
-        OrderCreatedRB.setText("Created");
-        OrderCreatedRB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderCreatedRBActionPerformed(evt);
-            }
-        });
-
-        OrderStatusBG.add(OrderMediaHoldRB);
-        OrderMediaHoldRB.setText("Product Hold");
-
-        OrderStatusBG.add(OrderWorkingRB);
-        OrderWorkingRB.setText("Working");
-
-        OrderStatusBG.add(OrderPECompleteRB);
-        OrderPECompleteRB.setText("P/E Completed");
-        OrderPECompleteRB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderPECompleteRBActionPerformed(evt);
-            }
-        });
-
-        OrderStatusBG.add(OrderQAPassedRB);
-        OrderQAPassedRB.setText("Q/A Passed");
-
-        OrderStatusBG.add(OrderQAFailedRB);
-        OrderQAFailedRB.setText("Q/A Failed");
-
-        OrderStatusBG.add(OrderHoldForPayRB);
-        OrderHoldForPayRB.setText("Hold for Payment");
-
-        OrderStatusBG.add(OrderClosedRB);
-        OrderClosedRB.setText("Closed");
-
-        OrderMediaStatusRBLbl.setText("Media Status:");
-
-        OrderMediaStatusBG.add(OrderMNotVerified);
-        OrderMNotVerified.setText("Order Not Verified");
-
-        OrderMediaStatusBG.add(OrderMNotRequested);
-        OrderMNotRequested.setText("Not Requested");
-
-        OrderMediaStatusBG.add(OrderMSoldRB);
-        OrderMSoldRB.setText("Requested/Sold");
-
-        OrderMediaStatusBG.add(OrderMOnOrderRB);
-        OrderMOnOrderRB.setText("Requested/On Order");
-
-        OrderMediaStatusBG.add(OrderMEnRouteRB);
-        OrderMEnRouteRB.setText("En Route");
-
-        OrderMediaStatusBG.add(OrderMDeliveredRB);
-        OrderMDeliveredRB.setText("Delivered");
-
-        OrderJobTypeLbl.setText("Job Type:");
-
-        OrderCustNumberLbl.setText("Customer Number:");
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, CustNumberText, org.jdesktop.beansbinding.ELProperty.create("${text_ON_ACTION_OR_FOCUS_LOST}"), OrderCustomerNumberText, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
-
-        OrderCustomerNumberText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderCustomerNumberTextActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout OrderInfoPanelLayout = new javax.swing.GroupLayout(OrderInfoPanel);
-        OrderInfoPanel.setLayout(OrderInfoPanelLayout);
-        OrderInfoPanelLayout.setHorizontalGroup(
-            OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(OrderMediaCatNumLbl)
-                                    .addComponent(OrderNumberLbl))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(OrderNumberText, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                                    .addComponent(OrderMediaCatNumText, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                                    .addComponent(OrderCustomerNumberText)))
-                            .addComponent(OrderTypeEngrRB)
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(OrderTypePlaqueRB)
-                                    .addComponent(OrderTypeTrophyRB)))
-                            .addComponent(OrderTypePrintRB)
-                            .addComponent(OrderJobTypeLbl)
-                            .addComponent(OrderCustNumberLbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(OrderContentLbl))
-                        .addGap(56, 56, 56)
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrderQAFailedRB)
-                            .addComponent(OrderHoldForPayRB)
-                            .addComponent(OrderClosedRB)
-                            .addComponent(OrderCreatedRB)
-                            .addComponent(OrderStatusRBLbl)
-                            .addComponent(OrderVerifiedRB)
-                            .addComponent(OrderMediaHoldRB)
-                            .addComponent(OrderWorkingRB)
-                            .addComponent(OrderPECompleteRB)
-                            .addComponent(OrderQAPassedRB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrderMEnRouteRB)
-                            .addComponent(OrderMOnOrderRB)
-                            .addComponent(OrderMSoldRB)
-                            .addComponent(OrderMediaStatusRBLbl)
-                            .addComponent(OrderMNotVerified)
-                            .addComponent(OrderMNotRequested)
-                            .addComponent(OrderMDeliveredRB))
-                        .addGap(30, 30, 30))
-                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(OrderDepositLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(OrderDepositText, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(OrderAccountPayRB)
-                            .addComponent(OrderDeliverPayRB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(OrderDetailsLbl)
-                    .addComponent(OrderDetailsText, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62))
-        );
-        OrderInfoPanelLayout.setVerticalGroup(
-            OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                        .addComponent(OrderDetailsLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderDetailsText, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(OrderCustNumberLbl)
-                                    .addComponent(OrderCustomerNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(OrderNumberLbl)
-                                    .addComponent(OrderNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(OrderMediaCatNumLbl)
-                                    .addComponent(OrderMediaCatNumText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(2, 2, 2)
-                                .addComponent(OrderJobTypeLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderTypePrintRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderTypeEngrRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderTypeTrophyRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderTypePlaqueRB))
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addComponent(OrderMediaStatusRBLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMNotVerified)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMNotRequested)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMSoldRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMOnOrderRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMEnRouteRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMDeliveredRB))
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addComponent(OrderStatusRBLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderCreatedRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderVerifiedRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderMediaHoldRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderWorkingRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderPECompleteRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderQAPassedRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderQAFailedRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderHoldForPayRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderClosedRB))
-                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addComponent(OrderContentLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderContentText)))
-                        .addGap(32, 32, 32)
-                        .addComponent(OrderAccountPayRB)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderDeliverPayRB)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(OrderDepositLbl)
-                            .addComponent(OrderDepositText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(171, Short.MAX_VALUE))
-        );
-
-        WSCInterface.addTab("Order Info", OrderInfoPanel);
-
-        jCheckBox1.setText("Customer Number");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox2.setText("Employee Number");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox3.setText("Order Number");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("Search:");
-
-        jLabel5.setText("Search By:");
-
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList2);
-
-        javax.swing.GroupLayout OrderTrackingPanelLayout = new javax.swing.GroupLayout(OrderTrackingPanel);
-        OrderTrackingPanel.setLayout(OrderTrackingPanelLayout);
-        OrderTrackingPanelLayout.setHorizontalGroup(
-            OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OrderTrackingPanelLayout.createSequentialGroup()
-                .addGroup(OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(OrderTrackingPanelLayout.createSequentialGroup()
-                        .addGap(272, 272, 272)
-                        .addGroup(OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(OrderTrackingPanelLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox1)
-                                    .addComponent(jCheckBox2)
-                                    .addComponent(jCheckBox3)))
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderTrackingPanelLayout.createSequentialGroup()
-                        .addContainerGap(241, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(286, 286, 286))
-        );
-        OrderTrackingPanelLayout.setVerticalGroup(
-            OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OrderTrackingPanelLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(OrderTrackingPanelLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(OrderTrackingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox3)))
-                .addContainerGap(151, Short.MAX_VALUE))
-        );
-
-        WSCInterface.addTab("Order Tracking", OrderTrackingPanel);
+        LoginPanel.setDoubleBuffered(false);
 
         LoginSubmitButton.setText("Login");
         LoginSubmitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -581,13 +270,24 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText("Logout");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout LoginPanelLayout = new javax.swing.GroupLayout(LoginPanel);
         LoginPanel.setLayout(LoginPanelLayout);
         LoginPanelLayout.setHorizontalGroup(
             LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginPanelLayout.createSequentialGroup()
-                .addGap(359, 359, 359)
-                .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(260, 260, 260)
+                .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, LoginPanelLayout.createSequentialGroup()
+                        .addComponent(LoginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(LoginPanelLayout.createSequentialGroup()
                         .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LoginEMPIDLabel)
@@ -595,16 +295,13 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(LoginEMPIDField)
-                            .addComponent(LoginPasswordFieldText, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(LoginPanelLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(LoginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(694, Short.MAX_VALUE))
+                            .addComponent(LoginPasswordFieldText, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
         LoginPanelLayout.setVerticalGroup(
             LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginPanelLayout.createSequentialGroup()
-                .addGap(233, 233, 233)
+                .addGap(157, 157, 157)
                 .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LoginEMPIDLabel)
                     .addComponent(LoginEMPIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -612,12 +309,902 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LoginPASSLabel)
                     .addComponent(LoginPasswordFieldText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(LoginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(LoginSubmitButton))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
 
         WSCInterface.addTab("Login", LoginPanel);
+
+        OrderNumberLbl1.setText("Order Number");
+
+        OrderPayTypeBG.add(OrderDeliverPayRB1);
+        OrderDeliverPayRB1.setText("Payment on Delivery");
+
+        OrderPayTypeBG.add(OrderAccountPayRB1);
+        OrderAccountPayRB1.setText("Payment on Account");
+
+        OrderDepositLbl1.setText("Deposit Amount");
+
+        OrderDepositText1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderDepositText1ActionPerformed(evt);
+            }
+        });
+
+        OrderTypeBG.add(OrderTypePrintRB1);
+        OrderTypePrintRB1.setText("Printing");
+
+        OrderTypeBG.add(OrderTypeEngrRB1);
+        OrderTypeEngrRB1.setText("Engraving");
+
+        OrderEngMediaBG.add(OrderTypeTrophyRB1);
+        OrderTypeTrophyRB1.setText("Trophy");
+
+        OrderEngMediaBG.add(OrderTypePlaqueRB1);
+        OrderTypePlaqueRB1.setText("Plaque");
+
+        OrderContentLbl1.setText("Printing/Engraving Content:");
+
+        OrderContentText1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderContentText1ActionPerformed(evt);
+            }
+        });
+
+        OrderMediaCatNumLbl1.setText("Media Catalog Number");
+
+        OrderJobTypeLbl1.setText("Job Type");
+
+        OrderCustNumberLbl1.setText("Customer Number");
+
+        OrderCustomerNumberText1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderCustomerNumberText1ActionPerformed(evt);
+            }
+        });
+
+        OrderPaymentTypeLbl1.setText("Payment Type");
+
+        CustCreateButton8.setText("Clear Fields");
+        CustCreateButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustCreateButton8ActionPerformed(evt);
+            }
+        });
+
+        CustCreateButton9.setText("Create/Update");
+        CustCreateButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustCreateButton9ActionPerformed(evt);
+            }
+        });
+
+        CustFindButton4.setText("Find");
+        CustFindButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustFindButton4ActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel14.setText("Order Status");
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel15.setText("Media Status");
+
+        jLabel32.setText("Estimated Total");
+
+        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField20ActionPerformed(evt);
+            }
+        });
+
+        jLabel33.setText("Order Verified by ******");
+
+        jLabel34.setText("Work Assigned to ******");
+
+        jLabel37.setText("Order Created by ******");
+
+        jLabel38.setText("Last Modified by ******");
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout OrderInfoPanelLayout = new javax.swing.GroupLayout(OrderInfoPanel);
+        OrderInfoPanel.setLayout(OrderInfoPanelLayout);
+        OrderInfoPanelLayout.setHorizontalGroup(
+            OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(OrderTypeEngrRB1)
+                            .addComponent(OrderTypePrintRB1)
+                            .addComponent(OrderCustNumberLbl1)
+                            .addComponent(OrderNumberLbl1)
+                            .addComponent(OrderMediaCatNumLbl1)
+                            .addComponent(OrderJobTypeLbl1)
+                            .addComponent(OrderTypePlaqueRB1)
+                            .addComponent(OrderTypeTrophyRB1)
+                            .addComponent(jLabel32)
+                            .addComponent(OrderPaymentTypeLbl1)
+                            .addComponent(OrderDeliverPayRB1)
+                            .addComponent(OrderAccountPayRB1)
+                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(OrderDepositLbl1)))
+                        .addGap(2, 2, Short.MAX_VALUE))
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(OrderDepositText1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OrderMediaCatNumText1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OrderCustomerNumberText1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(OrderContentText1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderContentLbl1)))
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(CustFindButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustCreateButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustCreateButton8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                .addGap(215, 215, 215)
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel37))
+                .addGap(48, 48, 48)
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel38))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        OrderInfoPanelLayout.setVerticalGroup(
+            OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                            .addGap(74, 74, 74)
+                            .addComponent(OrderContentText1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(19, 19, 19))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(OrderContentLbl1)
+                                .addComponent(OrderCustomerNumberText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(OrderMediaCatNumText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(238, 238, 238)))
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(OrderCustNumberLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OrderNumberLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OrderMediaCatNumLbl1)
+                        .addGap(5, 5, 5)
+                        .addComponent(OrderJobTypeLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OrderTypePrintRB1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OrderTypeEngrRB1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OrderTypeTrophyRB1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OrderTypePlaqueRB1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(OrderPaymentTypeLbl1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(OrderAccountPayRB1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(OrderDeliverPayRB1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(OrderDepositLbl1)
+                                    .addComponent(OrderDepositText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(26, 26, 26)))
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
+                    .addComponent(CustFindButton4)
+                    .addComponent(CustCreateButton9)
+                    .addComponent(CustCreateButton8))
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel15))
+                    .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel34))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel33))
+                .addGap(51, 51, 51))
+        );
+
+        OrderInfoPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {OrderCustomerNumberText1, OrderDepositText1, OrderMediaCatNumText1, jComboBox1, jComboBox3, jTextField20});
+
+        OrderTP.addTab("Order Info", OrderInfoPanel);
+
+        CustCreateButton6.setText("Submit");
+        CustCreateButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustCreateButton6ActionPerformed(evt);
+            }
+        });
+
+        CustCreateButton7.setText("Clear Fields");
+        CustCreateButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustCreateButton7ActionPerformed(evt);
+            }
+        });
+
+        CustFindButton3.setText("Find");
+        CustFindButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustFindButton3ActionPerformed(evt);
+            }
+        });
+
+        QACorrectContentLbl.setText("Correct Order Content");
+
+        QACorrectOrderMediaLbl.setText("Correct Order Media");
+
+        QAMediaFinishLbl.setText("Media Finish");
+
+        QAEngrFinishLbl.setText("Workmanship");
+
+        QAOrderContentBG.add(QACorrectContentPassRb);
+        QACorrectContentPassRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectContentPassRbActionPerformed(evt);
+            }
+        });
+
+        QAOrderMediaBG.add(QACorrectMediaPassRb);
+        QACorrectMediaPassRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectMediaPassRbActionPerformed(evt);
+            }
+        });
+
+        QAMediaFinishBG.add(QAMediaFinishPassRb);
+        QAMediaFinishPassRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAMediaFinishPassRbActionPerformed(evt);
+            }
+        });
+
+        QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAWorkmanshipPassRbActionPerformed(evt);
+            }
+        });
+
+        QAOrderContentBG.add(QACorrectContentFailRb);
+        QACorrectContentFailRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectContentFailRbActionPerformed(evt);
+            }
+        });
+
+        QAOrderMediaBG.add(QACorrectMediaFailRb);
+        QACorrectMediaFailRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectMediaFailRbActionPerformed(evt);
+            }
+        });
+
+        QAMediaFinishBG.add(QAMediaFinishFailRb);
+        QAMediaFinishFailRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAMediaFinishFailRbActionPerformed(evt);
+            }
+        });
+
+        QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAWorkmanshipFailRbActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel16.setText("Comments");
+
+        jTextField7.setEditable(false);
+
+        jTextField8.setEditable(false);
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+
+        jTextField9.setEditable(false);
+
+        jTextField10.setEditable(false);
+
+        jLabel17.setText("Pass");
+
+        jLabel18.setText("Fail");
+
+        jLabel19.setText("Reason for Failure");
+
+        jLabel39.setText("Order Verified by ******");
+
+        jLabel40.setText("Order Created by ******");
+
+        jLabel41.setText("Work Assigned to ******");
+
+        jLabel42.setText("Last Modified by ******");
+
+        OrderNumberLbl2.setText("Order Number");
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel47.setText("QA Inspection Number");
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
+        QAPanel.setLayout(QAPanelLayout);
+        QAPanelLayout.setHorizontalGroup(
+            QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
+                .addContainerGap(112, Short.MAX_VALUE)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QAPanelLayout.createSequentialGroup()
+                        .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel39)
+                            .addComponent(jLabel40))
+                        .addGap(48, 48, 48)
+                        .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel41)
+                            .addComponent(jLabel42)))
+                    .addGroup(QAPanelLayout.createSequentialGroup()
+                        .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(QACorrectOrderMediaLbl)
+                            .addComponent(QAMediaFinishLbl)
+                            .addComponent(QAEngrFinishLbl)
+                            .addComponent(QACorrectContentLbl))
+                        .addGap(17, 17, 17)
+                        .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(QAMediaFinishPassRb)
+                            .addComponent(QAWorkmanshipPassRb)
+                            .addComponent(QACorrectMediaPassRb)
+                            .addComponent(QACorrectContentPassRb)
+                            .addComponent(jLabel17))
+                        .addGap(18, 18, 18)
+                        .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(QACorrectContentFailRb)
+                            .addComponent(QACorrectMediaFailRb)
+                            .addComponent(QAMediaFinishFailRb)
+                            .addComponent(QAWorkmanshipFailRb)
+                            .addComponent(jLabel18))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(QAPanelLayout.createSequentialGroup()
+                        .addComponent(CustFindButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustCreateButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustCreateButton7))
+                    .addComponent(jLabel16))
+                .addGap(200, 200, 200))
+            .addGroup(QAPanelLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(OrderNumberLbl2)
+                    .addComponent(jLabel47))
+                .addGap(63, 63, 63)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField10, jTextField7, jTextField8, jTextField9});
+
+        QAPanelLayout.setVerticalGroup(
+            QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QAPanelLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(OrderNumberLbl2)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(QACorrectContentPassRb)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QACorrectContentFailRb)
+                    .addComponent(QACorrectContentLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QACorrectMediaFailRb)
+                    .addComponent(QACorrectMediaPassRb)
+                    .addComponent(QACorrectOrderMediaLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAMediaFinishFailRb)
+                    .addComponent(QAMediaFinishPassRb)
+                    .addComponent(QAMediaFinishLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(QAEngrFinishLbl)
+                    .addComponent(QAWorkmanshipPassRb)
+                    .addComponent(QAWorkmanshipFailRb)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CustFindButton3)
+                    .addComponent(CustCreateButton6)
+                    .addComponent(CustCreateButton7))
+                .addGap(27, 27, 27)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(jLabel41))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42)
+                    .addComponent(jLabel39))
+                .addGap(88, 88, 88))
+        );
+
+        OrderTP.addTab("Quality Assurance", QAPanel);
+
+        CustCreateButton10.setText("Submit/Assign");
+        CustCreateButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustCreateButton10ActionPerformed(evt);
+            }
+        });
+
+        CustCreateButton11.setText("Clear Fields");
+        CustCreateButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustCreateButton11ActionPerformed(evt);
+            }
+        });
+
+        CustFindButton5.setText("Find");
+        CustFindButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustFindButton5ActionPerformed(evt);
+            }
+        });
+
+        QACorrectContentLbl1.setText("Correct Name");
+
+        QACorrectOrderMediaLbl1.setText("Correct Account Number");
+
+        QAMediaFinishLbl1.setText("Valid Media Cat. #");
+
+        QAEngrFinishLbl1.setText("Valid Content");
+
+        QAOrderContentBG.add(QACorrectContentPassRb1);
+        QACorrectContentPassRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectContentPassRb1ActionPerformed(evt);
+            }
+        });
+
+        QAOrderMediaBG.add(QACorrectMediaPassRb1);
+        QACorrectMediaPassRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectMediaPassRb1ActionPerformed(evt);
+            }
+        });
+
+        QAMediaFinishBG.add(QAMediaFinishPassRb1);
+        QAMediaFinishPassRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAMediaFinishPassRb1ActionPerformed(evt);
+            }
+        });
+
+        QAWorkmanshipPassRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAWorkmanshipPassRb1ActionPerformed(evt);
+            }
+        });
+
+        QAOrderContentBG.add(QACorrectContentFailRb1);
+        QACorrectContentFailRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectContentFailRb1ActionPerformed(evt);
+            }
+        });
+
+        QAOrderMediaBG.add(QACorrectMediaFailRb1);
+        QACorrectMediaFailRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectMediaFailRb1ActionPerformed(evt);
+            }
+        });
+
+        QAMediaFinishBG.add(QAMediaFinishFailRb1);
+        QAMediaFinishFailRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAMediaFinishFailRb1ActionPerformed(evt);
+            }
+        });
+
+        QAWorkmanshipFailRb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAWorkmanshipFailRb1ActionPerformed(evt);
+            }
+        });
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel20.setText("Additional Comments");
+
+        jTextField11.setEditable(false);
+
+        jTextField12.setEditable(false);
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+
+        jTextField13.setEditable(false);
+
+        jTextField14.setEditable(false);
+
+        jLabel21.setText("Pass");
+
+        jLabel22.setText("Fail");
+
+        jLabel23.setText("Reason for Failure");
+
+        QAOrderContentBG.add(QACorrectContentFailRb2);
+        QACorrectContentFailRb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectContentFailRb2ActionPerformed(evt);
+            }
+        });
+
+        QAMediaFinishBG.add(QAMediaFinishPassRb2);
+        QAMediaFinishPassRb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAMediaFinishPassRb2ActionPerformed(evt);
+            }
+        });
+
+        QAMediaFinishLbl2.setText("Sufficient Deposit");
+
+        QACorrectContentLbl2.setText("Correct Job Type");
+
+        QAMediaFinishBG.add(QAMediaFinishFailRb2);
+        QAMediaFinishFailRb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAMediaFinishFailRb2ActionPerformed(evt);
+            }
+        });
+
+        QAOrderMediaBG.add(QACorrectMediaFailRb2);
+        QACorrectMediaFailRb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectMediaFailRb2ActionPerformed(evt);
+            }
+        });
+
+        QACorrectOrderMediaLbl2.setText("Payment Type");
+
+        jTextField15.setEditable(false);
+
+        jTextField16.setEditable(false);
+
+        jTextField18.setEditable(false);
+        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField18ActionPerformed(evt);
+            }
+        });
+
+        QAOrderContentBG.add(QACorrectContentPassRb2);
+        QACorrectContentPassRb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectContentPassRb2ActionPerformed(evt);
+            }
+        });
+
+        QAOrderMediaBG.add(QACorrectMediaPassRb2);
+        QACorrectMediaPassRb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QACorrectMediaPassRb2ActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setText("Verification Number");
+
+        jLabel25.setText("Customer Name F/L");
+
+        jLabel26.setText("Customer ID Number");
+
+        jLabel27.setText("Media Catalog Number");
+
+        jLabel28.setText("Content Popup Link");
+
+        jLabel29.setText("Job Type");
+
+        jLabel30.setText("Payment Type");
+
+        jLabel31.setText("Deposit Amount");
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel35.setText("Assign Printer/Engraver");
+
+        jLabel36.setText("Order Number");
+
+        jLabel43.setText("Order Verified by ******");
+
+        jLabel44.setText("Order Created by ******");
+
+        jLabel45.setText("Work Assigned to ******");
+
+        jLabel46.setText("Last Modified by ******");
+
+        javax.swing.GroupLayout OrderVerifyPanelLayout = new javax.swing.GroupLayout(OrderVerifyPanel);
+        OrderVerifyPanel.setLayout(OrderVerifyPanelLayout);
+        OrderVerifyPanelLayout.setHorizontalGroup(
+            OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                        .addComponent(CustFindButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(CustCreateButton10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustCreateButton11)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderVerifyPanelLayout.createSequentialGroup()
+                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel25)
+                                            .addComponent(jLabel26)
+                                            .addComponent(jLabel27)
+                                            .addComponent(jLabel28)
+                                            .addComponent(jLabel29)
+                                            .addComponent(jLabel30)
+                                            .addComponent(jLabel31))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(QAMediaFinishLbl2)
+                                            .addComponent(QACorrectOrderMediaLbl2)
+                                            .addComponent(QACorrectContentLbl2)
+                                            .addComponent(QAEngrFinishLbl1)
+                                            .addComponent(QAMediaFinishLbl1)
+                                            .addComponent(QACorrectOrderMediaLbl1)
+                                            .addComponent(QACorrectContentLbl1))
+                                        .addGap(15, 15, 15))
+                                    .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel24)
+                                            .addComponent(jLabel36))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                                                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                    .addComponent(QAMediaFinishPassRb2)
+                                    .addComponent(QACorrectMediaPassRb2)
+                                    .addComponent(QACorrectContentPassRb2)
+                                    .addComponent(QAWorkmanshipPassRb1)
+                                    .addComponent(QAMediaFinishPassRb1)
+                                    .addComponent(QACorrectMediaPassRb1)
+                                    .addComponent(QACorrectContentPassRb1)
+                                    .addComponent(jLabel21))
+                                .addGap(18, 18, 18)
+                                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                    .addComponent(QAMediaFinishFailRb2)
+                                    .addComponent(QACorrectMediaFailRb2)
+                                    .addComponent(QACorrectContentFailRb2)
+                                    .addComponent(QAWorkmanshipFailRb1)
+                                    .addComponent(QAMediaFinishFailRb1)
+                                    .addComponent(QACorrectMediaFailRb1)
+                                    .addComponent(QACorrectContentFailRb1)
+                                    .addComponent(jLabel22))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel23)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, OrderVerifyPanelLayout.createSequentialGroup()
+                                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel43)
+                                            .addComponent(jLabel44))
+                                        .addGap(48, 48, 48)
+                                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel45)
+                                            .addComponent(jLabel46)))
+                                    .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, OrderVerifyPanelLayout.createSequentialGroup()
+                                            .addComponent(jLabel20)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel35))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, OrderVerifyPanelLayout.createSequentialGroup()
+                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(93, 93, 93))))
+        );
+
+        OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField11, jTextField12, jTextField13, jTextField14});
+
+        OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField15, jTextField16, jTextField18});
+
+        OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField17, jTextField19});
+
+        OrderVerifyPanelLayout.setVerticalGroup(
+            OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderVerifyPanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(QACorrectContentPassRb1)
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QACorrectContentFailRb1)
+                    .addComponent(QACorrectContentLbl1)
+                    .addComponent(jLabel25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QACorrectMediaFailRb1)
+                    .addComponent(QACorrectMediaPassRb1)
+                    .addComponent(QACorrectOrderMediaLbl1)
+                    .addComponent(jLabel26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAMediaFinishFailRb1)
+                    .addComponent(QAMediaFinishPassRb1)
+                    .addComponent(QAMediaFinishLbl1)
+                    .addComponent(jLabel27))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(QAEngrFinishLbl1)
+                    .addComponent(QAWorkmanshipPassRb1)
+                    .addComponent(QAWorkmanshipFailRb1)
+                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(QACorrectContentPassRb2)
+                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QACorrectContentFailRb2)
+                    .addComponent(QACorrectContentLbl2)
+                    .addComponent(jLabel29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QACorrectMediaFailRb2)
+                    .addComponent(QACorrectMediaPassRb2)
+                    .addComponent(QACorrectOrderMediaLbl2)
+                    .addComponent(jLabel30))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAMediaFinishFailRb2)
+                    .addComponent(QAMediaFinishPassRb2)
+                    .addComponent(QAMediaFinishLbl2)
+                    .addComponent(jLabel31))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel35)
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CustFindButton5)
+                            .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(CustCreateButton11)
+                                .addComponent(CustCreateButton10))))
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(jLabel45))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(jLabel43))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        OrderTP.addTab("Order Verify", OrderVerifyPanel);
+
+        WSCInterface.addTab("Order", OrderTP);
 
         CustBillLNameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -651,55 +1238,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
 
         CustBillZipLbl.setText("Zip");
 
-        BillingLbl.setText("Billing:");
-
-        ShippLbl.setText("Shipping:");
-
-        SameAsBillCheckBox.setText("Same as Billing");
-        SameAsBillCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SameAsBillCheckBoxActionPerformed(evt);
-            }
-        });
-
-        CustShipFNameLbl.setText("First Name");
-
-        CustShipZipLbl.setText("Zip");
-
-        CustShipZipText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustShipZipTextActionPerformed(evt);
-            }
-        });
-
-        CustShipStreet2Text.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustShipStreet2TextActionPerformed(evt);
-            }
-        });
-
-        CustShipStreet1Text.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustShipStreet1TextActionPerformed(evt);
-            }
-        });
-
-        CustShipLNameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustShipLNameTextActionPerformed(evt);
-            }
-        });
-
-        CustShipLNameLbl.setText("Last Name");
-
-        CustShipOrgLbl.setText("Organization");
-
-        CustShipStreet1Lbl.setText("Street Address Line 1");
-
-        CustShipStreet2Lbl.setText("Street Address Line 2");
-
-        CustShipCityLbl.setText("City");
-
         CustFindButton.setText("Find");
         CustFindButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -730,12 +1268,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
             }
         });
 
-        CustCommentText.setColumns(20);
-        CustCommentText.setRows(5);
-        CustCommBox.setViewportView(CustCommentText);
-
-        CustCommentLbl.setText("Notes/Comments:");
-
         ActiveOrderLbl.setForeground(new java.awt.Color(255, 0, 0));
         ActiveOrderLbl.setText("*Active orders in red");
 
@@ -751,217 +1283,502 @@ CustShipStateComB.addActionListener(new java.awt.event.ActionListener() {
     }
     });
 
-    CustShipStateCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
-        "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
-        "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" }));
-CustShipStateCB.setPreferredSize(new java.awt.Dimension(35, 20));
-CustShipStateCB.addActionListener(new java.awt.event.ActionListener() {
-public void actionPerformed(java.awt.event.ActionEvent evt) {
-    CustShipStateCBActionPerformed(evt);
-    }
-    });
+    jLabel9.setText("State");
 
     javax.swing.GroupLayout CustomerInfoPanelLayout = new javax.swing.GroupLayout(CustomerInfoPanel);
     CustomerInfoPanel.setLayout(CustomerInfoPanelLayout);
     CustomerInfoPanelLayout.setHorizontalGroup(
         CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-            .addGap(281, 281, 281)
-            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                .addComponent(CustCommBox)
-                .addComponent(CustCommentLbl)
+            .addGap(120, 120, 120)
+            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                .addComponent(CustBillStreet2Lbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CustBillStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                .addComponent(CustBillStreet1Lbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CustBillStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                .addComponent(CustFindButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CustCreateButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CustCreateButton1))
-                            .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                .addComponent(CustNumberLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(CustNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(67, 67, 67))
-                            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(CustBillLNameLbl)
-                                        .addComponent(CustBillFNameLbl))
-                                    .addGap(56, 56, 56)
-                                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(CustBillFNameText)
-                                        .addComponent(CustBillLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addComponent(CustBillOrgLbl)
-                                    .addGap(46, 46, 46)
-                                    .addComponent(CustBillOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(BillingLbl, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addComponent(CustShipStateComB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CustomerInfoPanelLayout.createSequentialGroup()
-                                .addGap(89, 89, 89)
-                                .addComponent(CustBillZipLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CustBillZipText))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CustomerInfoPanelLayout.createSequentialGroup()
-                                .addComponent(CustBillCityLbl)
-                                .addGap(88, 88, 88)
-                                .addComponent(CustBillCityText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(31, 31, 31)
-                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CustFindButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(CustCreateButton)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(CustCreateButton1))
+                .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                        .addComponent(CustBillStreet2Lbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustBillStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                        .addComponent(CustBillStreet1Lbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustBillStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                        .addComponent(CustBillCityLbl)
+                        .addGap(88, 88, 88)
+                        .addComponent(CustBillCityText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                            .addComponent(ShippLbl)
-                            .addGap(29, 29, 29)
-                            .addComponent(SameAsBillCheckBox))
-                        .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addComponent(CustShipStateCB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(40, 40, 40)
-                                    .addComponent(CustShipZipLbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(CustShipZipText))
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addComponent(CustShipCityLbl)
-                                    .addGap(88, 88, 88)
-                                    .addComponent(CustShipCityText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addComponent(CustShipStreet2Lbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(CustShipStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(CustShipStreet1Lbl)
-                                        .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                            .addGap(1, 1, 1)
-                                            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(CustShipLNameLbl)
-                                                .addComponent(CustShipOrgLbl)))
-                                        .addComponent(CustShipFNameLbl))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(CustShipFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CustShipOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CustShipStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CustShipLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGap(30, 30, 30)
                             .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(CustOrderListBox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(ActiveOrderLbl))
-                                .addComponent(CustOrderListBoxLbl))))))
-            .addContainerGap(308, Short.MAX_VALUE))
+                                .addComponent(CustBillLNameLbl)
+                                .addComponent(CustBillFNameLbl))
+                            .addGap(56, 56, 56)
+                            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(CustBillFNameText)
+                                .addComponent(CustBillLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                            .addComponent(CustBillOrgLbl)
+                            .addGap(46, 46, 46)
+                            .addComponent(CustBillOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                            .addComponent(CustNumberLbl)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CustNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CustomerInfoPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustShipStateComB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(CustBillZipLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CustBillZipText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGap(18, 18, 18)
+            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(ActiveOrderLbl)
+                .addComponent(CustOrderListBox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CustOrderListBoxLbl))
+            .addContainerGap(122, Short.MAX_VALUE))
     );
     CustomerInfoPanelLayout.setVerticalGroup(
         CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-            .addGap(92, 92, 92)
-            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(CustNumberLbl)
-                .addComponent(CustNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(BillingLbl)
-                .addComponent(ShippLbl)
-                .addComponent(SameAsBillCheckBox))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGap(109, 109, 109)
             .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(CustOrderListBoxLbl)
-                .addComponent(CustShipStateComB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, Short.MAX_VALUE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                .addComponent(CustOrderListBox)
-                .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustShipStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustShipStreet1Lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustShipStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustShipStreet2Lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustShipCityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustShipCityLbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustShipZipText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustShipZipLbl)
-                            .addComponent(CustShipStateCB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillFNameLbl)
-                            .addComponent(CustShipFNameLbl)
-                            .addComponent(CustShipFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillLNameLbl)
-                            .addComponent(CustShipLNameLbl)
-                            .addComponent(CustShipLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillOrgLbl)
-                            .addComponent(CustShipOrgLbl)
-                            .addComponent(CustShipOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillStreet1Lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillStreet2Lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillCityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillCityLbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CustBillZipText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CustBillZipLbl)))))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(CustFindButton)
-                .addComponent(CustCreateButton)
-                .addComponent(CustCreateButton1)
-                .addComponent(ActiveOrderLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(CustCommentLbl)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(CustCommBox, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(93, Short.MAX_VALUE))
+                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                    .addComponent(CustOrderListBoxLbl)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(CustOrderListBox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(ActiveOrderLbl))
+                .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustNumberLbl)
+                        .addComponent(CustNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillFNameLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillLNameLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillOrgLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillStreet1Lbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillStreet2Lbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillCityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillCityLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillZipText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillZipLbl)
+                        .addComponent(CustShipStateComB, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel9))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustFindButton)
+                        .addComponent(CustCreateButton)
+                        .addComponent(CustCreateButton1))))
+            .addContainerGap(124, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Customer Info", CustomerInfoPanel);
+
+    jLabel1.setText("Item Number");
+
+    jLabel2.setText("Manufacturer");
+
+    jLabel3.setText("On Hand");
+
+    jLabel6.setText("On Order");
+
+    jLabel7.setText("Delivery Date");
+
+    CustCreateButton4.setText("Order/Mark Sold");
+    CustCreateButton4.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustCreateButton4ActionPerformed(evt);
+        }
+    });
+
+    CustCreateButton5.setText("Clear Fields");
+    CustCreateButton5.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustCreateButton5ActionPerformed(evt);
+        }
+    });
+
+    CustFindButton2.setText("Find");
+    CustFindButton2.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustFindButton2ActionPerformed(evt);
+        }
+    });
+
+    jLabel5.setText("Item Name");
+
+    jLabel8.setText("* Use only one field for searches");
+
+    jLabel11.setText("* Use only one field for searches");
+
+    jLabel12.setText("* Use only one field for searches");
+
+    jLabel13.setText("* Use only one field for searches");
+
+    jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            jTextField4ActionPerformed(evt);
+        }
+    });
+
+    jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            jTextField5ActionPerformed(evt);
+        }
+    });
+
+    javax.swing.GroupLayout MediaInventoryPanelLayout = new javax.swing.GroupLayout(MediaInventoryPanel);
+    MediaInventoryPanel.setLayout(MediaInventoryPanelLayout);
+    MediaInventoryPanelLayout.setHorizontalGroup(
+        MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
+            .addGap(170, 170, 170)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
+                    .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(CustFindButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
+                            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField3)
+                                .addComponent(jTextField4)
+                                .addComponent(jTextField5)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel12)
+                                .addComponent(jLabel11)
+                                .addComponent(jLabel8))
+                            .addGap(751, 751, 751))
+                        .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
+                            .addComponent(CustCreateButton4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(CustCreateButton5)
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
+                    .addComponent(jLabel13)
+                    .addContainerGap())))
+    );
+
+    MediaInventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6});
+
+    MediaInventoryPanelLayout.setVerticalGroup(
+        MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(MediaInventoryPanelLayout.createSequentialGroup()
+            .addGap(110, 110, 110)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
+                .addComponent(jLabel8))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jLabel11)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jLabel12)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel5))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel6))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel7))
+            .addGap(18, 18, 18)
+            .addGroup(MediaInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(CustFindButton2)
+                .addComponent(CustCreateButton4)
+                .addComponent(CustCreateButton5))
+            .addGap(36, 36, 36)
+            .addComponent(jLabel13)
+            .addContainerGap(127, Short.MAX_VALUE))
+    );
+
+    WSCInterface.addTab("Inventory", MediaInventoryPanel);
+
+    CustBillLNameText1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustBillLNameText1ActionPerformed(evt);
+        }
+    });
+
+    CustBillStreet2Text1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustBillStreet2Text1ActionPerformed(evt);
+        }
+    });
+
+    CustBillFNameLbl1.setText("First Name");
+
+    CustBillLNameLbl1.setText("Last Name");
+
+    CustBillOrgLbl1.setText("Organization");
+
+    CustBillStreet1Lbl1.setText("Street Address Line 1");
+
+    CustBillStreet2Lbl1.setText("Street Address Line 2");
+
+    CustBillZipText1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustBillZipText1ActionPerformed(evt);
+        }
+    });
+
+    CustBillCityLbl1.setText("City");
+
+    CustBillZipLbl1.setText("Zip");
+
+    CustFindButton1.setText("Find");
+    CustFindButton1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustFindButton1ActionPerformed(evt);
+        }
+    });
+
+    CustCreateButton2.setText("Create/Update");
+    CustCreateButton2.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustCreateButton2ActionPerformed(evt);
+        }
+    });
+
+    jList2.setModel(new javax.swing.AbstractListModel() {
+        String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        public int getSize() { return strings.length; }
+        public Object getElementAt(int i) { return strings[i]; }
+    });
+    CustOrderListBox1.setViewportView(jList2);
+
+    CustOrderListBoxLbl1.setText("Order(s):");
+
+    CustCreateButton3.setText("Clear Fields");
+    CustCreateButton3.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CustCreateButton3ActionPerformed(evt);
+        }
+    });
+
+    ActiveOrderLbl1.setForeground(new java.awt.Color(255, 0, 0));
+    ActiveOrderLbl1.setText("*Active orders in red");
+
+    CustNumberLbl1.setText("Employee id");
+
+    CustShipStateComB1.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
+        "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
+        "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" }));
+CustShipStateComB1.setPreferredSize(new java.awt.Dimension(35, 20));
+CustShipStateComB1.addActionListener(new java.awt.event.ActionListener() {
+public void actionPerformed(java.awt.event.ActionEvent evt) {
+    CustShipStateComB1ActionPerformed(evt);
+    }
+    });
+
+    jLabel10.setText("State");
+
+    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+    jLabel4.setText("Employee Type");
+
+    javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+    jPanel1.setLayout(jPanel1Layout);
+    jPanel1Layout.setHorizontalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGap(120, 120, 120)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(CustBillStreet2Lbl1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(CustBillStreet2Text1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(CustBillStreet1Lbl1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(CustBillStreet1Text1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CustBillLNameLbl1)
+                                    .addComponent(CustBillFNameLbl1))
+                                .addGap(56, 56, 56)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(CustBillFNameText1)
+                                    .addComponent(CustBillLNameText1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(CustBillOrgLbl1)
+                                .addGap(46, 46, 46)
+                                .addComponent(CustBillOrgText1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(CustNumberLbl1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CustNumberText1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(CustBillCityLbl1)
+                                .addGap(88, 88, 88)
+                                .addComponent(CustBillCityText1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(CustShipStateComB1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(CustBillZipLbl1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addGap(34, 34, 34)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CustBillZipText1)))))
+                    .addGap(18, 116, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ActiveOrderLbl1)
+                        .addComponent(CustOrderListBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustOrderListBoxLbl1)))
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(CustFindButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(10, 10, 10)
+                    .addComponent(CustCreateButton2)
+                    .addGap(5, 5, 5)
+                    .addComponent(CustCreateButton3)))
+            .addContainerGap(119, Short.MAX_VALUE))
+    );
+    jPanel1Layout.setVerticalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGap(109, 109, 109)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(CustOrderListBoxLbl1)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(CustOrderListBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(ActiveOrderLbl1))
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustNumberLbl1)
+                        .addComponent(CustNumberText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillFNameText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillFNameLbl1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillLNameText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillLNameLbl1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillOrgText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillOrgLbl1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillStreet1Text1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillStreet1Lbl1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillStreet2Text1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillStreet2Lbl1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillCityText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillCityLbl1))
+                    .addGap(1, 1, 1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CustBillZipText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustBillZipLbl1)
+                        .addComponent(CustShipStateComB1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel10))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4))))
+            .addGap(9, 9, 9)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(CustFindButton1)
+                .addComponent(CustCreateButton2)
+                .addComponent(CustCreateButton3))
+            .addContainerGap(87, Short.MAX_VALUE))
+    );
+
+    WSCInterface.addTab("Employee Info", jPanel1);
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
     layout.setHorizontalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addComponent(WSCInterface)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addComponent(WSCInterface)
+        .addGroup(layout.createSequentialGroup()
+            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 0, Short.MAX_VALUE))
     );
 
-    bindingGroup.bind();
+    getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CustFindButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustFindButton2ActionPerformed
+
+    private void CustCreateButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton5ActionPerformed
+
+    private void CustCreateButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton4ActionPerformed
+
+    private void CustShipStateComBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipStateComBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustShipStateComBActionPerformed
 
     private void CustCreateButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton1ActionPerformed
         // TODO add your handling code here:
@@ -975,26 +1792,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_CustFindButtonActionPerformed
 
-    private void CustShipLNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipLNameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustShipLNameTextActionPerformed
-
-    private void CustShipStreet1TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipStreet1TextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustShipStreet1TextActionPerformed
-
-    private void CustShipStreet2TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipStreet2TextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustShipStreet2TextActionPerformed
-
-    private void CustShipZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipZipTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustShipZipTextActionPerformed
-
-    private void SameAsBillCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SameAsBillCheckBoxActionPerformed
-        
-    }//GEN-LAST:event_SameAsBillCheckBoxActionPerformed
-
     private void CustBillZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustBillZipTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CustBillZipTextActionPerformed
@@ -1006,34 +1803,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private void CustBillLNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustBillLNameTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CustBillLNameTextActionPerformed
-
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void OrderCustomerNumberTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCustomerNumberTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderCustomerNumberTextActionPerformed
-
-    private void OrderPECompleteRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderPECompleteRBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderPECompleteRBActionPerformed
-
-    private void OrderCreatedRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCreatedRBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderCreatedRBActionPerformed
-
-    private void OrderDepositTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDepositTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderDepositTextActionPerformed
 
     private void LoginPasswordFieldTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPasswordFieldTextActionPerformed
         // TODO add your handling code here:
@@ -1047,57 +1816,257 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginSubmitButtonActionPerformed
 
-    private void CustShipStateComBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipStateComBActionPerformed
+    private void OrderDepositText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDepositText1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustShipStateComBActionPerformed
+    }//GEN-LAST:event_OrderDepositText1ActionPerformed
 
-    private void CustShipStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipStateCBActionPerformed
+    private void OrderCustomerNumberText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCustomerNumberText1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustShipStateCBActionPerformed
+    }//GEN-LAST:event_OrderCustomerNumberText1ActionPerformed
+
+    private void CustCreateButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton6ActionPerformed
+
+    private void CustCreateButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton7ActionPerformed
+
+    private void CustFindButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustFindButton3ActionPerformed
+
+    private void CustCreateButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton8ActionPerformed
+
+    private void CustCreateButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton9ActionPerformed
+
+    private void CustFindButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustFindButton4ActionPerformed
+
+    private void OrderContentText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderContentText1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OrderContentText1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void CustBillLNameText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustBillLNameText1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustBillLNameText1ActionPerformed
+
+    private void CustBillStreet2Text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustBillStreet2Text1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustBillStreet2Text1ActionPerformed
+
+    private void CustBillZipText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustBillZipText1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustBillZipText1ActionPerformed
+
+    private void CustFindButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustFindButton1ActionPerformed
+
+    private void CustCreateButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton2ActionPerformed
+
+    private void CustCreateButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton3ActionPerformed
+
+    private void CustShipStateComB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustShipStateComB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustShipStateComB1ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void QACorrectContentPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentPassRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectContentPassRbActionPerformed
+
+    private void QACorrectMediaPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaPassRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectMediaPassRbActionPerformed
+
+    private void QAMediaFinishPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishPassRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAMediaFinishPassRbActionPerformed
+
+    private void QAWorkmanshipPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipPassRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAWorkmanshipPassRbActionPerformed
+
+    private void QACorrectContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentFailRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectContentFailRbActionPerformed
+
+    private void QACorrectMediaFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaFailRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectMediaFailRbActionPerformed
+
+    private void QAMediaFinishFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishFailRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAMediaFinishFailRbActionPerformed
+
+    private void QAWorkmanshipFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipFailRbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAWorkmanshipFailRbActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void QACorrectMediaPassRb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaPassRb2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectMediaPassRb2ActionPerformed
+
+    private void QACorrectContentPassRb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentPassRb2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectContentPassRb2ActionPerformed
+
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField18ActionPerformed
+
+    private void QACorrectMediaFailRb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaFailRb2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectMediaFailRb2ActionPerformed
+
+    private void QAMediaFinishFailRb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishFailRb2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAMediaFinishFailRb2ActionPerformed
+
+    private void QAMediaFinishPassRb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishPassRb2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAMediaFinishPassRb2ActionPerformed
+
+    private void QACorrectContentFailRb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentFailRb2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectContentFailRb2ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void QAWorkmanshipFailRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipFailRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAWorkmanshipFailRb1ActionPerformed
+
+    private void QAMediaFinishFailRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishFailRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAMediaFinishFailRb1ActionPerformed
+
+    private void QACorrectMediaFailRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaFailRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectMediaFailRb1ActionPerformed
+
+    private void QACorrectContentFailRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentFailRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectContentFailRb1ActionPerformed
+
+    private void QAWorkmanshipPassRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipPassRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAWorkmanshipPassRb1ActionPerformed
+
+    private void QAMediaFinishPassRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishPassRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAMediaFinishPassRb1ActionPerformed
+
+    private void QACorrectMediaPassRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaPassRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectMediaPassRb1ActionPerformed
+
+    private void QACorrectContentPassRb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentPassRb1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QACorrectContentPassRb1ActionPerformed
+
+    private void CustFindButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustFindButton5ActionPerformed
+
+    private void CustCreateButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton11ActionPerformed
+
+    private void CustCreateButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustCreateButton10ActionPerformed
+
+    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField20ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ActiveOrderLbl;
-    private javax.swing.JLabel BillingLbl;
+    private javax.swing.JLabel ActiveOrderLbl1;
     private javax.swing.JLabel CustBillCityLbl;
+    private javax.swing.JLabel CustBillCityLbl1;
     private javax.swing.JTextField CustBillCityText;
+    private javax.swing.JTextField CustBillCityText1;
     private javax.swing.JLabel CustBillFNameLbl;
+    private javax.swing.JLabel CustBillFNameLbl1;
     private javax.swing.JTextField CustBillFNameText;
+    private javax.swing.JTextField CustBillFNameText1;
     private javax.swing.JLabel CustBillLNameLbl;
+    private javax.swing.JLabel CustBillLNameLbl1;
     private javax.swing.JTextField CustBillLNameText;
+    private javax.swing.JTextField CustBillLNameText1;
     private javax.swing.JLabel CustBillOrgLbl;
+    private javax.swing.JLabel CustBillOrgLbl1;
     private javax.swing.JTextField CustBillOrgText;
+    private javax.swing.JTextField CustBillOrgText1;
     private javax.swing.JLabel CustBillStreet1Lbl;
+    private javax.swing.JLabel CustBillStreet1Lbl1;
     private javax.swing.JTextField CustBillStreet1Text;
+    private javax.swing.JTextField CustBillStreet1Text1;
     private javax.swing.JLabel CustBillStreet2Lbl;
+    private javax.swing.JLabel CustBillStreet2Lbl1;
     private javax.swing.JTextField CustBillStreet2Text;
+    private javax.swing.JTextField CustBillStreet2Text1;
     private javax.swing.JLabel CustBillZipLbl;
+    private javax.swing.JLabel CustBillZipLbl1;
     private javax.swing.JTextField CustBillZipText;
-    private javax.swing.JScrollPane CustCommBox;
-    private javax.swing.JLabel CustCommentLbl;
-    private javax.swing.JTextArea CustCommentText;
+    private javax.swing.JTextField CustBillZipText1;
     private javax.swing.JButton CustCreateButton;
     private javax.swing.JButton CustCreateButton1;
+    private javax.swing.JButton CustCreateButton10;
+    private javax.swing.JButton CustCreateButton11;
+    private javax.swing.JButton CustCreateButton2;
+    private javax.swing.JButton CustCreateButton3;
+    private javax.swing.JButton CustCreateButton4;
+    private javax.swing.JButton CustCreateButton5;
+    private javax.swing.JButton CustCreateButton6;
+    private javax.swing.JButton CustCreateButton7;
+    private javax.swing.JButton CustCreateButton8;
+    private javax.swing.JButton CustCreateButton9;
     private javax.swing.JButton CustFindButton;
+    private javax.swing.JButton CustFindButton1;
+    private javax.swing.JButton CustFindButton2;
+    private javax.swing.JButton CustFindButton3;
+    private javax.swing.JButton CustFindButton4;
+    private javax.swing.JButton CustFindButton5;
     private javax.swing.JLabel CustNumberLbl;
+    private javax.swing.JLabel CustNumberLbl1;
     private javax.swing.JTextField CustNumberText;
+    private javax.swing.JTextField CustNumberText1;
     private javax.swing.JScrollPane CustOrderListBox;
+    private javax.swing.JScrollPane CustOrderListBox1;
     private javax.swing.JLabel CustOrderListBoxLbl;
-    private javax.swing.JLabel CustShipCityLbl;
-    private javax.swing.JTextField CustShipCityText;
-    private javax.swing.JLabel CustShipFNameLbl;
-    private javax.swing.JTextField CustShipFNameText;
-    private javax.swing.JLabel CustShipLNameLbl;
-    private javax.swing.JTextField CustShipLNameText;
-    private javax.swing.JLabel CustShipOrgLbl;
-    private javax.swing.JTextField CustShipOrgText;
-    private javax.swing.JComboBox CustShipStateCB;
+    private javax.swing.JLabel CustOrderListBoxLbl1;
     private javax.swing.JComboBox CustShipStateComB;
-    private javax.swing.JLabel CustShipStreet1Lbl;
-    private javax.swing.JTextField CustShipStreet1Text;
-    private javax.swing.JLabel CustShipStreet2Lbl;
-    private javax.swing.JTextField CustShipStreet2Text;
-    private javax.swing.JLabel CustShipZipLbl;
-    private javax.swing.JTextField CustShipZipText;
+    private javax.swing.JComboBox CustShipStateComB1;
     private javax.swing.JPanel CustomerInfoPanel;
     private javax.swing.JTextField LoginEMPIDField;
     private javax.swing.JLabel LoginEMPIDLabel;
@@ -1106,70 +2075,152 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JPasswordField LoginPasswordFieldText;
     private javax.swing.JButton LoginSubmitButton;
     private javax.swing.JPanel MediaInventoryPanel;
-    private javax.swing.JRadioButton OrderAccountPayRB;
-    private javax.swing.JRadioButton OrderClosedRB;
-    private javax.swing.JLabel OrderContentLbl;
-    private javax.swing.JTextField OrderContentText;
-    private javax.swing.JRadioButton OrderCreatedRB;
-    private javax.swing.JLabel OrderCustNumberLbl;
-    private javax.swing.JTextField OrderCustomerNumberText;
-    private javax.swing.JRadioButton OrderDeliverPayRB;
-    private javax.swing.JLabel OrderDepositLbl;
-    private javax.swing.JTextField OrderDepositText;
-    private javax.swing.JLabel OrderDetailsLbl;
-    private javax.swing.JScrollPane OrderDetailsText;
+    private javax.swing.JRadioButton OrderAccountPayRB1;
+    private javax.swing.JLabel OrderContentLbl1;
+    private javax.swing.JTextField OrderContentText1;
+    private javax.swing.JLabel OrderCustNumberLbl1;
+    private javax.swing.JTextField OrderCustomerNumberText1;
+    private javax.swing.JRadioButton OrderDeliverPayRB1;
+    private javax.swing.JLabel OrderDepositLbl1;
+    private javax.swing.JTextField OrderDepositText1;
     private javax.swing.ButtonGroup OrderEngMediaBG;
-    private javax.swing.JRadioButton OrderHoldForPayRB;
     private javax.swing.JPanel OrderInfoPanel;
-    private javax.swing.JLabel OrderJobTypeLbl;
-    private javax.swing.JRadioButton OrderMDeliveredRB;
-    private javax.swing.JRadioButton OrderMEnRouteRB;
-    private javax.swing.JRadioButton OrderMNotRequested;
-    private javax.swing.JRadioButton OrderMNotVerified;
-    private javax.swing.JRadioButton OrderMOnOrderRB;
-    private javax.swing.JRadioButton OrderMSoldRB;
-    private javax.swing.JLabel OrderMediaCatNumLbl;
-    private javax.swing.JTextField OrderMediaCatNumText;
-    private javax.swing.JRadioButton OrderMediaHoldRB;
+    private javax.swing.JLabel OrderJobTypeLbl1;
+    private javax.swing.JLabel OrderMediaCatNumLbl1;
+    private javax.swing.JTextField OrderMediaCatNumText1;
     private javax.swing.ButtonGroup OrderMediaStatusBG;
-    private javax.swing.JLabel OrderMediaStatusRBLbl;
-    private javax.swing.JLabel OrderNumberLbl;
-    private javax.swing.JTextField OrderNumberText;
-    private javax.swing.JRadioButton OrderPECompleteRB;
+    private javax.swing.JLabel OrderNumberLbl1;
+    private javax.swing.JLabel OrderNumberLbl2;
     private javax.swing.ButtonGroup OrderPayTypeBG;
-    private javax.swing.JRadioButton OrderQAFailedRB;
-    private javax.swing.JRadioButton OrderQAPassedRB;
+    private javax.swing.JLabel OrderPaymentTypeLbl1;
     private javax.swing.ButtonGroup OrderStatusBG;
-    private javax.swing.JLabel OrderStatusRBLbl;
-    private javax.swing.JPanel OrderTrackingPanel;
+    private javax.swing.JTabbedPane OrderTP;
     private javax.swing.ButtonGroup OrderTypeBG;
-    private javax.swing.JRadioButton OrderTypeEngrRB;
-    private javax.swing.JRadioButton OrderTypePlaqueRB;
-    private javax.swing.JRadioButton OrderTypePrintRB;
-    private javax.swing.JRadioButton OrderTypeTrophyRB;
-    private javax.swing.JRadioButton OrderVerifiedRB;
-    private javax.swing.JRadioButton OrderWorkingRB;
+    private javax.swing.JRadioButton OrderTypeEngrRB1;
+    private javax.swing.JRadioButton OrderTypePlaqueRB1;
+    private javax.swing.JRadioButton OrderTypePrintRB1;
+    private javax.swing.JRadioButton OrderTypeTrophyRB1;
+    private javax.swing.JPanel OrderVerifyPanel;
+    private javax.swing.JRadioButton QACorrectContentFailRb;
+    private javax.swing.JRadioButton QACorrectContentFailRb1;
+    private javax.swing.JRadioButton QACorrectContentFailRb2;
+    private javax.swing.JLabel QACorrectContentLbl;
+    private javax.swing.JLabel QACorrectContentLbl1;
+    private javax.swing.JLabel QACorrectContentLbl2;
+    private javax.swing.JRadioButton QACorrectContentPassRb;
+    private javax.swing.JRadioButton QACorrectContentPassRb1;
+    private javax.swing.JRadioButton QACorrectContentPassRb2;
+    private javax.swing.JRadioButton QACorrectMediaFailRb;
+    private javax.swing.JRadioButton QACorrectMediaFailRb1;
+    private javax.swing.JRadioButton QACorrectMediaFailRb2;
+    private javax.swing.JRadioButton QACorrectMediaPassRb;
+    private javax.swing.JRadioButton QACorrectMediaPassRb1;
+    private javax.swing.JRadioButton QACorrectMediaPassRb2;
+    private javax.swing.JLabel QACorrectOrderMediaLbl;
+    private javax.swing.JLabel QACorrectOrderMediaLbl1;
+    private javax.swing.JLabel QACorrectOrderMediaLbl2;
+    private javax.swing.JLabel QAEngrFinishLbl;
+    private javax.swing.JLabel QAEngrFinishLbl1;
+    private javax.swing.ButtonGroup QAMediaFinishBG;
+    private javax.swing.JRadioButton QAMediaFinishFailRb;
+    private javax.swing.JRadioButton QAMediaFinishFailRb1;
+    private javax.swing.JRadioButton QAMediaFinishFailRb2;
+    private javax.swing.JLabel QAMediaFinishLbl;
+    private javax.swing.JLabel QAMediaFinishLbl1;
+    private javax.swing.JLabel QAMediaFinishLbl2;
+    private javax.swing.JRadioButton QAMediaFinishPassRb;
+    private javax.swing.JRadioButton QAMediaFinishPassRb1;
+    private javax.swing.JRadioButton QAMediaFinishPassRb2;
+    private javax.swing.ButtonGroup QAOrderContentBG;
+    private javax.swing.ButtonGroup QAOrderMediaBG;
     private javax.swing.JPanel QAPanel;
-    private javax.swing.JCheckBox SameAsBillCheckBox;
-    private javax.swing.JLabel ShippLbl;
+    private javax.swing.ButtonGroup QAWorkmanshipBG;
+    private javax.swing.JRadioButton QAWorkmanshipFailRb;
+    private javax.swing.JRadioButton QAWorkmanshipFailRb1;
+    private javax.swing.JRadioButton QAWorkmanshipPassRb;
+    private javax.swing.JRadioButton QAWorkmanshipPassRb1;
     private javax.swing.JTabbedPane WSCInterface;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JComboBox jComboBox3;
+    private javax.swing.JComboBox jComboBox4;
+    private javax.swing.JComboBox jComboBox5;
+    private javax.swing.JComboBox jComboBox6;
+    private javax.swing.JComboBox jComboBox7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JList jList1;
     private javax.swing.JList jList2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField3;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
