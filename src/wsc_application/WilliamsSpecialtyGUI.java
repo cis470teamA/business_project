@@ -296,7 +296,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                         .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(LoginEMPIDField)
                             .addComponent(LoginPasswordFieldText, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         LoginPanelLayout.setVerticalGroup(
             LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,7 +313,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(LoginSubmitButton))
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         WSCInterface.addTab("Login", LoginPanel);
@@ -439,7 +439,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                             .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addComponent(OrderDepositLbl1)))
-                        .addGap(2, 2, Short.MAX_VALUE))
+                        .addGap(6, 34, Short.MAX_VALUE))
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -447,7 +447,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(OrderDepositText1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox3, 0, 131, Short.MAX_VALUE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(OrderMediaCatNumText1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -466,7 +466,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                         .addComponent(CustCreateButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(CustCreateButton8)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                 .addGap(215, 215, 215)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -543,7 +543,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
                     .addComponent(jLabel34))
@@ -687,7 +687,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         QAPanelLayout.setHorizontalGroup(
             QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
-                .addContainerGap(112, Short.MAX_VALUE)
+                .addContainerGap(192, Short.MAX_VALUE)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(QAPanelLayout.createSequentialGroup()
                         .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -787,7 +787,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                     .addComponent(QAWorkmanshipPassRb)
                     .addComponent(QAWorkmanshipFailRb)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1033,7 +1033,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                                             .addComponent(jLabel29)
                                             .addComponent(jLabel30)
                                             .addComponent(jLabel31))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                                         .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(QAMediaFinishLbl2)
                                             .addComponent(QACorrectOrderMediaLbl2)
@@ -1199,7 +1199,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel46)
                     .addComponent(jLabel43))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         OrderTP.addTab("Order Verify", OrderVerifyPanel);
@@ -1341,7 +1341,7 @@ CustShipStateComB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(ActiveOrderLbl)
                 .addComponent(CustOrderListBox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(CustOrderListBoxLbl))
-            .addContainerGap(122, Short.MAX_VALUE))
+            .addContainerGap(198, Short.MAX_VALUE))
     );
     CustomerInfoPanelLayout.setVerticalGroup(
         CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1393,7 +1393,7 @@ CustShipStateComB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(CustFindButton)
                         .addComponent(CustCreateButton)
                         .addComponent(CustCreateButton1))))
-            .addContainerGap(124, Short.MAX_VALUE))
+            .addContainerGap(208, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Customer Info", CustomerInfoPanel);
@@ -1532,7 +1532,7 @@ CustShipStateComB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(CustCreateButton5))
             .addGap(36, 36, 36)
             .addComponent(jLabel13)
-            .addContainerGap(127, Short.MAX_VALUE))
+            .addContainerGap(201, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Inventory", MediaInventoryPanel);
@@ -1674,7 +1674,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(CustBillZipText1)))))
-                    .addGap(18, 116, Short.MAX_VALUE)
+                    .addGap(18, 140, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(ActiveOrderLbl1)
                         .addComponent(CustOrderListBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1685,7 +1685,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
                     .addComponent(CustCreateButton2)
                     .addGap(5, 5, 5)
                     .addComponent(CustCreateButton3)))
-            .addContainerGap(119, Short.MAX_VALUE))
+            .addContainerGap(143, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1741,7 +1741,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
                 .addComponent(CustFindButton1)
                 .addComponent(CustCreateButton2)
                 .addComponent(CustCreateButton3))
-            .addContainerGap(87, Short.MAX_VALUE))
+            .addContainerGap(179, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Employee Info", jPanel1);

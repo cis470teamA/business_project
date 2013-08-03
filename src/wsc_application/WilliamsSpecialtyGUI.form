@@ -104,7 +104,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="243" max="32767" attributes="0"/>
+                      <EmptySpace pref="277" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -126,7 +126,7 @@
                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LoginSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="262" max="32767" attributes="0"/>
+                      <EmptySpace pref="303" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -218,7 +218,7 @@
                                           <Component id="OrderDepositLbl1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="6" pref="2" max="32767" attributes="0"/>
+                                  <EmptySpace min="6" pref="34" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -230,7 +230,7 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="OrderDepositText1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
-                              <Component id="jComboBox3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jComboBox3" alignment="0" pref="131" max="32767" attributes="0"/>
                               <Component id="jComboBox1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
                               <Component id="jTextField20" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
                               <Component id="OrderMediaCatNumText1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
@@ -254,7 +254,7 @@
                                   <Component id="CustCreateButton8" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="42" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
@@ -349,7 +349,7 @@
                                   <Component id="jComboBox3" linkSize="6" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="30" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -580,7 +580,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="112" max="32767" attributes="0"/>
+                          <EmptySpace pref="192" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -699,7 +699,7 @@
                               <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField10" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="6" max="32767" attributes="0"/>
                           <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
@@ -990,7 +990,7 @@
                                                       <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <EmptySpace pref="106" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="QAMediaFinishLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       <Component id="QACorrectOrderMediaLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1190,7 +1190,7 @@
                               <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="51" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1629,7 +1629,7 @@
                           <Component id="CustOrderListBox" min="-2" pref="133" max="-2" attributes="0"/>
                           <Component id="CustOrderListBoxLbl" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="122" max="32767" attributes="0"/>
+                      <EmptySpace pref="198" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1695,7 +1695,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="124" max="32767" attributes="0"/>
+                      <EmptySpace pref="208" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1952,7 +1952,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="127" max="32767" attributes="0"/>
+                      <EmptySpace pref="201" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2130,7 +2130,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace type="separate" pref="116" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" pref="140" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="ActiveOrderLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="CustOrderListBox1" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
@@ -2145,7 +2145,7 @@
                               <Component id="CustCreateButton3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="119" max="32767" attributes="0"/>
+                      <EmptySpace pref="143" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2216,7 +2216,7 @@
                           <Component id="CustCreateButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="CustCreateButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="87" max="32767" attributes="0"/>
+                      <EmptySpace pref="179" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
