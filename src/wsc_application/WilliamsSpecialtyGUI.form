@@ -183,7 +183,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JTabbedPane" name="OrderTP">
+        <Container class="javax.swing.JTabbedPane" name="Order">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Order">
@@ -211,63 +211,63 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel14" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaStatusLbl" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderTypePrintRB1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderCustNumberLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderNumberLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderJobTypeLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderPaymentTypeLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderDeliverPayRB1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderAccountPayRB1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTypePrintRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                                          <Component id="OrderDepositLbl1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderDepositLbl" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="OrderTypeEngrRB1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrderTypePlaqueRB1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderTypeEngrRB" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderTypePlaqueRB" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                          <Component id="OrderTypeTrophyRB1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="6" pref="34" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="OrderDepositText1" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="jComboBox1" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="jTextField20" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="OrderMediaCatNumText1" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="jComboBox7" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="OrderCustomerNumberText1" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="jComboBox3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="OrderDepositText" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="OrderStatusCB" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="OrderTotalText" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="OrderMediaCatNumText" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="OrderNumberCB" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="OrderCustomerNumberText" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="OrderMediaStatusCB" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="32" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderContentText1" min="-2" pref="317" max="-2" attributes="0"/>
-                                      <Component id="OrderContentLbl1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
+                                      <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="CustFindButton4" min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="OrderSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="42" max="32767" attributes="0"/>
@@ -275,13 +275,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderVerifyByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderCreatedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderAssignedToLbl" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderLastModifiedByLbl" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -294,54 +294,54 @@
                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="OrderContentText1" min="-2" pref="265" max="-2" attributes="0"/>
+                                      <Component id="OrderContentText" min="-2" pref="265" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="OrderContentLbl1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrderCustomerNumberText1" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderCustomerNumberText" linkSize="6" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jComboBox7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderNumberCB" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumText1" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaCatNumText" linkSize="6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
-                                  <Component id="OrderCustNumberLbl1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderCustNumberLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderNumberLbl1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderNumberLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="OrderMediaCatNumLbl1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderMediaCatNumLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                  <Component id="OrderJobTypeLbl1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderJobTypeLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypePrintRB1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderTypePrintRB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypeEngrRB1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderTypeEngrRB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypeTrophyRB1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypePlaqueRB1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderTypePlaqueRB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField20" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTotalText" linkSize="6" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
-                                          <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderTotalLbl" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="OrderPaymentTypeLbl1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderPaymentTypeLbl" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderAccountPayRB1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderAccountPayRB" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderDeliverPayRB1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderDeliverPayRB" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="OrderDepositLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrderDepositText1" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OrderDepositLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OrderDepositText" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -349,31 +349,31 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="jComboBox1" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="CustFindButton4" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="CustCreateButton9" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="CustCreateButton8" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderStatusCB" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderStatusLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderSearchButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderSubmitButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="11" pref="11" max="11" attributes="0"/>
-                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderMediaStatusLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="8" pref="8" max="8" attributes="0"/>
-                                  <Component id="jComboBox3" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderMediaStatusCB" linkSize="6" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="30" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderLastModifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
@@ -381,20 +381,23 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="OrderNumberLbl1">
+                <Component class="javax.swing.JLabel" name="OrderNumberLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderDeliverPayRB1">
+                <Component class="javax.swing.JRadioButton" name="OrderDeliverPayRB">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderPayTypeBG"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Payment on Delivery"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDeliverPayRBActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderAccountPayRB1">
+                <Component class="javax.swing.JRadioButton" name="OrderAccountPayRB">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderPayTypeBG"/>
@@ -402,17 +405,17 @@
                     <Property name="text" type="java.lang.String" value="Payment on Account"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderDepositLbl1">
+                <Component class="javax.swing.JLabel" name="OrderDepositLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Deposit Amount"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="OrderDepositText1">
+                <Component class="javax.swing.JTextField" name="OrderDepositText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDepositText1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDepositTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypePrintRB1">
+                <Component class="javax.swing.JRadioButton" name="OrderTypePrintRB">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderTypeBG"/>
@@ -420,7 +423,7 @@
                     <Property name="text" type="java.lang.String" value="Printing"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypeEngrRB1">
+                <Component class="javax.swing.JRadioButton" name="OrderTypeEngrRB">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderTypeBG"/>
@@ -428,7 +431,7 @@
                     <Property name="text" type="java.lang.String" value="Engraving"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypeTrophyRB1">
+                <Component class="javax.swing.JRadioButton" name="OrderTypeTrophyRB">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderEngMediaBG"/>
@@ -436,7 +439,7 @@
                     <Property name="text" type="java.lang.String" value="Trophy"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypePlaqueRB1">
+                <Component class="javax.swing.JRadioButton" name="OrderTypePlaqueRB">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderEngMediaBG"/>
@@ -444,68 +447,68 @@
                     <Property name="text" type="java.lang.String" value="Plaque"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderContentLbl1">
+                <Component class="javax.swing.JLabel" name="OrderContentLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Printing/Engraving Content:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="OrderContentText1">
+                <Component class="javax.swing.JTextField" name="OrderContentText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderContentText1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderContentTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderMediaCatNumLbl1">
+                <Component class="javax.swing.JLabel" name="OrderMediaCatNumLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Media Catalog Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="OrderMediaCatNumText1">
+                <Component class="javax.swing.JTextField" name="OrderMediaCatNumText">
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderJobTypeLbl1">
+                <Component class="javax.swing.JLabel" name="OrderJobTypeLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Job Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderCustNumberLbl1">
+                <Component class="javax.swing.JLabel" name="OrderCustNumberLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Customer Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="OrderCustomerNumberText1">
+                <Component class="javax.swing.JTextField" name="OrderCustomerNumberText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderCustomerNumberText1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderCustomerNumberTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderPaymentTypeLbl1">
+                <Component class="javax.swing.JLabel" name="OrderPaymentTypeLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Payment Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustCreateButton8">
+                <Component class="javax.swing.JButton" name="OrderClearFieldsButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Clear Fields"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton8ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderClearFieldsButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustCreateButton9">
+                <Component class="javax.swing.JButton" name="OrderSubmitButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Create/Update"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton9ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSubmitButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustFindButton4">
+                <Component class="javax.swing.JButton" name="OrderSearchButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Find"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButton4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSearchButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="OrderStatusCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -517,12 +520,12 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel14">
+                <Component class="javax.swing.JLabel" name="OrderStatusLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox3">
+                <Component class="javax.swing.JComboBox" name="OrderMediaStatusCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -533,43 +536,46 @@
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderMediaStatusCBActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="OrderMediaStatusLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Media Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel32">
+                <Component class="javax.swing.JLabel" name="OrderTotalLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Estimated Total"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField20">
+                <Component class="javax.swing.JTextField" name="OrderTotalText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField20ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderTotalTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel33">
+                <Component class="javax.swing.JLabel" name="OrderVerifyByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Verified by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel34">
+                <Component class="javax.swing.JLabel" name="OrderAssignedToLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel37">
+                <Component class="javax.swing.JLabel" name="OrderCreatedByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Created by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel38">
+                <Component class="javax.swing.JLabel" name="OrderLastModifiedByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox7">
+                <Component class="javax.swing.JComboBox" name="OrderNumberCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -643,11 +649,11 @@
                               </Group>
                               <Component id="jScrollPane1" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="CustFindButton3" min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="QASearchButton" min="-2" pref="65" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="QASubmitButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="QAClearButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -721,9 +727,9 @@
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="CustFindButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CustCreateButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CustCreateButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QASearchButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QASubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -741,28 +747,28 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="CustCreateButton6">
+                <Component class="javax.swing.JButton" name="QASubmitButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Submit"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton6ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASubmitButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustCreateButton7">
+                <Component class="javax.swing.JButton" name="QAClearButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Clear Fields"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton7ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAClearButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustFindButton3">
+                <Component class="javax.swing.JButton" name="QASearchButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Find"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButton3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASearchButtonActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="QACorrectContentLbl">

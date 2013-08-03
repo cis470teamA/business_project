@@ -48,43 +48,43 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         LoginPASSLabel = new javax.swing.JLabel();
         LoginPasswordFieldText = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
-        OrderTP = new javax.swing.JTabbedPane();
+        Order = new javax.swing.JTabbedPane();
         OrderInfoPanel = new javax.swing.JPanel();
-        OrderNumberLbl1 = new javax.swing.JLabel();
-        OrderDeliverPayRB1 = new javax.swing.JRadioButton();
-        OrderAccountPayRB1 = new javax.swing.JRadioButton();
-        OrderDepositLbl1 = new javax.swing.JLabel();
-        OrderDepositText1 = new javax.swing.JTextField();
-        OrderTypePrintRB1 = new javax.swing.JRadioButton();
-        OrderTypeEngrRB1 = new javax.swing.JRadioButton();
-        OrderTypeTrophyRB1 = new javax.swing.JRadioButton();
-        OrderTypePlaqueRB1 = new javax.swing.JRadioButton();
-        OrderContentLbl1 = new javax.swing.JLabel();
-        OrderContentText1 = new javax.swing.JTextField();
-        OrderMediaCatNumLbl1 = new javax.swing.JLabel();
-        OrderMediaCatNumText1 = new javax.swing.JTextField();
-        OrderJobTypeLbl1 = new javax.swing.JLabel();
-        OrderCustNumberLbl1 = new javax.swing.JLabel();
-        OrderCustomerNumberText1 = new javax.swing.JTextField();
-        OrderPaymentTypeLbl1 = new javax.swing.JLabel();
-        CustCreateButton8 = new javax.swing.JButton();
-        CustCreateButton9 = new javax.swing.JButton();
-        CustFindButton4 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
-        jLabel14 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox();
+        OrderNumberLbl = new javax.swing.JLabel();
+        OrderDeliverPayRB = new javax.swing.JRadioButton();
+        OrderAccountPayRB = new javax.swing.JRadioButton();
+        OrderDepositLbl = new javax.swing.JLabel();
+        OrderDepositText = new javax.swing.JTextField();
+        OrderTypePrintRB = new javax.swing.JRadioButton();
+        OrderTypeEngrRB = new javax.swing.JRadioButton();
+        OrderTypeTrophyRB = new javax.swing.JRadioButton();
+        OrderTypePlaqueRB = new javax.swing.JRadioButton();
+        OrderContentLbl = new javax.swing.JLabel();
+        OrderContentText = new javax.swing.JTextField();
+        OrderMediaCatNumLbl = new javax.swing.JLabel();
+        OrderMediaCatNumText = new javax.swing.JTextField();
+        OrderJobTypeLbl = new javax.swing.JLabel();
+        OrderCustNumberLbl = new javax.swing.JLabel();
+        OrderCustomerNumberText = new javax.swing.JTextField();
+        OrderPaymentTypeLbl = new javax.swing.JLabel();
+        OrderClearFieldsButton = new javax.swing.JButton();
+        OrderSubmitButton = new javax.swing.JButton();
+        OrderSearchButton = new javax.swing.JButton();
+        OrderStatusCB = new javax.swing.JComboBox();
+        OrderStatusLbl = new javax.swing.JLabel();
+        OrderMediaStatusCB = new javax.swing.JComboBox();
+        OrderMediaStatusLbl = new javax.swing.JLabel();
+        OrderTotalLbl = new javax.swing.JLabel();
+        OrderTotalText = new javax.swing.JTextField();
+        OrderVerifyByLbl = new javax.swing.JLabel();
+        OrderAssignedToLbl = new javax.swing.JLabel();
+        OrderCreatedByLbl = new javax.swing.JLabel();
+        OrderLastModifiedByLbl = new javax.swing.JLabel();
+        OrderNumberCB = new javax.swing.JComboBox();
         QAPanel = new javax.swing.JPanel();
-        CustCreateButton6 = new javax.swing.JButton();
-        CustCreateButton7 = new javax.swing.JButton();
-        CustFindButton3 = new javax.swing.JButton();
+        QASubmitButton = new javax.swing.JButton();
+        QAClearButton = new javax.swing.JButton();
+        QASearchButton = new javax.swing.JButton();
         QACorrectContentLbl = new javax.swing.JLabel();
         QACorrectOrderMediaLbl = new javax.swing.JLabel();
         QAMediaFinishLbl = new javax.swing.JLabel();
@@ -323,102 +323,112 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
 
         WSCInterface.addTab("Login", LoginPanel);
 
-        OrderNumberLbl1.setText("Order Number");
+        OrderNumberLbl.setText("Order Number");
 
-        OrderPayTypeBG.add(OrderDeliverPayRB1);
-        OrderDeliverPayRB1.setText("Payment on Delivery");
-
-        OrderPayTypeBG.add(OrderAccountPayRB1);
-        OrderAccountPayRB1.setText("Payment on Account");
-
-        OrderDepositLbl1.setText("Deposit Amount");
-
-        OrderDepositText1.addActionListener(new java.awt.event.ActionListener() {
+        OrderPayTypeBG.add(OrderDeliverPayRB);
+        OrderDeliverPayRB.setText("Payment on Delivery");
+        OrderDeliverPayRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderDepositText1ActionPerformed(evt);
+                OrderDeliverPayRBActionPerformed(evt);
             }
         });
 
-        OrderTypeBG.add(OrderTypePrintRB1);
-        OrderTypePrintRB1.setText("Printing");
+        OrderPayTypeBG.add(OrderAccountPayRB);
+        OrderAccountPayRB.setText("Payment on Account");
 
-        OrderTypeBG.add(OrderTypeEngrRB1);
-        OrderTypeEngrRB1.setText("Engraving");
+        OrderDepositLbl.setText("Deposit Amount");
 
-        OrderEngMediaBG.add(OrderTypeTrophyRB1);
-        OrderTypeTrophyRB1.setText("Trophy");
-
-        OrderEngMediaBG.add(OrderTypePlaqueRB1);
-        OrderTypePlaqueRB1.setText("Plaque");
-
-        OrderContentLbl1.setText("Printing/Engraving Content:");
-
-        OrderContentText1.addActionListener(new java.awt.event.ActionListener() {
+        OrderDepositText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderContentText1ActionPerformed(evt);
+                OrderDepositTextActionPerformed(evt);
             }
         });
 
-        OrderMediaCatNumLbl1.setText("Media Catalog Number");
+        OrderTypeBG.add(OrderTypePrintRB);
+        OrderTypePrintRB.setText("Printing");
 
-        OrderJobTypeLbl1.setText("Job Type");
+        OrderTypeBG.add(OrderTypeEngrRB);
+        OrderTypeEngrRB.setText("Engraving");
 
-        OrderCustNumberLbl1.setText("Customer Number");
+        OrderEngMediaBG.add(OrderTypeTrophyRB);
+        OrderTypeTrophyRB.setText("Trophy");
 
-        OrderCustomerNumberText1.addActionListener(new java.awt.event.ActionListener() {
+        OrderEngMediaBG.add(OrderTypePlaqueRB);
+        OrderTypePlaqueRB.setText("Plaque");
+
+        OrderContentLbl.setText("Printing/Engraving Content:");
+
+        OrderContentText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderCustomerNumberText1ActionPerformed(evt);
+                OrderContentTextActionPerformed(evt);
             }
         });
 
-        OrderPaymentTypeLbl1.setText("Payment Type");
+        OrderMediaCatNumLbl.setText("Media Catalog Number");
 
-        CustCreateButton8.setText("Clear Fields");
-        CustCreateButton8.addActionListener(new java.awt.event.ActionListener() {
+        OrderJobTypeLbl.setText("Job Type");
+
+        OrderCustNumberLbl.setText("Customer Number");
+
+        OrderCustomerNumberText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustCreateButton8ActionPerformed(evt);
+                OrderCustomerNumberTextActionPerformed(evt);
             }
         });
 
-        CustCreateButton9.setText("Create/Update");
-        CustCreateButton9.addActionListener(new java.awt.event.ActionListener() {
+        OrderPaymentTypeLbl.setText("Payment Type");
+
+        OrderClearFieldsButton.setText("Clear Fields");
+        OrderClearFieldsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustCreateButton9ActionPerformed(evt);
+                OrderClearFieldsButtonActionPerformed(evt);
             }
         });
 
-        CustFindButton4.setText("Find");
-        CustFindButton4.addActionListener(new java.awt.event.ActionListener() {
+        OrderSubmitButton.setText("Create/Update");
+        OrderSubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustFindButton4ActionPerformed(evt);
+                OrderSubmitButtonActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel14.setText("Order Status");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel15.setText("Media Status");
-
-        jLabel32.setText("Estimated Total");
-
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        OrderSearchButton.setText("Find");
+        OrderSearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                OrderSearchButtonActionPerformed(evt);
             }
         });
 
-        jLabel33.setText("Order Verified by ******");
+        OrderStatusCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel34.setText("Work Assigned to ******");
+        OrderStatusLbl.setText("Order Status");
 
-        jLabel37.setText("Order Created by ******");
+        OrderMediaStatusCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        OrderMediaStatusCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderMediaStatusCBActionPerformed(evt);
+            }
+        });
 
-        jLabel38.setText("Last Modified by ******");
+        OrderMediaStatusLbl.setText("Media Status");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        OrderTotalLbl.setText("Estimated Total");
+
+        OrderTotalText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderTotalTextActionPerformed(evt);
+            }
+        });
+
+        OrderVerifyByLbl.setText("Order Verified by ******");
+
+        OrderAssignedToLbl.setText("Work Assigned to ******");
+
+        OrderCreatedByLbl.setText("Order Created by ******");
+
+        OrderLastModifiedByLbl.setText("Last Modified by ******");
+
+        OrderNumberCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout OrderInfoPanelLayout = new javax.swing.GroupLayout(OrderInfoPanel);
         OrderInfoPanel.setLayout(OrderInfoPanelLayout);
@@ -429,62 +439,62 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OrderStatusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrderTypePrintRB1)
-                            .addComponent(OrderCustNumberLbl1)
-                            .addComponent(OrderNumberLbl1)
-                            .addComponent(OrderMediaCatNumLbl1)
-                            .addComponent(OrderJobTypeLbl1)
-                            .addComponent(jLabel32)
-                            .addComponent(OrderPaymentTypeLbl1)
-                            .addComponent(OrderDeliverPayRB1)
-                            .addComponent(OrderAccountPayRB1)
+                            .addComponent(OrderTypePrintRB)
+                            .addComponent(OrderCustNumberLbl)
+                            .addComponent(OrderNumberLbl)
+                            .addComponent(OrderMediaCatNumLbl)
+                            .addComponent(OrderJobTypeLbl)
+                            .addComponent(OrderTotalLbl)
+                            .addComponent(OrderPaymentTypeLbl)
+                            .addComponent(OrderDeliverPayRB)
+                            .addComponent(OrderAccountPayRB)
                             .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                                 .addGap(21, 21, 21)
-                                .addComponent(OrderDepositLbl1))
+                                .addComponent(OrderDepositLbl))
                             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(OrderTypeEngrRB1)
-                                .addComponent(OrderTypePlaqueRB1))
+                                .addComponent(OrderTypeEngrRB)
+                                .addComponent(OrderTypePlaqueRB))
                             .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                                 .addGap(16, 16, 16)
-                                .addComponent(OrderTypeTrophyRB1)))
+                                .addComponent(OrderTypeTrophyRB)))
                         .addGap(6, 34, Short.MAX_VALUE)))
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(OrderDepositText1, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(jComboBox1, 0, 99, Short.MAX_VALUE)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(OrderMediaCatNumText1, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OrderCustomerNumberText1, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(OrderDepositText, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(OrderStatusCB, 0, 99, Short.MAX_VALUE)
+                    .addComponent(OrderTotalText, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(OrderMediaCatNumText, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(OrderNumberCB, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OrderCustomerNumberText, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(OrderMediaStatusCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OrderContentText1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(OrderContentLbl1)))
+                            .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderContentLbl)))
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(CustFindButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(OrderSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CustCreateButton9)
+                        .addComponent(OrderSubmitButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CustCreateButton8)))
+                        .addComponent(OrderClearFieldsButton)))
                 .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                 .addGap(215, 215, 215)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel33)
-                    .addComponent(jLabel37))
+                    .addComponent(OrderVerifyByLbl)
+                    .addComponent(OrderCreatedByLbl))
                 .addGap(48, 48, 48)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel38))
+                    .addComponent(OrderAssignedToLbl)
+                    .addComponent(OrderLastModifiedByLbl))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         OrderInfoPanelLayout.setVerticalGroup(
@@ -494,97 +504,97 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                             .addGap(74, 74, 74)
-                            .addComponent(OrderContentText1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(19, 19, 19))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
                             .addContainerGap()
                             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(OrderContentLbl1)
-                                .addComponent(OrderCustomerNumberText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(OrderContentLbl)
+                                .addComponent(OrderCustomerNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderNumberCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(OrderMediaCatNumText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderMediaCatNumText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(238, 238, 238)))
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addComponent(OrderCustNumberLbl1)
+                        .addComponent(OrderCustNumberLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderNumberLbl1)
+                        .addComponent(OrderNumberLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderMediaCatNumLbl1)
+                        .addComponent(OrderMediaCatNumLbl)
                         .addGap(5, 5, 5)
-                        .addComponent(OrderJobTypeLbl1)
+                        .addComponent(OrderJobTypeLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderTypePrintRB1)
+                        .addComponent(OrderTypePrintRB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderTypeEngrRB1)
+                        .addComponent(OrderTypeEngrRB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderTypeTrophyRB1)
+                        .addComponent(OrderTypeTrophyRB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OrderTypePlaqueRB1)
+                        .addComponent(OrderTypePlaqueRB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderTotalText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel32)
+                                .addComponent(OrderTotalLbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(OrderPaymentTypeLbl1)
+                                .addComponent(OrderPaymentTypeLbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderAccountPayRB1)
+                                .addComponent(OrderAccountPayRB)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrderDeliverPayRB1)
+                                .addComponent(OrderDeliverPayRB)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(OrderDepositLbl1)
-                                    .addComponent(OrderDepositText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(OrderDepositLbl)
+                                    .addComponent(OrderDepositText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(26, 26, 26)))
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(CustFindButton4)
-                    .addComponent(CustCreateButton9)
-                    .addComponent(CustCreateButton8))
+                    .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OrderStatusLbl)
+                    .addComponent(OrderSearchButton)
+                    .addComponent(OrderSubmitButton)
+                    .addComponent(OrderClearFieldsButton))
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
-                        .addComponent(jLabel15))
+                        .addComponent(OrderMediaStatusLbl))
                     .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel37)
-                    .addComponent(jLabel34))
+                    .addComponent(OrderCreatedByLbl)
+                    .addComponent(OrderAssignedToLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel38)
-                    .addComponent(jLabel33))
+                    .addComponent(OrderLastModifiedByLbl)
+                    .addComponent(OrderVerifyByLbl))
                 .addGap(51, 51, 51))
         );
 
-        OrderInfoPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {OrderCustomerNumberText1, OrderDepositText1, OrderMediaCatNumText1, jComboBox1, jComboBox3, jTextField20});
+        OrderInfoPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {OrderCustomerNumberText, OrderDepositText, OrderMediaCatNumText, OrderMediaStatusCB, OrderStatusCB, OrderTotalText});
 
-        OrderTP.addTab("Order Info", OrderInfoPanel);
+        Order.addTab("Order Info", OrderInfoPanel);
 
-        CustCreateButton6.setText("Submit");
-        CustCreateButton6.addActionListener(new java.awt.event.ActionListener() {
+        QASubmitButton.setText("Submit");
+        QASubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustCreateButton6ActionPerformed(evt);
+                QASubmitButtonActionPerformed(evt);
             }
         });
 
-        CustCreateButton7.setText("Clear Fields");
-        CustCreateButton7.addActionListener(new java.awt.event.ActionListener() {
+        QAClearButton.setText("Clear Fields");
+        QAClearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustCreateButton7ActionPerformed(evt);
+                QAClearButtonActionPerformed(evt);
             }
         });
 
-        CustFindButton3.setText("Find");
-        CustFindButton3.addActionListener(new java.awt.event.ActionListener() {
+        QASearchButton.setText("Find");
+        QASearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustFindButton3ActionPerformed(evt);
+                QASearchButtonActionPerformed(evt);
             }
         });
 
@@ -735,11 +745,11 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                             .addComponent(jLabel19)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(QAPanelLayout.createSequentialGroup()
-                        .addComponent(CustFindButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(QASearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CustCreateButton6)
+                        .addComponent(QASubmitButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CustCreateButton7))
+                        .addComponent(QAClearButton))
                     .addComponent(jLabel16))
                 .addGap(200, 200, 200))
             .addGroup(QAPanelLayout.createSequentialGroup()
@@ -802,9 +812,9 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CustFindButton3)
-                    .addComponent(CustCreateButton6)
-                    .addComponent(CustCreateButton7))
+                    .addComponent(QASearchButton)
+                    .addComponent(QASubmitButton)
+                    .addComponent(QAClearButton))
                 .addGap(27, 27, 27)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
@@ -816,7 +826,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addGap(88, 88, 88))
         );
 
-        OrderTP.addTab("Quality Assurance", QAPanel);
+        Order.addTab("Quality Assurance", QAPanel);
 
         OVSubmitButton.setText("Submit/Assign");
         OVSubmitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1229,9 +1239,9 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
-        OrderTP.addTab("Order Verify", OrderVerifyPanel);
+        Order.addTab("Order Verify", OrderVerifyPanel);
 
-        WSCInterface.addTab("Order", OrderTP);
+        WSCInterface.addTab("Order", Order);
 
         CustBillLNameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1843,41 +1853,41 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginSubmitButtonActionPerformed
 
-    private void OrderDepositText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDepositText1ActionPerformed
+    private void OrderDepositTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDepositTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_OrderDepositText1ActionPerformed
+    }//GEN-LAST:event_OrderDepositTextActionPerformed
 
-    private void OrderCustomerNumberText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCustomerNumberText1ActionPerformed
+    private void OrderCustomerNumberTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCustomerNumberTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_OrderCustomerNumberText1ActionPerformed
+    }//GEN-LAST:event_OrderCustomerNumberTextActionPerformed
 
-    private void CustCreateButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton6ActionPerformed
+    private void QASubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASubmitButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustCreateButton6ActionPerformed
+    }//GEN-LAST:event_QASubmitButtonActionPerformed
 
-    private void CustCreateButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton7ActionPerformed
+    private void QAClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAClearButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustCreateButton7ActionPerformed
+    }//GEN-LAST:event_QAClearButtonActionPerformed
 
-    private void CustFindButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton3ActionPerformed
+    private void QASearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASearchButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustFindButton3ActionPerformed
+    }//GEN-LAST:event_QASearchButtonActionPerformed
 
-    private void CustCreateButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton8ActionPerformed
+    private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustCreateButton8ActionPerformed
+    }//GEN-LAST:event_OrderClearFieldsButtonActionPerformed
 
-    private void CustCreateButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton9ActionPerformed
+    private void OrderSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSubmitButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustCreateButton9ActionPerformed
+    }//GEN-LAST:event_OrderSubmitButtonActionPerformed
 
-    private void CustFindButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton4ActionPerformed
+    private void OrderSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSearchButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustFindButton4ActionPerformed
+    }//GEN-LAST:event_OrderSearchButtonActionPerformed
 
-    private void OrderContentText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderContentText1ActionPerformed
+    private void OrderContentTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderContentTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_OrderContentText1ActionPerformed
+    }//GEN-LAST:event_OrderContentTextActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -2031,9 +2041,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void OrderTotalTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTotalTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }//GEN-LAST:event_OrderTotalTextActionPerformed
 
     private void OVMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaFailTextActionPerformed
         // TODO add your handling code here:
@@ -2046,6 +2056,14 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private void OVOrderNumTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVOrderNumTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OVOrderNumTextActionPerformed
+
+    private void OrderMediaStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderMediaStatusCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OrderMediaStatusCBActionPerformed
+
+    private void OrderDeliverPayRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDeliverPayRBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OrderDeliverPayRBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ActiveOrderLbl;
@@ -2084,15 +2102,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JButton CustCreateButton3;
     private javax.swing.JButton CustCreateButton4;
     private javax.swing.JButton CustCreateButton5;
-    private javax.swing.JButton CustCreateButton6;
-    private javax.swing.JButton CustCreateButton7;
-    private javax.swing.JButton CustCreateButton8;
-    private javax.swing.JButton CustCreateButton9;
     private javax.swing.JButton CustFindButton;
     private javax.swing.JButton CustFindButton1;
     private javax.swing.JButton CustFindButton2;
-    private javax.swing.JButton CustFindButton3;
-    private javax.swing.JButton CustFindButton4;
     private javax.swing.JLabel CustNumberLbl;
     private javax.swing.JLabel CustNumberLbl1;
     private javax.swing.JTextField CustNumberText;
@@ -2164,29 +2176,42 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JButton OVSearchButton;
     private javax.swing.JButton OVSubmitButton;
     private javax.swing.JLabel OVVerifyByLbl;
-    private javax.swing.JRadioButton OrderAccountPayRB1;
-    private javax.swing.JLabel OrderContentLbl1;
-    private javax.swing.JTextField OrderContentText1;
-    private javax.swing.JLabel OrderCustNumberLbl1;
-    private javax.swing.JTextField OrderCustomerNumberText1;
-    private javax.swing.JRadioButton OrderDeliverPayRB1;
-    private javax.swing.JLabel OrderDepositLbl1;
-    private javax.swing.JTextField OrderDepositText1;
+    private javax.swing.JTabbedPane Order;
+    private javax.swing.JRadioButton OrderAccountPayRB;
+    private javax.swing.JLabel OrderAssignedToLbl;
+    private javax.swing.JButton OrderClearFieldsButton;
+    private javax.swing.JLabel OrderContentLbl;
+    private javax.swing.JTextField OrderContentText;
+    private javax.swing.JLabel OrderCreatedByLbl;
+    private javax.swing.JLabel OrderCustNumberLbl;
+    private javax.swing.JTextField OrderCustomerNumberText;
+    private javax.swing.JRadioButton OrderDeliverPayRB;
+    private javax.swing.JLabel OrderDepositLbl;
+    private javax.swing.JTextField OrderDepositText;
     private javax.swing.ButtonGroup OrderEngMediaBG;
     private javax.swing.JPanel OrderInfoPanel;
-    private javax.swing.JLabel OrderJobTypeLbl1;
-    private javax.swing.JLabel OrderMediaCatNumLbl1;
-    private javax.swing.JTextField OrderMediaCatNumText1;
-    private javax.swing.JLabel OrderNumberLbl1;
+    private javax.swing.JLabel OrderJobTypeLbl;
+    private javax.swing.JLabel OrderLastModifiedByLbl;
+    private javax.swing.JLabel OrderMediaCatNumLbl;
+    private javax.swing.JTextField OrderMediaCatNumText;
+    private javax.swing.JComboBox OrderMediaStatusCB;
+    private javax.swing.JLabel OrderMediaStatusLbl;
+    private javax.swing.JComboBox OrderNumberCB;
+    private javax.swing.JLabel OrderNumberLbl;
     private javax.swing.JLabel OrderNumberLbl2;
     private javax.swing.ButtonGroup OrderPayTypeBG;
-    private javax.swing.JLabel OrderPaymentTypeLbl1;
-    private javax.swing.JTabbedPane OrderTP;
+    private javax.swing.JLabel OrderPaymentTypeLbl;
+    private javax.swing.JButton OrderSearchButton;
+    private javax.swing.JComboBox OrderStatusCB;
+    private javax.swing.JLabel OrderStatusLbl;
+    private javax.swing.JButton OrderSubmitButton;
+    private javax.swing.JLabel OrderTotalLbl;
+    private javax.swing.JTextField OrderTotalText;
     private javax.swing.ButtonGroup OrderTypeBG;
-    private javax.swing.JRadioButton OrderTypeEngrRB1;
-    private javax.swing.JRadioButton OrderTypePlaqueRB1;
-    private javax.swing.JRadioButton OrderTypePrintRB1;
-    private javax.swing.JRadioButton OrderTypeTrophyRB1;
+    private javax.swing.JRadioButton OrderTypeEngrRB;
+    private javax.swing.JRadioButton OrderTypePlaqueRB;
+    private javax.swing.JRadioButton OrderTypePrintRB;
+    private javax.swing.JRadioButton OrderTypeTrophyRB;
     private javax.swing.ButtonGroup OrderVerCorrectAccountNumBG;
     private javax.swing.ButtonGroup OrderVerCorrectNameBG;
     private javax.swing.ButtonGroup OrderVerDepositBG;
@@ -2194,7 +2219,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.ButtonGroup OrderVerPayTypeBG;
     private javax.swing.ButtonGroup OrderVerValidContentBG;
     private javax.swing.ButtonGroup OrderVerValidMediaBG;
+    private javax.swing.JLabel OrderVerifyByLbl;
     private javax.swing.JPanel OrderVerifyPanel;
+    private javax.swing.JButton QAClearButton;
     private javax.swing.JRadioButton QACorrectContentFailRb;
     private javax.swing.JLabel QACorrectContentLbl;
     private javax.swing.JRadioButton QACorrectContentPassRb;
@@ -2209,35 +2236,27 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.ButtonGroup QAOrderContentBG;
     private javax.swing.ButtonGroup QAOrderMediaBG;
     private javax.swing.JPanel QAPanel;
+    private javax.swing.JButton QASearchButton;
+    private javax.swing.JButton QASubmitButton;
     private javax.swing.ButtonGroup QAWorkmanshipBG;
     private javax.swing.JRadioButton QAWorkmanshipFailRb;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox5;
     private javax.swing.JComboBox jComboBox6;
-    private javax.swing.JComboBox jComboBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
@@ -2258,7 +2277,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
