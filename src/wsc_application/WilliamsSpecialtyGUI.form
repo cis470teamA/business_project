@@ -98,19 +98,19 @@
                       <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="LoginSubmitButton" min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="LoginButton" min="-2" pref="94" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton1" max="32767" attributes="0"/>
+                              <Component id="LogoutButton" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="LoginEMPIDLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="LoginPASSLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LoginEMPIDLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LoginPassLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="LoginEMPIDField" max="32767" attributes="0"/>
-                                  <Component id="LoginPasswordFieldText" min="-2" pref="123" max="-2" attributes="0"/>
+                                  <Component id="LoginEMPIDTxt" max="32767" attributes="0"/>
+                                  <Component id="LoginPassText" min="-2" pref="123" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -123,18 +123,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LoginEMPIDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LoginEMPIDField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LoginEMPIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LoginEMPIDTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LoginPASSLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LoginPasswordFieldText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LoginPassLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LoginPassText" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LoginSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LogoutButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LoginButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="303" max="32767" attributes="0"/>
                   </Group>
@@ -142,48 +142,377 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="LoginSubmitButton">
+            <Component class="javax.swing.JButton" name="LoginButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Login"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginSubmitButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="LoginEMPIDField">
+            <Component class="javax.swing.JTextField" name="LoginEMPIDTxt">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginEMPIDFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginEMPIDTxtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="LoginEMPIDLabel">
+            <Component class="javax.swing.JLabel" name="LoginEMPIDLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Employee ID"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="LoginPASSLabel">
+            <Component class="javax.swing.JLabel" name="LoginPassLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="LoginPasswordFieldText">
+            <Component class="javax.swing.JPasswordField" name="LoginPassText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jPasswordField1"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginPasswordFieldTextActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginPassTextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="LogoutButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Logout"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LogoutButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JTabbedPane" name="Order">
+        <Container class="javax.swing.JPanel" name="CustomerInfoPanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Customer Info">
+                <Property name="tabTitle" type="java.lang.String" value="Customer Info"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="InvSearchLbl5" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="CustFindButton" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="CustCreateButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="CustClearButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="CustStreet2Lbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="CustStreet2Text" min="-2" pref="95" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="CustStreet1Lbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="CustStreet1Text" min="-2" pref="95" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="CustCityLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                          <Component id="CustCityText" min="-2" pref="95" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="CustOrgLbl" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="CustOrgText" min="-2" pref="95" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="CustLNameLbl" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="CustFNameLbl" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="CUSTIDLbl" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="CustFNameText" max="32767" attributes="0"/>
+                                                  <Component id="CustLNameText" alignment="0" pref="95" max="32767" attributes="0"/>
+                                                  <Component id="CUSTIDCB" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="CustStateLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="CustStateCB" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="CustZipLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="CustZipText" min="-2" pref="95" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="CustActiveOrderLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustOrderListBox" min="-2" pref="133" max="-2" attributes="0"/>
+                                  <Component id="CustOrderListBoxLbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="198" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="CustOrderListBoxLbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CustOrderListBox" min="-2" pref="180" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CustActiveOrderLbl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CUSTIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CUSTIDCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustFNameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustFNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustLNameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustLNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustOrgText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustOrgLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustStreet1Text" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustStreet1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustStreet2Text" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustStreet2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustCityText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustCityLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustZipText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustZipLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustStateCB" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="CustStateLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CustFindButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustCreateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="InvSearchLbl5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="191" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="CustFNameText">
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustLNameText">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustLNameTextActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustOrgText">
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustStreet1Text">
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustStreet2Text">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustStreet2TextActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustFNameLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="First Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustLNameLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Last Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustOrgLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Organization"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustStreet1Lbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Street Address Line 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustStreet2Lbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Street Address Line 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustCityText">
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustZipText">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustZipTextActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustCityLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="City"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustZipLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Zip"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="CustFindButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="CustCreateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Create/Update"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="CustOrderListBox">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="jList1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                        <StringItem index="4" value="Item 5"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="CustOrderListBoxLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Order(s):"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="CustClearButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clear Fields"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustClearButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustActiveOrderLbl">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="*Active orders in red"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CUSTIDLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer Number"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="CustStateCB">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.DefaultComboBoxModel(new String[] {&quot;&quot;, &quot;AL&quot;, &quot;AK&quot;, &quot;AZ&quot;, &quot;AR&quot;, &quot;CA&quot;, &quot;CO&quot;, &quot;CT&quot;, &quot;DE&quot;, &quot;FL&quot;, &quot;GA&quot;, &quot;HI&quot;, &quot;ID&quot;, &quot;IL&quot;, &quot;IN&quot;, &quot;IA&quot;, &quot;KS&quot;, &quot;KY&quot;, &quot;LA&quot;,&#xa;&quot;ME&quot;, &quot;MD&quot;, &quot;MA&quot;, &quot;MI&quot;, &quot;MN&quot;, &quot;MS&quot;, &quot;MO&quot;, &quot;MT&quot;, &quot;NE&quot;, &quot;NV&quot;, &quot;NH&quot;, &quot;NJ&quot;, &quot;NM&quot;, &quot;NY&quot;, &quot;NC&quot;, &quot;ND&quot;, &quot;OH&quot;,&#xa;&quot;OK&quot;, &quot;OR&quot;, &quot;PA&quot;, &quot;RI&quot;, &quot;SC&quot;, &quot;SD&quot;, &quot;TN&quot;, &quot;TX&quot;, &quot;UT&quot;, &quot;VT&quot;, &quot;VA&quot;, &quot;WA&quot;, &quot;WV&quot;, &quot;WI&quot;, &quot;WY&quot; })" type="code"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[35, 20]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustStateCBActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox()"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustStateLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="State"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="CUSTIDCB">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CUSTIDCBActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="InvSearchLbl5">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="OrderTabbedPane">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Order">
@@ -263,11 +592,16 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="OrderSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="InvSearchLbl2" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="OrderSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace pref="42" max="32767" attributes="0"/>
@@ -360,9 +694,12 @@
                                   <EmptySpace min="11" pref="11" max="11" attributes="0"/>
                                   <Component id="OrderMediaStatusLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="8" pref="8" max="8" attributes="0"/>
-                                  <Component id="OrderMediaStatusCB" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="InvSearchLbl2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaStatusCB" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -502,7 +839,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="OrderSearchButton">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Find"/>
+                    <Property name="text" type="java.lang.String" value="Search"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSearchButtonActionPerformed"/>
@@ -587,6 +924,14 @@
                     </Property>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JLabel" name="InvSearchLbl2">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="QAPanel">
@@ -601,6 +946,19 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="QAOrderIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="QAIDCB" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAOrderIDCB" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="192" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -656,21 +1014,9 @@
                                   <Component id="QAClearButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
+                              <Component id="InvSearchLbl3" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="QAOrderIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="QAIDCB" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAOrderIDCB" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -731,7 +1077,9 @@
                               <Component id="QASubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="QAClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="InvSearchLbl3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="QACreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="QAAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -765,7 +1113,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="QASearchButton">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Find"/>
+                    <Property name="text" type="java.lang.String" value="Search"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASearchButtonActionPerformed"/>
@@ -989,6 +1337,14 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAIDCBActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="InvSearchLbl3">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="OrderVerifyPanel">
@@ -1006,6 +1362,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="InvSearchLbl4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
                               <Group type="102" attributes="0">
                                   <Component id="OVSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -1218,7 +1578,9 @@
                               </Group>
                               <Component id="OVAssignEmpCB" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Component id="InvSearchLbl4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OVCreateByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OVAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1252,7 +1614,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="OVSearchButton">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Find"/>
+                    <Property name="text" type="java.lang.String" value="Search"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVSearchButtonActionPerformed"/>
@@ -1604,15 +1966,23 @@
                     <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JLabel" name="InvSearchLbl4">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="CustomerInfoPanel">
+        <Container class="javax.swing.JPanel" name="EmployeeInfoPanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Customer Info">
-                <Property name="tabTitle" type="java.lang.String" value="Customer Info"/>
+              <JTabbedPaneConstraints tabName="Employee Info">
+                <Property name="tabTitle" type="java.lang.String" value="Employee Info"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1623,223 +1993,239 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="CustFindButton" min="-2" pref="65" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CustCreateButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CustCreateButton1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="InvSearchLbl1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="CustBillStreet2Lbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustBillStreet2Text" min="-2" pref="95" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="CustBillStreet1Lbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustBillStreet1Text" min="-2" pref="95" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="CustBillCityLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                                  <Component id="CustBillCityText" min="-2" pref="95" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="CustBillLNameLbl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="CustBillFNameLbl" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="EmpLNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="EmpFNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="EMPIDLbl" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="EmpFNameText" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="EmpLNameText" alignment="0" pref="95" max="32767" attributes="0"/>
+                                                  <Component id="EMPIDCB" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="EmpCityLbl" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="EmpStateLbl" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="EmpStateCB" min="-2" pref="49" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="EmpZipLbl" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="EmpZipText" min="-2" pref="95" max="-2" attributes="0"/>
+                                                  <Component id="EmpCityText" min="-2" pref="95" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="EmpStreet1Lbl" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="EmpStreet1Text" min="-2" pref="95" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="EmpStreet2Lbl" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="EmpStreet2Text" min="-2" pref="95" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="EmpTypeLbl" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                              <Component id="EmpTypeCB" min="-2" pref="95" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="CustBillFNameText" max="32767" attributes="0"/>
-                                          <Component id="CustBillLNameText" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <EmptySpace pref="139" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="EmpActiveOrderLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EmpOrderLB" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                                          <Component id="EmpOrderLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="CustBillOrgLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                      <Component id="CustBillOrgText" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="CustNumberLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="CustNumberText" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="EmpSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="EmpSubmitButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                      <Component id="EmpClearButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustShipStateComB" min="-2" pref="49" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="CustBillZipLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustBillZipText" min="-2" pref="95" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace pref="142" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ActiveOrderLbl" min="-2" max="-2" attributes="0"/>
-                          <Component id="CustOrderListBox" min="-2" pref="133" max="-2" attributes="0"/>
-                          <Component id="CustOrderListBoxLbl" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="198" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="CustOrderListBoxLbl" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="EmpOrderLbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CustOrderListBox" min="-2" pref="180" max="-2" attributes="0"/>
+                              <Component id="EmpOrderLB" min="-2" pref="180" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ActiveOrderLbl" min="-2" max="-2" attributes="0"/>
+                              <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustNumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EMPIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EMPIDCB" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillFNameText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillFNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpFNameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpFNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillLNameText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillLNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpLNameText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpLNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="EmpStreet1Text" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpStreet1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="EmpStreet2Lbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpStreet2Text" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillOrgText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillOrgLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpCityText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpCityLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillStreet1Text" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillStreet1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpStateLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpStateCB" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="EmpZipText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpZipLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillStreet2Text" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillStreet2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillCityText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillCityLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillZipText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillZipLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustShipStateComB" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustFindButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpTypeCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpTypeLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="208" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="EmpSearchButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="EmpSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="EmpClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="InvSearchLbl1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="164" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="CustBillFNameText">
+            <Component class="javax.swing.JTextField" name="EmpFNameText">
             </Component>
-            <Component class="javax.swing.JTextField" name="CustBillLNameText">
+            <Component class="javax.swing.JTextField" name="EmpLNameText">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustBillLNameTextActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpLNameTextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="CustBillOrgText">
+            <Component class="javax.swing.JTextField" name="EmpStreet1Text">
             </Component>
-            <Component class="javax.swing.JTextField" name="CustBillStreet1Text">
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillStreet2Text">
+            <Component class="javax.swing.JTextField" name="EmpStreet2Text">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustBillStreet2TextActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpStreet2TextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustBillFNameLbl">
+            <Component class="javax.swing.JLabel" name="EmpFNameLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="First Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustBillLNameLbl">
+            <Component class="javax.swing.JLabel" name="EmpLNameLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Last Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustBillOrgLbl">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Organization"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillStreet1Lbl">
+            <Component class="javax.swing.JLabel" name="EmpStreet1Lbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Street Address Line 1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustBillStreet2Lbl">
+            <Component class="javax.swing.JLabel" name="EmpStreet2Lbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Street Address Line 2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="CustBillCityText">
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillZipText">
+            <Component class="javax.swing.JTextField" name="EmpCityText">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustBillZipTextActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpCityTextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustBillCityLbl">
+            <Component class="javax.swing.JTextField" name="EmpZipText">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpZipTextActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="EmpCityLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="City"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustBillZipLbl">
+            <Component class="javax.swing.JLabel" name="EmpZipLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Zip"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="CustFindButton">
+            <Component class="javax.swing.JButton" name="EmpSearchButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Find"/>
+                <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpSearchButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="CustCreateButton">
+            <Component class="javax.swing.JButton" name="EmpSubmitButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Create/Update"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpSubmitButtonActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="CustOrderListBox">
+            <Container class="javax.swing.JScrollPane" name="EmpOrderLB">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="jList1">
+                <Component class="javax.swing.JList" name="jList2">
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="5">
@@ -1854,20 +2240,20 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="CustOrderListBoxLbl">
+            <Component class="javax.swing.JLabel" name="EmpOrderLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Order(s):"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="CustCreateButton1">
+            <Component class="javax.swing.JButton" name="EmpClearButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Clear Fields"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpClearButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="ActiveOrderLbl">
+            <Component class="javax.swing.JLabel" name="EmpActiveOrderLbl1">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -1875,14 +2261,12 @@
                 <Property name="text" type="java.lang.String" value="*Active orders in red"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustNumberLbl">
+            <Component class="javax.swing.JLabel" name="EMPIDLbl">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Customer Number"/>
+                <Property name="text" type="java.lang.String" value="Employee id"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="CustNumberText">
-            </Component>
-            <Component class="javax.swing.JComboBox" name="CustShipStateComB">
+            <Component class="javax.swing.JComboBox" name="EmpStateCB">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.DefaultComboBoxModel(new String[] {&quot;&quot;, &quot;AL&quot;, &quot;AK&quot;, &quot;AZ&quot;, &quot;AR&quot;, &quot;CA&quot;, &quot;CO&quot;, &quot;CT&quot;, &quot;DE&quot;, &quot;FL&quot;, &quot;GA&quot;, &quot;HI&quot;, &quot;ID&quot;, &quot;IL&quot;, &quot;IN&quot;, &quot;IA&quot;, &quot;KS&quot;, &quot;KY&quot;, &quot;LA&quot;,&#xa;&quot;ME&quot;, &quot;MD&quot;, &quot;MA&quot;, &quot;MI&quot;, &quot;MN&quot;, &quot;MS&quot;, &quot;MO&quot;, &quot;MT&quot;, &quot;NE&quot;, &quot;NV&quot;, &quot;NH&quot;, &quot;NJ&quot;, &quot;NM&quot;, &quot;NY&quot;, &quot;NC&quot;, &quot;ND&quot;, &quot;OH&quot;,&#xa;&quot;OK&quot;, &quot;OR&quot;, &quot;PA&quot;, &quot;RI&quot;, &quot;SC&quot;, &quot;SD&quot;, &quot;TN&quot;, &quot;TX&quot;, &quot;UT&quot;, &quot;VT&quot;, &quot;VA&quot;, &quot;WA&quot;, &quot;WV&quot;, &quot;WI&quot;, &quot;WY&quot; })" type="code"/>
@@ -1892,20 +2276,57 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustShipStateComBActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpStateCBActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="EmpStateLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="State"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JComboBox" name="EmpTypeCB">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="EmpTypeLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Employee Type"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="EMPIDCB">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="InvSearchLbl1">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="MediaInventoryPanel">
+        <Container class="javax.swing.JPanel" name="Inv">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Inventory">
@@ -1923,31 +2344,25 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustFindButton2" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvDelDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOnOrderLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOnHandLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvItemNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvManIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvItemIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField1" linkSize="7" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                                          <Component id="jTextField2" linkSize="7" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                                          <Component id="jTextField3" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField4" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField5" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField6" linkSize="7" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                                          <Component id="InvItemNameText" linkSize="7" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="InvOnHandText" linkSize="7" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="InvOnOrderText" linkSize="7" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="InvDelDateText" linkSize="7" alignment="0" pref="75" max="32767" attributes="0"/>
+                                          <Component id="InvItemIDCB" max="32767" attributes="0"/>
+                                          <Component id="jComboBox2" alignment="1" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="751" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="918" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CustCreateButton4" min="-2" max="-2" attributes="0"/>
@@ -1958,7 +2373,7 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              <Component id="InvSearchLbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1970,36 +2385,33 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jTextField1" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvItemIDLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvItemIDCB" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jLabel11" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField2" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvManIDLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox2" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jLabel12" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField3" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvItemNameText" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvItemNameLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jTextField4" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvOnHandText" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvOnHandLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jTextField5" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvOnOrderText" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvOnOrderLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="jTextField6" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvDelDateText" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvDelDateLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
@@ -2007,39 +2419,35 @@
                           <Component id="CustCreateButton4" alignment="2" min="-2" max="-2" attributes="0"/>
                           <Component id="CustCreateButton5" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="201" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="InvSearchLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="231" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="InvItemIDLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Item Number"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="InvManIDLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Manufacturer"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="InvOnHandLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On Hand"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="InvOnOrderLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On Order"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="InvDelDateLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delivery Date"/>
               </Properties>
@@ -2062,366 +2470,49 @@
             </Component>
             <Component class="javax.swing.JButton" name="CustFindButton2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Find"/>
+                <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButton2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="InvItemNameLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Item Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="InvItemNameText">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel1">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Employee Info">
-                <Property name="tabTitle" type="java.lang.String" value="Employee Info"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="CustBillStreet2Lbl1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="CustBillStreet2Text1" min="-2" pref="95" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="CustBillStreet1Lbl1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="CustBillStreet1Text1" min="-2" pref="95" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="CustBillLNameLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="CustBillFNameLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="CustBillFNameText1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="CustBillLNameText1" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="CustBillOrgLbl1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                          <Component id="CustBillOrgText1" min="-2" pref="95" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="CustNumberLbl1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="CustNumberText1" min="-2" pref="95" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="CustBillCityLbl1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="CustBillCityText1" min="-2" pref="95" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="CustShipStateComB1" min="-2" pref="49" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="CustBillZipLbl1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jComboBox2" min="-2" pref="95" max="-2" attributes="0"/>
-                                              <Component id="CustBillZipText1" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="separate" pref="140" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ActiveOrderLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustOrderListBox1" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                                  <Component id="CustOrderListBoxLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="CustFindButton1" min="-2" pref="65" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Component id="CustCreateButton2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                              <Component id="CustCreateButton3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="143" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="CustOrderListBoxLbl1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CustOrderListBox1" min="-2" pref="180" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustNumberLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustNumberText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillFNameText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillFNameLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillLNameText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillLNameLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillOrgText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillOrgLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillStreet1Text1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillStreet1Lbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillStreet2Text1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillStreet2Lbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillCityText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillCityLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="CustBillZipText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustBillZipLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CustShipStateComB1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CustFindButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="CustCreateButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="CustCreateButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="179" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JTextField" name="CustBillFNameText1">
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillLNameText1">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustBillLNameText1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillOrgText1">
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillStreet1Text1">
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillStreet2Text1">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustBillStreet2Text1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillFNameLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="First Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillLNameLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Last Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillOrgLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Organization"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillStreet1Lbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Street Address Line 1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillStreet2Lbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Street Address Line 2"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillCityText1">
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustBillZipText1">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustBillZipText1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillCityLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="City"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="CustBillZipLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Zip"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="CustFindButton1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Find"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButton1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="CustCreateButton2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Create/Update"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton2ActionPerformed"/>
-              </Events>
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="CustOrderListBox1">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JList" name="jList2">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                        <StringItem index="4" value="Item 5"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JLabel" name="CustOrderListBoxLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Order(s):"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="CustCreateButton3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Clear Fields"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton3ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ActiveOrderLbl1">
+            <Component class="javax.swing.JLabel" name="InvSearchLbl">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="*Active orders in red"/>
+                <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="CustNumberLbl1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Employee id"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="CustNumberText1">
-            </Component>
-            <Component class="javax.swing.JComboBox" name="CustShipStateComB1">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new javax.swing.DefaultComboBoxModel(new String[] {&quot;&quot;, &quot;AL&quot;, &quot;AK&quot;, &quot;AZ&quot;, &quot;AR&quot;, &quot;CA&quot;, &quot;CO&quot;, &quot;CT&quot;, &quot;DE&quot;, &quot;FL&quot;, &quot;GA&quot;, &quot;HI&quot;, &quot;ID&quot;, &quot;IL&quot;, &quot;IN&quot;, &quot;IA&quot;, &quot;KS&quot;, &quot;KY&quot;, &quot;LA&quot;,&#xa;&quot;ME&quot;, &quot;MD&quot;, &quot;MA&quot;, &quot;MI&quot;, &quot;MN&quot;, &quot;MS&quot;, &quot;MO&quot;, &quot;MT&quot;, &quot;NE&quot;, &quot;NV&quot;, &quot;NH&quot;, &quot;NJ&quot;, &quot;NM&quot;, &quot;NY&quot;, &quot;NC&quot;, &quot;ND&quot;, &quot;OH&quot;,&#xa;&quot;OK&quot;, &quot;OR&quot;, &quot;PA&quot;, &quot;RI&quot;, &quot;SC&quot;, &quot;SD&quot;, &quot;TN&quot;, &quot;TX&quot;, &quot;UT&quot;, &quot;VT&quot;, &quot;VA&quot;, &quot;WA&quot;, &quot;WV&quot;, &quot;WI&quot;, &quot;WY&quot; })" type="code"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[35, 20]"/>
-                </Property>
-              </Properties>
+            <Component class="javax.swing.JTextField" name="InvOnHandText">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustShipStateComB1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InvOnHandTextActionPerformed"/>
               </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox()"/>
-              </AuxValues>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
+            <Component class="javax.swing.JTextField" name="InvOnOrderText">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InvOnOrderTextActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="InvDelDateText">
+            </Component>
+            <Component class="javax.swing.JComboBox" name="InvItemIDCB">
               <Properties>
-                <Property name="text" type="java.lang.String" value="State"/>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="jComboBox2">
@@ -2434,11 +2525,6 @@
                     <StringItem index="3" value="Item 4"/>
                   </StringArray>
                 </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Employee Type"/>
               </Properties>
             </Component>
           </SubComponents>
