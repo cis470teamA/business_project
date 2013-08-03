@@ -8,9 +8,9 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="OrderEngMediaBG">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="OrderStatusBG">
+    <Component class="javax.swing.ButtonGroup" name="OrderVerCorrectAccountNumBG">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="OrderMediaStatusBG">
+    <Component class="javax.swing.ButtonGroup" name="OrderVerCorrectNameBG">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="QAOrderContentBG">
     </Component>
@@ -19,6 +19,16 @@
     <Component class="javax.swing.ButtonGroup" name="QAMediaFinishBG">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="QAWorkmanshipBG">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="OrderVerValidMediaBG">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="OrderVerValidContentBG">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="OrderVerJobTypeBG">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="OrderVerPayTypeBG">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="OrderVerDepositBG">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -201,14 +211,18 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderTypeEngrRB1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel14" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="OrderTypePrintRB1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderCustNumberLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderNumberLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderMediaCatNumLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderJobTypeLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderTypePlaqueRB1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderTypeTrophyRB1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderPaymentTypeLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderDeliverPayRB1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -217,26 +231,28 @@
                                           <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
                                           <Component id="OrderDepositLbl1" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="OrderTypeEngrRB1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OrderTypePlaqueRB1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                          <Component id="OrderTypeTrophyRB1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace min="6" pref="34" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel14" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="OrderDepositText1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
-                              <Component id="jComboBox3" alignment="0" pref="131" max="32767" attributes="0"/>
-                              <Component id="jComboBox1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
-                              <Component id="jTextField20" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
-                              <Component id="OrderMediaCatNumText1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="OrderDepositText1" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="jComboBox1" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="jTextField20" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="OrderMediaCatNumText1" alignment="0" pref="99" max="32767" attributes="0"/>
                               <Component id="jComboBox7" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="OrderCustomerNumberText1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="OrderCustomerNumberText1" alignment="0" pref="99" max="32767" attributes="0"/>
+                              <Component id="jComboBox3" alignment="0" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -969,11 +985,11 @@
                           <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="CustFindButton5" min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="OVSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton10" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVSubmitButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="CustCreateButton11" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVClearFieldButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -982,100 +998,100 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVCustNameValLbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVCustIDValLbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVMediaCatValLbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVContentValLbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVJobTypeValLbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVPayTypeValLbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVDepositValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace pref="106" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="QAMediaFinishLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="QACorrectOrderMediaLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="QACorrectContentLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="QAEngrFinishLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="QAMediaFinishLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="QACorrectOrderMediaLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="QACorrectContentLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVDepositLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVPayTypePassLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVContentLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVMediaNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVAcctNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVCorrectNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVOrderNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
-                                                          <Component id="jTextField17" linkSize="4" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="OVOrderNumText" linkSize="4" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" attributes="0">
-                                                          <Component id="jTextField19" linkSize="4" min="-2" pref="80" max="-2" attributes="0"/>
+                                                          <Component id="OVNumberText" linkSize="4" min="-2" pref="80" max="-2" attributes="0"/>
                                                           <EmptySpace max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="2" attributes="0">
-                                              <Component id="QAMediaFinishPassRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectMediaPassRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectContentPassRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QAWorkmanshipPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QAMediaFinishPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectMediaPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectContentPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel21" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVPayTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVJobTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVMediaNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVAcctNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVCorrectNamePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVPassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="2" attributes="0">
-                                              <Component id="QAMediaFinishFailRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectMediaFailRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectContentFailRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QAWorkmanshipFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QAMediaFinishFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectMediaFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="QACorrectContentFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel22" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVMediaNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVFailLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField14" linkSize="2" alignment="0" max="-2" attributes="0"/>
-                                              <Component id="jTextField11" linkSize="2" alignment="0" max="-2" attributes="0"/>
-                                              <Component id="jTextField12" linkSize="2" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
-                                              <Component id="jTextField13" linkSize="2" alignment="0" max="-2" attributes="0"/>
-                                              <Component id="jTextField16" linkSize="3" alignment="0" max="-2" attributes="0"/>
-                                              <Component id="jTextField18" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
-                                              <Component id="jTextField15" linkSize="3" alignment="0" max="-2" attributes="0"/>
-                                              <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVContentFailText" linkSize="2" alignment="0" max="-2" attributes="0"/>
+                                              <Component id="OVNameFailText" linkSize="2" alignment="0" max="-2" attributes="0"/>
+                                              <Component id="OVAcctNumFailText" linkSize="2" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                                              <Component id="OVMediaFailText" linkSize="2" alignment="0" max="-2" attributes="0"/>
+                                              <Component id="OVJobTypeFailText" linkSize="3" alignment="0" max="-2" attributes="0"/>
+                                              <Component id="OVPayTypeFailText" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                                              <Component id="OVDepositFailText" linkSize="3" alignment="0" max="-2" attributes="0"/>
+                                              <Component id="OVReasonLbl" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVVerifyByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVCreateByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVAssignedToLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVLastModfiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVCommentsLbl" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="OVAssignEmpLbl" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jScrollPane2" min="-2" pref="300" max="-2" attributes="0"/>
+                                                      <Component id="OVCommentsTB" min="-2" pref="300" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jComboBox4" min="-2" pref="114" max="-2" attributes="0"/>
+                                                      <Component id="OVAssignEmpCB" min="-2" pref="114" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -1093,102 +1109,102 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVOrderNumLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVOrderNumText" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVPassLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVFailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVReasonLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVNumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QACorrectContentPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField11" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectContentFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectContentLbl1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel25" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCorrectNamePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVNameFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCorrectNameLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCustNameValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="jTextField12" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectMediaFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectMediaPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectOrderMediaLbl1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel26" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAcctNumFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAcctNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAcctNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCustIDValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="jTextField13" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishLbl1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel27" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVMediaFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVMediaNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVMediaNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVMediaNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVMediaCatValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QAEngrFinishLbl1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAWorkmanshipPassRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAWorkmanshipFailRb1" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField14" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel28" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVContentLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVContentFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVContentValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QACorrectContentPassRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField16" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectContentFailRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectContentLbl2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel29" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVJobTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVJobTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVJobTypeLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVJobTypeValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="jTextField18" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectMediaFailRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectMediaPassRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectOrderMediaLbl2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel30" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVPayTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVPayTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVPayTypePassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVPayTypeValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="jTextField15" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishFailRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishPassRb2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishLbl2" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel31" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVDepositFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVDepositValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAssignEmpLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCommentsLbl" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVCommentsTB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="CustFindButton5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVSearchButton" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="CustCreateButton11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="CustCreateButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OVClearFieldButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="OVSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAssignEmpCB" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVCreateByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="51" max="32767" attributes="0"/>
                       </Group>
@@ -1196,121 +1212,131 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="CustCreateButton10">
+                <Component class="javax.swing.JButton" name="OVSubmitButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Submit/Assign"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton10ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVSubmitButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustCreateButton11">
+                <Component class="javax.swing.JButton" name="OVClearFieldButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Clear Fields"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustCreateButton11ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVClearFieldButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="CustFindButton5">
+                <Component class="javax.swing.JButton" name="OVSearchButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Find"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustFindButton5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVSearchButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QACorrectContentLbl1">
+                <Component class="javax.swing.JLabel" name="OVCorrectNameLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Correct Name"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QACorrectOrderMediaLbl1">
+                <Component class="javax.swing.JLabel" name="OVAcctNumLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Correct Account Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QAMediaFinishLbl1">
+                <Component class="javax.swing.JLabel" name="OVMediaNumLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Valid Media Cat. #"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QAEngrFinishLbl1">
+                <Component class="javax.swing.JLabel" name="OVContentLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Valid Content"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectContentPassRb1">
+                <Component class="javax.swing.JRadioButton" name="OVCorrectNamePassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderContentBG"/>
+                      <ComponentRef name="OrderVerCorrectNameBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentPassRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVCorrectNamePassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectMediaPassRb1">
+                <Component class="javax.swing.JRadioButton" name="OVAcctNumPassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderMediaBG"/>
+                      <ComponentRef name="OrderVerCorrectAccountNumBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaPassRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVAcctNumPassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QAMediaFinishPassRb1">
+                <Component class="javax.swing.JRadioButton" name="OVMediaNumPassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAMediaFinishBG"/>
+                      <ComponentRef name="OrderVerValidMediaBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishPassRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVMediaNumPassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QAWorkmanshipPassRb1">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAWorkmanshipPassRb1ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectContentFailRb1">
+                <Component class="javax.swing.JRadioButton" name="OVContentPassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderContentBG"/>
+                      <ComponentRef name="OrderVerValidContentBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentFailRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVContentPassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectMediaFailRb1">
+                <Component class="javax.swing.JRadioButton" name="OVCorrectNameFailRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderMediaBG"/>
+                      <ComponentRef name="OrderVerCorrectNameBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaFailRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVCorrectNameFailRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QAMediaFinishFailRb1">
+                <Component class="javax.swing.JRadioButton" name="OVAcctNumFailRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAMediaFinishBG"/>
+                      <ComponentRef name="OrderVerCorrectAccountNumBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishFailRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVAcctNumFailRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QAWorkmanshipFailRb1">
+                <Component class="javax.swing.JRadioButton" name="OVMediaNumFailRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderVerValidMediaBG"/>
+                    </Property>
+                  </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAWorkmanshipFailRb1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVMediaNumFailRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                <Component class="javax.swing.JRadioButton" name="OVContentFailRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderVerValidContentBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVContentFailRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="OVCommentsTB">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
@@ -1325,185 +1351,191 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="jLabel20">
+                <Component class="javax.swing.JLabel" name="OVCommentsLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Additional Comments"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField11">
+                <Component class="javax.swing.JTextField" name="OVNameFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField12">
+                <Component class="javax.swing.JTextField" name="OVAcctNumFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField12ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVAcctNumFailTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField13">
+                <Component class="javax.swing.JTextField" name="OVMediaFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVMediaFailTextActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField14">
+                <Component class="javax.swing.JTextField" name="OVContentFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVContentFailTextActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel21">
+                <Component class="javax.swing.JLabel" name="OVPassLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pass"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel22">
+                <Component class="javax.swing.JLabel" name="OVFailLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Fail"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel23">
+                <Component class="javax.swing.JLabel" name="OVReasonLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Reason for Failure"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectContentFailRb2">
+                <Component class="javax.swing.JRadioButton" name="OVJobTypeFailRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderContentBG"/>
+                      <ComponentRef name="OrderVerJobTypeBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentFailRb2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVJobTypeFailRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QAMediaFinishPassRb2">
+                <Component class="javax.swing.JRadioButton" name="OVDepositPassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAMediaFinishBG"/>
+                      <ComponentRef name="OrderVerDepositBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishPassRb2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVDepositPassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QAMediaFinishLbl2">
+                <Component class="javax.swing.JLabel" name="OVDepositLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sufficient Deposit"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QACorrectContentLbl2">
+                <Component class="javax.swing.JLabel" name="OVJobTypeLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Correct Job Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QAMediaFinishFailRb2">
+                <Component class="javax.swing.JRadioButton" name="OVDepostiFailRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAMediaFinishBG"/>
+                      <ComponentRef name="OrderVerDepositBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishFailRb2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVDepostiFailRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectMediaFailRb2">
+                <Component class="javax.swing.JRadioButton" name="OVPayTypeFailRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderMediaBG"/>
+                      <ComponentRef name="OrderVerPayTypeBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaFailRb2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVPayTypeFailRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QACorrectOrderMediaLbl2">
+                <Component class="javax.swing.JLabel" name="OVPayTypePassLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Payment Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField15">
+                <Component class="javax.swing.JTextField" name="OVDepositFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField16">
+                <Component class="javax.swing.JTextField" name="OVJobTypeFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField18">
+                <Component class="javax.swing.JTextField" name="OVPayTypeFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField18ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVPayTypeFailTextActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectContentPassRb2">
+                <Component class="javax.swing.JRadioButton" name="OVJobTypePassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderContentBG"/>
+                      <ComponentRef name="OrderVerJobTypeBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentPassRb2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVJobTypePassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectMediaPassRb2">
+                <Component class="javax.swing.JRadioButton" name="OVPayTypePassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderMediaBG"/>
+                      <ComponentRef name="OrderVerPayTypeBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaPassRb2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVPayTypePassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel24">
+                <Component class="javax.swing.JLabel" name="OVNumberLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Verification Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField19">
+                <Component class="javax.swing.JTextField" name="OVNumberText">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel25">
+                <Component class="javax.swing.JLabel" name="OVCustNameValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Customer Name F/L"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel26">
+                <Component class="javax.swing.JLabel" name="OVCustIDValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Customer ID Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel27">
+                <Component class="javax.swing.JLabel" name="OVMediaCatValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Media Catalog Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel28">
+                <Component class="javax.swing.JLabel" name="OVContentValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Content Popup Link"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel29">
+                <Component class="javax.swing.JLabel" name="OVJobTypeValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Job Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel30">
+                <Component class="javax.swing.JLabel" name="OVPayTypeValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Payment Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel31">
+                <Component class="javax.swing.JLabel" name="OVDepositValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Deposit Amount"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox4">
+                <Component class="javax.swing.JComboBox" name="OVAssignEmpCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -1515,34 +1547,37 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel35">
+                <Component class="javax.swing.JLabel" name="OVAssignEmpLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Assign Printer/Engraver"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel36">
+                <Component class="javax.swing.JLabel" name="OVOrderNumLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField17">
+                <Component class="javax.swing.JTextField" name="OVOrderNumText">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVOrderNumTextActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel43">
+                <Component class="javax.swing.JLabel" name="OVVerifyByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Verified by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel44">
+                <Component class="javax.swing.JLabel" name="OVCreateByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Created by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel45">
+                <Component class="javax.swing.JLabel" name="OVAssignedToLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel46">
+                <Component class="javax.swing.JLabel" name="OVLastModfiedByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
                   </Properties>
