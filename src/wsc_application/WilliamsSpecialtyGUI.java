@@ -97,24 +97,24 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         QACorrectMediaFailRb = new javax.swing.JRadioButton();
         QAMediaFinishFailRb = new javax.swing.JRadioButton();
         QAWorkmanshipFailRb = new javax.swing.JRadioButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        QACommentTB = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        OrderNumberLbl2 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox();
-        jLabel47 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox();
+        QACommentLbl = new javax.swing.JLabel();
+        QAContentFailText = new javax.swing.JTextField();
+        QAOrderMediaFailText = new javax.swing.JTextField();
+        QAMediaFinishFailText = new javax.swing.JTextField();
+        QAWorkmanshipFailText = new javax.swing.JTextField();
+        QAPassLbl = new javax.swing.JLabel();
+        QAFailLbl = new javax.swing.JLabel();
+        QAReasonLbl = new javax.swing.JLabel();
+        QAVerifiedByLbl = new javax.swing.JLabel();
+        QACreatedByLbl = new javax.swing.JLabel();
+        QAAssignedToLbl = new javax.swing.JLabel();
+        QAModifiedByLbl = new javax.swing.JLabel();
+        QAOrderIDLbl = new javax.swing.JLabel();
+        QAOrderIDCB = new javax.swing.JComboBox();
+        QAIDLbl = new javax.swing.JLabel();
+        QAIDCB = new javax.swing.JComboBox();
         OrderVerifyPanel = new javax.swing.JPanel();
         OVSubmitButton = new javax.swing.JButton();
         OVClearFieldButton = new javax.swing.JButton();
@@ -627,6 +627,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
             }
         });
 
+        QAWorkmanshipBG.add(QAWorkmanshipPassRb);
         QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QAWorkmanshipPassRbActionPerformed(evt);
@@ -654,6 +655,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
             }
         });
 
+        QAWorkmanshipBG.add(QAWorkmanshipFailRb);
         QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QAWorkmanshipFailRbActionPerformed(evt);
@@ -662,44 +664,54 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        QACommentTB.setViewportView(jTextArea1);
 
-        jLabel16.setText("Comments");
+        QACommentLbl.setText("Comments");
 
-        jTextField7.setEditable(false);
-
-        jTextField8.setEditable(false);
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        QAContentFailText.setEditable(false);
+        QAContentFailText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                QAContentFailTextActionPerformed(evt);
             }
         });
 
-        jTextField9.setEditable(false);
+        QAOrderMediaFailText.setEditable(false);
+        QAOrderMediaFailText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAOrderMediaFailTextActionPerformed(evt);
+            }
+        });
 
-        jTextField10.setEditable(false);
+        QAMediaFinishFailText.setEditable(false);
 
-        jLabel17.setText("Pass");
+        QAWorkmanshipFailText.setEditable(false);
 
-        jLabel18.setText("Fail");
+        QAPassLbl.setText("Pass");
 
-        jLabel19.setText("Reason for Failure");
+        QAFailLbl.setText("Fail");
 
-        jLabel39.setText("Order Verified by ******");
+        QAReasonLbl.setText("Reason for Failure");
 
-        jLabel40.setText("Order Created by ******");
+        QAVerifiedByLbl.setText("Order Verified by ******");
 
-        jLabel41.setText("Work Assigned to ******");
+        QACreatedByLbl.setText("Order Created by ******");
 
-        jLabel42.setText("Last Modified by ******");
+        QAAssignedToLbl.setText("Work Assigned to ******");
 
-        OrderNumberLbl2.setText("Order Number");
+        QAModifiedByLbl.setText("Last Modified by ******");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        QAOrderIDLbl.setText("Order Number");
 
-        jLabel47.setText("QA Inspection Number");
+        QAOrderIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        QAIDLbl.setText("QA Inspection Number");
+
+        QAIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        QAIDCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QAIDCBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
         QAPanel.setLayout(QAPanelLayout);
@@ -710,12 +722,12 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(QAPanelLayout.createSequentialGroup()
                         .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel40))
+                            .addComponent(QAVerifiedByLbl)
+                            .addComponent(QACreatedByLbl))
                         .addGap(48, 48, 48)
                         .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel41)
-                            .addComponent(jLabel42)))
+                            .addComponent(QAAssignedToLbl)
+                            .addComponent(QAModifiedByLbl)))
                     .addGroup(QAPanelLayout.createSequentialGroup()
                         .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(QACorrectOrderMediaLbl)
@@ -728,75 +740,75 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                             .addComponent(QAWorkmanshipPassRb)
                             .addComponent(QACorrectMediaPassRb)
                             .addComponent(QACorrectContentPassRb)
-                            .addComponent(jLabel17))
+                            .addComponent(QAPassLbl))
                         .addGap(18, 18, 18)
                         .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(QACorrectContentFailRb)
                             .addComponent(QACorrectMediaFailRb)
                             .addComponent(QAMediaFinishFailRb)
                             .addComponent(QAWorkmanshipFailRb)
-                            .addComponent(jLabel18))
+                            .addComponent(QAFailLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel19)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(QAWorkmanshipFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(QAMediaFinishFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(QAContentFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(QAOrderMediaFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(QAReasonLbl)))
+                    .addComponent(QACommentTB, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(QAPanelLayout.createSequentialGroup()
                         .addComponent(QASearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(QASubmitButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(QAClearButton))
-                    .addComponent(jLabel16))
+                    .addComponent(QACommentLbl))
                 .addGap(200, 200, 200))
             .addGroup(QAPanelLayout.createSequentialGroup()
                 .addGap(81, 81, 81)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(OrderNumberLbl2)
-                    .addComponent(jLabel47))
+                    .addComponent(QAOrderIDLbl)
+                    .addComponent(QAIDLbl))
                 .addGap(63, 63, 63)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(QAIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAOrderIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField10, jTextField7, jTextField8, jTextField9});
+        QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAContentFailText, QAMediaFinishFailText, QAOrderMediaFailText, QAWorkmanshipFailText});
 
         QAPanelLayout.setVerticalGroup(
             QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QAPanelLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OrderNumberLbl2)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(QAOrderIDLbl)
+                    .addComponent(QAOrderIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel47)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(QAIDLbl)
+                    .addComponent(QAIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel19))
+                    .addComponent(QAPassLbl)
+                    .addComponent(QAFailLbl)
+                    .addComponent(QAReasonLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(QACorrectContentPassRb)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAContentFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(QACorrectContentFailRb)
                     .addComponent(QACorrectContentLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAOrderMediaFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(QACorrectMediaFailRb)
                     .addComponent(QACorrectMediaPassRb)
                     .addComponent(QACorrectOrderMediaLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QAMediaFinishFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(QAMediaFinishFailRb)
                     .addComponent(QAMediaFinishPassRb)
                     .addComponent(QAMediaFinishLbl))
@@ -805,11 +817,11 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                     .addComponent(QAEngrFinishLbl)
                     .addComponent(QAWorkmanshipPassRb)
                     .addComponent(QAWorkmanshipFailRb)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(QAWorkmanshipFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-                .addComponent(jLabel16)
+                .addComponent(QACommentLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(QACommentTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(QASearchButton)
@@ -817,12 +829,12 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
                     .addComponent(QAClearButton))
                 .addGap(27, 27, 27)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel40)
-                    .addComponent(jLabel41))
+                    .addComponent(QACreatedByLbl)
+                    .addComponent(QAAssignedToLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel42)
-                    .addComponent(jLabel39))
+                    .addComponent(QAModifiedByLbl)
+                    .addComponent(QAVerifiedByLbl))
                 .addGap(88, 88, 88))
         );
 
@@ -1961,9 +1973,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_QAWorkmanshipFailRbActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void QAOrderMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderMediaFailTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_QAOrderMediaFailTextActionPerformed
 
     private void OVPayTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypePassRbActionPerformed
         // TODO add your handling code here:
@@ -2064,6 +2076,14 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private void OrderDeliverPayRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDeliverPayRBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderDeliverPayRBActionPerformed
+
+    private void QAContentFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentFailTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAContentFailTextActionPerformed
+
+    private void QAIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAIDCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAIDCBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ActiveOrderLbl;
@@ -2198,7 +2218,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JLabel OrderMediaStatusLbl;
     private javax.swing.JComboBox OrderNumberCB;
     private javax.swing.JLabel OrderNumberLbl;
-    private javax.swing.JLabel OrderNumberLbl2;
     private javax.swing.ButtonGroup OrderPayTypeBG;
     private javax.swing.JLabel OrderPaymentTypeLbl;
     private javax.swing.JButton OrderSearchButton;
@@ -2221,48 +2240,54 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.ButtonGroup OrderVerValidMediaBG;
     private javax.swing.JLabel OrderVerifyByLbl;
     private javax.swing.JPanel OrderVerifyPanel;
+    private javax.swing.JLabel QAAssignedToLbl;
     private javax.swing.JButton QAClearButton;
+    private javax.swing.JLabel QACommentLbl;
+    private javax.swing.JScrollPane QACommentTB;
+    private javax.swing.JTextField QAContentFailText;
     private javax.swing.JRadioButton QACorrectContentFailRb;
     private javax.swing.JLabel QACorrectContentLbl;
     private javax.swing.JRadioButton QACorrectContentPassRb;
     private javax.swing.JRadioButton QACorrectMediaFailRb;
     private javax.swing.JRadioButton QACorrectMediaPassRb;
     private javax.swing.JLabel QACorrectOrderMediaLbl;
+    private javax.swing.JLabel QACreatedByLbl;
     private javax.swing.JLabel QAEngrFinishLbl;
+    private javax.swing.JLabel QAFailLbl;
+    private javax.swing.JComboBox QAIDCB;
+    private javax.swing.JLabel QAIDLbl;
     private javax.swing.ButtonGroup QAMediaFinishBG;
     private javax.swing.JRadioButton QAMediaFinishFailRb;
+    private javax.swing.JTextField QAMediaFinishFailText;
     private javax.swing.JLabel QAMediaFinishLbl;
     private javax.swing.JRadioButton QAMediaFinishPassRb;
+    private javax.swing.JLabel QAModifiedByLbl;
     private javax.swing.ButtonGroup QAOrderContentBG;
+    private javax.swing.JComboBox QAOrderIDCB;
+    private javax.swing.JLabel QAOrderIDLbl;
     private javax.swing.ButtonGroup QAOrderMediaBG;
+    private javax.swing.JTextField QAOrderMediaFailText;
     private javax.swing.JPanel QAPanel;
+    private javax.swing.JLabel QAPassLbl;
+    private javax.swing.JLabel QAReasonLbl;
     private javax.swing.JButton QASearchButton;
     private javax.swing.JButton QASubmitButton;
+    private javax.swing.JLabel QAVerifiedByLbl;
     private javax.swing.ButtonGroup QAWorkmanshipBG;
     private javax.swing.JRadioButton QAWorkmanshipFailRb;
+    private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox5;
-    private javax.swing.JComboBox jComboBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2271,18 +2296,13 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JList jList1;
     private javax.swing.JList jList2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
