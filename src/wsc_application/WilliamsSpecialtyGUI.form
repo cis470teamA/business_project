@@ -538,73 +538,67 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="OrderTypePrintRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderMediaStatusLbl" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+                                  <Component id="OrderDepositLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderTypePrintRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                                          <Component id="OrderDepositLbl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="OrderTypeEngrRB" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrderTypePlaqueRB" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                          <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="6" pref="34" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="OrderTypeEngrRB" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderTypePlaqueRB" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                  <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="OrderDepositText" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="OrderStatusCB" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="OrderTotalText" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="OrderMediaCatNumText" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="OrderNumberCB" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="OrderCustomerNumberText" alignment="0" pref="99" max="32767" attributes="0"/>
-                              <Component id="OrderMediaStatusCB" alignment="0" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderStatusCB" alignment="2" min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusCB" alignment="2" min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="OrderDepositText" alignment="2" max="32767" attributes="0"/>
+                              <Component id="OrderTotalText" alignment="2" max="32767" attributes="0"/>
+                              <Component id="OrderMediaCatNumText" alignment="2" max="32767" attributes="0"/>
+                              <Component id="OrderNumberCB" alignment="2" min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="OrderCustomerNumberText" alignment="2" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="32" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
                                       <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="InvSearchLbl2" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="OrderSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="InvSearchLbl2" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="OrderSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="OrderMediaStatusLbl" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="42" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
@@ -617,41 +611,22 @@
                               <Component id="OrderAssignedToLbl" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderLastModifiedByLbl" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="223" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="OrderContentText" min="-2" pref="265" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrderCustomerNumberText" linkSize="6" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="OrderNumberCB" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumText" linkSize="6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <Component id="OrderCustNumberLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="OrderNumberLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="OrderMediaCatNumLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                   <Component id="OrderJobTypeLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="OrderTypePrintRB" min="-2" max="-2" attributes="0"/>
@@ -661,48 +636,42 @@
                                   <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="OrderTypePlaqueRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderTotalText" linkSize="6" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="OrderTotalLbl" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="OrderPaymentTypeLbl" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderAccountPayRB" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderDeliverPayRB" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="OrderDepositLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrderDepositText" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OrderStatusCB" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderStatusLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderSearchButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderSubmitButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="11" pref="11" max="11" attributes="0"/>
-                                  <Component id="OrderMediaStatusLbl" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="8" pref="8" max="8" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="InvSearchLbl2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaStatusCB" linkSize="6" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="OrderCustomerNumberText" linkSize="6" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderNumberCB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderMediaCatNumText" linkSize="6" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderTotalText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderTotalLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="OrderPaymentTypeLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="OrderAccountPayRB" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="OrderDeliverPayRB" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderDepositText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="OrderStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="48" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -713,6 +682,29 @@
                               <Component id="OrderVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="290" pref="290" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderSearchButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderSubmitButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="8" pref="8" max="8" attributes="0"/>
+                                  <Component id="InvSearchLbl2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                  <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
+                                  <Component id="OrderContentText" min="-2" pref="265" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -953,9 +945,9 @@
                               <Component id="QAIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="QAIDCB" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAOrderIDCB" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="QAOrderIDCB" pref="93" max="32767" attributes="0"/>
+                              <Component id="QAIDCB" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1347,6 +1339,50 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="jPanel1">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Order Tracking">
+                    <Property name="tabTitle" type="java.lang.String" value="Order Tracking"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="592" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="453" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
             <Container class="javax.swing.JPanel" name="OrderVerifyPanel">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -1362,62 +1398,30 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="InvSearchLbl4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="OVSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="OVNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVOrderNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="OVSubmitButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OVClearFieldButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
+                                          <Component id="OVOrderNumText" linkSize="4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="472" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="OVNumberText" linkSize="4" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="OVCustNameValLbl" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVCustIDValLbl" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVMediaCatValLbl" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVContentValLbl" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVJobTypeValLbl" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVPayTypeValLbl" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVDepositValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace pref="106" max="32767" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="OVDepositLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVPayTypePassLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVContentLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVMediaNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVAcctNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVCorrectNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="OVNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVOrderNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="OVOrderNumText" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="OVNumberText" linkSize="4" min="-2" pref="80" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
+                                              <Component id="OVDepositLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVPayTypePassLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVContentLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVMediaNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVAcctNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="OVCorrectNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="2" attributes="0">
                                               <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVPayTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
@@ -1429,15 +1433,17 @@
                                               <Component id="OVPassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="2" attributes="0">
-                                              <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVMediaNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVFailLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="2" attributes="0">
+                                                  <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVFailLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="OVMediaNumFailRb" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1450,37 +1456,59 @@
                                               <Component id="OVDepositFailText" linkSize="3" alignment="0" max="-2" attributes="0"/>
                                               <Component id="OVReasonLbl" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="OVVerifyByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVCreateByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="OVAssignedToLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="OVLastModfiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="OVCommentsLbl" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="OVAssignEmpLbl" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="OVCommentsTB" min="-2" pref="300" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="OVAssignEmpCB" min="-2" pref="114" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="InvSearchLbl4" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="OVVerifyByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVCreateByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="OVAssignedToLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVLastModfiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="OVCommentsLbl" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="OVAssignEmpLbl" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="OVCommentsTB" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="OVAssignEmpCB" min="-2" pref="114" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="OVSearchButton" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="OVSubmitButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="OVClearFieldButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="OVCustNameValLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVCustIDValLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVMediaCatValLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVContentValLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVJobTypeValLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVPayTypeValLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVDepositValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1495,68 +1523,83 @@
                               <Component id="OVOrderNumText" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OVPassLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVFailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVReasonLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVNumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVCorrectNamePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVNameFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVCorrectNameLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVCustNameValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVAcctNumFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVAcctNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVAcctNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVCustIDValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVMediaFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVMediaNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVMediaNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVMediaNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVMediaCatValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVContentLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVContentFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVContentValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVJobTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVPayTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVPayTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVPayTypePassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVPayTypeValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVDepositFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVDepositValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="OVNumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVNumberText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OVCustNameValLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVCustIDValLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVMediaCatValLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OVContentValLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OVJobTypeValLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVPayTypeValLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="OVDepositValLbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="OVPassLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVFailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVReasonLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVCorrectNamePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVNameFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVCorrectNameLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVAcctNumFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVAcctNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVAcctNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVMediaFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVMediaNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVMediaNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVMediaNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVContentLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVContentFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVJobTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVJobTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVJobTypeLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVPayTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVPayTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVPayTypePassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OVDepositFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OVDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1590,7 +1633,7 @@
                               <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="51" max="32767" attributes="0"/>
+                          <EmptySpace pref="57" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2057,7 +2100,7 @@
                                               <Component id="EmpTypeCB" min="-2" pref="95" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="139" max="32767" attributes="0"/>
+                                      <EmptySpace pref="138" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="EmpActiveOrderLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="EmpOrderLB" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
@@ -2072,7 +2115,7 @@
                                       <Component id="EmpClearButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="142" max="32767" attributes="0"/>
+                              <EmptySpace pref="143" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
