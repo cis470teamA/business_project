@@ -2190,52 +2190,66 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                      <EmptySpace min="135" pref="135" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel4" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpTypeLbl" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel1" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="EmpLNameLbl" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="EmpFNameLbl" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="EMPIDLbl" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="EmpTypeLbl" linkSize="11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="EmpSearchButton" linkSize="11" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="jPasswordField2" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPasswordField1" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
                                   <Component id="EmpTypeCB" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
                                   <Component id="jTextField1" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
                                   <Component id="EmpLNameText" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
                                   <Component id="EmpFNameText" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
                                   <Component id="EMPIDCB" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="EmpSubmitButton" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="EmpClearButton" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                      <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="EmpOrderLbl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EmpOrderLB" min="-2" pref="133" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Component id="EmpSearchLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="EmpSearchLbl" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="EmpSearchButton" linkSize="11" min="-2" pref="73" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="EmpSubmitButton" linkSize="10" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="EmpClearButton" linkSize="10" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="EmpOrderLbl" min="-2" max="-2" attributes="0"/>
-                          <Component id="EmpOrderLB" min="-2" pref="133" max="-2" attributes="0"/>
-                          <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="195" max="32767" attributes="0"/>
+                      <EmptySpace pref="189" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="EmpOrderLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="EmpOrderLB" min="-2" pref="180" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="EmpOrderLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="EMPIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2263,16 +2277,34 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EmpSearchButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="EmpSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPasswordField1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="EmpClearButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPasswordField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="EmpOrderLB" min="-2" pref="179" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpSearchButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="EmpSearchLbl" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="226" max="32767" attributes="0"/>
+                      <EmptySpace pref="217" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2402,6 +2434,26 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Login Password"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Confirm Password"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jPasswordField2"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

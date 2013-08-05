@@ -238,6 +238,10 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         EmpSearchLbl = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
 
         setPreferredSize(new java.awt.Dimension(600, 549));
 
@@ -1670,6 +1674,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     jLabel1.setText("Email Address");
 
+    jLabel3.setText("Login Password");
+
+    jPasswordField1.setText("jPasswordField1");
+
+    jLabel4.setText("Confirm Password");
+
+    jPasswordField2.setText("jPasswordField2");
+
     javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
     EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
     EmployeeInfoPanelLayout.setHorizontalGroup(
@@ -1679,45 +1691,54 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4)
+                        .addComponent(jLabel3)
+                        .addComponent(EmpTypeLbl)
                         .addComponent(jLabel1)
                         .addComponent(EmpLNameLbl)
                         .addComponent(EmpFNameLbl)
-                        .addComponent(EMPIDLbl)
-                        .addComponent(EmpTypeLbl)
-                        .addComponent(EmpSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(49, 49, 49)
+                        .addComponent(EMPIDLbl))
+                    .addGap(33, 33, 33)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpSubmitButton)
-                        .addComponent(EmpClearButton)))
-                .addComponent(EmpSearchLbl))
-            .addGap(48, 48, 48)
-            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(EmpOrderLbl)
-                .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(EmpActiveOrderLbl1))
-            .addContainerGap(195, Short.MAX_VALUE))
+                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                            .addGap(7, 7, 7)
+                            .addComponent(EmpActiveOrderLbl1))
+                        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                            .addGap(51, 51, 51)
+                            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(EmpOrderLbl)
+                                .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(EmpSearchLbl)
+                        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                            .addComponent(EmpSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(EmpSubmitButton)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(EmpClearButton)))
+            .addContainerGap(189, Short.MAX_VALUE))
     );
 
-    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDCB, EmpClearButton, EmpFNameText, EmpLNameText, EmpSubmitButton, EmpTypeCB, jTextField1});
+    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDCB, EmpClearButton, EmpFNameText, EmpLNameText, EmpSubmitButton, EmpTypeCB, jPasswordField1, jPasswordField2, jTextField1});
 
-    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDLbl, EmpFNameLbl, EmpLNameLbl, EmpSearchButton, EmpTypeLbl, jLabel1});
+    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDLbl, EmpFNameLbl, EmpLNameLbl, EmpSearchButton, EmpTypeLbl, jLabel1, jLabel3, jLabel4});
 
     EmployeeInfoPanelLayout.setVerticalGroup(
         EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-            .addGap(106, 106, 106)
-            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                    .addComponent(EmpOrderLbl)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(EmpActiveOrderLbl1))
+            .addGap(86, 86, 86)
+            .addComponent(EmpOrderLbl)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(EMPIDLbl)
@@ -1740,13 +1761,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(EmpTypeLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EmpSearchButton)
-                        .addComponent(EmpSubmitButton))
+                        .addComponent(jLabel3)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(EmpClearButton)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EmpSearchLbl)))
-            .addContainerGap(226, Short.MAX_VALUE))
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeInfoPanelLayout.createSequentialGroup()
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpSubmitButton)
+                        .addComponent(EmpClearButton)
+                        .addComponent(EmpSearchButton))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(EmpSearchLbl))
+                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                    .addGap(30, 30, 30)
+                    .addComponent(EmpActiveOrderLbl1)))
+            .addContainerGap(217, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Employee Info", EmployeeInfoPanel);
@@ -2242,8 +2276,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JList jList1;
     private javax.swing.JList jList2;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
