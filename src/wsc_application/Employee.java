@@ -1,9 +1,14 @@
 package wsc_application;
 
-public class Employee extends Person {
+public class Employee{
+    
+    protected String firstName;
+    protected String lastName;
+    protected Long EMPID;
+    protected String email;
     
     public enum type {
-        SALES, ENGRAVER, PRINTER, STOCKCLERK, OPSMGR;
+        SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan;
     }
     
     public Employee() {
