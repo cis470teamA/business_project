@@ -93,7 +93,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         QAMediaFinishFailRb = new javax.swing.JRadioButton();
         QAWorkmanshipFailRb = new javax.swing.JRadioButton();
         QACommentTB = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        QACommentText = new javax.swing.JTextArea();
         QACommentLbl = new javax.swing.JLabel();
         QAContentFailText = new javax.swing.JTextField();
         QAOrderMediaFailText = new javax.swing.JTextField();
@@ -110,7 +110,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         QAOrderIDCB = new javax.swing.JComboBox();
         QAIDLbl = new javax.swing.JLabel();
         QAIDCB = new javax.swing.JComboBox();
-        InvSearchLbl3 = new javax.swing.JLabel();
+        QASearchLbl = new javax.swing.JLabel();
         OrderVerifyPanel = new javax.swing.JPanel();
         OVSubmitButton = new javax.swing.JButton();
         OVClearFieldButton = new javax.swing.JButton();
@@ -128,7 +128,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         OVMediaNumFailRb = new javax.swing.JRadioButton();
         OVContentFailRb = new javax.swing.JRadioButton();
         OVCommentsTB = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        OVCommentsText = new javax.swing.JTextArea();
         OVCommentsLbl = new javax.swing.JLabel();
         OVNameFailText = new javax.swing.JTextField();
         OVAcctNumFailText = new javax.swing.JTextField();
@@ -166,7 +166,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         OVCreateByLbl = new javax.swing.JLabel();
         OVAssignedToLbl = new javax.swing.JLabel();
         OVLastModfiedByLbl = new javax.swing.JLabel();
-        InvSearchLbl4 = new javax.swing.JLabel();
+        OVSearchButttonLbl = new javax.swing.JLabel();
         OrderInfoPanel = new javax.swing.JPanel();
         OrderNumberLbl = new javax.swing.JLabel();
         OrderDeliverPayRB = new javax.swing.JRadioButton();
@@ -199,43 +199,16 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         OrderCreatedByLbl = new javax.swing.JLabel();
         OrderLastModifiedByLbl = new javax.swing.JLabel();
         OrderNumberCB = new javax.swing.JComboBox();
-        InvSearchLbl2 = new javax.swing.JLabel();
-        EmployeeInfoPanel = new javax.swing.JPanel();
-        EmpFNameText = new javax.swing.JTextField();
-        EmpLNameText = new javax.swing.JTextField();
-        EmpStreet1Text = new javax.swing.JTextField();
-        EmpStreet2Text = new javax.swing.JTextField();
-        EmpFNameLbl = new javax.swing.JLabel();
-        EmpLNameLbl = new javax.swing.JLabel();
-        EmpStreet1Lbl = new javax.swing.JLabel();
-        EmpStreet2Lbl = new javax.swing.JLabel();
-        EmpCityText = new javax.swing.JTextField();
-        EmpZipText = new javax.swing.JTextField();
-        EmpCityLbl = new javax.swing.JLabel();
-        EmpZipLbl = new javax.swing.JLabel();
-        EmpSearchButton = new javax.swing.JButton();
-        EmpSubmitButton = new javax.swing.JButton();
-        EmpOrderLB = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-        EmpOrderLbl = new javax.swing.JLabel();
-        EmpClearButton = new javax.swing.JButton();
-        EmpActiveOrderLbl1 = new javax.swing.JLabel();
-        EMPIDLbl = new javax.swing.JLabel();
-        EmpStateCB = new javax.swing.JComboBox();
-        EmpStateLbl = new javax.swing.JLabel();
-        EmpTypeCB = new javax.swing.JComboBox();
-        EmpTypeLbl = new javax.swing.JLabel();
-        EMPIDCB = new javax.swing.JComboBox();
-        InvSearchLbl1 = new javax.swing.JLabel();
+        OrderSearchLbl = new javax.swing.JLabel();
         Inv = new javax.swing.JPanel();
         InvItemIDLbl = new javax.swing.JLabel();
         InvManIDLbl = new javax.swing.JLabel();
         InvOnHandLbl = new javax.swing.JLabel();
         InvOnOrderLbl = new javax.swing.JLabel();
         InvDelDateLbl = new javax.swing.JLabel();
-        CustCreateButton4 = new javax.swing.JButton();
-        CustCreateButton5 = new javax.swing.JButton();
-        CustFindButton2 = new javax.swing.JButton();
+        InvOrderButton = new javax.swing.JButton();
+        InvClearButton = new javax.swing.JButton();
+        InvSearchButton = new javax.swing.JButton();
         InvItemNameLbl = new javax.swing.JLabel();
         InvItemNameText = new javax.swing.JTextField();
         InvSearchLbl = new javax.swing.JLabel();
@@ -244,6 +217,25 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         InvDelDateText = new javax.swing.JTextField();
         InvItemIDCB = new javax.swing.JComboBox();
         jComboBox2 = new javax.swing.JComboBox();
+        EmployeeInfoPanel = new javax.swing.JPanel();
+        EmpFNameText = new javax.swing.JTextField();
+        EmpLNameText = new javax.swing.JTextField();
+        EmpFNameLbl = new javax.swing.JLabel();
+        EmpLNameLbl = new javax.swing.JLabel();
+        EmpSearchButton = new javax.swing.JButton();
+        EmpSubmitButton = new javax.swing.JButton();
+        EmpOrderLB = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        EmpOrderLbl = new javax.swing.JLabel();
+        EmpClearButton = new javax.swing.JButton();
+        EmpActiveOrderLbl1 = new javax.swing.JLabel();
+        EMPIDLbl = new javax.swing.JLabel();
+        EmpTypeCB = new javax.swing.JComboBox();
+        EmpTypeLbl = new javax.swing.JLabel();
+        EMPIDCB = new javax.swing.JComboBox();
+        EmpSearchLbl = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(600, 549));
 
@@ -617,9 +609,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    jTextArea1.setColumns(20);
-    jTextArea1.setRows(5);
-    QACommentTB.setViewportView(jTextArea1);
+    QACommentText.setColumns(20);
+    QACommentText.setRows(5);
+    QACommentTB.setViewportView(QACommentText);
 
     QACommentLbl.setText("Comments");
 
@@ -668,8 +660,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    InvSearchLbl3.setForeground(new java.awt.Color(255, 51, 51));
-    InvSearchLbl3.setText("* Use only one field for searches");
+    QASearchLbl.setForeground(new java.awt.Color(255, 51, 51));
+    QASearchLbl.setText("* Use only one field for searches");
 
     javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
     QAPanel.setLayout(QAPanelLayout);
@@ -731,7 +723,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(QASearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(QASubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(InvSearchLbl3, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(QASearchLbl, javax.swing.GroupLayout.Alignment.LEADING))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(QAClearButton)))
             .addGap(200, 200, 200))
@@ -789,7 +781,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QASubmitButton)
                 .addComponent(QAClearButton))
             .addGap(2, 2, 2)
-            .addComponent(InvSearchLbl3)
+            .addComponent(QASearchLbl)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QACreatedByLbl)
@@ -888,9 +880,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    jTextArea2.setColumns(20);
-    jTextArea2.setRows(5);
-    OVCommentsTB.setViewportView(jTextArea2);
+    OVCommentsText.setColumns(20);
+    OVCommentsText.setRows(5);
+    OVCommentsTB.setViewportView(OVCommentsText);
 
     OVCommentsLbl.setText("Additional Comments");
 
@@ -1018,8 +1010,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVLastModfiedByLbl.setText("Last Modified by ******");
 
-    InvSearchLbl4.setForeground(new java.awt.Color(255, 51, 51));
-    InvSearchLbl4.setText("* Use only one field for searches");
+    OVSearchButttonLbl.setForeground(new java.awt.Color(255, 51, 51));
+    OVSearchButttonLbl.setText("* Use only one field for searches");
 
     javax.swing.GroupLayout OrderVerifyPanelLayout = new javax.swing.GroupLayout(OrderVerifyPanel);
     OrderVerifyPanel.setLayout(OrderVerifyPanelLayout);
@@ -1082,7 +1074,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(InvSearchLbl4)
+                        .addComponent(OVSearchButttonLbl)
                         .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1216,7 +1208,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(OVSubmitButton))))
                 .addComponent(OVAssignEmpCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(3, 3, 3)
-            .addComponent(InvSearchLbl4)
+            .addComponent(OVSearchButttonLbl)
             .addGap(1, 1, 1)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVCreateByLbl)
@@ -1337,8 +1329,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderNumberCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-    InvSearchLbl2.setForeground(new java.awt.Color(255, 51, 51));
-    InvSearchLbl2.setText("* Use only one field for searches");
+    OrderSearchLbl.setForeground(new java.awt.Color(255, 51, 51));
+    OrderSearchLbl.setText("* Use only one field for searches");
 
     javax.swing.GroupLayout OrderInfoPanelLayout = new javax.swing.GroupLayout(OrderInfoPanel);
     OrderInfoPanel.setLayout(OrderInfoPanelLayout);
@@ -1388,10 +1380,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(OrderContentLbl))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
+                    .addGap(63, 63, 63)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(InvSearchLbl2)
+                        .addComponent(OrderSearchLbl)
                         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                            .addGap(63, 63, 63)
                             .addComponent(OrderSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(OrderSubmitButton)
@@ -1407,7 +1399,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(OrderAssignedToLbl)
                 .addComponent(OrderLastModifiedByLbl))
-            .addContainerGap())
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     OrderInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OrderCustomerNumberText, OrderDepositText, OrderMediaCatNumText, OrderMediaStatusCB, OrderNumberCB, OrderStatusCB, OrderTotalText});
@@ -1470,8 +1462,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(OrderSearchButton)
                         .addComponent(OrderSubmitButton)
                         .addComponent(OrderClearFieldsButton))
-                    .addGap(8, 8, 8)
-                    .addComponent(InvSearchLbl2)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(OrderSearchLbl)))
             .addGap(8, 8, 8)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OrderMediaStatusLbl)
@@ -1493,222 +1485,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     WSCInterface.addTab("Order", OrderTabbedPane);
 
-    EmpLNameText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpLNameTextActionPerformed(evt);
-        }
-    });
-
-    EmpStreet2Text.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpStreet2TextActionPerformed(evt);
-        }
-    });
-
-    EmpFNameLbl.setText("First Name");
-
-    EmpLNameLbl.setText("Last Name");
-
-    EmpStreet1Lbl.setText("Street Address Line 1");
-
-    EmpStreet2Lbl.setText("Street Address Line 2");
-
-    EmpCityText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpCityTextActionPerformed(evt);
-        }
-    });
-
-    EmpZipText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpZipTextActionPerformed(evt);
-        }
-    });
-
-    EmpCityLbl.setText("City");
-
-    EmpZipLbl.setText("Zip");
-
-    EmpSearchButton.setText("Search");
-    EmpSearchButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpSearchButtonActionPerformed(evt);
-        }
-    });
-
-    EmpSubmitButton.setText("Create/Update");
-    EmpSubmitButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpSubmitButtonActionPerformed(evt);
-        }
-    });
-
-    jList2.setModel(new javax.swing.AbstractListModel() {
-        String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-        public int getSize() { return strings.length; }
-        public Object getElementAt(int i) { return strings[i]; }
-    });
-    EmpOrderLB.setViewportView(jList2);
-
-    EmpOrderLbl.setText("Order(s):");
-
-    EmpClearButton.setText("Clear Fields");
-    EmpClearButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpClearButtonActionPerformed(evt);
-        }
-    });
-
-    EmpActiveOrderLbl1.setForeground(new java.awt.Color(255, 0, 0));
-    EmpActiveOrderLbl1.setText("*Active orders in red");
-
-    EMPIDLbl.setText("Employee id");
-
-    EmpStateCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
-        "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
-        "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" }));
-EmpStateCB.setPreferredSize(new java.awt.Dimension(35, 20));
-EmpStateCB.addActionListener(new java.awt.event.ActionListener() {
-public void actionPerformed(java.awt.event.ActionEvent evt) {
-    EmpStateCBActionPerformed(evt);
-    }
-    });
-
-    EmpStateLbl.setText("State");
-
-    EmpTypeCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    EmpTypeLbl.setText("Employee Type");
-
-    EMPIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    InvSearchLbl1.setForeground(new java.awt.Color(255, 51, 51));
-    InvSearchLbl1.setText("* Use only one field for searches");
-
-    javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
-    EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
-    EmployeeInfoPanelLayout.setHorizontalGroup(
-        EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-            .addGap(120, 120, 120)
-            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                    .addComponent(InvSearchLbl1)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeInfoPanelLayout.createSequentialGroup()
-                                        .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(EmpLNameLbl)
-                                            .addComponent(EmpFNameLbl))
-                                        .addGap(56, 56, 56))
-                                    .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                                        .addComponent(EMPIDLbl)
-                                        .addGap(50, 50, 50)))
-                                .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                                        .addComponent(EmpCityLbl)
-                                        .addGap(88, 88, 88))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeInfoPanelLayout.createSequentialGroup()
-                                        .addComponent(EmpStateLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(EmpStateCB, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(EmpZipLbl)
-                                        .addGap(4, 4, 4)))
-                                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(EmpStreet1Lbl)
-                                        .addComponent(EmpStreet2Lbl))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                .addComponent(EmpZipText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(EmpCityText, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(EmpStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(EmpStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(EmpLNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                                .addComponent(EmpFNameText)
-                                .addComponent(EMPIDCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
-                            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(EmpActiveOrderLbl1)
-                                .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(EmpOrderLbl)))
-                        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(EmpSearchButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(EmpTypeLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                                    .addGap(36, 36, 36)
-                                    .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeInfoPanelLayout.createSequentialGroup()
-                                    .addGap(2, 2, 2)
-                                    .addComponent(EmpSubmitButton)
-                                    .addGap(5, 5, 5)
-                                    .addComponent(EmpClearButton)))))
-                    .addContainerGap(143, Short.MAX_VALUE))))
-    );
-    EmployeeInfoPanelLayout.setVerticalGroup(
-        EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-            .addGap(106, 106, 106)
-            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                    .addComponent(EmpOrderLbl)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(EmpActiveOrderLbl1))
-                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EMPIDLbl)
-                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EmpFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpFNameLbl))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EmpLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpLNameLbl))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(EmpStreet1Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpStreet1Lbl))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(EmpStreet2Lbl)
-                        .addComponent(EmpStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EmpCityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpCityLbl))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EmpStateLbl)
-                        .addComponent(EmpStateCB, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpZipText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpZipLbl))
-                    .addGap(2, 2, 2)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EmpTypeLbl))))
-            .addGap(19, 19, 19)
-            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(EmpSearchButton)
-                .addComponent(EmpSubmitButton)
-                .addComponent(EmpClearButton))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(InvSearchLbl1)
-            .addContainerGap(164, Short.MAX_VALUE))
-    );
-
-    WSCInterface.addTab("Employee Info", EmployeeInfoPanel);
-
     InvItemIDLbl.setText("Item Number");
 
     InvManIDLbl.setText("Manufacturer");
@@ -1719,24 +1495,24 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
 
     InvDelDateLbl.setText("Delivery Date");
 
-    CustCreateButton4.setText("Order/Mark Sold");
-    CustCreateButton4.addActionListener(new java.awt.event.ActionListener() {
+    InvOrderButton.setText("Order/Mark Sold");
+    InvOrderButton.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            CustCreateButton4ActionPerformed(evt);
+            InvOrderButtonActionPerformed(evt);
         }
     });
 
-    CustCreateButton5.setText("Clear Fields");
-    CustCreateButton5.addActionListener(new java.awt.event.ActionListener() {
+    InvClearButton.setText("Clear Fields");
+    InvClearButton.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            CustCreateButton5ActionPerformed(evt);
+            InvClearButtonActionPerformed(evt);
         }
     });
 
-    CustFindButton2.setText("Search");
-    CustFindButton2.addActionListener(new java.awt.event.ActionListener() {
+    InvSearchButton.setText("Search");
+    InvSearchButton.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            CustFindButton2ActionPerformed(evt);
+            InvSearchButtonActionPerformed(evt);
         }
     });
 
@@ -1766,7 +1542,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     InvLayout.setHorizontalGroup(
         InvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(InvLayout.createSequentialGroup()
-            .addGap(170, 170, 170)
+            .addGap(137, 137, 137)
             .addGroup(InvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(InvLayout.createSequentialGroup()
                     .addGroup(InvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1776,7 +1552,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
                         .addComponent(InvItemNameLbl)
                         .addComponent(InvManIDLbl)
                         .addComponent(InvItemIDLbl)
-                        .addComponent(CustFindButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(InvSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(InvLayout.createSequentialGroup()
@@ -1789,9 +1565,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGap(918, 918, 918))
                         .addGroup(InvLayout.createSequentialGroup()
-                            .addComponent(CustCreateButton4)
+                            .addComponent(InvOrderButton)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(CustCreateButton5)
+                            .addComponent(InvClearButton)
                             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(InvLayout.createSequentialGroup()
                     .addComponent(InvSearchLbl)
@@ -1829,15 +1605,154 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
                 .addComponent(InvDelDateLbl))
             .addGap(18, 18, 18)
             .addGroup(InvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(CustFindButton2)
-                .addComponent(CustCreateButton4)
-                .addComponent(CustCreateButton5))
+                .addComponent(InvSearchButton)
+                .addComponent(InvOrderButton)
+                .addComponent(InvClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvSearchLbl)
             .addContainerGap(231, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Inventory", Inv);
+
+    EmpLNameText.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            EmpLNameTextActionPerformed(evt);
+        }
+    });
+
+    EmpFNameLbl.setText("First Name");
+
+    EmpLNameLbl.setText("Last Name");
+
+    EmpSearchButton.setText("Search");
+    EmpSearchButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            EmpSearchButtonActionPerformed(evt);
+        }
+    });
+
+    EmpSubmitButton.setText("Create/Update");
+    EmpSubmitButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            EmpSubmitButtonActionPerformed(evt);
+        }
+    });
+
+    jList2.setModel(new javax.swing.AbstractListModel() {
+        String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        public int getSize() { return strings.length; }
+        public Object getElementAt(int i) { return strings[i]; }
+    });
+    EmpOrderLB.setViewportView(jList2);
+
+    EmpOrderLbl.setText("Order(s):");
+
+    EmpClearButton.setText("Clear Fields");
+    EmpClearButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            EmpClearButtonActionPerformed(evt);
+        }
+    });
+
+    EmpActiveOrderLbl1.setForeground(new java.awt.Color(255, 0, 0));
+    EmpActiveOrderLbl1.setText("*Active orders in red");
+
+    EMPIDLbl.setText("Employee id");
+
+    EmpTypeCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+    EmpTypeLbl.setText("Employee Type");
+
+    EMPIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+    EmpSearchLbl.setForeground(new java.awt.Color(255, 51, 51));
+    EmpSearchLbl.setText("* Use only one field for searches");
+
+    jLabel1.setText("Email Address");
+
+    jTextField1.setText("jTextField1");
+
+    javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
+    EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
+    EmployeeInfoPanelLayout.setHorizontalGroup(
+        EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+            .addGap(120, 120, 120)
+            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
+                        .addComponent(EmpLNameLbl)
+                        .addComponent(EmpFNameLbl)
+                        .addComponent(EMPIDLbl)
+                        .addComponent(EmpTypeLbl)
+                        .addComponent(EmpSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(49, 49, 49)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpSubmitButton)
+                        .addComponent(EmpClearButton)))
+                .addComponent(EmpSearchLbl))
+            .addGap(48, 48, 48)
+            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(EmpOrderLbl)
+                .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EmpActiveOrderLbl1))
+            .addContainerGap(210, Short.MAX_VALUE))
+    );
+
+    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDCB, EmpClearButton, EmpFNameText, EmpLNameText, EmpSubmitButton, EmpTypeCB, jTextField1});
+
+    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDLbl, EmpFNameLbl, EmpLNameLbl, EmpSearchButton, EmpTypeLbl, jLabel1});
+
+    EmployeeInfoPanelLayout.setVerticalGroup(
+        EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+            .addGap(106, 106, 106)
+            .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                    .addComponent(EmpOrderLbl)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(EmpActiveOrderLbl1))
+                .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EMPIDLbl)
+                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpFNameLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpLNameLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpTypeLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EmpSearchButton)
+                        .addComponent(EmpSubmitButton))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(EmpClearButton)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EmpSearchLbl)))
+            .addContainerGap(226, Short.MAX_VALUE))
+    );
+
+    WSCInterface.addTab("Employee Info", EmployeeInfoPanel);
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
@@ -1857,17 +1772,17 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CustFindButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButton2ActionPerformed
+    private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustFindButton2ActionPerformed
+    }//GEN-LAST:event_InvSearchButtonActionPerformed
 
-    private void CustCreateButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton5ActionPerformed
+    private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustCreateButton5ActionPerformed
+    }//GEN-LAST:event_InvClearButtonActionPerformed
 
-    private void CustCreateButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButton4ActionPerformed
+    private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CustCreateButton4ActionPerformed
+    }//GEN-LAST:event_InvOrderButtonActionPerformed
 
     private void CustStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStateCBActionPerformed
         // TODO add your handling code here:
@@ -1953,14 +1868,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpLNameTextActionPerformed
 
-    private void EmpStreet2TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpStreet2TextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpStreet2TextActionPerformed
-
-    private void EmpZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpZipTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpZipTextActionPerformed
-
     private void EmpSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSearchButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
@@ -1972,10 +1879,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private void EmpClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpClearButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpClearButtonActionPerformed
-
-    private void EmpStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpStateCBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpStateCBActionPerformed
 
     private void InvOnHandTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOnHandTextActionPerformed
         // TODO add your handling code here:
@@ -2129,10 +2032,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_QAIDCBActionPerformed
 
-    private void EmpCityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCityTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpCityTextActionPerformed
-
     private void CUSTIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CUSTIDCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CUSTIDCBActionPerformed
@@ -2145,12 +2044,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JTextField CustCityText;
     private javax.swing.JButton CustClearButton;
     private javax.swing.JButton CustCreateButton;
-    private javax.swing.JButton CustCreateButton4;
-    private javax.swing.JButton CustCreateButton5;
     private javax.swing.JLabel CustFNameLbl;
     private javax.swing.JTextField CustFNameText;
     private javax.swing.JButton CustFindButton;
-    private javax.swing.JButton CustFindButton2;
     private javax.swing.JLabel CustLNameLbl;
     private javax.swing.JTextField CustLNameText;
     private javax.swing.JScrollPane CustOrderListBox;
@@ -2169,8 +2065,6 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JComboBox EMPIDCB;
     private javax.swing.JLabel EMPIDLbl;
     private javax.swing.JLabel EmpActiveOrderLbl1;
-    private javax.swing.JLabel EmpCityLbl;
-    private javax.swing.JTextField EmpCityText;
     private javax.swing.JButton EmpClearButton;
     private javax.swing.JLabel EmpFNameLbl;
     private javax.swing.JTextField EmpFNameText;
@@ -2179,19 +2073,13 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JScrollPane EmpOrderLB;
     private javax.swing.JLabel EmpOrderLbl;
     private javax.swing.JButton EmpSearchButton;
-    private javax.swing.JComboBox EmpStateCB;
-    private javax.swing.JLabel EmpStateLbl;
-    private javax.swing.JLabel EmpStreet1Lbl;
-    private javax.swing.JTextField EmpStreet1Text;
-    private javax.swing.JLabel EmpStreet2Lbl;
-    private javax.swing.JTextField EmpStreet2Text;
+    private javax.swing.JLabel EmpSearchLbl;
     private javax.swing.JButton EmpSubmitButton;
     private javax.swing.JComboBox EmpTypeCB;
     private javax.swing.JLabel EmpTypeLbl;
-    private javax.swing.JLabel EmpZipLbl;
-    private javax.swing.JTextField EmpZipText;
     private javax.swing.JPanel EmployeeInfoPanel;
     private javax.swing.JPanel Inv;
+    private javax.swing.JButton InvClearButton;
     private javax.swing.JLabel InvDelDateLbl;
     private javax.swing.JTextField InvDelDateText;
     private javax.swing.JComboBox InvItemIDCB;
@@ -2203,11 +2091,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JTextField InvOnHandText;
     private javax.swing.JLabel InvOnOrderLbl;
     private javax.swing.JTextField InvOnOrderText;
+    private javax.swing.JButton InvOrderButton;
+    private javax.swing.JButton InvSearchButton;
     private javax.swing.JLabel InvSearchLbl;
-    private javax.swing.JLabel InvSearchLbl1;
-    private javax.swing.JLabel InvSearchLbl2;
-    private javax.swing.JLabel InvSearchLbl3;
-    private javax.swing.JLabel InvSearchLbl4;
     private javax.swing.JLabel InvSearchLbl5;
     private javax.swing.JButton LoginButton;
     private javax.swing.JLabel LoginEMPIDLbl;
@@ -2226,6 +2112,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JButton OVClearFieldButton;
     private javax.swing.JLabel OVCommentsLbl;
     private javax.swing.JScrollPane OVCommentsTB;
+    private javax.swing.JTextArea OVCommentsText;
     private javax.swing.JRadioButton OVContentFailRb;
     private javax.swing.JTextField OVContentFailText;
     private javax.swing.JLabel OVContentLbl;
@@ -2267,6 +2154,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JLabel OVPayTypeValLbl;
     private javax.swing.JLabel OVReasonLbl;
     private javax.swing.JButton OVSearchButton;
+    private javax.swing.JLabel OVSearchButttonLbl;
     private javax.swing.JButton OVSubmitButton;
     private javax.swing.JLabel OVVerifyByLbl;
     private javax.swing.JRadioButton OrderAccountPayRB;
@@ -2293,6 +2181,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.ButtonGroup OrderPayTypeBG;
     private javax.swing.JLabel OrderPaymentTypeLbl;
     private javax.swing.JButton OrderSearchButton;
+    private javax.swing.JLabel OrderSearchLbl;
     private javax.swing.JComboBox OrderStatusCB;
     private javax.swing.JLabel OrderStatusLbl;
     private javax.swing.JButton OrderSubmitButton;
@@ -2317,6 +2206,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JButton QAClearButton;
     private javax.swing.JLabel QACommentLbl;
     private javax.swing.JScrollPane QACommentTB;
+    private javax.swing.JTextArea QACommentText;
     private javax.swing.JTextField QAContentFailText;
     private javax.swing.JRadioButton QACorrectContentFailRb;
     private javax.swing.JLabel QACorrectContentLbl;
@@ -2344,6 +2234,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JLabel QAPassLbl;
     private javax.swing.JLabel QAReasonLbl;
     private javax.swing.JButton QASearchButton;
+    private javax.swing.JLabel QASearchLbl;
     private javax.swing.JButton QASubmitButton;
     private javax.swing.JLabel QAVerifiedByLbl;
     private javax.swing.ButtonGroup QAWorkmanshipBG;
@@ -2352,9 +2243,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JList jList1;
     private javax.swing.JList jList2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
