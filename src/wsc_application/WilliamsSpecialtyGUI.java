@@ -75,8 +75,10 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         CustStateLbl = new javax.swing.JLabel();
         CUSTIDCB = new javax.swing.JComboBox();
         InvSearchLbl5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        CustPhoneLbl = new javax.swing.JLabel();
+        CustPhoneText = new javax.swing.JTextField();
+        CustEmailLbl = new javax.swing.JLabel();
+        CustEmailText = new javax.swing.JTextField();
         OrderTabbedPane = new javax.swing.JTabbedPane();
         QAPanel = new javax.swing.JPanel();
         QASubmitButton = new javax.swing.JButton();
@@ -410,9 +412,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     InvSearchLbl5.setForeground(new java.awt.Color(255, 51, 51));
     InvSearchLbl5.setText("* Use only one field for searches");
 
-    jLabel2.setText("Phone Number");
+    CustPhoneLbl.setText("Phone Number");
 
-    jTextField2.setText("jTextField2");
+    CustEmailLbl.setText("Email");
 
     javax.swing.GroupLayout CustomerInfoPanelLayout = new javax.swing.GroupLayout(CustomerInfoPanel);
     CustomerInfoPanel.setLayout(CustomerInfoPanelLayout);
@@ -421,10 +423,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
             .addGap(120, 120, 120)
             .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(CustEmailLbl)
                 .addComponent(InvSearchLbl5)
                 .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
                     .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2)
+                        .addComponent(CustPhoneLbl)
                         .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
                             .addComponent(CustStateLbl)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -440,7 +443,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addComponent(CustZipLbl)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustEmailText, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CustPhoneText, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CustZipText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CustCityText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CustStreet2Text, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -463,7 +467,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addContainerGap(240, Short.MAX_VALUE))
     );
 
-    CustomerInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CUSTIDCB, CustCityText, CustFNameText, CustLNameText, CustOrgText, CustStreet1Text, CustStreet2Text, CustZipText, jTextField2});
+    CustomerInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CUSTIDCB, CustCityText, CustEmailText, CustFNameText, CustLNameText, CustOrgText, CustPhoneText, CustStreet1Text, CustStreet2Text, CustZipText});
 
     CustomerInfoPanelLayout.setVerticalGroup(
         CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -475,8 +479,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(CustOrderListBox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(CustActiveOrderLbl)
-                    .addGap(20, 20, 20))
+                    .addComponent(CustActiveOrderLbl))
                 .addGroup(CustomerInfoPanelLayout.createSequentialGroup()
                     .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(CUSTIDLbl)
@@ -513,16 +516,20 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(CustStateLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addComponent(CustPhoneLbl)
+                        .addComponent(CustPhoneText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(CustEmailLbl)
+                .addComponent(CustEmailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(23, 23, 23)
             .addGroup(CustomerInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(CustFindButton)
                 .addComponent(CustCreateButton)
                 .addComponent(CustClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvSearchLbl5)
-            .addContainerGap(160, Short.MAX_VALUE))
+            .addContainerGap(117, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Customer Info", CustomerInfoPanel);
@@ -1756,7 +1763,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(jLabel1)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpTypeLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1824,7 +1831,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_CustClearButtonActionPerformed
 
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
-        // TODO add your handling code here:
+        Customer customer = new Customer(Integer.parseInt(CUSTIDCB.toString()),
+                CustFNameText.getText(),CustLNameText.getName(),CustOrgText.getText(),
+                CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
+                CustStateCB.toString(),Integer.parseInt(CustZipText.getText()),
+                Integer.parseInt(CustPhoneText.getText()),CustEmailText.getText());
     }//GEN-LAST:event_CustCreateButtonActionPerformed
 
     private void CustFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButtonActionPerformed
@@ -2075,6 +2086,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField CustCityText;
     private javax.swing.JButton CustClearButton;
     private javax.swing.JButton CustCreateButton;
+    private javax.swing.JLabel CustEmailLbl;
+    private javax.swing.JTextField CustEmailText;
     private javax.swing.JLabel CustFNameLbl;
     private javax.swing.JTextField CustFNameText;
     private javax.swing.JButton CustFindButton;
@@ -2084,6 +2097,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel CustOrderListBoxLbl;
     private javax.swing.JLabel CustOrgLbl;
     private javax.swing.JTextField CustOrgText;
+    private javax.swing.JLabel CustPhoneLbl;
+    private javax.swing.JTextField CustPhoneText;
     private javax.swing.JComboBox CustStateCB;
     private javax.swing.JLabel CustStateLbl;
     private javax.swing.JLabel CustStreet1Lbl;
@@ -2275,7 +2290,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JList jList1;
@@ -2283,6 +2297,5 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

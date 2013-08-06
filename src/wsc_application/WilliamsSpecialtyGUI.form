@@ -198,10 +198,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="CustEmailLbl" min="-2" max="-2" attributes="0"/>
                           <Component id="InvSearchLbl5" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustPhoneLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="CustStateLbl" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -219,7 +220,8 @@
                               <Component id="CustZipLbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="jTextField2" linkSize="8" alignment="2" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="CustEmailText" linkSize="8" alignment="2" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="CustPhoneText" linkSize="8" alignment="2" min="-2" pref="89" max="-2" attributes="0"/>
                                   <Component id="CustZipText" linkSize="8" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                                   <Component id="CustCityText" linkSize="8" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                                   <Component id="CustStreet2Text" linkSize="8" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
@@ -259,7 +261,6 @@
                               <Component id="CustOrderListBox" min="-2" pref="180" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="CustActiveOrderLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -305,12 +306,17 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustPhoneLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CustPhoneText" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="CustEmailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CustEmailText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="CustFindButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="CustCreateButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -318,7 +324,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="InvSearchLbl5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="160" max="32767" attributes="0"/>
+                      <EmptySpace pref="117" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -490,15 +496,19 @@
                 <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="CustPhoneLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phone Number"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="CustPhoneText">
+            </Component>
+            <Component class="javax.swing.JLabel" name="CustEmailLbl">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField2"/>
+                <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="CustEmailText">
             </Component>
           </SubComponents>
         </Container>
@@ -2271,7 +2281,7 @@
                                   <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="EmpTypeCB" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="EmpTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
