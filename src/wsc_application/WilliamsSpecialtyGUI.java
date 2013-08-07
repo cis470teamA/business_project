@@ -2093,7 +2093,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_emOrdersLstValueChanged
 
     private void custOrdLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_custOrdLstValueChanged
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
+        
     }//GEN-LAST:event_custOrdLstValueChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
