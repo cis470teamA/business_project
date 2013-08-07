@@ -2093,7 +2093,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_emOrdersLstValueChanged
 
     private void custOrdLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_custOrdLstValueChanged
-        // TODO add your handling code here: 
+        //Add code for customer orders 
         
     }//GEN-LAST:event_custOrdLstValueChanged
 
