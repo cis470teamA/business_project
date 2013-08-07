@@ -66,7 +66,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
         CustFindButton = new javax.swing.JButton();
         CustCreateButton = new javax.swing.JButton();
         CustOrderListBox = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        custOrdLst = new javax.swing.JList();
         CustOrderListBoxLbl = new javax.swing.JLabel();
         CustClearButton = new javax.swing.JButton();
         CustActiveOrderLbl = new javax.swing.JLabel();
@@ -369,12 +369,17 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
             }
         });
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        custOrdLst.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        CustOrderListBox.setViewportView(jList1);
+        custOrdLst.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                custOrdLstValueChanged(evt);
+            }
+        });
+        CustOrderListBox.setViewportView(custOrdLst);
 
         CustOrderListBoxLbl.setText("Order(s):");
 
@@ -2087,6 +2092,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_emOrdersLstValueChanged
 
+    private void custOrdLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_custOrdLstValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_custOrdLstValueChanged
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox CUSTIDCB;
     private javax.swing.JLabel CUSTIDLbl;
@@ -2297,12 +2306,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
+    private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JList jList1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
