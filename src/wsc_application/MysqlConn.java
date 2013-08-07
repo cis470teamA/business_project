@@ -3,6 +3,7 @@ package wsc_application;
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class MysqlConn {
     private String user = "appl_user";
@@ -14,6 +15,9 @@ public class MysqlConn {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
         }
         catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "MySQL driver failed to load.", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
+            System.exit(1);
             System.out.println("Exception loading com.mysql.jdbc.Driver" + ex.getMessage());
         }
     }
@@ -23,6 +27,9 @@ public class MysqlConn {
             this.conn = DriverManager.getConnection("jdbc:mysql://mysql.durivage.org", user, pass);
         }
         catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,  "Failed to connect to the "
+                    + "MySQL Server.  Check console for more information", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
