@@ -17,18 +17,18 @@ public class Customer {
     public Customer(){
     }
      public Customer(int custid, String fName, String lName,String org, String street1,
-    String street2, String city, String state, int zip, int phone, String email){
-     setCUSTID(custid);
-     setFName(fName);
-     setLName(lName);
-     setOrg(org);
-     setStreet1(street1);
-     setStreet2(street2);
-     setCity(city);
-     setState(state);
-     setZip(zip);
-     setPhone(phone);
-     setEmail(email);
+            String street2, String city, String state, int zip, int phone, String email) {
+        setCUSTID(custid);
+        setFName(fName);
+        setLName(lName);
+        setOrg(org);
+        setStreet1(street1);
+        setStreet2(street2);
+        setCity(city);
+        setState(state);
+        setZip(zip);
+        setPhone(phone);
+        setEmail(email);
     }
     public void setCUSTID(int custid){
         
