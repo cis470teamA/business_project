@@ -1,15 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package wsc_application;
 
 import javax.swing.JFrame;
 
-/**
- *
- * @author Bradley
- */
 public class SrProject {
 
     /*
@@ -17,7 +10,9 @@ public class SrProject {
      */
     public static void main(String[] args) {
         createAndShowGUI();
-	}
+        MysqlConn mysql = new MysqlConn();
+        mysql.makeConnection();
+    }
 
     private static void createAndShowGUI() {
         //Create and set up the window.
