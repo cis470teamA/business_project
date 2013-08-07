@@ -3,6 +3,9 @@ package wsc_application;
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
 
 public class MysqlConn {
@@ -22,7 +25,7 @@ public class MysqlConn {
         }
     }
     
-    public void makeConnection() {
+    protected void makeConnection() {
         try {
             this.conn = DriverManager.getConnection("jdbc:mysql://mysql.durivage.org", user, pass);
         }
@@ -33,7 +36,21 @@ public class MysqlConn {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
+        }   
+    }
+    
+    protected ResultSet query(String query) {
+        Statement statement = null;
+        ResultSet resultset = null;
+        try {
+            statement = this.conn.createStatement();
+            resultset = statement.executeQuery(query);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        finally {
+            return resultset;
         }
     }
-
 }
