@@ -526,11 +526,11 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="QAPanel">
+            <Container class="javax.swing.JPanel" name="OrderInfoPanel">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Quality Assurance">
-                    <Property name="tabTitle" type="java.lang.String" value="Quality Assurance"/>
+                  <JTabbedPaneConstraints tabName="Order Info">
+                    <Property name="tabTitle" type="java.lang.String" value="Order Info"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -538,370 +538,297 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="QAOrderIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderTypeShirtRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderTypePlaqueRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderTypeTrophyRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusLbl" alignment="0" pref="146" max="32767" attributes="0"/>
+                              <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="QAOrderIDCB" pref="93" max="32767" attributes="0"/>
-                              <Component id="QAIDCB" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderMediaStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderDepositText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderTotalText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderMediaCatNumText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderNumberCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderCUSTIDText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
+                                      <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="OrderSearchButton" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="192" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="QAVerifiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QACreatedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderVerifyByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderCreatedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="QAAssignedToLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAModifiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderAssignedToLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderLastModifiedByLbl" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="QACorrectOrderMediaLbl" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAMediaFinishLbl" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAEngrFinishLbl" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QACorrectContentLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="QAMediaFinishPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAWorkmanshipPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QACorrectMediaPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QACorrectContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAPassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="QACorrectContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QACorrectMediaFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAMediaFinishFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="QAFailLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="QAWorkmanshipFailText" linkSize="1" alignment="0" max="-2" attributes="0"/>
-                                      <Component id="QAMediaFinishFailText" linkSize="1" alignment="0" max="-2" attributes="0"/>
-                                      <Component id="QAContentFailText" linkSize="1" alignment="0" max="-2" attributes="0"/>
-                                      <Component id="QAOrderMediaFailText" linkSize="1" min="-2" pref="147" max="-2" attributes="0"/>
-                                      <Component id="QAReasonLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="QACommentTB" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                              <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="QASearchButton" min="-2" pref="76" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="QASubmitButton" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="QASearchLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="QAClearButton" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="58" pref="58" max="-2" attributes="0"/>
+                                  <Component id="OrderDepositLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderCUSTIDText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderCustNumberLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderNumberCB" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderNumberLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderMediaCatNumText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaCatNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Component id="OrderMediaTypeLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderTypeShirtRB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderTypePlaqueRB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderTotalText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTotalLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="OrderPaymentTypeLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderAccountPayRB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderDeliverPayRB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderDepositText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="OrderStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                          <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
+                                          <Component id="OrderContentText" min="-2" pref="265" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="OrderSearchButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderSubmitButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="QAOrderIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAOrderIDCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="QAIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAIDCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderLastModifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="QAPassLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAFailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAReasonLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QACorrectContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAContentFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectContentLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QAOrderMediaFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectMediaFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectMediaPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QACorrectOrderMediaLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QAMediaFinishFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAMediaFinishLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="QAEngrFinishLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAWorkmanshipPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAWorkmanshipFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="6" max="32767" attributes="0"/>
-                          <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="QACommentTB" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="QASearchButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QASubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                          <Component id="QASearchLbl" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="QACreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="QAModifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="QAVerifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="QASubmitButton">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Submit"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASubmitButtonActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="QAClearButton">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Clear Fields"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAClearButtonActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="QASearchButton">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Search"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASearchButtonActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QACorrectContentLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Correct Order Content"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QACorrectOrderMediaLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Correct Order Media"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAMediaFinishLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Media Finish"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAEngrFinishLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Workmanship"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectContentPassRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderContentBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentPassRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectMediaPassRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderMediaBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaPassRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QAMediaFinishPassRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAMediaFinishBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishPassRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QAWorkmanshipPassRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAWorkmanshipBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAWorkmanshipPassRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectContentFailRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderContentBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentFailRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QACorrectMediaFailRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAOrderMediaBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaFailRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QAMediaFinishFailRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAMediaFinishBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishFailRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="QAWorkmanshipFailRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="QAWorkmanshipBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAWorkmanshipFailRbActionPerformed"/>
-                  </Events>
-                </Component>
-                <Container class="javax.swing.JScrollPane" name="QACommentTB">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="QACommentText">
-                      <Properties>
-                        <Property name="columns" type="int" value="20"/>
-                        <Property name="rows" type="int" value="5"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JLabel" name="QACommentLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Comments"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="QAContentFailText">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAContentFailTextActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="QAOrderMediaFailText">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAOrderMediaFailTextActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="QAMediaFinishFailText">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="QAWorkmanshipFailText">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAPassLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Pass"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAFailLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Fail"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAReasonLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Reason for Failure"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAVerifiedByLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Order Verified by ******"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QACreatedByLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Order Created by ******"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAAssignedToLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAModifiedByLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="QAOrderIDLbl">
+                <Component class="javax.swing.JLabel" name="OrderNumberLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Number"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="QAOrderIDCB">
+                <Component class="javax.swing.JRadioButton" name="OrderDeliverPayRB">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderPayTypeBG"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Payment on Delivery"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDeliverPayRBActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="OrderAccountPayRB">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderPayTypeBG"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Payment on Account"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderDepositLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Deposit Amount"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="OrderDepositText">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDepositTextActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="OrderTypeShirtRB">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderTypeBG"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Shirt"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderTypeShirtRBActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="OrderTypeTrophyRB">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderTypeBG"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Trophy"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="OrderTypePlaqueRB">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="OrderTypeBG"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Plaque"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderContentLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Printing/Engraving Content:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="OrderContentText">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderContentTextActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderMediaCatNumLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Media Catalog Number"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="OrderMediaCatNumText">
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderMediaTypeLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Media Type"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderCustNumberLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Customer Number"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="OrderCUSTIDText">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderCUSTIDTextActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderPaymentTypeLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Payment Type"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="OrderClearFieldsButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Clear Fields"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderClearFieldsButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="OrderSubmitButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Create/Update"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSubmitButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="OrderSearchButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Search"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSearchButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="OrderStatusCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -913,12 +840,12 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QAIDLbl">
+                <Component class="javax.swing.JLabel" name="OrderStatusLbl">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="QA Inspection Number"/>
+                    <Property name="text" type="java.lang.String" value="Order Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="QAIDCB">
+                <Component class="javax.swing.JComboBox" name="OrderMediaStatusCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -930,10 +857,57 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAIDCBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderMediaStatusCBActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="QASearchLbl">
+                <Component class="javax.swing.JLabel" name="OrderMediaStatusLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Media Status"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderTotalLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estimated Total"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="OrderTotalText">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderTotalTextActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderVerifyByLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Order Verified by ******"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderAssignedToLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderCreatedByLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Order Created by ******"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderLastModifiedByLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="OrderNumberCB">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="OrderSearchLbl">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -1579,11 +1553,11 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="OrderInfoPanel">
+            <Container class="javax.swing.JPanel" name="QAPanel">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Order Info">
-                    <Property name="tabTitle" type="java.lang.String" value="Order Info"/>
+                  <JTabbedPaneConstraints tabName="Quality Assurance">
+                    <Property name="tabTitle" type="java.lang.String" value="Quality Assurance"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1591,379 +1565,370 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderTypePrintRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                                          <Component id="OrderDepositLbl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="OrderTypeEngrRB" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OrderTypePlaqueRB" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                          <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderMediaStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="OrderDepositText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="OrderTotalText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="OrderNumberCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="OrderCustomerNumberText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="OrderStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="OrderMediaStatusLbl" pref="147" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
-                                      <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="OrderSearchButton" min="-2" pref="91" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="OrderVerifyByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderCreatedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAOrderIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="OrderAssignedToLbl" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderLastModifiedByLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="QAOrderIDCB" pref="93" max="32767" attributes="0"/>
+                              <Component id="QAIDCB" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="192" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="QAVerifiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QACreatedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="QAAssignedToLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAModifiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="QACorrectOrderMediaLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAMediaFinishLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAEngrFinishLbl" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QACorrectContentLbl" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="QAMediaFinishPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAWorkmanshipPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QACorrectMediaPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QACorrectContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAPassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="2" attributes="0">
+                                      <Component id="QACorrectContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QACorrectMediaFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAMediaFinishFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="QAFailLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="QAWorkmanshipFailText" linkSize="1" alignment="0" max="-2" attributes="0"/>
+                                      <Component id="QAMediaFinishFailText" linkSize="1" alignment="0" max="-2" attributes="0"/>
+                                      <Component id="QAContentFailText" linkSize="1" alignment="0" max="-2" attributes="0"/>
+                                      <Component id="QAOrderMediaFailText" linkSize="1" min="-2" pref="147" max="-2" attributes="0"/>
+                                      <Component id="QAReasonLbl" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="QACommentTB" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="QASearchButton" min="-2" pref="76" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="QASubmitButton" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="QASearchLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="QAClearButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderCustomerNumberText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderCustNumberLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderNumberCB" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderNumberLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderMediaCatNumText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaCatNumLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="OrderJobTypeLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypePrintRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypeEngrRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypeTrophyRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderTypePlaqueRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderTotalText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderTotalLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="OrderPaymentTypeLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderAccountPayRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderDeliverPayRB" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderDepositText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="OrderStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                          <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
-                                          <Component id="OrderContentText" min="-2" pref="265" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderSearchButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderSubmitButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="30" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAOrderIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAOrderIDCB" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OrderLastModifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAIDCB" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="QAPassLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAFailLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAReasonLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="QACorrectContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAContentFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QACorrectContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QACorrectContentLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="QAOrderMediaFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QACorrectMediaFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QACorrectMediaPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QACorrectOrderMediaLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="QAMediaFinishFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAMediaFinishFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAMediaFinishPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAMediaFinishLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="QAEngrFinishLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAWorkmanshipPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAWorkmanshipFailText" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="6" max="32767" attributes="0"/>
+                          <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="QACommentTB" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="QASearchButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QASubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="QASearchLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="QACreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="QAModifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="QAVerifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="OrderNumberLbl">
+                <Component class="javax.swing.JButton" name="QASubmitButton">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Order Number"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderDeliverPayRB">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderPayTypeBG"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Payment on Delivery"/>
+                    <Property name="text" type="java.lang.String" value="Submit"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDeliverPayRBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASubmitButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderAccountPayRB">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderPayTypeBG"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Payment on Account"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderDepositLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Deposit Amount"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="OrderDepositText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDepositTextActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypePrintRB">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderTypeBG"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Printing"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypeEngrRB">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderTypeBG"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Engraving"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypeTrophyRB">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderEngMediaBG"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Trophy"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="OrderTypePlaqueRB">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderEngMediaBG"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Plaque"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderContentLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Printing/Engraving Content:"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="OrderContentText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderContentTextActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderMediaCatNumLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Media Catalog Number"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="OrderMediaCatNumText">
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderJobTypeLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Job Type"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderCustNumberLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Customer Number"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="OrderCustomerNumberText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderCustomerNumberTextActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderPaymentTypeLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Payment Type"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="OrderClearFieldsButton">
+                <Component class="javax.swing.JButton" name="QAClearButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Clear Fields"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderClearFieldsButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAClearButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="OrderSubmitButton">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Create/Update"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSubmitButtonActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="OrderSearchButton">
+                <Component class="javax.swing.JButton" name="QASearchButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Search"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSearchButtonActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QASearchButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="OrderStatusCB">
+                <Component class="javax.swing.JLabel" name="QACorrectContentLbl">
                   <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
-                    </Property>
+                    <Property name="text" type="java.lang.String" value="Correct Order Content"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderStatusLbl">
+                <Component class="javax.swing.JLabel" name="QACorrectOrderMediaLbl">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Order Status"/>
+                    <Property name="text" type="java.lang.String" value="Correct Order Media"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="OrderMediaStatusCB">
+                <Component class="javax.swing.JLabel" name="QAMediaFinishLbl">
                   <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
+                    <Property name="text" type="java.lang.String" value="Media Finish"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QAEngrFinishLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Workmanship"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="QACorrectContentPassRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAOrderContentBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderMediaStatusCBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentPassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderMediaStatusLbl">
+                <Component class="javax.swing.JRadioButton" name="QACorrectMediaPassRb">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Media Status"/>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAOrderMediaBG"/>
+                    </Property>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderTotalLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Estimated Total"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="OrderTotalText">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderTotalTextActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaPassRbActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderVerifyByLbl">
+                <Component class="javax.swing.JRadioButton" name="QAMediaFinishPassRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAMediaFinishBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishPassRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="QAWorkmanshipPassRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAWorkmanshipBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAWorkmanshipPassRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="QACorrectContentFailRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAOrderContentBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectContentFailRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="QACorrectMediaFailRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAOrderMediaBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QACorrectMediaFailRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="QAMediaFinishFailRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAMediaFinishBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAMediaFinishFailRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="QAWorkmanshipFailRb">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="QAWorkmanshipBG"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAWorkmanshipFailRbActionPerformed"/>
+                  </Events>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="QACommentTB">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="QACommentText">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="QACommentLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Comments"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="QAContentFailText">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAContentFailTextActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="QAOrderMediaFailText">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAOrderMediaFailTextActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="QAMediaFinishFailText">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="QAWorkmanshipFailText">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QAPassLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Pass"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QAFailLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Fail"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QAReasonLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Reason for Failure"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QAVerifiedByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Verified by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderAssignedToLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OrderCreatedByLbl">
+                <Component class="javax.swing.JLabel" name="QACreatedByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Order Created by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderLastModifiedByLbl">
+                <Component class="javax.swing.JLabel" name="QAAssignedToLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QAModifiedByLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="OrderNumberCB">
+                <Component class="javax.swing.JLabel" name="QAOrderIDLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Order Number"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="QAOrderIDCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -1975,7 +1940,27 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderSearchLbl">
+                <Component class="javax.swing.JLabel" name="QAIDLbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="QA Inspection Number"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="QAIDCB">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAIDCBActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="QASearchLbl">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="ff" type="rgb"/>
