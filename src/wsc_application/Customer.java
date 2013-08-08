@@ -32,37 +32,37 @@ public class Customer {
     }
      // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setCUSTID(int custid){
-        
+        this.CUSTID = custid;
     }
     public void setFName(String fName){
-        
+        this.custFName = fName;
     }
     public void setLName(String lName){
-        
+        this.custLName = lName;
     }
     public void setOrg(String org){
-        
+        this.custOrg = org;
     }
     public void setStreet1(String street1){
-        
+        this.custStreet1 = street1;
     }
     public void setStreet2(String street2){
-        
+        this.custStreet2 = street2;
     }
     public void setCity(String City){
-        
+        this.custCity = City;
     }
     public void setState(String state){
-        
+        this.custState = state;
     }
     public void setZip(int zip){
-        
+        this.custZip = zip;
     }
     public void setPhone(int phone){
-        
+        this.custPhone = phone;
     }
     public void setEmail(String email){
-        
+        this.custEmail = email;
     }
     // </editor-fold>
     
