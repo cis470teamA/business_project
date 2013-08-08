@@ -40,7 +40,7 @@ public class MysqlConn {
     }
     
     protected ResultSet query(String query) {
-        Statement statement = null;
+        Statement statement;
         ResultSet resultset = null;
         try {
             statement = this.conn.createStatement();
