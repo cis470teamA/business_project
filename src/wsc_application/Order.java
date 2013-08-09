@@ -25,7 +25,19 @@ public class Order {
             String cont, float tot, Boolean onAcct, float dep,
             String ordStat, String medStat, Employee createBy, Employee modBy, 
             Employee assignTo){
-        
+        setCustomer(cust);
+        setORDID(ordID);
+        setCatalogItem(catItem);
+        setMediaType(medType);
+        setContent(cont);
+        setTotal(tot);
+        setOnAccount(onAcct);
+        setDeposit(dep);
+        setOrderStatus(ordStat);
+        setMediaStatus(medStat);
+        setCreatedBy(createBy);
+        setModifiedBy(modBy);
+        setAssignedTo(assignTo);
     }
     public Customer getCustomer(){
         return customer;
@@ -48,8 +60,8 @@ public class Order {
     public String getMediaType(){
         return mediaType;
     }
-    public void setMediaType(){
-        
+    public void setMediaType(String medType){
+        mediaType = medType;
     }
     public String getContent(){
         return content;
