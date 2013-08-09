@@ -10,8 +10,12 @@ import javax.swing.JOptionPane;
 
 public class MysqlConn {
     private String user = "appl_user";
-    private String pass = "4Eche4AfETupHu";
+    private String pass = "password123"; // Select only user
+    private String database = "cis470"; // Database on the MySQL server to use
     private Connection conn;
+    
+    protected Statement stmt = null;
+    protected ResultSet rs = null;
     
     public MysqlConn () {
         try {
@@ -23,11 +27,13 @@ public class MysqlConn {
             System.exit(1);
             System.out.println("Exception loading com.mysql.jdbc.Driver" + ex.getMessage());
         }
+        makeConnection();
     }
     
-    protected void makeConnection() {
+    private void makeConnection() {
         try {
             this.conn = DriverManager.getConnection("jdbc:mysql://mysql.durivage.org", user, pass);
+            this.conn.setCatalog(database);
         }
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,  "Failed to connect to the "
@@ -39,18 +45,47 @@ public class MysqlConn {
         }   
     }
     
-    protected ResultSet query(String query) {
-        Statement statement;
-        ResultSet resultset = null;
+    protected ResultSet doQuery(String query) {
         try {
-            statement = this.conn.createStatement();
-            resultset = statement.executeQuery(query);
+            this.stmt = this.conn.createStatement();
+            this.rs = this.stmt.executeQuery(query);
         }
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
         finally {
-            return resultset;
+            return rs;
+        }
+    }
+    
+    protected ResultSet runStatement(String query) {
+        try {
+            this.stmt = this.conn.createStatement();
+            this.stmt.execute(query);
+            this.rs = this.stmt.getResultSet();
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        finally {
+            return this.rs;
+        }
+    }
+    
+    protected void closeAll() {
+        try {
+            if (this.conn != null) {
+                this.conn.close();
+            }
+            if (this.rs != null) {
+                this.rs.close();
+            }
+            if (this.stmt != null) {
+                this.stmt.close();
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

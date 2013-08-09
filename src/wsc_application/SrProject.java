@@ -11,7 +11,6 @@ public class SrProject {
     public static void main(String[] args) {
         createAndShowGUI();
         MysqlConn mysql = new MysqlConn();
-        mysql.makeConnection();
     }
 
     private static void createAndShowGUI() {
