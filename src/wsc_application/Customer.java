@@ -1,11 +1,14 @@
 package wsc_application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 public class Customer {
     
     private int CUSTID;
     private String custFName;
     private String custLName;
-    private String custOrg;
     private String custStreet1;
     private String custStreet2;
     private String custCity;
@@ -16,12 +19,11 @@ public class Customer {
     
     public Customer(){
     }
-     public Customer(int custid, String fName, String lName,String org, String street1,
-            String street2, String city, String state, int zip, int phone, String email) {
+    
+    public Customer(int custid, String fName, String lName, String street1, String street2, String city, String state, int zip, long phone, String email) {
         setCUSTID(custid);
         setFName(fName);
         setLName(lName);
-        setOrg(org);
         setStreet1(street1);
         setStreet2(street2);
         setCity(city);
@@ -30,6 +32,48 @@ public class Customer {
         setPhone(phone);
         setEmail(email);
     }
+     
+     /**
+     * By Paul
+     * @param col Name of column to search in
+     * @param value Value of the column to search by
+     * @return Customer object or null if nothing found
+     */
+    public static Customer searchBy(String col, String value) {     
+         Customer cust = null;
+         ResultSet rs;
+         MysqlConn mysql = new MysqlConn();
+         String query = "select * from customer where "
+                 + "" + col + " = " + value;
+         rs = mysql.doQuery(query);
+         try {
+             if (rs.next()) {
+                 cust = new Customer(
+                         rs.getInt("CUSTID"),
+                         rs.getString("CustFirstName"),
+                         rs.getString("CustLastName"),
+                         rs.getString("CustStreet1"),
+                         rs.getString("CustStreet2"),
+                         rs.getString("CustCity"),
+                         rs.getString("CustState"),
+                         rs.getInt("CustZip"),
+                         rs.getLong("CustPhone"),
+                         rs.getString("CustEmail"));
+             }
+         }
+         catch (SQLException ex) {
+             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+         }
+         finally {
+             mysql.closeAll();
+             return cust;
+         }
+     }
+     
+     
+     
+     
+     
      // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setCUSTID(int custid){
         this.CUSTID = custid;
@@ -40,9 +84,7 @@ public class Customer {
     public void setLName(String lName){
         this.custLName = lName;
     }
-    public void setOrg(String org){
-        this.custOrg = org;
-    }
+    
     public void setStreet1(String street1){
         this.custStreet1 = street1;
     }
@@ -58,7 +100,7 @@ public class Customer {
     public void setZip(int zip){
         this.custZip = zip;
     }
-    public void setPhone(int phone){
+    public void setPhone(long phone){
         this.custPhone = phone;
     }
     public void setEmail(String email){
@@ -77,10 +119,6 @@ public class Customer {
     
     public String getCustLName(){
         return custLName;
-    }
-    
-    public String getCustOrg(){
-        return custOrg;
     }
     
     public String getCustStreet1(){
