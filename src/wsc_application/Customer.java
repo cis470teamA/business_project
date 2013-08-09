@@ -20,7 +20,8 @@ public class Customer {
     public Customer(){
     }
     
-    public Customer(int custid, String fName, String lName, String street1, String street2, String city, String state, int zip, long phone, String email) {
+    public Customer(int custid, String fName, String lName, String street1, String street2, 
+            String city, String state, int zip, long phone, String email) {
         setCUSTID(custid);
         setFName(fName);
         setLName(lName);
@@ -70,6 +71,52 @@ public class Customer {
          }
      }
      
+    /**
+     *
+     * @param customer An object of Customer class
+     * @return Customer object from database
+     */
+    public static Customer updateBy(Customer customer) {     
+        Customer cust = null; 
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from customer where CUSTID = " + Integer.toString(customer.CUSTID) + ";";
+        rs = mysql.doStatement(query);
+        try {
+            if (rs.next()) {
+                rs.updateString("CustFirstName", customer.custFName);
+                rs.updateString("CustLastName", customer.custLName);
+                rs.updateString("CustStreet1", customer.custStreet1);
+                rs.updateString("CustStreet2", customer.custStreet2);
+                rs.updateString("CustCity", customer.custCity);
+                rs.updateString("CustState", customer.custState);
+                rs.updateInt("Custzip", customer.custZip);
+                rs.updateLong("CustPhone", customer.custPhone);
+                rs.updateString("CustEmail", customer.custEmail);
+            }
+            rs = mysql.doStatement(query);
+            if (rs.next()) {
+                cust = new Customer(
+                        rs.getInt("CUSTID"),
+                        rs.getString("CustFirstName"),
+                        rs.getString("CustLastName"),
+                        rs.getString("CustStreet1"),
+                        rs.getString("CustStreet2"),
+                        rs.getString("CustCity"),
+                        rs.getString("CustState"),
+                        rs.getInt("CustZip"),
+                        rs.getLong("CustPhone"),
+                        rs.getString("CustEmail"));
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+        }
+        finally {
+            mysql.closeAll();
+            return cust;
+        }
+     }
      
      
      
