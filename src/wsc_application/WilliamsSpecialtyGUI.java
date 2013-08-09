@@ -10,11 +10,17 @@ package wsc_application;
  *
  * @author Bradley
  */
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
 
     /**
      * Creates new form WilliamsSpecialtyGUI
      */
+    
+    
     public WilliamsSpecialtyGUI() {
         initComponents();
     }
@@ -1903,7 +1909,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderClearFieldsButtonActionPerformed
 
     private void OrderSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSubmitButtonActionPerformed
-        
+    
     }//GEN-LAST:event_OrderSubmitButtonActionPerformed
     
     private void OrderSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSearchButtonActionPerformed
