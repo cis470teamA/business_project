@@ -70,7 +70,7 @@ public class Customer {
              return cust;
          }
      }
-     
+
     /**
      *
      * @param customer An object of Customer class
@@ -80,6 +80,13 @@ public class Customer {
         Customer cust = null; 
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
         String query = "select * from customer where CUSTID = " + Integer.toString(customer.CUSTID) + ";";
         rs = mysql.doStatement(query);
         try {
@@ -116,7 +123,47 @@ public class Customer {
             mysql.closeAll();
             return cust;
         }
-     }
+    }
+    
+    /**
+     * Inserts a record into the DB
+     * @param customer Customer object
+     * @return Customer object or null if failed.
+     */
+    public static Customer createCust(Customer customer) {
+        Customer cust = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            mysql.stmt.executeUpdate("insert into customer values (0, " 
+                    + customer.custFName + ", "
+                    + customer.custLName + ", "
+                    + customer.custStreet1 + ", "
+                    + customer.custStreet2 + ", "
+                    + customer.custCity + ", " 
+                    + customer.custState + ", "
+                    + customer.custZip + ", "
+                    + customer.custPhone + ", "
+                    + customer.custEmail + ");",
+                    java.sql.Statement.RETURN_GENERATED_KEYS);
+            int key = -1;
+            rs = mysql.stmt.getGeneratedKeys();
+            if (rs.next()) {
+                rs.getInt(1);
+            }
+            if (key > 0) {
+                cust = Customer.searchBy("CUSTID", Integer.toString(key));
+            }
+            
+        }   
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+        }
+        finally {
+            return cust;
+        }
+    }
      
     /**
      * Checks to see if a customer number is valid -- if a number is a customer?
