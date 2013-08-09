@@ -114,7 +114,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="277" max="32767" attributes="0"/>
+                      <EmptySpace pref="243" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -136,7 +136,7 @@
                           <Component id="LogoutButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LoginButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="303" max="32767" attributes="0"/>
+                      <EmptySpace pref="262" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -166,9 +166,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="LoginPassText">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginPassTextActionPerformed"/>
               </Events>
@@ -246,7 +243,7 @@
                               <Component id="CustClearButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="240" max="32767" attributes="0"/>
+                      <EmptySpace pref="186" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -324,7 +321,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="InvSearchLbl5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="117" max="32767" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -544,7 +541,7 @@
                               <Component id="OrderTypeShirtRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderTypePlaqueRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderTypeTrophyRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusLbl" alignment="0" pref="146" max="32767" attributes="0"/>
+                              <Component id="OrderMediaStatusLbl" alignment="0" max="32767" attributes="0"/>
                               <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                               <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -690,7 +687,7 @@
                               <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -941,7 +938,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="OVOrderNumText" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="472" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="OVNumberText" linkSize="4" min="-2" pref="80" max="-2" attributes="0"/>
@@ -1167,7 +1164,7 @@
                               <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="57" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1573,13 +1570,13 @@
                           </Group>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="QAOrderIDCB" pref="93" max="32767" attributes="0"/>
+                              <Component id="QAOrderIDCB" max="32767" attributes="0"/>
                               <Component id="QAIDCB" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="192" max="32767" attributes="0"/>
+                          <EmptySpace pref="112" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1690,7 +1687,7 @@
                               <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="QAWorkmanshipFailText" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="6" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="QACommentTB" min="-2" max="-2" attributes="0"/>
@@ -2005,8 +2002,8 @@
                                           <Component id="InvOnHandText" linkSize="7" alignment="0" max="32767" attributes="0"/>
                                           <Component id="InvOnOrderText" linkSize="7" alignment="0" max="32767" attributes="0"/>
                                           <Component id="InvDelDateText" linkSize="7" alignment="0" pref="75" max="32767" attributes="0"/>
-                                          <Component id="InvItemIDCB" max="32767" attributes="0"/>
-                                          <Component id="jComboBox2" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="InvItemIDCB" pref="0" max="32767" attributes="0"/>
+                                          <Component id="jComboBox2" alignment="1" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="918" max="-2" attributes="0"/>
                                   </Group>
@@ -2067,7 +2064,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="InvSearchLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="231" max="32767" attributes="0"/>
+                      <EmptySpace pref="159" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2237,7 +2234,7 @@
                               <Component id="EmpClearButton" linkSize="10" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="189" max="32767" attributes="0"/>
+                      <EmptySpace pref="121" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2302,7 +2299,7 @@
                               <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
+                      <EmptySpace pref="139" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
