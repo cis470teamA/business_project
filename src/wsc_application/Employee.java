@@ -8,7 +8,7 @@ public class Employee{
     protected String email;
     
     public enum type {
-        SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan;
+        SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan, Admin;
     }
     
     public Employee(){
