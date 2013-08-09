@@ -11,8 +11,15 @@ public class Employee{
         SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan;
     }
     
-    public Employee() {
+    public Employee(){
         
+    }
+    
+    public Employee(String fName, String lName, Long empId, String eMail) {
+        setFirstName(fName);
+        setLastName(lName);
+        setEmpId(empId);
+        setEmail(eMail);
     }
     
     // Employee class code goes here.  Methods and stuff.
