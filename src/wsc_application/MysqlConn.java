@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 
 public class MysqlConn {
     private String user = "appl_user";
-    private String pass = "password123"; // Select only user
+    private String pass = "password12"; // Select only user
     private String database = "cis470"; // Database on the MySQL server to use
-    private Connection conn;
     
+    protected Connection conn;
     protected Statement stmt = null;
     protected ResultSet rs = null;
     
@@ -58,7 +58,7 @@ public class MysqlConn {
         }
     }
     
-    protected ResultSet runStatement(String query) {
+    protected ResultSet doStatement(String query) {
         try {
             this.stmt = this.conn.createStatement();
             this.stmt.execute(query);
@@ -70,7 +70,7 @@ public class MysqlConn {
         finally {
             return this.rs;
         }
-    }
+    } 
     
     protected void closeAll() {
         try {

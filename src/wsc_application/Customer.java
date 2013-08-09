@@ -44,7 +44,7 @@ public class Customer {
          Customer cust = null;
          ResultSet rs;
          MysqlConn mysql = new MysqlConn();
-         String query = "select * from customer where "
+         String query = "select * from CUSTOMER where "
                  + "" + col + " = " + value;
          rs = mysql.doQuery(query);
          try {
@@ -82,14 +82,8 @@ public class Customer {
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-        }
-        catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
-        }
-        
-        String query = "select * from customer where CUSTID = " + Integer.toString(customer.CUSTID) + ";";
-        rs = mysql.doStatement(query);
-        try {
+            String query = "select * from CUSTOMER where CUSTID = " + Integer.toString(customer.CUSTID) + ";";
+            rs = mysql.stmt.executeQuery(query);
             if (rs.next()) {
                 rs.updateString("CustFirstName", customer.custFName);
                 rs.updateString("CustLastName", customer.custLName);
@@ -100,6 +94,7 @@ public class Customer {
                 rs.updateInt("Custzip", customer.custZip);
                 rs.updateLong("CustPhone", customer.custPhone);
                 rs.updateString("CustEmail", customer.custEmail);
+                rs.updateRow();
             }
             rs = mysql.doStatement(query);
             if (rs.next()) {
@@ -118,6 +113,7 @@ public class Customer {
         }
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println(ex.getMessage());
         }
         finally {
             mysql.closeAll();
@@ -136,7 +132,7 @@ public class Customer {
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            mysql.stmt.executeUpdate("insert into customer values (0, " 
+            mysql.stmt.executeUpdate("insert into CUSTOMER values (0, " 
                     + customer.custFName + ", "
                     + customer.custLName + ", "
                     + customer.custStreet1 + ", "
@@ -174,7 +170,7 @@ public class Customer {
         ResultSet rs;
         boolean retval = false;
         MysqlConn mysql = new MysqlConn();
-        String query = "select * from customer where CUSTID = " + Integer.toString(CustId) + ";";
+        String query = "select * from CUSTOMER where CUSTID = " + Integer.toString(CustId) + ";";
         rs = mysql.doQuery(query);
         try {
             if (rs.next()) {
