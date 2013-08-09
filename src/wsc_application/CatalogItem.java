@@ -16,6 +16,7 @@ public class CatalogItem {
     }
     
     // <editor-fold defaultstate="collapsed" desc="Setters">
+    
     public void setItmNum(String itmNum){
         this.itmNum = itmNum;
     }
