@@ -30,39 +30,87 @@ public class Customer {
         setPhone(phone);
         setEmail(email);
     }
+     // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setCUSTID(int custid){
-        
+        this.CUSTID = custid;
     }
     public void setFName(String fName){
-        
+        this.custFName = fName;
     }
     public void setLName(String lName){
-        
+        this.custLName = lName;
     }
     public void setOrg(String org){
-        
+        this.custOrg = org;
     }
     public void setStreet1(String street1){
-        
+        this.custStreet1 = street1;
     }
     public void setStreet2(String street2){
-        
+        this.custStreet2 = street2;
     }
     public void setCity(String City){
-        
+        this.custCity = City;
     }
     public void setState(String state){
-        
+        this.custState = state;
     }
     public void setZip(int zip){
-        
+        this.custZip = zip;
     }
     public void setPhone(int phone){
-        
+        this.custPhone = phone;
     }
     public void setEmail(String email){
-        
+        this.custEmail = email;
     }
+    // </editor-fold>
+    
+     // <editor-fold defaultstate="collapsed" desc="getters">
+    public int getCustId(){
+        return CUSTID;
+    }
+    
+    public String getCustFName(){
+        return custFName;
+    }
+    
+    public String getCustLName(){
+        return custLName;
+    }
+    
+    public String getCustOrg(){
+        return custOrg;
+    }
+    
+    public String getCustStreet1(){
+        return custStreet1;
+    }
+    
+    public String getCustStreet2(){
+        return custStreet2;
+    }
+    
+    public String getCustCity(){
+        return custCity;
+    }
+    
+    public String getCustState(){
+        return custState;
+    }
+    
+    public int getCustZip(){
+        return custZip;
+    }
+    
+    public long getCustPhone(){
+        return custPhone;
+    }
+    
+    public String getCustEmail(){
+        return custEmail;
+    }
+    // </editor-fold>
 }
 
 
