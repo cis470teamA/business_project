@@ -38,40 +38,40 @@ public class QAReport {
         }
     
     public void setQAID(long qaID){
-       QAID = qaID;
-       } 
+       this.QAID = qaID;
+    } 
     public void setOrder(Order ord){
-        order = ord;
+       this.order = ord;
     } 
     public void setInspector(Employee inspect){
-        inspector = inspect;
+       this.inspector = inspect;
     }
     public void setCorrectContent(Boolean corrCont){
-        correctContent = corrCont;
+       this.correctContent = corrCont;
     }
     public void setCorrectMedia(Boolean corrMed){
-        correctMedia = corrMed;
+       this.correctMedia = corrMed;
     }
     public void setMediaFinish(Boolean medFin){
-        mediaFinish = medFin;
+       this. mediaFinish = medFin;
     }
     public void setWorkmanship(Boolean work){
-        workmanship = work;
+        this.workmanship = work;
     }
     public void setContentFailComment(String contFail){
-        contentFailComment = contFail;
+        this.contentFailComment = contFail;
     } 
     public void setMediaFailComment(String medFail){
-        mediaFailComment = medFail;
+        this.mediaFailComment = medFail;
     }
     public void setMediaFinishFailComment(String medFinFail){
-        mediaFinishFailComment = medFinFail;
+        this.mediaFinishFailComment = medFinFail;
     }
     public void setWorkmanshipFailComment(String workFail){
-        workmanshipFailComment = workFail;
+        this.workmanshipFailComment = workFail;
     }
     public void setCorrectiveActionComment(String corrAct){
-        correctiveActionComment = corrAct;
+        this.correctiveActionComment = corrAct;
     }
     public long getQAID(){
         return QAID;

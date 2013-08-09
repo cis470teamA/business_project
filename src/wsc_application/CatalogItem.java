@@ -3,9 +3,9 @@ package wsc_application;
 public class CatalogItem {
     
     //Global Variables
-    private String itmNum;
+    private String itemNumber;
     private String manufacturer;
-    private String itmName;
+    private String itemName;
     private int qtyOnHand;
     private int qtyOnOrder;
     private String deliveryDate;
@@ -14,19 +14,28 @@ public class CatalogItem {
     public CatalogItem(){
         
     }
+    public CatalogItem(String itemNum, String manufacturer, String itemName, int onHand,
+            int onOrder, String delDate){
+        setItemNum(itemNum);
+        setManufacturer(manufacturer);
+        setItemName(itemName);
+        setQtyOnHand(onHand);
+        setQtyOnOrder(onOrder);
+        setDeliveryDate(delDate);
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Setters">
     
-    public void setItmNum(String itmNum){
-        this.itmNum = itmNum;
+    public void setItemNum(String itemNum){
+        this.itemNumber = itemNum;
     }
     
     public void setManufacturer(String manufacturer){
         this.manufacturer = manufacturer;
     }
     
-    public void setItmName(String itmName){
-        this.itmName = itmName;
+    public void setItemName(String itemName){
+        this.itemName = itemName;
     }
     
     public void setQtyOnHand(int qtyOnHand){
@@ -41,4 +50,22 @@ public class CatalogItem {
         this.deliveryDate = deliveryDate;
     }
       // </editor-fold>
+    public String getItemNumber(){
+        return itemNumber;
+    }
+    public String getItemName(){
+        return itemName;
+    }
+    public String getManufacturer(){
+        return manufacturer;
+    }
+    public int getQtyOnHand(){
+        return qtyOnHand;
+    }
+    public int getQtyOnOrder(){
+        return qtyOnOrder;
+    }
+    public String getDeliveryDate(){
+        return deliveryDate;
+    }
 }
