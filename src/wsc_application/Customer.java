@@ -118,7 +118,30 @@ public class Customer {
         }
      }
      
-     
+    /**
+     * Checks to see if a customer number is valid -- if a number is a customer?
+     * @param CustId customer id as integer
+     * @return boolean false, not customer; true, customer
+     */
+    public static boolean isCustomer(int CustId) {
+        ResultSet rs;
+        boolean retval = false;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from customer where CUSTID = " + Integer.toString(CustId) + ";";
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                retval = true;
+            }
+        }
+        catch (SQLException ex) {
+            // JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+        }
+        finally {
+            mysql.closeAll();
+            return retval;
+        }
+    }
      
      
      // <editor-fold defaultstate="collapsed" desc="Setters">
