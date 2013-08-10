@@ -1928,6 +1928,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustPhoneText.setText(String.valueOf(searchCust.getCustPhone()));
         CustEmailText.setText(searchCust.getCustEmail());
         CustStateCB.setSelectedItem(searchCust.getCustState());
+        CustOrgText.setText(searchCust.getCustOrg());
             // </editor-fold>
         
         
