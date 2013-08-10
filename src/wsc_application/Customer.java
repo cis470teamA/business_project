@@ -186,11 +186,11 @@ public class Customer {
      * @param CustId customer id as integer
      * @return boolean false, not customer; true, customer
      */
-    public static boolean isCustomer(int CustId) {
+    public static boolean isCustomer(int CustId, String CustStreet1) {
         ResultSet rs;
         boolean retval = false;
         MysqlConn mysql = new MysqlConn();
-        String query = "select * from CUSTOMER where CUSTID = " + Integer.toString(CustId) + ";";
+        String query = "select * from CUSTOMER where CUSTID = " + Integer.toString(CustId) + " OR CustStreet1 = '"+CustStreet1+"';";
         rs = mysql.doQuery(query);
         try {
             if (rs.next()) {
