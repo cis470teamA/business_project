@@ -11,6 +11,7 @@ public class Employee{
     protected String lastName;
     protected Long EMPID;
     protected String email;
+    protected String empType;
     
     public enum type {
         SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan, Admin;
@@ -19,12 +20,19 @@ public class Employee{
     public Employee(){
         
     }
-    
-    public Employee(String fName, String lName, Long empId, String eMail) {
+     public Employee(String fName, String lName, Long empId, String eMail) {
         setFirstName(fName);
         setLastName(lName);
         setEmpId(empId);
         setEmail(eMail);
+        
+    }
+    public Employee(String fName, String lName, Long empId, String eMail, String empType) {
+        setFirstName(fName);
+        setLastName(lName);
+        setEmpId(empId);
+        setEmail(eMail);
+        setEmpType(empType);
     }
     
     // Employee class code goes here.  Methods and stuff.
@@ -56,6 +64,43 @@ public class Employee{
          }
     }
     
+    //Jacob: Added Employee update method 
+    public static Employee updateBy(Employee employee) {     
+        Employee emp = null; 
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "select * from EMPLOYEE where EMPID =  " + Long.toString(employee.EMPID) + ";";
+            rs = mysql.stmt.executeQuery(query);
+            if (rs.next()) {
+                rs.updateString("EmpFirstName", employee.firstName);
+                rs.updateString("EmpLastName", employee.lastName);
+                rs.updateString("EmpEmail", employee.email);
+                rs.updateString("EmpType", employee.empType);
+                rs.updateRow();
+            }
+            rs = mysql.doStatement(query);
+            if (rs.next()) {
+                emp = new Employee(
+                        rs.getString("EmpFirstName"),
+                        rs.getString("EmpLastName"),
+                        rs.getLong("EMPID"),
+                        rs.getString("EmpEmail"),
+                        rs.getString("EmpType"));
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        finally {
+            mysql.closeAll();
+            return emp;
+        }
+    }
     // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setFirstName(String firstName){
         this.firstName = firstName;
@@ -71,6 +116,10 @@ public class Employee{
     
     public void setEmail(String email){
         this.email = email;
+    }
+    
+    public void setEmpType(String empType){
+        this.empType = empType;
     }
     // </editor-fold>
     
@@ -89,6 +138,10 @@ public class Employee{
     
     public String getEmail(){
         return email;
+    }
+    
+    public String getEmpType(){
+        return empType;
     }
     // </editor-fold>
 }
