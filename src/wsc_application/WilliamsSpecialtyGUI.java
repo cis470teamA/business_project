@@ -1846,7 +1846,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.toString()),
-                CustFNameText.getText(),CustLNameText.getName(), 
+                CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
                 CustStateCB.toString(),Integer.parseInt(CustZipText.getText()),
                 Integer.parseInt(CustPhoneText.getText()),CustEmailText.getText());
