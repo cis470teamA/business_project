@@ -1,43 +1,46 @@
 package wsc_application;
 
-public class Order {
+import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
     
-    
+public class Order {    
     private Customer customer;
     private int ORDID;
-    private CatalogItem catalogItem;
     private String mediaType;
     private String content;
     private float total;
-    private boolean onAccount;
+    private boolean paymentOnAccount;
     private float deposit;
     private String orderStatus; 
-    private String mediaStatus;
-    private Employee createdBy;
     private Employee modifiedBy;
-    private Employee assignedTo;
+    private String mediaStatus;
+//    private CatalogItem catalogItem;
+//    private Employee createdBy;
+//    private Employee assignedTo;
     
+    protected static ArrayList<Order> orders;
     
     public Order(){
-        
     }
-    public Order(Customer cust, int ordID, CatalogItem catItem, String medType,
-            String cont, float tot, Boolean onAcct, float dep,
-            String ordStat, String medStat, Employee createBy, Employee modBy, 
-            Employee assignTo){
+
+    public Order(Customer cust, int OrderId, String mediaType,
+            String content, Boolean onAcct, float total, float deposit, 
+            String orderStatus, String mediaStatus, Employee modBy){
         setCustomer(cust);
-        setORDID(ordID);
-        setCatalogItem(catItem);
-        setMediaType(medType);
-        setContent(cont);
-        setTotal(tot);
-        setOnAccount(onAcct);
-        setDeposit(dep);
-        setOrderStatus(ordStat);
-        setMediaStatus(medStat);
-        setCreatedBy(createBy);
+        setORDID(OrderId);
+        setMediaType(mediaType);
+        setContent(content);
+        setTotal(total);
+        setPaymentOnAccount(onAcct);
+        setDeposit(deposit);
+        setOrderStatus(orderStatus);
+        setMediaStatus(mediaStatus);
         setModifiedBy(modBy);
-        setAssignedTo(assignTo);
+//        setCatalogItem(catItem);
+//        setCreatedBy(createBy);
+//        setAssignedTo(assignTo);
     }
     public Customer getCustomer(){
         return customer;
@@ -75,11 +78,11 @@ public class Order {
     public void setTotal(float tot){
         this.total = tot;
     }
-    public Boolean getOnAccount(){
-        return onAccount;
+    public Boolean getPaymentOnAccount(){
+        return paymentOnAccount;
     }
-    public void setOnAccount(Boolean onAcct){
-        this.onAccount = onAcct;
+    public void setPaymentOnAccount(Boolean onAcct){
+        this.paymentOnAccount = onAcct;
     }
     public float getDeposit(){
         return deposit;
@@ -99,22 +102,23 @@ public class Order {
     public void setMediaStatus(String medStat){
         this.mediaStatus = medStat;
     }
-    public Employee getCreatedBy(){
-        return createdBy;
-    }
-    public void setCreatedBy(Employee createBy){
-        this.createdBy = createBy;
-    }
+//    public Employee getCreatedBy(){
+//        return createdBy;
+//    }
+//    public void setCreatedBy(Employee createBy){
+//        this.createdBy = createBy;
+//    }
     public Employee getModifiedBy(){
         return modifiedBy;
     }
     public void setModifiedBy(Employee modBy){
         this.modifiedBy = modBy;
     }
-    public Employee getAssignedTo(){
-        return assignedTo;
-    }
-    public void setAssignedTo(Employee assignTo){
-        this.assignedTo = assignTo;
-    }
+//    public Employee getAssignedTo(){
+//        return assignedTo;
+//    }
+//    public void setAssignedTo(Employee assignTo){
+//        this.assignedTo = assignTo;
+//    }
+    //</editor-fold>
 }
