@@ -2,6 +2,7 @@
 package wsc_application;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class SrProject {
 
@@ -11,6 +12,16 @@ public class SrProject {
     public static void main(String[] args) {
         createAndShowGUI();
         MysqlConn mysql = new MysqlConn();
+//        Paul's testing functions
+//        Customer customer = Customer.searchBy("CUSTID", "1");
+//        customer.setFName("Billy");
+//        customer = Customer.updateBy(customer);
+//        customer.setLName("Smith");
+//        customer.setStreet1("111 Street St.");
+//        Customer.createCust(customer);
+//        if (Customer.isCustomer(1)) {
+//            JOptionPane.showMessageDialog(null, "Is customer", null, JOptionPane.INFORMATION_MESSAGE);
+//        }
     }
 
     private static void createAndShowGUI() {

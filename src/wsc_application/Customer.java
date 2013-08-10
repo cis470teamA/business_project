@@ -41,29 +41,32 @@ public class Customer {
      * @return Customer object or null if nothing found
      */
     public static Customer searchBy(String col, String value) {     
-         Customer cust = null;
-         ResultSet rs;
-         MysqlConn mysql = new MysqlConn();
-         String query = "select * from CUSTOMER where "
-                 + "" + col + " = " + value;
-         rs = mysql.doQuery(query);
-         try {
-             if (rs.next()) {
-                 cust = new Customer(
-                         rs.getInt("CUSTID"),
-                         rs.getString("CustFirstName"),
-                         rs.getString("CustLastName"),
-                         rs.getString("CustStreet1"),
-                         rs.getString("CustStreet2"),
-                         rs.getString("CustCity"),
-                         rs.getString("CustState"),
-                         rs.getInt("CustZip"),
-                         rs.getLong("CustPhone"),
-                         rs.getString("CustEmail"));
-             }
-         }
-         catch (SQLException ex) {
-             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+        Customer cust = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from CUSTOMER where "
+                + "" + col + " = " + value;
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                cust = new Customer(
+                        rs.getInt("CUSTID"),
+                        rs.getString("CustFirstName") != null ? rs.getString("CustFirstName") : new String(),
+                        rs.getString("CustLastName") != null ? rs.getString("CustLastName") : new String(),
+                        rs.getString("CustStreet1") != null ? rs.getString("CustStreet2") : new String(),
+                        rs.getString("CustStreet2") != null ? rs.getString("CustStreet2") : new String(),
+                        rs.getString("CustCity") != null ? rs.getString("CustCity") : new String(),
+                        rs.getString("CustState") != null ? rs.getString("CustState") : new String(),
+                        rs.getInt("CustZip"),
+                        rs.getLong("CustPhone"),
+                        rs.getString("CustEmail") != null ? rs.getString("CustEmail") : new String());
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
          }
          finally {
              mysql.closeAll();
@@ -88,7 +91,7 @@ public class Customer {
                 rs.updateString("CustFirstName", customer.custFName);
                 rs.updateString("CustLastName", customer.custLName);
                 rs.updateString("CustStreet1", customer.custStreet1);
-                rs.updateString("CustStreet2", customer.custStreet2);
+                rs.updateString("CustStreet2", customer.custStreet2 != null ? customer.custStreet2 : new String());
                 rs.updateString("CustCity", customer.custCity);
                 rs.updateString("CustState", customer.custState);
                 rs.updateInt("Custzip", customer.custZip);
@@ -113,7 +116,9 @@ public class Customer {
         }
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
-            System.out.println(ex.getMessage());
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
         }
         finally {
             mysql.closeAll();
@@ -132,17 +137,17 @@ public class Customer {
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            mysql.stmt.executeUpdate("insert into CUSTOMER values (0, " 
-                    + customer.custFName + ", "
-                    + customer.custLName + ", "
-                    + customer.custStreet1 + ", "
-                    + customer.custStreet2 + ", "
-                    + customer.custCity + ", " 
-                    + customer.custState + ", "
-                    + customer.custZip + ", "
-                    + customer.custPhone + ", "
-                    + customer.custEmail + ");",
-                    java.sql.Statement.RETURN_GENERATED_KEYS);
+            String query = "insert into CUSTOMER values (0, '"
+                    + customer.custFName + "', '"
+                    + customer.custLName + "', '"
+                    + customer.custStreet1 + "', '"
+                    + customer.custStreet2 + "', '"
+                    + customer.custCity + "', '" 
+                    + customer.custState + "', '"
+                    + customer.custZip + "', '"
+                    + customer.custPhone + "', '"
+                    + customer.custEmail + "');";
+            mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
             int key = -1;
             rs = mysql.stmt.getGeneratedKeys();
             if (rs.next()) {
@@ -155,6 +160,9 @@ public class Customer {
         }   
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
         }
         finally {
             return cust;
@@ -178,7 +186,10 @@ public class Customer {
             }
         }
         catch (SQLException ex) {
-            // JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+//            OptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+//            System.out.println("SQLException: " + ex.getMessage());
+//            System.out.println("SQLState: " + ex.getSQLState());
+//            System.out.println("VendorError: " + ex.getErrorCode());
         }
         finally {
             mysql.closeAll();
