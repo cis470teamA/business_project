@@ -36,7 +36,6 @@ public class Employee{
     }
     
     // Employee class code goes here.  Methods and stuff.
-    
     public static Employee searchBy(long EmpId) {
         Employee employee = null;
         ResultSet rs;
@@ -125,6 +124,28 @@ public class Employee{
         finally {
             return emp;
         }
+    }
+    
+    //Added isEmployee to check for exist before adding new employee
+    public static boolean isEmployee(long EmpID){
+        boolean checkExist = false;
+         ResultSet rs;
+         MysqlConn mysql = new MysqlConn();
+        String query = "select * from EMPLOYEE where EMPID = " + Long.toString(EmpID) +";";
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                checkExist = true;
+            }
+        }
+        catch (SQLException ex) {
+            
+        }
+        finally{
+            mysql.closeAll();
+            return checkExist;
+        }
+        
     }
     
     // <editor-fold defaultstate="collapsed" desc="Setters">
