@@ -535,7 +535,7 @@
                               <Component id="OrderTypeShirtRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderTypePlaqueRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderTypeTrophyRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusLbl" alignment="0" pref="132" max="32767" attributes="0"/>
+                              <Component id="OrderMediaStatusLbl" alignment="0" pref="131" max="32767" attributes="0"/>
                               <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                               <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -556,7 +556,7 @@
                               <Component id="OrderCUSTIDText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
+                          <EmptySpace pref="9" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
@@ -564,7 +564,7 @@
                                       <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
                                       <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="95" max="32767" attributes="0"/>
+                                  <EmptySpace pref="94" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
