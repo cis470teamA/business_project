@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-    
+
 public class Order {    
     private Customer customer;
     private int ORDID;
@@ -13,7 +13,7 @@ public class Order {
     private float total;
     private boolean paymentOnAccount;
     private float deposit;
-    private String orderStatus; 
+    private String orderStatus;
     private Employee modifiedBy;
     private String mediaStatus;
 //    private CatalogItem catalogItem;
@@ -42,6 +42,52 @@ public class Order {
 //        setCreatedBy(createBy);
 //        setAssignedTo(assignTo);
     }
+    
+    // Search by Customer ID only?  Not sure!
+    /**
+     * Create an ArrayList of Order objects by customer.
+     * @param CustId Customer ID as integer
+     * @return An array list of order objects; A search by customer ID can 
+     * 
+     */
+    public static ArrayList searchBy(int CustId) {
+        orders = new ArrayList(0);
+        Order order = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from ORDER where CUSTID = " + CustId + ";";
+        rs = mysql.doQuery(query);
+        try {
+            while (rs.next()) {
+                Employee employee;
+                Customer customer;
+                employee = Employee.searchBy(rs.getLong("EMPID"));
+                customer = Customer.searchBy("CUSTID", rs.getString("CUSTID"));
+                order = new Order(
+                        customer,
+                        rs.getInt("ORDERID"),
+                        rs.getString("MediaType"),
+                        rs.getString("Content"),
+                        rs.getBoolean("PaymentOnAccount"),
+                        rs.getFloat("Total"),
+                        rs.getFloat("Deposit"),
+                        rs.getString("OrderStatus"),
+                        rs.getString("MediaStatus"),
+                        employee);
+                // Add the new order to the ArrayList
+                orders.add(order);
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return orders;
+    }
+    
+    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public Customer getCustomer(){
         return customer;
     }
