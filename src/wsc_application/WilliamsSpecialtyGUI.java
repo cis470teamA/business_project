@@ -1855,11 +1855,17 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_CustClearButtonActionPerformed
 
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
+       try{
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.toString()),
                 CustFNameText.getText(),CustLNameText.getName(), 
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
                 CustStateCB.toString(),Integer.parseInt(CustZipText.getText()),
                 Integer.parseInt(CustPhoneText.getText()),CustEmailText.getText());
+       }
+       catch (Exception e)
+               {
+                   JOptionPane.showMessageDialog(null, "A numeric value is required for the following:\nCustomer ID\nCustomer Zip\nCustomer Phone Number", "Numeric Value Required", JOptionPane.INFORMATION_MESSAGE);
+               }
     }//GEN-LAST:event_CustCreateButtonActionPerformed
     
     private void CustFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButtonActionPerformed
