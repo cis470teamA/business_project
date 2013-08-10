@@ -12,6 +12,7 @@ package wsc_application;
  */
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import static javax.swing.JComponent.TOOL_TIP_TEXT_KEY;
 import javax.swing.JOptionPane;
 
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
@@ -1855,7 +1856,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_CustClearButtonActionPerformed
 
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
-       try{
+       //Jacob: Added Try and Catch to check if parse was successful 
+       //if not through a message explaining
+        try{
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.toString()),
                 CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
@@ -1869,7 +1872,65 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_CustCreateButtonActionPerformed
     
     private void CustFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButtonActionPerformed
-        // TODO add your handling code here:
+        Customer searchCust = null;
+        //Search input to specify column to seach
+        
+        // <editor-fold defaultstate="collapsed" desc="Get Query for cust search">
+        if (CUSTIDCB.getText() != "")
+        {
+            searchCust = Customer.searchBy("CUSTID", CUSTIDCB.getText());
+        }
+        
+        if (CustFNameText.getText() != "")
+        {
+            searchCust = Customer.searchBy("CustFirstName", CustFNameText.getText());
+        }
+        
+        if (CustLNameText.getText() != "")
+        {
+            searchCust = Customer.searchBy("CustLastName", CustLNameText.getText());
+        }
+        
+        if (CustOrgText.getText() != "")
+        {
+            searchCust = Customer.searchBy("CustOrg", CustOrgText.getText());
+        }
+        
+        if (CustStreet1Text.getText() != "")
+        {
+            searchCust = Customer.searchBy("CustStreet1", CustStreet1Text.getText());
+        }
+        
+        if (CustStreet2Text.getText() != "")
+        {
+            searchCust = Customer.searchBy("CustStreet2", CustStreet2Text.getText());
+        }
+        
+        if (CustPhoneText.getText() != "")
+        {
+            searchCust = Customer.searchBy("CustPhone", CustPhoneText.getText());
+        }
+        
+        if (searchCust == null)
+        {
+            JOptionPane.showMessageDialog(null, "A search value is required", "Search Value", JOptionPane.INFORMATION_MESSAGE);
+        }
+        // </editor-fold>
+     
+        // <editor-fold defaultstate="collapsed" desc="Set customer data to tab">
+        CUSTIDCB.setText(String.valueOf(searchCust.getCustId()));
+        CustFNameText.setText(searchCust.getCustFName());
+        CustLNameText.setText(searchCust.getCustLName());
+        CustStreet1Text.setText(searchCust.getCustStreet1());
+        CustStreet2Text.setText(searchCust.getCustStreet2());
+        CustCityText.setText(searchCust.getCustCity());
+        CustZipText.setText(String.valueOf(searchCust.getCustZip()));
+        CustPhoneText.setText(String.valueOf(searchCust.getCustPhone()));
+        CustEmailText.setText(searchCust.getCustEmail());
+        CustStateCB.setSelectedItem(searchCust.getCustState());
+            // </editor-fold>
+        
+        
     }//GEN-LAST:event_CustFindButtonActionPerformed
 
     private void CustZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustZipTextActionPerformed
