@@ -663,7 +663,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OrderTypeShirtRB)
                 .addComponent(OrderTypePlaqueRB)
                 .addComponent(OrderTypeTrophyRB)
-                .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                 .addComponent(OrderStatusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderAccountPayRB)
                 .addComponent(OrderDeliverPayRB)
@@ -682,14 +682,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OrderNumberCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderCUSTIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                     .addGap(41, 41, 41)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(OrderContentLbl))
-                    .addContainerGap(95, Short.MAX_VALUE))
+                    .addContainerGap(94, Short.MAX_VALUE))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
                     .addGap(63, 63, 63)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1839,6 +1839,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void CustClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustClearButtonActionPerformed
         //Clear all fields on customer info
+        CustClear();
+    }//GEN-LAST:event_CustClearButtonActionPerformed
+    
+    //Jacob: Created clear method as it will need called once the customer is created.
+    public void CustClear() {
         CUSTIDCB.setText("");
         CustFNameText.setText("");
         CustLNameText.setText("");
@@ -1851,23 +1856,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustEmailText.setText("");
         CustStateCB.setSelectedIndex(0);
         custOrdLst.setListData(new Object[0]);
-    }//GEN-LAST:event_CustClearButtonActionPerformed
-
+    }
+    
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
        //Jacob: Added Try and Catch to check if parse was successful 
        //if not through a message explaining
+        boolean CustExist = false;
+        String temp;
+  try{
+      //Get address and assign an empty string if it doesnt exist
+        if ("".equals(CustStreet1Text.getText()))
+        {
+            temp = "";
+        }
+        else
+        {
+            temp = CustStreet1Text.getText();
+        }
+        //Check if customer exists
+        CustExist = Customer.isCustomer(Integer.parseInt(CUSTIDCB.getText()),temp);
        
-        try{
+        //If the customer doesnt exist create them else cust already exists update
+      if (CustExist == false)
+      {
+
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
                 CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
                 CustStateCB.getSelectedItem().toString(),Integer.parseInt(CustZipText.getText()),
                 Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
         Customer.createCust(customer);
+        JOptionPane.showMessageDialog(null, "Customer created successfully.");
+        CustClear();
+      }
+      else
+      {
+          //Update the customer
+          Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
+                CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
+                CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
+                CustStateCB.getSelectedItem().toString(),Integer.parseInt(CustZipText.getText()),
+                Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
+           Customer.updateBy(customer);
+           JOptionPane.showMessageDialog(null, "Customer updated.");
+           CustClear();
+      }
        }
        catch (Exception e)
                {
                    JOptionPane.showMessageDialog(null, "A numeric value is required for the following:\nCustomer ID\nCustomer Zip\nCustomer Phone Number", "Numeric Value Required", JOptionPane.INFORMATION_MESSAGE);
+                   JOptionPane.showMessageDialog(null, "Customer was not created.");
                }
     }//GEN-LAST:event_CustCreateButtonActionPerformed
     
@@ -1876,48 +1914,49 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //Search input to specify column to seach
         
         // <editor-fold defaultstate="collapsed" desc="Get Query for cust search">
-        if (CUSTIDCB.getText() != "")
+        if (!"".equals(CUSTIDCB.getText()))
         {
             searchCust = Customer.searchBy("CUSTID", CUSTIDCB.getText());
         }
         
-        if (CustFNameText.getText() != "" & searchCust == null)
+        if (!"".equals(CustFNameText.getText()) & searchCust == null)
         {
             searchCust = Customer.searchBy("CustFirstName", CustFNameText.getText());
         }
         
-        if (CustLNameText.getText() != "" & searchCust == null)
+        if (!"".equals(CustLNameText.getText()) & searchCust == null)
         {
             searchCust = Customer.searchBy("CustLastName", CustLNameText.getText());
         }
         
-        if (CustOrgText.getText() != "" & searchCust == null)
+        if (!"".equals(CustOrgText.getText()) & searchCust == null)
         {
             searchCust = Customer.searchBy("CustOrg", CustOrgText.getText());
         }
         
-        if (CustStreet1Text.getText() != "" & searchCust == null)
+        if (!"".equals(CustStreet1Text.getText()) & searchCust == null)
         {
             searchCust = Customer.searchBy("CustStreet1", CustStreet1Text.getText());
         }
         
-        if (CustStreet2Text.getText() != "" & searchCust == null)
+        if (!"".equals(CustStreet2Text.getText()) & searchCust == null)
         {
             searchCust = Customer.searchBy("CustStreet2", CustStreet2Text.getText());
         }
         
-        if (CustPhoneText.getText() != "" & searchCust == null)
+        if (!"".equals(CustPhoneText.getText()) & searchCust == null)
         {
             searchCust = Customer.searchBy("CustPhone", CustPhoneText.getText());
         }
         
+        //Check if searchCust is null, if not set the customer information
         if (searchCust == null)
         {
             JOptionPane.showMessageDialog(null, "A search value is required", "Search Value", JOptionPane.INFORMATION_MESSAGE);
         }
-        // </editor-fold>
-     
-        // <editor-fold defaultstate="collapsed" desc="Set customer data to tab">
+        else
+        {
+             // <editor-fold defaultstate="collapsed" desc="Set customer data to tab">
         CUSTIDCB.setText(String.valueOf(searchCust.getCustId()));
         CustFNameText.setText(searchCust.getCustFName());
         CustLNameText.setText(searchCust.getCustLName());
@@ -1928,9 +1967,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustPhoneText.setText(String.valueOf(searchCust.getCustPhone()));
         CustEmailText.setText(searchCust.getCustEmail());
         CustStateCB.setSelectedItem(searchCust.getCustState());
+        CustOrgText.setText(searchCust.getCustOrg());
             // </editor-fold>
-        
-        
+        }
+        // </editor-fold>
     }//GEN-LAST:event_CustFindButtonActionPerformed
 
     private void CustZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustZipTextActionPerformed
