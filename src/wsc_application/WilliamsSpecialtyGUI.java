@@ -1841,7 +1841,19 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_CustStateCBActionPerformed
 
     private void CustClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustClearButtonActionPerformed
-        // TODO add your handling code here:
+        //Clear all fields on customer info
+        CUSTIDCB.setText("");
+        CustFNameText.setText("");
+        CustLNameText.setText("");
+        CustOrgText.setText("");
+        CustStreet1Text.setText("");
+        CustStreet2Text.setText("");
+        CustCityText.setText("");
+        CustZipText.setText("");
+        CustPhoneText.setText("");
+        CustEmailText.setText("");
+        CustStateCB.setSelectedIndex(0);
+        custOrdLst.setListData(new Object[0]);
     }//GEN-LAST:event_CustClearButtonActionPerformed
 
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
