@@ -1929,6 +1929,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustEmailText.setText(searchCust.getCustEmail());
         CustStateCB.setSelectedItem(searchCust.getCustState());
             // </editor-fold>
+        
     }//GEN-LAST:event_CustFindButtonActionPerformed
 
     private void CustZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustZipTextActionPerformed
