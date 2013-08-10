@@ -9,6 +9,7 @@ public class Customer {
     private int CUSTID;
     private String custFName;
     private String custLName;
+    private String custOrg;
     private String custStreet1;
     private String custStreet2;
     private String custCity;
@@ -20,7 +21,7 @@ public class Customer {
     public Customer(){
     }
     
-    public Customer(int custid, String fName, String lName, String street1, String street2, 
+    public Customer(int custid, String fName, String lName, String custOrg, String street1, String street2, 
             String city, String state, int zip, long phone, String email) {
         setCUSTID(custid);
         setFName(fName);
@@ -53,7 +54,7 @@ public class Customer {
                         rs.getInt("CUSTID"),
                         rs.getString("CustFirstName") != null ? rs.getString("CustFirstName") : new String(),
                         rs.getString("CustLastName") != null ? rs.getString("CustLastName") : new String(),
-                        rs.getString("CustStreet1") != null ? rs.getString("CustStreet2") : new String(),
+                        rs.getString("CustOrg") != null ? rs.getString("CustOrg") : new String(),                        rs.getString("CustStreet1") != null ? rs.getString("CustStreet2") : new String(),
                         rs.getString("CustStreet2") != null ? rs.getString("CustStreet2") : new String(),
                         rs.getString("CustCity") != null ? rs.getString("CustCity") : new String(),
                         rs.getString("CustState") != null ? rs.getString("CustState") : new String(),
@@ -75,7 +76,7 @@ public class Customer {
      }
 
     /**
-     *
+     * By Paul
      * @param customer An object of Customer class
      * @return Customer object from database
      */
@@ -105,6 +106,7 @@ public class Customer {
                         rs.getInt("CUSTID"),
                         rs.getString("CustFirstName"),
                         rs.getString("CustLastName"),
+                        rs.getString("CustOrg"),
                         rs.getString("CustStreet1"),
                         rs.getString("CustStreet2"),
                         rs.getString("CustCity"),
@@ -127,6 +129,7 @@ public class Customer {
     }
     
     /**
+     * By Paul
      * Inserts a record into the DB
      * @param customer Customer object
      * @return Customer object or null if failed.
@@ -170,6 +173,7 @@ public class Customer {
     }
      
     /**
+     * By Paul
      * Checks to see if a customer number is valid -- if a number is a customer?
      * @param CustId customer id as integer
      * @return boolean false, not customer; true, customer
@@ -274,5 +278,3 @@ public class Customer {
     }
     // </editor-fold>
 }
-
-

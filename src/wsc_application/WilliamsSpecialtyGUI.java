@@ -1860,7 +1860,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
        //if not through a message explaining
         try{
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.toString()),
-                CustFNameText.getText(),CustLNameText.getName(), 
+                CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
                 CustStateCB.toString(),Integer.parseInt(CustZipText.getText()),
                 Integer.parseInt(CustPhoneText.getText()),CustEmailText.getText());
