@@ -1864,6 +1864,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         boolean CustExist = false;
         String temp;
   try{
+      //Get address and assign an empty string if it doesnt exist
         if ("".equals(CustStreet1Text.getText()))
         {
             temp = "";
@@ -1872,8 +1873,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         {
             temp = CustStreet1Text.getText();
         }
+        //Check if customer exists
         CustExist = Customer.isCustomer(Integer.parseInt(CUSTIDCB.getText()),temp);
        
+        //If the customer doesnt exist create them else cust already exists message
       if (CustExist == false)
       {
 
