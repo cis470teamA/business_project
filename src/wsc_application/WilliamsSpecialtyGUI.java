@@ -1861,8 +1861,22 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
        //Jacob: Added Try and Catch to check if parse was successful 
        //if not through a message explaining
+        boolean CustExist = false;
+        String temp;
+  try{
+        if ("".equals(CustStreet1Text.getText()))
+        {
+            temp = "";
+        }
+        else
+        {
+            temp = CustStreet1Text.getText();
+        }
+        CustExist = Customer.isCustomer(Integer.parseInt(CUSTIDCB.getText()),temp);
        
-        try{
+      if (CustExist == false)
+      {
+
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
                 CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
@@ -1871,6 +1885,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         Customer.createCust(customer);
         JOptionPane.showMessageDialog(null, "Customer created successfully.");
         CustClear();
+      }
+      else
+      {
+           JOptionPane.showMessageDialog(null, "Customer already exists.");
+      }
        }
        catch (Exception e)
                {
