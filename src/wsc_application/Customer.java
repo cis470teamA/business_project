@@ -26,6 +26,7 @@ public class Customer {
         setCUSTID(custid);
         setFName(fName);
         setLName(lName);
+        setCustOrg(custOrg);
         setStreet1(street1);
         setStreet2(street2);
         setCity(city);
@@ -54,7 +55,8 @@ public class Customer {
                         rs.getInt("CUSTID"),
                         rs.getString("CustFirstName") != null ? rs.getString("CustFirstName") : new String(),
                         rs.getString("CustLastName") != null ? rs.getString("CustLastName") : new String(),
-                        rs.getString("CustOrg") != null ? rs.getString("CustOrg") : new String(),                        rs.getString("CustStreet1") != null ? rs.getString("CustStreet2") : new String(),
+                        rs.getString("CustOrg") != null ? rs.getString("CustOrg") : new String(),                        
+                        rs.getString("CustStreet1") != null ? rs.getString("CustStreet1") : new String(),
                         rs.getString("CustStreet2") != null ? rs.getString("CustStreet2") : new String(),
                         rs.getString("CustCity") != null ? rs.getString("CustCity") : new String(),
                         rs.getString("CustState") != null ? rs.getString("CustState") : new String(),
@@ -143,6 +145,7 @@ public class Customer {
             String query = "insert into CUSTOMER values (0, '"
                     + customer.custFName + "', '"
                     + customer.custLName + "', '"
+                    + customer.custOrg + "', '"
                     + customer.custStreet1 + "', '"
                     + customer.custStreet2 + "', '"
                     + customer.custCity + "', '" 
@@ -211,6 +214,10 @@ public class Customer {
     }
     public void setLName(String lName){
         this.custLName = lName;
+    }
+    
+    public void setCustOrg(String custOrg){
+        this.custOrg = custOrg;
     }
     
     public void setStreet1(String street1){
