@@ -101,6 +101,32 @@ public class Employee{
             return emp;
         }
     }
+    
+    //Jacob: Added CreateEmp method
+    public static Employee createEmp(Employee employee) {
+        Employee emp = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "insert into EMPLOYEE values (0, '"
+                    + employee.firstName + "', '"
+                    + employee.lastName + "', '"
+                    + employee.email + "', '"
+                    + employee.empType + "');";
+            mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);   
+        }   
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        finally {
+            return emp;
+        }
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setFirstName(String firstName){
         this.firstName = firstName;
