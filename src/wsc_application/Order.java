@@ -55,9 +55,10 @@ public class Order {
         Order order = null;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        String query = "select * from ORDER where CUSTID = " + CustId + ";";
-        rs = mysql.doQuery(query);
+        String query = "select * from cis470.ORDER where CUSTID = " + CustId + ";";
+        System.out.println(query);
         try {
+            rs = mysql.doQuery(query);
             while (rs.next()) {
                 Employee employee;
                 Customer customer;
@@ -87,6 +88,78 @@ public class Order {
         return orders;
     }
     
+    public static Order getOrder(int orderId) {
+        Order order = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from cis470.ORDER where ORDERID = " + orderId + ";";
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                Employee employee;
+                Customer customer;
+                employee = Employee.searchBy(rs.getLong("EMPID"));
+                customer = Customer.searchBy("CUSTID", rs.getString("CUSTID"));
+                order = new Order(
+                        customer,
+                        rs.getInt("ORDERID"),
+                        rs.getString("MediaType"),
+                        rs.getString("Content"),
+                        rs.getBoolean("PaymentOnAccount"),
+                        rs.getFloat("Total"),
+                        rs.getFloat("Deposit"),
+                        rs.getString("OrderStatus"),
+                        rs.getString("MediaStatus"),
+                        employee);                
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return order;
+    }
+    
+    public static Order createOrder(Order order) {
+        Order thisOrder = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "INSERT INTO cis470.ORDER values (0, '"
+                    + order.customer.getCustId() + "', '"
+                    + order.modifiedBy.getEmpId() + "', '"
+                    + order.orderStatus + "', '"
+                    + order.mediaType + "', '"
+                    + order.mediaStatus + "', '"
+                    + order.content + "', '"
+                    + order.paymentOnAccount + "', '"
+                    + order.total + "', '" +
+                    + order.deposit + "');";
+            System.out.println(query);
+            mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
+            int key = -1;
+            rs = mysql.stmt.getGeneratedKeys();
+            if (rs.next()) {
+                key = rs.getInt(1);
+            }
+            if (key > 0) {
+                thisOrder = Order.getOrder(key);
+            }
+        }   
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        finally {
+            return thisOrder;
+        }
+    }
+    
     //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public Customer getCustomer(){
         return customer;
@@ -99,12 +172,6 @@ public class Order {
     }
     public void setORDID(int ordID){
         this.ORDID = ordID;
-    }
-    public CatalogItem getCatalogItem(){
-        return catalogItem;
-    }
-    public void setCatalogItem(CatalogItem catItem){
-        this.catalogItem = catItem;
     }
     public String getMediaType(){
         return mediaType;
