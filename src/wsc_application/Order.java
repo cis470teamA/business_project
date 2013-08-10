@@ -11,7 +11,7 @@ public class Order {
     private String mediaType;
     private String content;
     private float total;
-    private boolean paymentOnAccount;
+    private int paymentOnAccount;
     private float deposit;
     private String orderStatus;
     private Employee modifiedBy;
@@ -50,8 +50,8 @@ public class Order {
      * @return An array list of order objects; A search by customer ID can 
      * 
      */
-    public static ArrayList searchBy(int CustId) {
-        orders = new ArrayList(0);
+    public static ArrayList getOrders(int CustId) {
+        orders= new ArrayList<Order>(0);
         Order order = null;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
@@ -192,10 +192,16 @@ public class Order {
         this.total = tot;
     }
     public Boolean getPaymentOnAccount(){
-        return paymentOnAccount;
+        if (this.paymentOnAccount == 0)
+            return false;
+        else
+            return true;
     }
     public void setPaymentOnAccount(Boolean onAcct){
-        this.paymentOnAccount = onAcct;
+        if (onAcct)
+            this.paymentOnAccount = 1;
+        else
+            this.paymentOnAccount = 0;
     }
     public float getDeposit(){
         return deposit;
