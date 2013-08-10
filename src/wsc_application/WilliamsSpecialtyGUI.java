@@ -1856,7 +1856,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
        //Jacob: Added Try and Catch to check if parse was successful 
        //if not through a message explaining
-        JOptionPane.showMessageDialog(null, CUSTIDCB.getText(),"r",JOptionPane.INFORMATION_MESSAGE);
+       
         try{
         Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
                 CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
