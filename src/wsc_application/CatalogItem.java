@@ -3,7 +3,7 @@ package wsc_application;
 public class CatalogItem {
     
     //Global Variables
-    private String itemNumber;
+    private String itemId;
     private String manufacturer;
     private String itemName;
     private int qtyOnHand;
@@ -27,7 +27,7 @@ public class CatalogItem {
     // <editor-fold defaultstate="collapsed" desc="Setters">
     
     public void setItemNum(String itemNum){
-        this.itemNumber = itemNum;
+        this.itemId = itemNum;
     }
     
     public void setManufacturer(String manufacturer){
@@ -51,7 +51,7 @@ public class CatalogItem {
     }
       // </editor-fold>
     public String getItemNumber(){
-        return itemNumber;
+        return itemId;
     }
     public String getItemName(){
         return itemName;

@@ -1,5 +1,10 @@
 package wsc_application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
+
 public class Employee{
     
     protected String firstName;
@@ -24,6 +29,33 @@ public class Employee{
     
     // Employee class code goes here.  Methods and stuff.
     
+    public static Employee searchBy(long EmpId) {
+        Employee employee = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from EMPLOYEE where EMPID = " + Long.toString(EmpId) + ";";
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                employee = new Employee(
+                        rs.getString("EmpFirstName"),
+                        rs.getString("EmpLastName"),
+                        rs.getLong("EMPID"),
+                        rs.getString("EmpEmail"));
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+         }
+         finally {
+             mysql.closeAll();
+             return employee;
+         }
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setFirstName(String firstName){
         this.firstName = firstName;
@@ -42,7 +74,7 @@ public class Employee{
     }
     // </editor-fold>
     
-    // <editor-fold defaultstate="collapsed" desc="getters">
+    // <editor-fold defaultstate="collapsed" desc="Getters">
     public String getFirstName(){
         return firstName;
     }
