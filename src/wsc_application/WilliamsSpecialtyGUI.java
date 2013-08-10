@@ -1876,7 +1876,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //Check if customer exists
         CustExist = Customer.isCustomer(Integer.parseInt(CUSTIDCB.getText()),temp);
        
-        //If the customer doesnt exist create them else cust already exists message
+        //If the customer doesnt exist create them else cust already exists update
       if (CustExist == false)
       {
 
@@ -1891,7 +1891,15 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
       }
       else
       {
-           JOptionPane.showMessageDialog(null, "Customer already exists.");
+          //Update the customer
+          Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
+                CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
+                CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
+                CustStateCB.getSelectedItem().toString(),Integer.parseInt(CustZipText.getText()),
+                Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
+           Customer.updateBy(customer);
+           JOptionPane.showMessageDialog(null, "Customer updated.");
+           CustClear();
       }
        }
        catch (Exception e)
