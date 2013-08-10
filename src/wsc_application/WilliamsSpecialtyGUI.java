@@ -1858,12 +1858,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
        //Jacob: Added Try and Catch to check if parse was successful 
        //if not through a message explaining
+        JOptionPane.showMessageDialog(null, CUSTIDCB.getText(),"r",JOptionPane.INFORMATION_MESSAGE);
         try{
-        Customer customer = new Customer(Integer.parseInt(CUSTIDCB.toString()),
+        Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
                 CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
                 CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
-                CustStateCB.toString(),Integer.parseInt(CustZipText.getText()),
-                Integer.parseInt(CustPhoneText.getText()),CustEmailText.getText());
+                CustStateCB.getSelectedItem().toString(),Integer.parseInt(CustZipText.getText()),
+                Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
+        Customer.createCust(customer);
        }
        catch (Exception e)
                {
@@ -1881,32 +1883,32 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             searchCust = Customer.searchBy("CUSTID", CUSTIDCB.getText());
         }
         
-        if (CustFNameText.getText() != "")
+        if (CustFNameText.getText() != "" & searchCust == null)
         {
             searchCust = Customer.searchBy("CustFirstName", CustFNameText.getText());
         }
         
-        if (CustLNameText.getText() != "")
+        if (CustLNameText.getText() != "" & searchCust == null)
         {
             searchCust = Customer.searchBy("CustLastName", CustLNameText.getText());
         }
         
-        if (CustOrgText.getText() != "")
+        if (CustOrgText.getText() != "" & searchCust == null)
         {
             searchCust = Customer.searchBy("CustOrg", CustOrgText.getText());
         }
         
-        if (CustStreet1Text.getText() != "")
+        if (CustStreet1Text.getText() != "" & searchCust == null)
         {
             searchCust = Customer.searchBy("CustStreet1", CustStreet1Text.getText());
         }
         
-        if (CustStreet2Text.getText() != "")
+        if (CustStreet2Text.getText() != "" & searchCust == null)
         {
             searchCust = Customer.searchBy("CustStreet2", CustStreet2Text.getText());
         }
         
-        if (CustPhoneText.getText() != "")
+        if (CustPhoneText.getText() != "" & searchCust == null)
         {
             searchCust = Customer.searchBy("CustPhone", CustPhoneText.getText());
         }
