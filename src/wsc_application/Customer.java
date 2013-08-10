@@ -18,9 +18,10 @@ public class Customer {
     private long custPhone;
     private String custEmail;
     
+    //Default constructor
     public Customer(){
     }
-    
+    //Constructor with values pasted and sets variables
     public Customer(int custid, String fName, String lName, String custOrg, String street1, String street2, 
             String city, String state, int zip, long phone, String email) {
         setCUSTID(custid);
@@ -42,6 +43,7 @@ public class Customer {
      * @param value Value of the column to search by
      * @return Customer object or null if nothing found
      */
+    //Jacob: Altered Query to include CustOrg
     public static Customer searchBy(String col, String value) {     
         Customer cust = null;
         ResultSet rs;
@@ -82,6 +84,7 @@ public class Customer {
      * @param customer An object of Customer class
      * @return Customer object from database
      */
+    //Jacob: Altered Qty to include custOrg
     public static Customer updateBy(Customer customer) {     
         Customer cust = null; 
         ResultSet rs;
@@ -93,6 +96,7 @@ public class Customer {
             if (rs.next()) {
                 rs.updateString("CustFirstName", customer.custFName);
                 rs.updateString("CustLastName", customer.custLName);
+                rs.updateString("CustOrg", customer.custOrg);
                 rs.updateString("CustStreet1", customer.custStreet1);
                 rs.updateString("CustStreet2", customer.custStreet2 != null ? customer.custStreet2 : new String());
                 rs.updateString("CustCity", customer.custCity);
@@ -136,6 +140,7 @@ public class Customer {
      * @param customer Customer object
      * @return Customer object or null if failed.
      */
+    //Jacob: Altered Qty to include custOrg
     public static Customer createCust(Customer customer) {
         Customer cust = null;
         ResultSet rs;
