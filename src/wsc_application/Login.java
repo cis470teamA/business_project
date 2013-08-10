@@ -6,7 +6,14 @@ import javax.swing.JOptionPane;
 
 public class Login {
     public static boolean isAuthenticated = false;
-    public static Employee emp;
+    /*
+     * REFER TO THIS AS THE APPLICATION GLOBAL EMPLOYEE OBJ
+     * It's convenient to set when logging in, and most of the work in the 
+     * doQuery method is already doing that -- refer to the class vars set
+     * there.
+     */
+    public static Employee emp; // App-level Employee obj.
+    
     
     private static int empid;
     private static String passwd;
