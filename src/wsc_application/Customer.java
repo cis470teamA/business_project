@@ -283,5 +283,9 @@ public class Customer {
     public String getCustEmail(){
         return custEmail;
     }
+    
+   public String getCustOrg(){
+        return custOrg;
+    }
     // </editor-fold>
 }
