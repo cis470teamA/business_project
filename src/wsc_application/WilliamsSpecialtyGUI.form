@@ -2193,13 +2193,13 @@
                               </Group>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="jPasswordField2" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPasswordField1" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpPassConfirm" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpPass" linkSize="10" alignment="2" min="-2" max="-2" attributes="0"/>
                                   <Component id="EmpTypeCB" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <Component id="EmpEmail" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
                                   <Component id="EmpLNameText" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
                                   <Component id="EmpFNameText" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="EMPIDCB" linkSize="10" alignment="2" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <Component id="EMPIDCB" alignment="2" min="-2" pref="111" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -2257,7 +2257,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2267,12 +2267,12 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPasswordField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpPass" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPasswordField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmpPassConfirm" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="EmpOrderLB" min="-2" pref="179" max="-2" attributes="0"/>
@@ -2400,18 +2400,6 @@
                 <Property name="text" type="java.lang.String" value="Employee Type"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="EMPIDCB">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="EmpSearchLbl">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2425,14 +2413,14 @@
                 <Property name="text" type="java.lang.String" value="Email Address"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="EmpEmail">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Login Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+            <Component class="javax.swing.JPasswordField" name="EmpPass">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jPasswordField1"/>
               </Properties>
@@ -2442,10 +2430,12 @@
                 <Property name="text" type="java.lang.String" value="Confirm Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+            <Component class="javax.swing.JPasswordField" name="EmpPassConfirm">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jPasswordField2"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="EMPIDCB">
             </Component>
           </SubComponents>
         </Container>

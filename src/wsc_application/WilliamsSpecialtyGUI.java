@@ -243,14 +243,14 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         EMPIDLbl = new javax.swing.JLabel();
         EmpTypeCB = new javax.swing.JComboBox();
         EmpTypeLbl = new javax.swing.JLabel();
-        EMPIDCB = new javax.swing.JComboBox();
         EmpSearchLbl = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        EmpEmail = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        EmpPass = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        EmpPassConfirm = new javax.swing.JPasswordField();
+        EMPIDCB = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(600, 549));
 
@@ -1682,8 +1682,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     EmpTypeLbl.setText("Employee Type");
 
-    EMPIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
     EmpSearchLbl.setForeground(new java.awt.Color(255, 51, 51));
     EmpSearchLbl.setText("* Use only one field for searches");
 
@@ -1691,11 +1689,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     jLabel3.setText("Login Password");
 
-    jPasswordField1.setText("jPasswordField1");
+    EmpPass.setText("jPasswordField1");
 
     jLabel4.setText("Confirm Password");
 
-    jPasswordField2.setText("jPasswordField2");
+    EmpPassConfirm.setText("jPasswordField2");
 
     javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
     EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
@@ -1715,13 +1713,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(EMPIDLbl))
                     .addGap(33, 33, 33)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpPassConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmpEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpLNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(EmpFNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(EMPIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
                             .addGap(7, 7, 7)
@@ -1743,7 +1741,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addContainerGap(189, Short.MAX_VALUE))
     );
 
-    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDCB, EmpClearButton, EmpFNameText, EmpLNameText, EmpSubmitButton, EmpTypeCB, jPasswordField1, jPasswordField2, jTextField1});
+    EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EmpClearButton, EmpEmail, EmpFNameText, EmpLNameText, EmpPass, EmpPassConfirm, EmpSubmitButton, EmpTypeCB});
 
     EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EMPIDLbl, EmpFNameLbl, EmpLNameLbl, EmpSearchButton, EmpTypeLbl, jLabel1, jLabel3, jLabel4});
 
@@ -1769,7 +1767,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(EmpEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(EmpTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1777,11 +1775,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(EmpPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
-                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(EmpPassConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
             .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1945,7 +1943,15 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_EmpSubmitButtonActionPerformed
 
     private void EmpClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpClearButtonActionPerformed
-        // TODO add your handling code here:
+        // Clear Employee data
+        EMPIDCB.setText("");
+        EmpFNameText.setText("");
+        EmpLNameText.setText("");
+        EmpEmail.setText("");
+        EmpPass.setText("");
+        EmpPassConfirm.setText("");
+        EmpTypeCB.setSelectedIndex(0);
+        emOrdersLst.setListData(new Object[0]);
     }//GEN-LAST:event_EmpClearButtonActionPerformed
 
     private void InvOnHandTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOnHandTextActionPerformed
@@ -2143,16 +2149,19 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel CustZipLbl;
     private javax.swing.JTextField CustZipText;
     private javax.swing.JPanel CustomerInfoPanel;
-    private javax.swing.JComboBox EMPIDCB;
+    private javax.swing.JTextField EMPIDCB;
     private javax.swing.JLabel EMPIDLbl;
     private javax.swing.JLabel EmpActiveOrderLbl1;
     private javax.swing.JButton EmpClearButton;
+    private javax.swing.JTextField EmpEmail;
     private javax.swing.JLabel EmpFNameLbl;
     private javax.swing.JTextField EmpFNameText;
     private javax.swing.JLabel EmpLNameLbl;
     private javax.swing.JTextField EmpLNameText;
     private javax.swing.JScrollPane EmpOrderLB;
     private javax.swing.JLabel EmpOrderLbl;
+    private javax.swing.JPasswordField EmpPass;
+    private javax.swing.JPasswordField EmpPassConfirm;
     private javax.swing.JButton EmpSearchButton;
     private javax.swing.JLabel EmpSearchLbl;
     private javax.swing.JButton EmpSubmitButton;
@@ -2328,8 +2337,5 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
