@@ -39,7 +39,7 @@ public class Login {
     }
     
     public static void processLogout(){
-        System.exit(0);
+        
     }
     
     private static boolean doQuery(String user, String pass) {
