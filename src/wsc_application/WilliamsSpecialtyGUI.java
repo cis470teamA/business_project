@@ -2108,12 +2108,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
       }
       else
       {
+          String passText = new String(EmpPass.getPassword());
+          String passTextConfirm = new String(EmpPassConfirm.getPassword());
+          
+          if (!passText.equals(passTextConfirm))
+          {
+              JOptionPane.showMessageDialog(null, "Employee password does not match.");
+          }
+          else
+          {
           //Update the employee
+          
           Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
            Employee.updateBy(emp);
+           emp = null;
+           emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
+           Employee.AddUserLogin(emp);
            JOptionPane.showMessageDialog(null, "Employee updated.");
            EmpClear();
            HideEmpPassword();
+          }
       }
        }
        catch (Exception e)
