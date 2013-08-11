@@ -2034,7 +2034,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderContentTextActionPerformed
 
     private void LogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutButtonActionPerformed
-        // TODO add your handling code here:
+        Login.processLogout();
     }//GEN-LAST:event_LogoutButtonActionPerformed
 
     private void EmpLNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpLNameTextActionPerformed
