@@ -2087,6 +2087,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
         // TODO add your handling code here:
        boolean empExist = false;
+       boolean empUser = false;
        String temp;
        
     try{
@@ -2115,11 +2116,23 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
           {
           //Update the employee
           
-          Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
+           Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
            Employee.updateBy(emp);
            emp = null;
-           emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
-           Employee.AddUserLogin(emp);
+           empUser = Employee.EmpUserExist(Long.parseLong(EMPIDCB.getText()));
+           
+           if (empUser == false)
+           {
+             emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
+             Employee.AddUserLogin(emp);
+           }
+           
+           if (empUser == true)
+           {
+             emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
+             Employee.UpdateUserLogin(emp);
+           }
+           
            JOptionPane.showMessageDialog(null, "Employee updated.");
            EmpClear();
            HideEmpPassword();
