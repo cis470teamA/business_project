@@ -126,6 +126,45 @@ public class Employee{
         }
     }
      
+          public static void UpdateUserLogin(Employee employee) {
+        Employee emp = null;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "UPDATE USER SET pass = '"
+                    + employee.password + "' WHERE EMPID = "+employee.EMPID+";";
+            mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);   
+        }   
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+    }
+     
+     public static boolean EmpUserExist(long EmpID){
+        boolean checkExist = false;
+         ResultSet rs;
+         MysqlConn mysql = new MysqlConn();
+        String query = "select * from USER where EMPID = " + Long.toString(EmpID) +";";
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                checkExist = true;
+                
+            }
+        }
+        catch (SQLException ex) {
+            
+        }
+        finally{
+            mysql.closeAll();
+            return checkExist;
+        }
+        
+    }
+     
     //Jacob: Added CreateEmp method
     public static Employee createEmp(Employee employee) {
         Employee emp = null;
