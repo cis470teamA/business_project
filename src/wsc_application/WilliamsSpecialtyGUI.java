@@ -1689,11 +1689,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     jLabel3.setText("Login Password");
 
-    EmpPass.setText("empPass");
-
     jLabel4.setText("Confirm Password");
-
-    EmpPassConfirm.setText("jPasswordField2");
 
     javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
     EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
