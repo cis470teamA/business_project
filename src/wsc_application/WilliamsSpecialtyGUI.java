@@ -22,6 +22,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
     
     public WilliamsSpecialtyGUI() {
         initComponents();
+        HideEmpPassword();
     }
 
     /**
@@ -1688,7 +1689,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     jLabel3.setText("Login Password");
 
-    EmpPass.setText("jPasswordField1");
+    EmpPass.setText("empPass");
 
     jLabel4.setText("Confirm Password");
 
@@ -1820,6 +1821,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderVerify workingOV = new OrderVerify();
     QAReport workingQA = new QAReport();
     CatalogItem workingCA = new CatalogItem();
+    
+    public void HideEmpPassword()
+    {
+           // <editor-fold defaultstate="collapsed" desc="Hide password employee fields by default">
+        EmpPass.setVisible(false);
+        EmpPassConfirm.setVisible(false);
+        jLabel3.setVisible(false);
+        jLabel4.setVisible(false);
+         // </editor-fold>
+    }
+    
+    public void ShowEmpPassword()
+    {
+           // <editor-fold defaultstate="collapsed" desc="Show password employee fields by default">
+        EmpPass.setVisible(true);
+        EmpPassConfirm.setVisible(true);
+        jLabel3.setVisible(true);
+        jLabel4.setVisible(true);
+         // </editor-fold>
+    }
     
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
         // TODO add your handling code here:
@@ -2062,7 +2083,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         EmpLNameText.setText(emp.getLastName());
         EmpEmail.setText(emp.getEmail());
         EmpTypeCB.setSelectedItem(emp.getEmpType());
-       
+        ShowEmpPassword();
         }
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
 

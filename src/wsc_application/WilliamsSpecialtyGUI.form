@@ -2423,7 +2423,7 @@
             </Component>
             <Component class="javax.swing.JPasswordField" name="EmpPass">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+                <Property name="text" type="java.lang.String" value="empPass"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
