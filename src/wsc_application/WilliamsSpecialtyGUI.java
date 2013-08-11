@@ -1677,7 +1677,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     EMPIDLbl.setText("Employee id");
 
-    EmpTypeCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    EmpTypeCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "TS", "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     EmpTypeLbl.setText("Employee Type");
 
@@ -2043,10 +2043,60 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void EmpSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSearchButtonActionPerformed
         // TODO add your handling code here:
+        Employee emp = null;
+        
+        if (!"".equals(EMPIDCB.getText()))
+        {
+            emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
+        }
+        
+        if (emp == null)
+        {
+            JOptionPane.showMessageDialog(null, "A search value is required", "Search Value", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else
+        {
+             
+        EMPIDCB.setText(String.valueOf(emp.getEmpId()));
+        EmpFNameText.setText(emp.getFirstName());
+        EmpLNameText.setText(emp.getLastName());
+        EmpEmail.setText(emp.getEmail());
+        EmpTypeCB.setSelectedItem(emp.getEmpType());
+       
+        }
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
 
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
         // TODO add your handling code here:
+            boolean empExist = false;
+        String temp;
+  try{
+        //Check if employee exists
+        empExist = Employee.isEmployee(Long.parseLong(EMPIDCB.getText()));
+       
+        //If the employee doesn't exist create them else employee already exists update
+      if (empExist == false)
+      {
+//public Employee(String fName, String lName, Long empId, String eMail, String empType)
+        Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());
+        Employee.createEmp(emp);
+        JOptionPane.showMessageDialog(null, "Employee created successfully.");
+        CustClear();
+      }
+      else
+      {
+          //Update the employee
+          Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
+           Employee.updateBy(emp);
+           JOptionPane.showMessageDialog(null, "Employee updated.");
+           CustClear();
+      }
+       }
+       catch (Exception e)
+               {
+                   
+                   JOptionPane.showMessageDialog(null, "Employee was not created.");
+               }
     }//GEN-LAST:event_EmpSubmitButtonActionPerformed
 
     private void EmpClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpClearButtonActionPerformed
