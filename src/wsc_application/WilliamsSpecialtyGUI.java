@@ -2043,6 +2043,27 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void EmpSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSearchButtonActionPerformed
         // TODO add your handling code here:
+        Employee emp = null;
+        
+        if (!"".equals(EMPIDCB.getText()))
+        {
+            emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
+        }
+        
+        if (emp == null)
+        {
+            JOptionPane.showMessageDialog(null, "A search value is required", "Search Value", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else
+        {
+             
+        EMPIDCB.setText(String.valueOf(emp.getEmpId()));
+        EmpFNameText.setText(emp.getFirstName());
+        EmpLNameText.setText(emp.getLastName());
+        EmpEmail.setText(emp.getEmail());
+        EmpTypeCB.setSelectedItem(emp.getEmpType());
+       
+        }
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
 
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
