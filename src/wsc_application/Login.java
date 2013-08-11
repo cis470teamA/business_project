@@ -30,10 +30,16 @@ public class Login {
             emp = new Employee(); // CREATE EMPLOYEE OBJECT
             // ALSO TIME TO POPULATE EMPLOYEE OBJECT FROM AUTHENTICAION
             System.out.println("Login successful");
+            JOptionPane.showMessageDialog(null, "Login sucessful", "Login sucessful", JOptionPane.INFORMATION_MESSAGE);
         } else {
             System.out.println("Login failed");
+            JOptionPane.showMessageDialog(null, "Username/password not a match", "Login failed", JOptionPane.ERROR_MESSAGE);
         }
         return false;
+    }
+    
+    public static void processLogout(){
+        System.exit(0);
     }
     
     private static boolean doQuery(String user, String pass) {
@@ -71,3 +77,4 @@ public class Login {
         }
     }
 }
+
