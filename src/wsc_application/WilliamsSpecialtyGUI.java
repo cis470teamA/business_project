@@ -48,6 +48,10 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OrderVerJobTypeBG = new javax.swing.ButtonGroup();
         OrderVerPayTypeBG = new javax.swing.ButtonGroup();
         OrderVerDepositBG = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         WSCInterface = new javax.swing.JTabbedPane();
         LoginPanel = new javax.swing.JPanel();
         LoginButton = new javax.swing.JButton();
@@ -1254,56 +1258,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAEngrFinishLbl.setText("Workmanship");
 
-    QAOrderContentBG.add(QACorrectContentPassRb);
+    buttonGroup1.add(QACorrectContentPassRb);
     QACorrectContentPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentPassRbActionPerformed(evt);
         }
     });
 
-    QAOrderMediaBG.add(QACorrectMediaPassRb);
+    buttonGroup2.add(QACorrectMediaPassRb);
     QACorrectMediaPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaPassRbActionPerformed(evt);
         }
     });
 
-    QAMediaFinishBG.add(QAMediaFinishPassRb);
+    buttonGroup3.add(QAMediaFinishPassRb);
     QAMediaFinishPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishPassRbActionPerformed(evt);
         }
     });
 
-    QAWorkmanshipBG.add(QAWorkmanshipPassRb);
+    buttonGroup4.add(QAWorkmanshipPassRb);
     QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipPassRbActionPerformed(evt);
         }
     });
 
-    QAOrderContentBG.add(QACorrectContentFailRb);
+    buttonGroup1.add(QACorrectContentFailRb);
     QACorrectContentFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentFailRbActionPerformed(evt);
         }
     });
 
-    QAOrderMediaBG.add(QACorrectMediaFailRb);
+    buttonGroup2.add(QACorrectMediaFailRb);
     QACorrectMediaFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaFailRbActionPerformed(evt);
         }
     });
 
-    QAMediaFinishBG.add(QAMediaFinishFailRb);
+    buttonGroup3.add(QAMediaFinishFailRb);
     QAMediaFinishFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishFailRbActionPerformed(evt);
         }
     });
 
-    QAWorkmanshipBG.add(QAWorkmanshipFailRb);
+    buttonGroup4.add(QAWorkmanshipFailRb);
     QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipFailRbActionPerformed(evt);
@@ -1351,6 +1355,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     QAOrderIDLbl.setText("Order Number");
 
     QAOrderIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    QAOrderIDCB.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            QAOrderIDCBActionPerformed(evt);
+        }
+    });
 
     QAIDLbl.setText("QA Inspection Number");
 
@@ -1443,7 +1452,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QAIDLbl)
                 .addComponent(QAIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, 18)
+            .addGap(30, 30, 30)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QAPassLbl)
                 .addComponent(QAFailLbl)
@@ -1843,7 +1852,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_InvSearchButtonActionPerformed
 
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
-        // TODO add your handling code here:
+        // Clear Inventory data
+        InvItemIDCB.setSelectedIndex(0);
+        jComboBox2.setSelectedIndex(0);
+        InvItemNameText.setText("");
+        InvOnHandText.setText("");
+        InvOnOrderText.setText("");
+        InvDelDateText.setText("");
     }//GEN-LAST:event_InvClearButtonActionPerformed
 
     private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
@@ -2028,7 +2043,19 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_QASubmitButtonActionPerformed
 
     private void QAClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAClearButtonActionPerformed
-        // TODO add your handling code here:
+        // Clear QA data
+        QAOrderIDCB.setSelectedIndex(0);
+        QAIDCB.setSelectedIndex(0);
+        QAContentFailText.setText("");
+        QAOrderMediaFailText.setText("");
+        QAMediaFinishFailText.setText("");
+        QAWorkmanshipFailText.setText("");
+        QACommentText.setText("");
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
+        buttonGroup3.clearSelection();
+        buttonGroup4.clearSelection();
+        
     }//GEN-LAST:event_QAClearButtonActionPerformed
 
     private void QASearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASearchButtonActionPerformed
@@ -2317,6 +2344,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderTypeShirtRBActionPerformed
 
+    private void QAOrderIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderIDCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAOrderIDCBActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
     private javax.swing.JLabel CUSTIDLbl;
@@ -2529,6 +2560,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JComboBox jComboBox2;
