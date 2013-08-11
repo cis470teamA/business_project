@@ -12,6 +12,7 @@ public class Employee{
     protected Long EMPID;
     protected String email;
     protected String empType;
+    protected String password;
     
     public enum type {
         SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan, Admin;
@@ -19,6 +20,11 @@ public class Employee{
     
     public Employee(){
         
+    }
+    
+    public Employee(long empid, String pass){
+        setEmpId(empid);
+        setPassword(pass);
     }
      public Employee(String fName, String lName, Long empId, String eMail) {
         setFirstName(fName);
@@ -102,6 +108,24 @@ public class Employee{
         }
     }
     
+     public static void AddUserLogin(Employee employee) {
+        Employee emp = null;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "insert into USER values (0, "
+                    + employee.EMPID + ", '"
+                    + employee.password + "');";
+            mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);   
+        }   
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+    }
+     
     //Jacob: Added CreateEmp method
     public static Employee createEmp(Employee employee) {
         Employee emp = null;
@@ -168,6 +192,10 @@ public class Employee{
     
     public void setEmpType(String empType){
         this.empType = empType;
+    }
+    
+    public void setPassword(String pass){
+        this.password = pass;
     }
     // </editor-fold>
     
