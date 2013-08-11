@@ -48,7 +48,8 @@ public class Employee{
                         rs.getString("EmpFirstName"),
                         rs.getString("EmpLastName"),
                         rs.getLong("EMPID"),
-                        rs.getString("EmpEmail"));
+                        rs.getString("EmpEmail"),
+                        rs.getString("EmpType"));
             }
         }
         catch (SQLException ex) {
