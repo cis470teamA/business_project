@@ -1921,6 +1921,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            Customer.updateBy(customer);
            JOptionPane.showMessageDialog(null, "Customer updated.");
            CustClear();
+           
       }
        }
        catch (Exception e)
@@ -2089,20 +2090,21 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
         // TODO add your handling code here:
-            boolean empExist = false;
-        String temp;
-  try{
+       boolean empExist = false;
+       String temp;
+       
+    try{
         //Check if employee exists
         empExist = Employee.isEmployee(Long.parseLong(EMPIDCB.getText()));
        
         //If the employee doesn't exist create them else employee already exists update
       if (empExist == false)
       {
-//public Employee(String fName, String lName, Long empId, String eMail, String empType)
         Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());
         Employee.createEmp(emp);
         JOptionPane.showMessageDialog(null, "Employee created successfully.");
-        CustClear();
+        EmpClear();
+        HideEmpPassword();
       }
       else
       {
@@ -2110,16 +2112,24 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
           Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
            Employee.updateBy(emp);
            JOptionPane.showMessageDialog(null, "Employee updated.");
-           CustClear();
+           EmpClear();
+           HideEmpPassword();
       }
        }
        catch (Exception e)
                {
-                   
                    JOptionPane.showMessageDialog(null, "Employee was not created.");
                }
     }//GEN-LAST:event_EmpSubmitButtonActionPerformed
 
+    public void EmpClear()
+    {
+       EMPIDCB.setText("");
+       EmpFNameText.setText("");
+       EmpLNameText.setText("");
+       EmpEmail.setText("");
+       EmpTypeCB.setSelectedIndex(0);
+    }
     private void EmpClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpClearButtonActionPerformed
         // Clear Employee data
         EMPIDCB.setText("");
