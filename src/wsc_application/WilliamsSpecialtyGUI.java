@@ -1929,7 +1929,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
         Customer.createCust(customer);
         JOptionPane.showMessageDialog(null, "Customer created successfully.");
-        CustClear();
+       // CustClear();
       }
       else
       {
@@ -1941,7 +1941,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
            Customer.updateBy(customer);
            JOptionPane.showMessageDialog(null, "Customer updated.");
-           CustClear();
+         //  CustClear();
            
       }
        }
@@ -2137,7 +2137,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());
         Employee.createEmp(emp);
         JOptionPane.showMessageDialog(null, "Employee created successfully.");
-        EmpClear();
+        //EmpClear();
         HideEmpPassword();
       }
       else
@@ -2171,7 +2171,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            }
            
            JOptionPane.showMessageDialog(null, "Employee updated.");
-           EmpClear();
+           //EmpClear();
            HideEmpPassword();
           }
       }
