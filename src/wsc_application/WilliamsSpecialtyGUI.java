@@ -1320,23 +1320,17 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QACommentLbl.setText("Comments");
 
-    QAContentFailText.setEditable(false);
     QAContentFailText.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAContentFailTextActionPerformed(evt);
         }
     });
 
-    QAOrderMediaFailText.setEditable(false);
     QAOrderMediaFailText.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAOrderMediaFailTextActionPerformed(evt);
         }
     });
-
-    QAMediaFinishFailText.setEditable(false);
-
-    QAWorkmanshipFailText.setEditable(false);
 
     QAPassLbl.setText("Pass");
 
@@ -1452,7 +1446,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QAIDLbl)
                 .addComponent(QAIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(30, 30, 30)
+            .addGap(24, 24, 24)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QAPassLbl)
                 .addComponent(QAFailLbl)
@@ -1556,6 +1550,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     });
 
     InvItemIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    InvItemIDCB.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            InvItemIDCBActionPerformed(evt);
+        }
+    });
 
     jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -1688,6 +1687,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     EMPIDLbl.setText("Employee id");
 
     EmpTypeCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "TS", "Item 1", "Item 2", "Item 3", "Item 4" }));
+    EmpTypeCB.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            EmpTypeCBActionPerformed(evt);
+        }
+    });
 
     EmpTypeLbl.setText("Employee Type");
 
@@ -1699,6 +1703,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     jLabel3.setText("Login Password");
 
     jLabel4.setText("Confirm Password");
+
+    EMPIDCB.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            EMPIDCBActionPerformed(evt);
+        }
+    });
 
     javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
     EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
@@ -2201,35 +2211,39 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_InvOnOrderTextActionPerformed
 
     private void QACorrectContentPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentPassRbActionPerformed
-        // TODO add your handling code here:
+        QAContentFailText.setText("");
+        QAContentFailText.setVisible(false);
     }//GEN-LAST:event_QACorrectContentPassRbActionPerformed
 
     private void QACorrectMediaPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaPassRbActionPerformed
-        // TODO add your handling code here:
+        QAOrderMediaFailText.setText("");
+        QAOrderMediaFailText.setVisible(false);
     }//GEN-LAST:event_QACorrectMediaPassRbActionPerformed
 
     private void QAMediaFinishPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishPassRbActionPerformed
-        // TODO add your handling code here:
+        QAMediaFinishFailText.setText("");
+        QAMediaFinishFailText.setVisible(false);
     }//GEN-LAST:event_QAMediaFinishPassRbActionPerformed
 
     private void QAWorkmanshipPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipPassRbActionPerformed
-        // TODO add your handling code here:
+        QAWorkmanshipFailText.setText("");
+        QAWorkmanshipFailText.setVisible(false);
     }//GEN-LAST:event_QAWorkmanshipPassRbActionPerformed
 
     private void QACorrectContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentFailRbActionPerformed
-        // TODO add your handling code here:
+        QAContentFailText.setVisible(true);
     }//GEN-LAST:event_QACorrectContentFailRbActionPerformed
 
     private void QACorrectMediaFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaFailRbActionPerformed
-        // TODO add your handling code here:
+        QAOrderMediaFailText.setVisible(true);
     }//GEN-LAST:event_QACorrectMediaFailRbActionPerformed
 
     private void QAMediaFinishFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishFailRbActionPerformed
-        // TODO add your handling code here:
+        QAMediaFinishFailText.setVisible(true);
     }//GEN-LAST:event_QAMediaFinishFailRbActionPerformed
 
     private void QAWorkmanshipFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipFailRbActionPerformed
-        // TODO add your handling code here:
+        QAWorkmanshipFailText.setVisible(true);
     }//GEN-LAST:event_QAWorkmanshipFailRbActionPerformed
 
     private void QAOrderMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderMediaFailTextActionPerformed
@@ -2360,6 +2374,18 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void QAOrderIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderIDCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_QAOrderIDCBActionPerformed
+
+    private void EmpTypeCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpTypeCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpTypeCBActionPerformed
+
+    private void EMPIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EMPIDCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EMPIDCBActionPerformed
+
+    private void InvItemIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvItemIDCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InvItemIDCBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
