@@ -10,7 +10,10 @@ package wsc_application;
  */
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 import static javax.swing.JComponent.TOOL_TIP_TEXT_KEY;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
@@ -2099,10 +2102,15 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void EmpSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSearchButtonActionPerformed
         // TODO add your handling code here:
         Employee emp = null;
+        ArrayList<String> orders = new ArrayList<String>();
         
         if (!"".equals(EMPIDCB.getText()))
         {
             emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
+            orders = Employee.GetOrders(Long.parseLong(EMPIDCB.getText()));
+            JList list = new JList(orders.toArray());
+            emOrdersLst.add(list);
+
         }
         
         if (emp == null)
