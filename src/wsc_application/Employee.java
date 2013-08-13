@@ -2,6 +2,7 @@ package wsc_application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
@@ -22,6 +23,10 @@ public class Employee{
         
     }
     
+     public Employee(long empid){
+        setEmpId(empid);
+    }
+     
     public Employee(long empid, String pass){
         setEmpId(empid);
         setPassword(pass);
@@ -211,6 +216,31 @@ public class Employee{
         }
         
     }
+    
+    public static ArrayList<String> GetOrders(long empid)
+    {
+        int i = 1;
+        String temp = "";
+        ArrayList<String> orders = new ArrayList<String>();
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select ORDERID from ORDER WHERE EMPID = " + Long.toString(empid) + ";";
+        rs = mysql.doQuery(query);
+        
+         try {
+            while (rs.next()) {
+                temp = rs.getString("ORDERID");
+                orders.add(temp);
+                temp = "";
+            }
+            return orders;
+         }
+            catch (SQLException ex) {
+            
+                    }
+         return null;
+    }
+    
     
     // <editor-fold defaultstate="collapsed" desc="Setters">
     public void setFirstName(String firstName){
