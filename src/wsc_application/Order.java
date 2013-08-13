@@ -14,7 +14,7 @@ public class Order {
     private int paymentOnAccount;
     private float deposit;
     private String orderStatus;
-    private Employee modifiedBy;
+    private Employee createdBy;
     private String mediaStatus;
 //    private CatalogItem catalogItem;
 //    private Employee createdBy;
@@ -27,7 +27,7 @@ public class Order {
 
     public Order(Customer cust, int OrderId, String mediaType,
             String content, Boolean onAcct, float total, float deposit, 
-            String orderStatus, String mediaStatus, Employee modBy){
+            String orderStatus, String mediaStatus, Employee createdBy){
         setCustomer(cust);
         setORDID(OrderId);
         setMediaType(mediaType);
@@ -37,7 +37,7 @@ public class Order {
         setDeposit(deposit);
         setOrderStatus(orderStatus);
         setMediaStatus(mediaStatus);
-        setModifiedBy(modBy);
+        setCreatedBy(createdBy);
 //        setCatalogItem(catItem);
 //        setCreatedBy(createBy);
 //        setAssignedTo(assignTo);
@@ -51,8 +51,8 @@ public class Order {
      * 
      */
     public static ArrayList getOrders(int CustId) {
-        orders= new ArrayList<Order>(0);
-        Order order = null;
+        orders = new ArrayList(0);
+        Order order;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
         String query = "select * from cis470.ORDER where CUSTID = " + CustId + ";";
@@ -130,7 +130,7 @@ public class Order {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
             String query = "INSERT INTO cis470.ORDER values (0, '"
                     + order.customer.getCustId() + "', '"
-                    + order.modifiedBy.getEmpId() + "', '"
+                    + order.createdBy.getEmpId() + "', '"
                     + order.orderStatus + "', '"
                     + order.mediaType + "', '"
                     + order.mediaStatus + "', '"
@@ -221,18 +221,18 @@ public class Order {
     public void setMediaStatus(String medStat){
         this.mediaStatus = medStat;
     }
+    public Employee getCreatedBy(){
+        return createdBy;
+    }
+    public void setCreatedBy(Employee modBy){
+        this.createdBy = modBy;
+    }
 //    public Employee getCreatedBy(){
 //        return createdBy;
 //    }
 //    public void setCreatedBy(Employee createBy){
 //        this.createdBy = createBy;
 //    }
-    public Employee getModifiedBy(){
-        return modifiedBy;
-    }
-    public void setModifiedBy(Employee modBy){
-        this.modifiedBy = modBy;
-    }
 //    public Employee getAssignedTo(){
 //        return assignedTo;
 //    }
