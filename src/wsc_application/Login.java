@@ -36,13 +36,11 @@ public class Login {
             emp.setEmail(email);
             // Done.
             System.out.println("Login successful");
-//            JOptionPane.showMessageDialog(null, "Login sucessful", "Login sucessful", JOptionPane.INFORMATION_MESSAGE);
             SrProject.win.lblLoginStatus.setText("Login successful");
             SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
             SrProject.win.lblLoginStatus.setVisible(true);
         } else {
             System.out.println("Login failed");
-//            JOptionPane.showMessageDialog(null, "Username/password not a match", "Login failed", JOptionPane.ERROR_MESSAGE);
             SrProject.win.lblLoginStatus.setText("Login failed.");
             SrProject.win.lblLoginStatus.setForeground(Color.red);
             SrProject.win.lblLoginStatus.setVisible(true);
@@ -61,7 +59,6 @@ public class Login {
         String query = "select * from USER, EMPLOYEE where "
                 + "USER.EMPID = " + user + " and "
                 + "EMPLOYEE.EMPID = " + user + ";";
-        System.out.println(query);
         rs = mysql.doQuery(query);
         try {
             if (rs.next()) {
@@ -72,10 +69,7 @@ public class Login {
                 lname = rs.getString("EmpLastName");
                 email = rs.getString("EmpEmail");
                 type = rs.getString("EmpType");
-                System.out.println("Form: " + pass);
-                System.out.println("DB: " + passwd);
                 if (passwd.equals(pass)) {
-                    System.out.println("Password matches");
                     rval = true;
                 } 
             }
