@@ -1,5 +1,6 @@
 package wsc_application;
 
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -27,16 +28,24 @@ public class Login {
         if (result) {
             isAuthenticated = true;
             emp = new Employee(); // CREATE EMPLOYEE OBJECT
+            // Now set attributes.
             emp.setEmpId(empid);
             emp.setFirstName(fname);
             emp.setLastName(lname);
             emp.setEmpType(type);
             emp.setEmail(email);
+            // Done.
             System.out.println("Login successful");
-            JOptionPane.showMessageDialog(null, "Login sucessful", "Login sucessful", JOptionPane.INFORMATION_MESSAGE);
+//            JOptionPane.showMessageDialog(null, "Login sucessful", "Login sucessful", JOptionPane.INFORMATION_MESSAGE);
+            SrProject.win.lblLoginStatus.setText("Login successful");
+            SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
+            SrProject.win.lblLoginStatus.setVisible(true);
         } else {
             System.out.println("Login failed");
-            JOptionPane.showMessageDialog(null, "Username/password not a match", "Login failed", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null, "Username/password not a match", "Login failed", JOptionPane.ERROR_MESSAGE);
+            SrProject.win.lblLoginStatus.setText("Login failed.");
+            SrProject.win.lblLoginStatus.setForeground(Color.red);
+            SrProject.win.lblLoginStatus.setVisible(true);
         }
         return false;
     }

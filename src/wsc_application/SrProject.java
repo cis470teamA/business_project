@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 
 public class SrProject {
-
+    protected static WilliamsSpecialtyGUI win = new WilliamsSpecialtyGUI();
     /*
      * @param args the command line arguments
      */
@@ -42,7 +42,7 @@ public class SrProject {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          
         //Add content to the window.
-        frame.add(new WilliamsSpecialtyGUI());
+        frame.add(win);
          
         //Display the window.
         frame.pack();
