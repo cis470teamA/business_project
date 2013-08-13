@@ -14,7 +14,7 @@ public class Login {
      */
     public static Employee emp; // App-level Employee obj.
     
-    private static int empid;
+    private static long empid;
     private static String passwd;
     private static String fname;
     private static String lname;
@@ -27,7 +27,11 @@ public class Login {
         if (result) {
             isAuthenticated = true;
             emp = new Employee(); // CREATE EMPLOYEE OBJECT
-            // ALSO TIME TO POPULATE EMPLOYEE OBJECT FROM AUTHENTICAION
+            emp.setEmpId(empid);
+            emp.setFirstName(fname);
+            emp.setLastName(lname);
+            emp.setEmpType(type);
+            emp.setEmail(email);
             System.out.println("Login successful");
             JOptionPane.showMessageDialog(null, "Login sucessful", "Login sucessful", JOptionPane.INFORMATION_MESSAGE);
         } else {
