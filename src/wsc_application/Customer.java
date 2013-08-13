@@ -39,11 +39,11 @@ public class Customer {
      
      /**
      * By Paul
-     * Jacob: Altered Query to include CustOrg
      * @param col Name of column to search in
      * @param value Value of the column to search by
      * @return Customer object or null if nothing found
      */
+    //Jacob: Altered Query to include CustOrg
     public static Customer searchBy(String col, String value) {     
         Customer cust = null;
         ResultSet rs;
