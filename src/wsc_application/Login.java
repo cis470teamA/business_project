@@ -14,7 +14,6 @@ public class Login {
      */
     public static Employee emp; // App-level Employee obj.
     
-    
     private static int empid;
     private static String passwd;
     private static String fname;
