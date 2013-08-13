@@ -16,9 +16,6 @@ public class Order {
     private String orderStatus;
     private Employee createdBy;
     private String mediaStatus;
-//    private CatalogItem catalogItem;
-//    private Employee createdBy;
-//    private Employee assignedTo;
     
     protected static ArrayList<Order> orders;
     
@@ -38,9 +35,6 @@ public class Order {
         setOrderStatus(orderStatus);
         setMediaStatus(mediaStatus);
         setCreatedBy(createdBy);
-//        setCatalogItem(catItem);
-//        setCreatedBy(createBy);
-//        setAssignedTo(assignTo);
     }
     
     // Search by Customer ID only?  Not sure!
@@ -224,20 +218,8 @@ public class Order {
     public Employee getCreatedBy(){
         return createdBy;
     }
-    public void setCreatedBy(Employee modBy){
-        this.createdBy = modBy;
+    public void setCreatedBy(Employee createdBy){
+        this.createdBy = createdBy;
     }
-//    public Employee getCreatedBy(){
-//        return createdBy;
-//    }
-//    public void setCreatedBy(Employee createBy){
-//        this.createdBy = createBy;
-//    }
-//    public Employee getAssignedTo(){
-//        return assignedTo;
-//    }
-//    public void setAssignedTo(Employee assignTo){
-//        this.assignedTo = assignTo;
-//    }
     //</editor-fold>
 }
