@@ -15,13 +15,13 @@ import javax.swing.DefaultListModel;
 import static javax.swing.JComponent.TOOL_TIP_TEXT_KEY;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
-
-    /**
-     * Creates new form WilliamsSpecialtyGUI
-     */
     
+//    protected Order order;
+    protected ArrayList<Order> orders;
+
     
     public WilliamsSpecialtyGUI() {
         initComponents();
@@ -1864,6 +1864,22 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          // </editor-fold>
     }
     
+    private void popOrderComboBox(ArrayList<Order> orders) {
+        this.OrderNumberCB.removeAllItems();
+        for (Order o : orders) {
+            this.OrderNumberCB.addItem(o.getORDID());
+        }
+    }
+    
+    private void popOrders(int index) {
+//        This will populate the page based on the index of the selection in 
+//        the order compbo box, but it's not done.
+        Order order = this.orders.get(index);
+        this.OrderDepositText.setText(Float.toString(order.getDeposit()));
+        // Not complete, fill out the rest
+    }
+    
+    
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InvSearchButtonActionPerformed
@@ -2088,7 +2104,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderSubmitButtonActionPerformed
     
     private void OrderSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSearchButtonActionPerformed
-        // TODO add your handling code here:
+        if (this.OrderCUSTIDText.getText().length() > 0) {
+            this.orders = Order.getOrders(Integer.parseInt(this.OrderCUSTIDText.getText()));
+            this.popOrderComboBox(orders);
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Please search by Customer ID", "Error", JOptionPane.ERROR_MESSAGE); 
+        }
+        
     }//GEN-LAST:event_OrderSearchButtonActionPerformed
 
     private void OrderContentTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderContentTextActionPerformed
@@ -2134,7 +2157,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
 
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
-        // TODO add your handling code here:
        boolean empExist = false;
        boolean empUser = false;
        String temp;
