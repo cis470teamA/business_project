@@ -14,9 +14,18 @@ public class Employee{
     protected String email;
     protected String empType;
     protected String password;
-    
     public enum type {
-        SalesPerson, EngrSpec, PrintSpec, StockClerk, OpsMan, Admin;
+        SalesPerson("SP"), 
+        EngrSpec("ES"), 
+        PrintSpec("PS"), 
+        StockClerk("SC"), 
+        OpsMan("OM"), 
+        Admin("AD");
+        
+        private String abbrev;
+        private type(String value) {
+            this.abbrev = value;
+        }
     }
     
     public Employee(){
@@ -31,13 +40,15 @@ public class Employee{
         setEmpId(empid);
         setPassword(pass);
     }
-     public Employee(String fName, String lName, Long empId, String eMail) {
+    
+    public Employee(String fName, String lName, Long empId, String eMail) {
         setFirstName(fName);
         setLastName(lName);
         setEmpId(empId);
         setEmail(eMail);
-        
+
     }
+    
     public Employee(String fName, String lName, Long empId, String eMail, String empType) {
         setFirstName(fName);
         setLastName(lName);
