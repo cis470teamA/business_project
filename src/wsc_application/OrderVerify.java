@@ -44,8 +44,27 @@ public class OrderVerify {
     
     public Boolean checkExistBy(String column, int id){
         Boolean ovExist = false;
-        
-        return ovExist;
+        OrderVerify ov = null;
+         ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "Select * from cis470.ORDERVERIFY WHERE "
+                    + column + " = " + id;
+                    
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()){
+                ovExist = true;
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+         }
+         finally {
+             mysql.closeAll();
+       }return ovExist;
     }
     public static OrderVerify getOVby(String column, int id){
         OrderVerify ov = null;
@@ -88,6 +107,7 @@ public class OrderVerify {
              mysql.closeAll();
              return ov;
          }
+        
     }
     public static OrderVerify insertOrUpdateOV(OrderVerify ov){
         OrderVerify thisOV = null;
@@ -154,6 +174,7 @@ public class OrderVerify {
             System.out.println("VendorError: " + ex.getErrorCode());
         }
         finally {
+            mysql.closeAll();
             return thisOV;
         }
     }

@@ -158,7 +158,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVDepositPassRb = new javax.swing.JRadioButton();
         OVDepositLbl = new javax.swing.JLabel();
         OVJobTypeLbl = new javax.swing.JLabel();
-        OVDepostiFailRb = new javax.swing.JRadioButton();
+        OVDepositFailRb = new javax.swing.JRadioButton();
         OVPayTypeFailRb = new javax.swing.JRadioButton();
         OVPayTypePassLbl = new javax.swing.JLabel();
         OVDepositFailText = new javax.swing.JTextField();
@@ -951,10 +951,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVJobTypeLbl.setText("Correct Job Type");
 
-    OrderVerDepositBG.add(OVDepostiFailRb);
-    OVDepostiFailRb.addActionListener(new java.awt.event.ActionListener() {
+    OrderVerDepositBG.add(OVDepositFailRb);
+    OVDepositFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVDepostiFailRbActionPerformed(evt);
+            OVDepositFailRbActionPerformed(evt);
         }
     });
 
@@ -1071,7 +1071,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addGap(18, 18, 18)
                             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(OVDepostiFailRb)
+                                    .addComponent(OVDepositFailRb)
                                     .addComponent(OVPayTypeFailRb)
                                     .addComponent(OVJobTypeFailRb)
                                     .addComponent(OVContentFailRb)
@@ -1199,7 +1199,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OVDepositValLbl)
                 .addComponent(OVDepositLbl)
                 .addComponent(OVDepositPassRb)
-                .addComponent(OVDepostiFailRb)
+                .addComponent(OVDepositFailRb)
                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2295,31 +2295,43 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_QAOrderMediaFailTextActionPerformed
 
     private void OVPayTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypePassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVPayTypePassRb.isSelected()){
+            OVPayTypeFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVPayTypePassRbActionPerformed
 
     private void OVJobTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVJobTypePassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVJobTypePassRb.isSelected()){
+            OVJobTypeFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVJobTypePassRbActionPerformed
 
     private void OVPayTypeFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailTextActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_OVPayTypeFailTextActionPerformed
 
     private void OVPayTypeFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailRbActionPerformed
-        // TODO add your handling code here:
+        if(OVPayTypeFailRb.isSelected()){
+            OVPayTypeFailText.setEditable(true);
+        }
     }//GEN-LAST:event_OVPayTypeFailRbActionPerformed
 
-    private void OVDepostiFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepostiFailRbActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OVDepostiFailRbActionPerformed
+    private void OVDepositFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositFailRbActionPerformed
+        if(OVDepositFailRb.isSelected()){
+            OVDepositFailText.setEditable(true);
+        }
+    }//GEN-LAST:event_OVDepositFailRbActionPerformed
 
     private void OVDepositPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositPassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVDepositPassRb.isSelected()){
+            OVDepositFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVDepositPassRbActionPerformed
 
     private void OVJobTypeFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVJobTypeFailRbActionPerformed
-        // TODO add your handling code here:
+        if(OVJobTypeFailRb.isSelected()){
+            OVJobTypeFailText.setEditable(true);
+        }
     }//GEN-LAST:event_OVJobTypeFailRbActionPerformed
 
     private void OVAcctNumFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumFailTextActionPerformed
@@ -2327,12 +2339,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVAcctNumFailTextActionPerformed
 
     private void OVContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentFailRbActionPerformed
-        // TODO add your handling code here:
+        if(OVContentFailRb.isSelected()){
+            OVContentFailText.setEditable(true);
+        }
     }//GEN-LAST:event_OVContentFailRbActionPerformed
 
     private void OVMediaNumFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaNumFailRbActionPerformed
         if(OVMediaNumFailRb.isSelected()){
-            OVMediaNumFailText.
+            OVMediaFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVMediaNumFailRbActionPerformed
 
@@ -2349,11 +2363,15 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVCorrectNameFailRbActionPerformed
 
     private void OVContentPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentPassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVContentPassRb.isSelected()){
+            OVContentFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVContentPassRbActionPerformed
 
     private void OVMediaNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaNumPassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVMediaNumPassRb.isSelected()){
+            OVMediaFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVMediaNumPassRbActionPerformed
 
     private void OVAcctNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumPassRbActionPerformed
@@ -2361,11 +2379,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVAcctNumPassRbActionPerformed
 
     private void OVCorrectNamePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVCorrectNamePassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVCorrectNamePassRb.isSelected()){
+            OVNameFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
 
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_OVSearchButtonActionPerformed
 
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
@@ -2537,11 +2557,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OVCreateByLbl;
     private javax.swing.JLabel OVCustIDValLbl;
     private javax.swing.JLabel OVCustNameValLbl;
+    private javax.swing.JRadioButton OVDepositFailRb;
     private javax.swing.JTextField OVDepositFailText;
     private javax.swing.JLabel OVDepositLbl;
     private javax.swing.JRadioButton OVDepositPassRb;
     private javax.swing.JLabel OVDepositValLbl;
-    private javax.swing.JRadioButton OVDepostiFailRb;
     private javax.swing.JLabel OVFailLbl;
     private javax.swing.JRadioButton OVJobTypeFailRb;
     private javax.swing.JTextField OVJobTypeFailText;

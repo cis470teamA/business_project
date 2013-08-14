@@ -974,7 +974,7 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" groupAlignment="2" attributes="0">
-                                                  <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="OVDepositFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
@@ -1126,7 +1126,7 @@
                               <Component id="OVDepositValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="OVDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVDepostiFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OVDepositFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="OVDepositFailText" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1385,14 +1385,14 @@
                     <Property name="text" type="java.lang.String" value="Correct Job Type"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OVDepostiFailRb">
+                <Component class="javax.swing.JRadioButton" name="OVDepositFailRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="OrderVerDepositBG"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVDepostiFailRbActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVDepositFailRbActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="OVPayTypeFailRb">
