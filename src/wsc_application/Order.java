@@ -37,6 +37,11 @@ public class Order {
         setCreatedBy(createdBy);
     }
     
+    @Override
+    public String toString() {
+        return Integer.toString(this.ORDID);
+    }
+    
     // Search by Customer ID only?  Not sure!
     /**
      * Create an ArrayList of Order objects by customer.
