@@ -8,6 +8,7 @@ package wsc_application;
  *
  * @author Bradley
  */
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import static javax.swing.JComponent.TOOL_TIP_TEXT_KEY;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import java.util.*;
 
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
     
@@ -167,7 +169,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVJobTypePassRb = new javax.swing.JRadioButton();
         OVPayTypePassRb = new javax.swing.JRadioButton();
         OVNumberLbl = new javax.swing.JLabel();
-        OVNumberText = new javax.swing.JTextField();
+        OVerIDText = new javax.swing.JTextField();
         OVCustNameValLbl = new javax.swing.JLabel();
         OVCustIDValLbl = new javax.swing.JLabel();
         OVMediaCatValLbl = new javax.swing.JLabel();
@@ -183,7 +185,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVCreateByLbl = new javax.swing.JLabel();
         OVAssignedToLbl = new javax.swing.JLabel();
         OVLastModfiedByLbl = new javax.swing.JLabel();
-        OVSearchButttonLbl = new javax.swing.JLabel();
+        OVButtonLbl = new javax.swing.JLabel();
         QAPanel = new javax.swing.JPanel();
         QASubmitButton = new javax.swing.JButton();
         QAClearButton = new javax.swing.JButton();
@@ -1028,8 +1030,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVLastModfiedByLbl.setText("Last Modified by ******");
 
-    OVSearchButttonLbl.setForeground(new java.awt.Color(255, 51, 51));
-    OVSearchButttonLbl.setText("* Use only one field for searches");
+    OVButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
+    OVButtonLbl.setText("* Use only one field for searches");
 
     javax.swing.GroupLayout OrderVerifyPanelLayout = new javax.swing.GroupLayout(OrderVerifyPanel);
     OrderVerifyPanel.setLayout(OrderVerifyPanelLayout);
@@ -1048,7 +1050,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(OVOrderNumText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
-                            .addComponent(OVNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OVerIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(OVCorrectNameLbl)
@@ -1092,7 +1094,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(OVSearchButttonLbl)
+                        .addComponent(OVButtonLbl)
                         .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1134,7 +1136,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVDepositFailText, OVJobTypeFailText, OVPayTypeFailText});
 
-    OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVNumberText, OVOrderNumText});
+    OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVOrderNumText, OVerIDText});
 
     OrderVerifyPanelLayout.setVerticalGroup(
         OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1147,7 +1149,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OVNumberLbl)
-                    .addComponent(OVNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(OVerIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OVPassLbl)
                     .addComponent(OVFailLbl)
@@ -1217,7 +1219,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(OVSubmitButton))))
                 .addComponent(OVAssignEmpCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(3, 3, 3)
-            .addComponent(OVSearchButttonLbl)
+            .addComponent(OVButtonLbl)
             .addGap(1, 1, 1)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVCreateByLbl)
@@ -2375,7 +2377,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVMediaNumPassRbActionPerformed
 
     private void OVAcctNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumPassRbActionPerformed
-        // TODO add your handling code here:
+        if(OVAcctNumPassRb.isSelected()){
+            OVAcctNumFailText.setEditable(false);
+        }
     }//GEN-LAST:event_OVAcctNumPassRbActionPerformed
 
     private void OVCorrectNamePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVCorrectNamePassRbActionPerformed
@@ -2385,9 +2389,77 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
 
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
-        
-    }//GEN-LAST:event_OVSearchButtonActionPerformed
+        popOV();
+    }
+    private void popOV(){
+        if ((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
+                && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
+            workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderNumText.getText()));
+            
+        }
+        else if ((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
+                && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
+            workingOV = OrderVerify.getOVby("VERID", Integer.parseInt(OVerIDText.getText()));
+        }
+        else {
+            OVButtonLbl.setText("Enter Valid Search Data");
+            OVButtonLbl.setVisible(true);
+        }
+        OVOrderNumText.setText(String.valueOf(workingOV.getOrder().getORDID()));
+        OVerIDText.setText(String.valueOf(workingOV.getVerID()));
+        OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
+                + " " + workingOV.getOrder().getCustomer().getCustLName());        
+        OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
+ //       OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
+        OVContentValLbl.setText("Click for Content Popup");
+        OVContentValLbl.setForeground(Color.BLUE);
+        OVJobTypeValLbl.setText(workingOV.getOrder().getMediaType());
+        if (workingOV.getOrder().getPaymentOnAccount()){
+            OVPayTypeValLbl.setText("On Account");
+        }
+        if (!workingOV.getOrder().getPaymentOnAccount()){
+            OVPayTypeValLbl.setText("On Delivery");
+        }
+        OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
+//        OVAssignEmpCB
+        if(workingOV.getNameCheck()){
+            OVCorrectNamePassRb.setSelected(true);}
+        else if(!workingOV.getNameCheck()){
+            OVCorrectNameFailRb.setSelected(true);}
+        if(workingOV.getAccountCheck()){
+            OVAcctNumPassRb.setSelected(true);}
+        else if(!workingOV.getAccountCheck()){
+            OVAcctNumFailRb.setSelected(true);}
+        if(workingOV.getMediaCheck()){
+            OVMediaNumPassRb.setSelected(true);}
+        else if(!workingOV.getMediaCheck()){
+            OVMediaNumFailRb.setSelected(true);}
+        if(workingOV.getContentCheck()){
+            OVContentPassRb.setSelected(true);}
+        else if(!workingOV.getContentCheck()){
+            OVContentFailRb.setSelected(true);}
+        if(workingOV.getJobCheck()){
+            OVJobTypePassRb.setSelected(true);}
+        else if(!workingOV.getJobCheck()){
+            OVJobTypeFailRb.setSelected(true);}
+        if(workingOV.getPaymentCheck()){
+            OVPayTypePassRb.setSelected(true);}
+        else if(!workingOV.getPaymentCheck()){
+            OVPayTypeFailRb.setSelected(true);}
+        if(workingOV.getDepositCheck()){
+            OVDepositPassRb.setSelected(true);}
+        else if(!workingOV.getDepositCheck()){
+            OVDepositFailRb.setSelected(true);}
+        OVNameFailText.setText(workingOV.getNameFailComment());
+        OVAcctNumFailText.setText(workingOV.getAccountFailComment());
+        OVMediaFailText.setText(workingOV.getMediaFailComment());
+        OVContentFailText.setText(workingOV.getContentFailComment());
+        OVJobTypeFailText.setText(workingOV.getJobTypeFailComment());
+        OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
+        OVDepositFailText.setText(workingOV.getDepositFailComment());
 
+    }//GEN-LAST:event_OVSearchButtonActionPerformed
+    
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
@@ -2542,6 +2614,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JComboBox OVAssignEmpCB;
     private javax.swing.JLabel OVAssignEmpLbl;
     private javax.swing.JLabel OVAssignedToLbl;
+    private javax.swing.JLabel OVButtonLbl;
     private javax.swing.JButton OVClearFieldButton;
     private javax.swing.JLabel OVCommentsLbl;
     private javax.swing.JScrollPane OVCommentsTB;
@@ -2576,7 +2649,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JRadioButton OVMediaNumPassRb;
     private javax.swing.JTextField OVNameFailText;
     private javax.swing.JLabel OVNumberLbl;
-    private javax.swing.JTextField OVNumberText;
     private javax.swing.JLabel OVOrderNumLbl;
     private javax.swing.JTextField OVOrderNumText;
     private javax.swing.JLabel OVPassLbl;
@@ -2587,9 +2659,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OVPayTypeValLbl;
     private javax.swing.JLabel OVReasonLbl;
     private javax.swing.JButton OVSearchButton;
-    private javax.swing.JLabel OVSearchButttonLbl;
     private javax.swing.JButton OVSubmitButton;
     private javax.swing.JLabel OVVerifyByLbl;
+    private javax.swing.JTextField OVerIDText;
     private javax.swing.JRadioButton OrderAccountPayRB;
     private javax.swing.JLabel OrderAssignedToLbl;
     private javax.swing.JTextField OrderCUSTIDText;
