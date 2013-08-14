@@ -4,6 +4,10 @@
  */
 package wsc_application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Bradley
@@ -37,6 +41,100 @@ public class OrderVerify {
             String contFail, String jobFail, String payFail, String depFail,
             String corrActComm){
         }
+    
+    public Boolean checkExistBy(String column, int id){
+        Boolean ovExist = false;
+        
+        return ovExist;
+    }
+    public static OrderVerify getOVby(String column, int id){
+        OrderVerify ov = null;
+         ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "Select * from cis470.ORDERVERIFY WHERE "
+                    + column + " = " + id;
+                    ov = new OrderVerify(
+                            
+                            );
+                    }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return ov;
+    }
+    public static OrderVerify insertOrUpdateOV(OrderVerify ov){
+        OrderVerify thisOV = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        try {
+            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            String query = "INSERT INTO cis470.ORDERVERIFY values ('"
+                    + ov.getVerID() + "', '"
+                    + ov.verifiedBy.getEmpId() + "', '"
+                    + ov.order.getORDID() + "', '"
+                    + ov.getNameCheck() + "', '"
+                    + ov.getAccountCheck() + "', '"
+                    + ov.getMediaCheck() + "', '"
+                    + ov.getContentCheck() + "', '"
+                    + ov.getJobCheck() + "', '"
+                    + ov.getPaymentCheck() + "', '"
+                    + ov.getDepositCheck() + "', '"
+                    + ov.getNameFailComment() + "', '"
+                    + ov.getAccountFailComment() + "', '"
+                    + ov.getMediaFailComment() + "', '"
+                    + ov.getContentFailComment() + "', '"
+                    + ov.getJobTypeFailComment() + "', '"
+                    + ov.getPaymentFailComment() + "', '"
+                    + ov.getDepositFailComment() + "', '"
+                    + ov.getCorrectiveActionComment() + "')"
+                    + "ON DUPLICATE KEY UPDATE cis470.ORDERVERIFY" 
+                    + "SET verifiedBy = '" + ov.verifiedBy.getEmpId() + "', '"
+                    + "ORDERID = '"+ ov.order.getORDID() + "', '"
+                    + "nameCheck = '" + ov.getNameCheck() + "', '"
+                    + "accountCheck = '" + ov.getAccountCheck() + "', '"
+                    + "mediaCheck = '" + ov.getMediaCheck() + "', '"
+                    + "contentCheck = '" + ov.getContentCheck() + "', '"
+                    + "jobTypeCheck = '" + ov.getJobCheck() + "', '"
+                    + "paymentCheck = '" + ov.getPaymentCheck() + "', '"
+                    + "depositCheck = '" +ov.getDepositCheck() + "', '"
+                    + "nameFailComment = '" + ov.getNameFailComment() + "', '"
+                    + "accountFailComment = '" + ov.getAccountFailComment() + "', '"
+                    + "mediaFailComment = '" + ov.getMediaFailComment() + "', '"
+                    + "contentFailComment = '" + ov.getContentFailComment() + "', '"
+                    + "jobTypeFailComment = '" + ov.getJobTypeFailComment() + "', '"
+                    + "paymentFailComment = '" + ov.getPaymentFailComment() + "', '"
+                    + "depositFailComment = '" + ov.getDepositFailComment() + "', '"
+                    + "correctiveActionComment = '" + ov.getCorrectiveActionComment()
+                    + "';";
+            System.out.println(query);
+            mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
+            int key = -1;
+            rs = mysql.stmt.getGeneratedKeys();
+            if (rs.next()) {
+                key = rs.getInt(1);
+            }
+            if (key > 0) {
+                thisOV = OrderVerify.getOVby("VERID", key);
+            }
+            else{
+                thisOV = OrderVerify.getOVby("VERID", ov.getVerID());
+            }
+        }   
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        finally {
+            return thisOV;
+        }
+    }
     public int getVerID(){
         return VERID;
     }
@@ -138,5 +236,11 @@ public class OrderVerify {
     }
     public void setDepositFailComment(String depFail){
         depositFailComment = depFail;
+    }
+    public String getCorrectiveActionComment(){
+        return correctiveActionComment;
+    }
+    public void setCorrectiveActionComment(String corrActComm){
+        correctiveActionComment = corrActComm;
     }
 }
