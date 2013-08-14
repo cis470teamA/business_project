@@ -956,7 +956,6 @@
                                               <Component id="OVAcctNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVMediaNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVContentLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVJobTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVPayTypePassLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVDepositLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -964,7 +963,6 @@
                                           <Group type="103" groupAlignment="2" attributes="0">
                                               <Component id="OVDepositPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVPayTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OVJobTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVContentPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVMediaNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                               <Component id="OVAcctNumPassRb" alignment="2" min="-2" max="-2" attributes="0"/>
@@ -976,7 +974,6 @@
                                               <Group type="103" groupAlignment="2" attributes="0">
                                                   <Component id="OVDepositFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVPayTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVAcctNumFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="OVCorrectNameFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
@@ -990,7 +987,6 @@
                                               <Component id="OVNameFailText" linkSize="2" alignment="0" max="-2" attributes="0"/>
                                               <Component id="OVAcctNumFailText" linkSize="2" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
                                               <Component id="OVMediaFailText" linkSize="2" alignment="0" max="-2" attributes="0"/>
-                                              <Component id="OVJobTypeFailText" linkSize="3" alignment="0" max="-2" attributes="0"/>
                                               <Component id="OVPayTypeFailText" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
                                               <Component id="OVDepositFailText" linkSize="3" alignment="0" max="-2" attributes="0"/>
                                               <Component id="OVReasonLbl" min="-2" max="-2" attributes="0"/>
@@ -1034,7 +1030,6 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="OVDepositValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OVPayTypeValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OVJobTypeValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OVContentValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OVMediaCatValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="OVCustIDValLbl" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1105,15 +1100,7 @@
                               <Component id="OVContentFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="OVContentFailText" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OVJobTypeValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypePassRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVJobTypeFailText" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
                               <Component id="OVPayTypeValLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="OVPayTypePassLbl" alignment="2" min="-2" max="-2" attributes="0"/>
@@ -1161,7 +1148,7 @@
                               <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="51" max="32767" attributes="0"/>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1355,16 +1342,6 @@
                     <Property name="text" type="java.lang.String" value="Reason for Failure"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="OVJobTypeFailRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderVerJobTypeBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVJobTypeFailRbActionPerformed"/>
-                  </Events>
-                </Component>
                 <Component class="javax.swing.JRadioButton" name="OVDepositPassRb">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
@@ -1378,11 +1355,6 @@
                 <Component class="javax.swing.JLabel" name="OVDepositLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sufficient Deposit"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OVJobTypeLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Correct Job Type"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="OVDepositFailRb">
@@ -1415,27 +1387,12 @@
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="OVJobTypeFailText">
-                  <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JTextField" name="OVPayTypeFailText">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVPayTypeFailTextActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="OVJobTypePassRb">
-                  <Properties>
-                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="OrderVerJobTypeBG"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OVJobTypePassRbActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="OVPayTypePassRb">
@@ -1473,11 +1430,6 @@
                 <Component class="javax.swing.JLabel" name="OVContentValLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Content Popup Link"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OVJobTypeValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Job Type"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVPayTypeValLbl">
