@@ -660,8 +660,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderLastModifiedByLbl.setText("Last Modified by ******");
 
-    OrderNumberCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
     OrderSearchLbl.setForeground(new java.awt.Color(255, 51, 51));
     OrderSearchLbl.setText("* Use only one field for searches");
 
