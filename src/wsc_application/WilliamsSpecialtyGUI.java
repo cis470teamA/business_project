@@ -660,6 +660,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderLastModifiedByLbl.setText("Last Modified by ******");
 
+    OrderNumberCB.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            OrderNumberCBActionPerformed(evt);
+        }
+    });
+
     OrderSearchLbl.setForeground(new java.awt.Color(255, 51, 51));
     OrderSearchLbl.setText("* Use only one field for searches");
 
@@ -1862,21 +1868,35 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          // </editor-fold>
     }
     
-    private void popOrderComboBox(ArrayList<Order> orders) {
+    private void setOrderNumberCBModel(ArrayList<Order> orders) {
         this.OrderNumberCB.removeAllItems();
         for (Order o : orders) {
-            this.OrderNumberCB.addItem(o.getORDID());
+            this.OrderNumberCB.addItem(o);
         }
     }
     
-    private void popOrders(int index) {
-//        This will populate the page based on the index of the selection in 
-//        the order compbo box, but it's not done.
-        Order order = this.orders.get(index);
+    private void selectOrderByIndex(int index) {
+        Order order = (Order)this.OrderNumberCB.getItemAt(index);
+        // Media Type Radio Buttons
+        
+        if (order.getMediaType() != null) {
+            switch (order.getMediaType().toLowerCase()) {
+                case "trophy":
+                    this.OrderTypeTrophyRB.setSelected(true);
+                    break;
+                case "plaque":
+                    this.OrderTypePlaqueRB.setSelected(true);
+                    break;
+                case "shirt":
+                    this.OrderTypeShirtRB.setSelected(true);
+                    break;
+            }
+        }
+        this.OrderTotalText.setText(Float.toString(order.getTotal()));
         this.OrderDepositText.setText(Float.toString(order.getDeposit()));
-        // Not complete, fill out the rest
+        
+        
     }
-    
     
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
         // TODO add your handling code here:
@@ -2104,7 +2124,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void OrderSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSearchButtonActionPerformed
         if (this.OrderCUSTIDText.getText().length() > 0) {
             this.orders = Order.getOrders(Integer.parseInt(this.OrderCUSTIDText.getText()));
-            this.popOrderComboBox(orders);
+            this.setOrderNumberCBModel(orders);
+            this.selectOrderByIndex(0);
         }
         else {
             JOptionPane.showMessageDialog(null, "Please search by Customer ID", "Error", JOptionPane.ERROR_MESSAGE); 
@@ -2418,6 +2439,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void InvItemIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvItemIDCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InvItemIDCBActionPerformed
+
+    private void OrderNumberCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderNumberCBActionPerformed
+        if (this.OrderNumberCB.getSelectedIndex() != -1)
+            this.selectOrderByIndex(this.OrderNumberCB.getSelectedIndex());
+    }//GEN-LAST:event_OrderNumberCBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
