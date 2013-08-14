@@ -36,7 +36,7 @@ public class OrderVerify {
         
     }
     public OrderVerify(int verID, Order ord, Employee verBy, Boolean nameChk,
-            Boolean acctChk, Boolean contChk, Boolean jobChk, Boolean payChk,
+            Boolean acctChk, Boolean medChk, Boolean contChk, Boolean jobChk, Boolean payChk,
             Boolean depChk, String nameFail, String acctFail, String medFail,
             String contFail, String jobFail, String payFail, String depFail,
             String corrActComm){
@@ -51,20 +51,43 @@ public class OrderVerify {
         OrderVerify ov = null;
          ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        try {
-            mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            String query = "Select * from cis470.ORDERVERIFY WHERE "
+        String query = "Select * from cis470.ORDERVERIFY WHERE "
                     + column + " = " + id;
-                    ov = new OrderVerify(
-                            
-                            );
-                    }
+                    
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                ov = new OrderVerify(
+                        rs.getInt("VERID"),
+                        Order.getOrder(rs.getInt("ORDERID")),
+                        Employee.searchBy(rs.getInt("EMPID")),               
+                        rs.getBoolean("nameCheck"),
+                        rs.getBoolean("accountCheck"),
+                        rs.getBoolean("mediaCheck"),
+                        rs.getBoolean("contentCheck"),
+                        rs.getBoolean("jobTypeCheck"),
+                        rs.getBoolean("paymentCheck"),
+                        rs.getBoolean("depositCheck"),
+                        rs.getString("nameFailComment") != null ? rs.getString("nameFailComment") : new String(),
+                        rs.getString("accountFailComment") != null ? rs.getString("accountFailComment") : new String(),                        
+                        rs.getString("mediaFailComment") != null ? rs.getString("mediaFailComment") : new String(),
+                        rs.getString("contentFailComment") != null ? rs.getString("contentFailComment") : new String(),
+                        rs.getString("jobTypeFailComment") != null ? rs.getString("jobTypeFailComment") : new String(),
+                        rs.getString("paymentFailComment") != null ? rs.getString("paymentFailComment") : new String(),
+                        rs.getString("depositFailComment") != null ? rs.getString("depositFailComment") : new String(),
+                        rs.getString("correctiveActionComment") != null ? rs.getString("correctiveActionComment") : new String());
+            }
+        }
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
-        }
+         }
+         finally {
+             mysql.closeAll();
+             return ov;
+         }
         return ov;
     }
     public static OrderVerify insertOrUpdateOV(OrderVerify ov){
@@ -92,7 +115,7 @@ public class OrderVerify {
                     + ov.getPaymentFailComment() + "', '"
                     + ov.getDepositFailComment() + "', '"
                     + ov.getCorrectiveActionComment() + "')"
-                    + "ON DUPLICATE KEY UPDATE cis470.ORDERVERIFY" 
+                    + "ON DUPLICATE KEY UPDATE cis470.ORDERVERIFY " 
                     + "SET verifiedBy = '" + ov.verifiedBy.getEmpId() + "', '"
                     + "ORDERID = '"+ ov.order.getORDID() + "', '"
                     + "nameCheck = '" + ov.getNameCheck() + "', '"
