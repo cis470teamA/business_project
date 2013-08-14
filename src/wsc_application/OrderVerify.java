@@ -88,7 +88,6 @@ public class OrderVerify {
              mysql.closeAll();
              return ov;
          }
-        return ov;
     }
     public static OrderVerify insertOrUpdateOV(OrderVerify ov){
         OrderVerify thisOV = null;
