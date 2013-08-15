@@ -42,16 +42,21 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OrderPayTypeBG = new javax.swing.ButtonGroup();
         OrderTypeBG = new javax.swing.ButtonGroup();
         OrderEngMediaBG = new javax.swing.ButtonGroup();
-        OVAccountBG = new javax.swing.ButtonGroup();
-        OVNameBG = new javax.swing.ButtonGroup();
-        OVPayBG = new javax.swing.ButtonGroup();
-        OVDepositBG = new javax.swing.ButtonGroup();
-        OVContBG = new javax.swing.ButtonGroup();
-        OVMediaBG = new javax.swing.ButtonGroup();
+        OrderVerCorrectAccountNumBG = new javax.swing.ButtonGroup();
+        OrderVerCorrectNameBG = new javax.swing.ButtonGroup();
         QAOrderContentBG = new javax.swing.ButtonGroup();
         QAOrderMediaBG = new javax.swing.ButtonGroup();
         QAMediaFinishBG = new javax.swing.ButtonGroup();
         QAWorkmanshipBG = new javax.swing.ButtonGroup();
+        OrderVerValidMediaBG = new javax.swing.ButtonGroup();
+        OrderVerValidContentBG = new javax.swing.ButtonGroup();
+        OrderVerJobTypeBG = new javax.swing.ButtonGroup();
+        OrderVerPayTypeBG = new javax.swing.ButtonGroup();
+        OrderVerDepositBG = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         WSCInterface = new javax.swing.JTabbedPane();
         LoginPanel = new javax.swing.JPanel();
         LoginButton = new javax.swing.JButton();
@@ -151,7 +156,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVPassLbl = new javax.swing.JLabel();
         OVFailLbl = new javax.swing.JLabel();
         OVReasonLbl = new javax.swing.JLabel();
-        OVContentBG = new javax.swing.JRadioButton();
+        OVDepositPassRb = new javax.swing.JRadioButton();
         OVDepositLbl = new javax.swing.JLabel();
         OVDepositFailRb = new javax.swing.JRadioButton();
         OVPayTypeFailRb = new javax.swing.JRadioButton();
@@ -309,7 +314,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
                             .addComponent(LoginPassText, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblLoginStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         LoginPanelLayout.setVerticalGroup(
             LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -327,7 +332,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
                 .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LogoutButton)
                     .addComponent(LoginButton))
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(316, Short.MAX_VALUE))
         );
 
         WSCInterface.addTab("Login", LoginPanel);
@@ -475,7 +480,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addComponent(CustCreateButton)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(CustClearButton)))
-            .addContainerGap(186, Short.MAX_VALUE))
+            .addContainerGap(229, Short.MAX_VALUE))
     );
 
     CustomerInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CustCityText, CustEmailText, CustFNameText, CustLNameText, CustOrgText, CustPhoneText, CustStreet1Text, CustStreet2Text, CustZipText});
@@ -540,7 +545,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(CustClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvSearchLbl5)
-            .addContainerGap(20, Short.MAX_VALUE))
+            .addContainerGap(74, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Customer Info", CustomerInfoPanel);
@@ -834,56 +839,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVContentLbl.setText("Valid Content");
 
-    OVNameBG.add(OVCorrectNamePassRb);
+    OrderVerCorrectNameBG.add(OVCorrectNamePassRb);
     OVCorrectNamePassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVCorrectNamePassRbActionPerformed(evt);
         }
     });
 
-    OVAccountBG.add(OVAcctNumPassRb);
+    OrderVerCorrectAccountNumBG.add(OVAcctNumPassRb);
     OVAcctNumPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVAcctNumPassRbActionPerformed(evt);
         }
     });
 
-    OVMediaBG.add(OVMediaNumPassRb);
+    OrderVerValidMediaBG.add(OVMediaNumPassRb);
     OVMediaNumPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVMediaNumPassRbActionPerformed(evt);
         }
     });
 
-    OVContBG.add(OVContentPassRb);
+    OrderVerValidContentBG.add(OVContentPassRb);
     OVContentPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVContentPassRbActionPerformed(evt);
         }
     });
 
-    OVNameBG.add(OVCorrectNameFailRb);
+    OrderVerCorrectNameBG.add(OVCorrectNameFailRb);
     OVCorrectNameFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVCorrectNameFailRbActionPerformed(evt);
         }
     });
 
-    OVAccountBG.add(OVAcctNumFailRb);
+    OrderVerCorrectAccountNumBG.add(OVAcctNumFailRb);
     OVAcctNumFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVAcctNumFailRbActionPerformed(evt);
         }
     });
 
-    OVMediaBG.add(OVMediaNumFailRb);
+    OrderVerValidMediaBG.add(OVMediaNumFailRb);
     OVMediaNumFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVMediaNumFailRbActionPerformed(evt);
         }
     });
 
-    OVContBG.add(OVContentFailRb);
+    OrderVerValidContentBG.add(OVContentFailRb);
     OVContentFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVContentFailRbActionPerformed(evt);
@@ -925,23 +930,23 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVReasonLbl.setText("Reason for Failure");
 
-    OVDepositBG.add(OVContentBG);
-    OVContentBG.addActionListener(new java.awt.event.ActionListener() {
+    OrderVerDepositBG.add(OVDepositPassRb);
+    OVDepositPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVContentBGActionPerformed(evt);
+            OVDepositPassRbActionPerformed(evt);
         }
     });
 
     OVDepositLbl.setText("Sufficient Deposit");
 
-    OVDepositBG.add(OVDepositFailRb);
+    OrderVerDepositBG.add(OVDepositFailRb);
     OVDepositFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVDepositFailRbActionPerformed(evt);
         }
     });
 
-    OVPayBG.add(OVPayTypeFailRb);
+    OrderVerPayTypeBG.add(OVPayTypeFailRb);
     OVPayTypeFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVPayTypeFailRbActionPerformed(evt);
@@ -959,7 +964,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    OVPayBG.add(OVPayTypePassRb);
+    OrderVerPayTypeBG.add(OVPayTypePassRb);
     OVPayTypePassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVPayTypePassRbActionPerformed(evt);
@@ -969,33 +974,16 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVNumberLbl.setText("Verification Number");
 
     OVCustNameValLbl.setText("Customer Name F/L");
-    OVCustNameValLbl.setEnabled(false);
-    OVCustNameValLbl.setFocusable(false);
 
     OVCustIDValLbl.setText("Customer ID Number");
-    OVCustIDValLbl.setEnabled(false);
-    OVCustIDValLbl.setFocusable(false);
 
     OVMediaCatValLbl.setText("Media Catalog Number");
-    OVMediaCatValLbl.setEnabled(false);
-    OVMediaCatValLbl.setFocusable(false);
 
     OVContentValLbl.setText("Content Popup Link");
-    OVContentValLbl.setEnabled(false);
-    OVContentValLbl.setFocusable(false);
-    OVContentValLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            OVContentValLblMouseClicked(evt);
-        }
-    });
 
     OVPayTypeValLbl.setText("Payment Type");
-    OVPayTypeValLbl.setEnabled(false);
-    OVPayTypeValLbl.setFocusable(false);
 
     OVDepositValLbl.setText("Deposit Amount");
-    OVDepositValLbl.setEnabled(false);
-    OVDepositValLbl.setFocusable(false);
 
     OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -1048,7 +1036,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVDepositLbl))
                             .addGap(15, 15, 15)
                             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                .addComponent(OVContentBG)
+                                .addComponent(OVDepositPassRb)
                                 .addComponent(OVPayTypePassRb)
                                 .addComponent(OVContentPassRb)
                                 .addComponent(OVMediaNumPassRb)
@@ -1074,7 +1062,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVPayTypeFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVReasonLbl))
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addContainerGap(38, Short.MAX_VALUE))))
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OVButtonLbl)
@@ -1175,7 +1163,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(OVDepositValLbl)
                 .addComponent(OVDepositLbl)
-                .addComponent(OVContentBG)
+                .addComponent(OVDepositPassRb)
                 .addComponent(OVDepositFailRb)
                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1203,7 +1191,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVLastModfiedByLbl)
                 .addComponent(OVVerifyByLbl))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(29, Short.MAX_VALUE))
     );
 
     OrderTabbedPane.addTab("Order Verify", OrderVerifyPanel);
@@ -1237,48 +1225,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAEngrFinishLbl.setText("Workmanship");
 
+    buttonGroup1.add(QACorrectContentPassRb);
     QACorrectContentPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentPassRbActionPerformed(evt);
         }
     });
 
+    buttonGroup2.add(QACorrectMediaPassRb);
     QACorrectMediaPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaPassRbActionPerformed(evt);
         }
     });
 
+    buttonGroup3.add(QAMediaFinishPassRb);
     QAMediaFinishPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishPassRbActionPerformed(evt);
         }
     });
 
+    buttonGroup4.add(QAWorkmanshipPassRb);
     QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipPassRbActionPerformed(evt);
         }
     });
 
+    buttonGroup1.add(QACorrectContentFailRb);
     QACorrectContentFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentFailRbActionPerformed(evt);
         }
     });
 
+    buttonGroup2.add(QACorrectMediaFailRb);
     QACorrectMediaFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaFailRbActionPerformed(evt);
         }
     });
 
+    buttonGroup3.add(QAMediaFinishFailRb);
     QAMediaFinishFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishFailRbActionPerformed(evt);
         }
     });
 
+    buttonGroup4.add(QAWorkmanshipFailRb);
     QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipFailRbActionPerformed(evt);
@@ -1353,7 +1349,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QAIDCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
-            .addContainerGap(112, Short.MAX_VALUE)
+            .addContainerGap(155, Short.MAX_VALUE)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1602,7 +1598,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(InvClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvSearchLbl)
-            .addContainerGap(159, Short.MAX_VALUE))
+            .addContainerGap(213, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Inventory", Inv);
@@ -1724,7 +1720,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(EmpSubmitButton)))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(EmpClearButton)))
-            .addContainerGap(121, Short.MAX_VALUE))
+            .addContainerGap(164, Short.MAX_VALUE))
     );
 
     EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EmpClearButton, EmpEmail, EmpFNameText, EmpLNameText, EmpPass, EmpPassConfirm, EmpSubmitButton, EmpTypeCB});
@@ -1767,7 +1763,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(jLabel4)
                         .addComponent(EmpPassConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
             .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeInfoPanelLayout.createSequentialGroup()
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1779,7 +1775,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
                     .addGap(30, 30, 30)
                     .addComponent(EmpActiveOrderLbl1)))
-            .addContainerGap(137, Short.MAX_VALUE))
+            .addContainerGap(164, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Employee Info", EmployeeInfoPanel);
@@ -1789,13 +1785,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     layout.setHorizontalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap())
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(layout.createSequentialGroup()
-            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(0, 0, Short.MAX_VALUE))
     );
 
@@ -2707,7 +2704,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel LoginPassLbl;
     private javax.swing.JPasswordField LoginPassText;
     private javax.swing.JButton LogoutButton;
-    private javax.swing.ButtonGroup OVAccountBG;
     private javax.swing.JRadioButton OVAcctNumFailRb;
     private javax.swing.JTextField OVAcctNumFailText;
     private javax.swing.JLabel OVAcctNumLbl;
@@ -2720,8 +2716,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OVCommentsLbl;
     private javax.swing.JScrollPane OVCommentsTB;
     private javax.swing.JTextArea OVCommentsText;
-    private javax.swing.ButtonGroup OVContBG;
-    private javax.swing.JRadioButton OVContentBG;
     private javax.swing.JRadioButton OVContentFailRb;
     private javax.swing.JTextField OVContentFailText;
     private javax.swing.JLabel OVContentLbl;
@@ -2733,26 +2727,23 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OVCreateByLbl;
     private javax.swing.JLabel OVCustIDValLbl;
     private javax.swing.JLabel OVCustNameValLbl;
-    private javax.swing.ButtonGroup OVDepositBG;
     private javax.swing.JRadioButton OVDepositFailRb;
     private javax.swing.JTextField OVDepositFailText;
     private javax.swing.JLabel OVDepositLbl;
+    private javax.swing.JRadioButton OVDepositPassRb;
     private javax.swing.JLabel OVDepositValLbl;
     private javax.swing.JLabel OVFailLbl;
     private javax.swing.JLabel OVLastModfiedByLbl;
-    private javax.swing.ButtonGroup OVMediaBG;
     private javax.swing.JLabel OVMediaCatValLbl;
     private javax.swing.JTextField OVMediaFailText;
     private javax.swing.JRadioButton OVMediaNumFailRb;
     private javax.swing.JLabel OVMediaNumLbl;
     private javax.swing.JRadioButton OVMediaNumPassRb;
-    private javax.swing.ButtonGroup OVNameBG;
     private javax.swing.JTextField OVNameFailText;
     private javax.swing.JLabel OVNumberLbl;
     private javax.swing.JLabel OVOrderNumLbl;
     private javax.swing.JTextField OVOrderNumText;
     private javax.swing.JLabel OVPassLbl;
-    private javax.swing.ButtonGroup OVPayBG;
     private javax.swing.JRadioButton OVPayTypeFailRb;
     private javax.swing.JTextField OVPayTypeFailText;
     private javax.swing.JLabel OVPayTypePassLbl;
@@ -2798,6 +2789,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JRadioButton OrderTypePlaqueRB;
     private javax.swing.JRadioButton OrderTypeShirtRB;
     private javax.swing.JRadioButton OrderTypeTrophyRB;
+    private javax.swing.ButtonGroup OrderVerCorrectAccountNumBG;
+    private javax.swing.ButtonGroup OrderVerCorrectNameBG;
+    private javax.swing.ButtonGroup OrderVerDepositBG;
+    private javax.swing.ButtonGroup OrderVerJobTypeBG;
+    private javax.swing.ButtonGroup OrderVerPayTypeBG;
+    private javax.swing.ButtonGroup OrderVerValidContentBG;
+    private javax.swing.ButtonGroup OrderVerValidMediaBG;
     private javax.swing.JLabel OrderVerifyByLbl;
     private javax.swing.JPanel OrderVerifyPanel;
     private javax.swing.JLabel QAAssignedToLbl;
@@ -2840,6 +2838,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JComboBox jComboBox2;
