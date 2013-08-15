@@ -587,7 +587,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
-                                          <Component id="OrderSearchButton" min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Component id="OrderSearchButton" min="-2" pref="91" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -692,12 +692,12 @@
                                   <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
