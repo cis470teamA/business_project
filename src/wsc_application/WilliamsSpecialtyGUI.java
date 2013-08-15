@@ -1855,7 +1855,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }
     
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
-        // TODO add your handling code here:
+        InventoryItem.findItem();
     }//GEN-LAST:event_InvSearchButtonActionPerformed
 
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
@@ -1869,7 +1869,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_InvClearButtonActionPerformed
 
     private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
-        // TODO add your handling code here:
+        InventoryItem.markItem();
     }//GEN-LAST:event_InvOrderButtonActionPerformed
 
     private void CustStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStateCBActionPerformed
