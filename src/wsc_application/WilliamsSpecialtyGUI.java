@@ -1865,6 +1865,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         this.OrderStatusCB.removeAllItems();
         for (Order.OrderStatus os : Order.OrderStatus.values())
             this.OrderStatusCB.addItem(os.toString());
+        this.OrderStatusCB.setSelectedItem(order.getOrderStatus());
         
     }
     
