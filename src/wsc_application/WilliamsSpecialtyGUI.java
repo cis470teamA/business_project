@@ -42,21 +42,16 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OrderPayTypeBG = new javax.swing.ButtonGroup();
         OrderTypeBG = new javax.swing.ButtonGroup();
         OrderEngMediaBG = new javax.swing.ButtonGroup();
-        OrderVerCorrectAccountNumBG = new javax.swing.ButtonGroup();
-        OrderVerCorrectNameBG = new javax.swing.ButtonGroup();
+        OVAccountBG = new javax.swing.ButtonGroup();
+        OVNameBG = new javax.swing.ButtonGroup();
+        OVPayBG = new javax.swing.ButtonGroup();
+        OVDepositBG = new javax.swing.ButtonGroup();
+        OVContBG = new javax.swing.ButtonGroup();
+        OVMediaBG = new javax.swing.ButtonGroup();
         QAOrderContentBG = new javax.swing.ButtonGroup();
         QAOrderMediaBG = new javax.swing.ButtonGroup();
         QAMediaFinishBG = new javax.swing.ButtonGroup();
         QAWorkmanshipBG = new javax.swing.ButtonGroup();
-        OrderVerValidMediaBG = new javax.swing.ButtonGroup();
-        OrderVerValidContentBG = new javax.swing.ButtonGroup();
-        OrderVerJobTypeBG = new javax.swing.ButtonGroup();
-        OrderVerPayTypeBG = new javax.swing.ButtonGroup();
-        OrderVerDepositBG = new javax.swing.ButtonGroup();
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
         WSCInterface = new javax.swing.JTabbedPane();
         LoginPanel = new javax.swing.JPanel();
         LoginButton = new javax.swing.JButton();
@@ -156,7 +151,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVPassLbl = new javax.swing.JLabel();
         OVFailLbl = new javax.swing.JLabel();
         OVReasonLbl = new javax.swing.JLabel();
-        OVDepositPassRb = new javax.swing.JRadioButton();
+        OVContentBG = new javax.swing.JRadioButton();
         OVDepositLbl = new javax.swing.JLabel();
         OVDepositFailRb = new javax.swing.JRadioButton();
         OVPayTypeFailRb = new javax.swing.JRadioButton();
@@ -839,56 +834,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVContentLbl.setText("Valid Content");
 
-    OrderVerCorrectNameBG.add(OVCorrectNamePassRb);
+    OVNameBG.add(OVCorrectNamePassRb);
     OVCorrectNamePassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVCorrectNamePassRbActionPerformed(evt);
         }
     });
 
-    OrderVerCorrectAccountNumBG.add(OVAcctNumPassRb);
+    OVAccountBG.add(OVAcctNumPassRb);
     OVAcctNumPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVAcctNumPassRbActionPerformed(evt);
         }
     });
 
-    OrderVerValidMediaBG.add(OVMediaNumPassRb);
+    OVMediaBG.add(OVMediaNumPassRb);
     OVMediaNumPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVMediaNumPassRbActionPerformed(evt);
         }
     });
 
-    OrderVerValidContentBG.add(OVContentPassRb);
+    OVContBG.add(OVContentPassRb);
     OVContentPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVContentPassRbActionPerformed(evt);
         }
     });
 
-    OrderVerCorrectNameBG.add(OVCorrectNameFailRb);
+    OVNameBG.add(OVCorrectNameFailRb);
     OVCorrectNameFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVCorrectNameFailRbActionPerformed(evt);
         }
     });
 
-    OrderVerCorrectAccountNumBG.add(OVAcctNumFailRb);
+    OVAccountBG.add(OVAcctNumFailRb);
     OVAcctNumFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVAcctNumFailRbActionPerformed(evt);
         }
     });
 
-    OrderVerValidMediaBG.add(OVMediaNumFailRb);
+    OVMediaBG.add(OVMediaNumFailRb);
     OVMediaNumFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVMediaNumFailRbActionPerformed(evt);
         }
     });
 
-    OrderVerValidContentBG.add(OVContentFailRb);
+    OVContBG.add(OVContentFailRb);
     OVContentFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVContentFailRbActionPerformed(evt);
@@ -930,23 +925,23 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVReasonLbl.setText("Reason for Failure");
 
-    OrderVerDepositBG.add(OVDepositPassRb);
-    OVDepositPassRb.addActionListener(new java.awt.event.ActionListener() {
+    OVDepositBG.add(OVContentBG);
+    OVContentBG.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVDepositPassRbActionPerformed(evt);
+            OVContentBGActionPerformed(evt);
         }
     });
 
     OVDepositLbl.setText("Sufficient Deposit");
 
-    OrderVerDepositBG.add(OVDepositFailRb);
+    OVDepositBG.add(OVDepositFailRb);
     OVDepositFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVDepositFailRbActionPerformed(evt);
         }
     });
 
-    OrderVerPayTypeBG.add(OVPayTypeFailRb);
+    OVPayBG.add(OVPayTypeFailRb);
     OVPayTypeFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVPayTypeFailRbActionPerformed(evt);
@@ -964,7 +959,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    OrderVerPayTypeBG.add(OVPayTypePassRb);
+    OVPayBG.add(OVPayTypePassRb);
     OVPayTypePassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVPayTypePassRbActionPerformed(evt);
@@ -974,16 +969,33 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVNumberLbl.setText("Verification Number");
 
     OVCustNameValLbl.setText("Customer Name F/L");
+    OVCustNameValLbl.setEnabled(false);
+    OVCustNameValLbl.setFocusable(false);
 
     OVCustIDValLbl.setText("Customer ID Number");
+    OVCustIDValLbl.setEnabled(false);
+    OVCustIDValLbl.setFocusable(false);
 
     OVMediaCatValLbl.setText("Media Catalog Number");
+    OVMediaCatValLbl.setEnabled(false);
+    OVMediaCatValLbl.setFocusable(false);
 
     OVContentValLbl.setText("Content Popup Link");
+    OVContentValLbl.setEnabled(false);
+    OVContentValLbl.setFocusable(false);
+    OVContentValLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            OVContentValLblMouseClicked(evt);
+        }
+    });
 
     OVPayTypeValLbl.setText("Payment Type");
+    OVPayTypeValLbl.setEnabled(false);
+    OVPayTypeValLbl.setFocusable(false);
 
     OVDepositValLbl.setText("Deposit Amount");
+    OVDepositValLbl.setEnabled(false);
+    OVDepositValLbl.setFocusable(false);
 
     OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -1036,7 +1048,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVDepositLbl))
                             .addGap(15, 15, 15)
                             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                .addComponent(OVDepositPassRb)
+                                .addComponent(OVContentBG)
                                 .addComponent(OVPayTypePassRb)
                                 .addComponent(OVContentPassRb)
                                 .addComponent(OVMediaNumPassRb)
@@ -1163,7 +1175,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(OVDepositValLbl)
                 .addComponent(OVDepositLbl)
-                .addComponent(OVDepositPassRb)
+                .addComponent(OVContentBG)
                 .addComponent(OVDepositFailRb)
                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1225,56 +1237,48 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAEngrFinishLbl.setText("Workmanship");
 
-    buttonGroup1.add(QACorrectContentPassRb);
     QACorrectContentPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup2.add(QACorrectMediaPassRb);
     QACorrectMediaPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup3.add(QAMediaFinishPassRb);
     QAMediaFinishPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup4.add(QAWorkmanshipPassRb);
     QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup1.add(QACorrectContentFailRb);
     QACorrectContentFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentFailRbActionPerformed(evt);
         }
     });
 
-    buttonGroup2.add(QACorrectMediaFailRb);
     QACorrectMediaFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaFailRbActionPerformed(evt);
         }
     });
 
-    buttonGroup3.add(QAMediaFinishFailRb);
     QAMediaFinishFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishFailRbActionPerformed(evt);
         }
     });
 
-    buttonGroup4.add(QAWorkmanshipFailRb);
     QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipFailRbActionPerformed(evt);
@@ -1785,7 +1789,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     layout.setHorizontalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addGap(0, 39, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE))
     );
     layout.setVerticalGroup(
@@ -1802,7 +1806,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     Order workingOrder = new Order();
     OrderVerify workingOV = new OrderVerify();
     QAReport workingQA = new QAReport();
-    InventoryItem workingCA = new InventoryItem();
+    CatalogItem workingCA = new CatalogItem();
     
     public void HideEmpPassword()
     {
@@ -1855,7 +1859,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }
     
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
-        InventoryItem.findItem();
+        // TODO add your handling code here:
     }//GEN-LAST:event_InvSearchButtonActionPerformed
 
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
@@ -1869,7 +1873,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_InvClearButtonActionPerformed
 
     private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
-        InventoryItem.markItem();
+        // TODO add your handling code here:
     }//GEN-LAST:event_InvOrderButtonActionPerformed
 
     private void CustStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStateCBActionPerformed
@@ -2058,10 +2062,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAMediaFinishFailText.setText("");
         QAWorkmanshipFailText.setText("");
         QACommentText.setText("");
-        buttonGroup1.clearSelection();
-        buttonGroup2.clearSelection();
-        buttonGroup3.clearSelection();
-        buttonGroup4.clearSelection();
+
         
     }//GEN-LAST:event_QAClearButtonActionPerformed
 
@@ -2109,9 +2110,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (!"".equals(EMPIDCB.getText()))
         {
             emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
-            //orders = Employee.GetOrders(Long.parseLong(EMPIDCB.getText()));
-           // JList list = new JList(orders.toArray());
-           // emOrdersLst.add(list);
+            orders = Employee.GetOrders(Long.parseLong(EMPIDCB.getText()));
+            JList list = new JList(orders.toArray());
+            emOrdersLst.add(list);
 
         }
         
@@ -2169,13 +2170,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            
            if (empUser == false)
            {
-             emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
+             emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
              Employee.AddUserLogin(emp);
            }
            
            if (empUser == true)
            {
-             emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
+             emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
              Employee.UpdateUserLogin(emp);
            }
            
@@ -2281,11 +2282,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     }//GEN-LAST:event_OVDepositFailRbActionPerformed
 
-    private void OVDepositPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositPassRbActionPerformed
-        if(OVDepositPassRb.isSelected()){
+    private void OVContentBGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentBGActionPerformed
+        if(OVContentBG.isSelected()){
             OVDepositFailText.setEditable(false);
         }
-    }//GEN-LAST:event_OVDepositPassRbActionPerformed
+    }//GEN-LAST:event_OVContentBGActionPerformed
 
     private void OVAcctNumFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumFailTextActionPerformed
         // TODO add your handling code here:
@@ -2340,28 +2341,51 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
 
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
-        popOV(); 
+        if(popOV()){
+            OVButtonLbl.setText("Record Found");
+        }; 
     }//GEN-LAST:event_OVSearchButtonActionPerformed
-        private void popOV(){
+    private boolean popOV(){
+        /* Author: Brad Clawson
+         * Populates OrderVerify tab by searching either Order Number or Verification Number
+         */
+        
+        //search by Order Number
         if ((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderNumText.getText()));
             
         }
+        //search by Verification Number
         else if ((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
                 && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("VERID", Integer.parseInt(OVerIDText.getText()));
         }
-        else {
-            OVButtonLbl.setText("Enter Valid Search Data");
+        else if((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
+                && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
+            OVButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
             OVButtonLbl.setVisible(true);
+            return false;
         }
+        else if((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
+                && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
+            OVButtonLbl.setText("Use Only One Field for Searches");
+            OVButtonLbl.setVisible(true);
+            return false;
+        }
+        
+        OVCustNameValLbl.setVisible(true);       
+        OVCustIDValLbl.setVisible(true);
+        OVMediaCatValLbl.setVisible(true);
+        OVContentValLbl.setVisible(true);
+        OVPayTypeValLbl.setVisible(true);
+        OVDepositValLbl.setVisible(true);
         OVOrderNumText.setText(String.valueOf(workingOV.getOrder().getORDID()));
         OVerIDText.setText(String.valueOf(workingOV.getVerID()));
         OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
                 + " " + workingOV.getOrder().getCustomer().getCustLName());        
         OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
-        //       OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
+//      OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
         OVContentValLbl.setText("Click for Content Popup");
         OVContentValLbl.setForeground(Color.BLUE);
         if (workingOV.getOrder().getPaymentOnAccount()){
@@ -2370,47 +2394,89 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (!workingOV.getOrder().getPaymentOnAccount()){
             OVPayTypeValLbl.setText("On Delivery");
         }
-        OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
-        //OVAssignEmpCB
+        OVDepositValLbl.setText((String.valueOf(workingOV.getOrder().getDeposit()))+
+                "/" + (String.valueOf(workingOV.getOrder().getTotal())) + "=" +
+                (String.valueOf(workingOV.getOrder().getDeposit()/workingOV.getOrder().getTotal()))) ;
+//      OVAssignEmpCB
         if(workingOV.getNameCheck()){
-            OVCorrectNamePassRb.setSelected(true);}
+            OVCorrectNamePassRb.setSelected(true);
+            OVNameFailText.setEditable(false);}
         else if(!workingOV.getNameCheck()){
             OVCorrectNameFailRb.setSelected(true);
-            OVNameFailText.setText(workingOV.getNameFailComment());}
+            OVNameFailText.setText(workingOV.getNameFailComment());
+            OVNameFailText.setEditable(true);}
         if(workingOV.getAccountCheck()){
-            OVAcctNumPassRb.setSelected(true);}
+            OVAcctNumPassRb.setSelected(true);
+            OVAcctNumFailText.setEditable(false);}
         else if(!workingOV.getAccountCheck()){
             OVAcctNumFailRb.setSelected(true);
-            OVAcctNumFailText.setText(workingOV.getAccountFailComment());}
+            OVAcctNumFailText.setText(workingOV.getAccountFailComment());
+            OVAcctNumFailText.setEditable(true);}
         if(workingOV.getMediaCheck()){
-            OVMediaNumPassRb.setSelected(true);}
+            OVMediaNumPassRb.setSelected(true);
+            OVMediaFailText.setEditable(false);}
         else if(!workingOV.getMediaCheck()){
             OVMediaNumFailRb.setSelected(true);
-            OVMediaFailText.setText(workingOV.getMediaFailComment());}
+            OVMediaFailText.setText(workingOV.getMediaFailComment());
+            OVMediaFailText.setEditable(true);}
         if(workingOV.getContentCheck()){
-            OVContentPassRb.setSelected(true);}
+            OVContentPassRb.setSelected(true);
+            OVContentFailText.setEditable(false);}
         else if(!workingOV.getContentCheck()){
             OVContentFailRb.setSelected(true);
-            OVContentFailText.setText(workingOV.getContentFailComment());}
+            OVContentFailText.setText(workingOV.getContentFailComment());
+            OVContentFailText.setEditable(true);}
         if(workingOV.getPaymentCheck()){
-            OVPayTypePassRb.setSelected(true);}
+            OVPayTypePassRb.setSelected(true);
+            OVPayTypeFailText.setEditable(false);}
         else if(!workingOV.getPaymentCheck()){
             OVPayTypeFailRb.setSelected(true);
-            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());}
+            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
+            OVPayTypeFailText.setEditable(true);}
         if(workingOV.getDepositCheck()){
-            OVDepositPassRb.setSelected(true);}
+            OVContentBG.setSelected(true);
+            OVDepositFailText.setEditable(false);}
         else if(!workingOV.getDepositCheck()){
             OVDepositFailRb.setSelected(true);
-            OVDepositFailText.setText(workingOV.getDepositFailComment());}
+            OVDepositFailText.setText(workingOV.getDepositFailComment());
+            OVDepositFailText.setEditable(true);}
         
         if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
                 OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
             OVCommentsText.setText(workingOV.getCorrectiveActionComment());
             }
+        return true;
         }
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
-        // TODO add your handling code here:
+        OVCustNameValLbl.setText("");
+        OVCustIDValLbl.setText("");
+        OVMediaCatValLbl.setText("");
+        OVContentValLbl.setText("");
+        OVPayTypeValLbl.setText("");
+        OVDepositValLbl.setText("");
+//      OVAssignEmpCB.setText("");
+        OVOrderNumText.setText("");
+        OVerIDText.setText("");
+        OVNameBG.clearSelection();
+        OVAccountBG.clearSelection();
+        OVPayBG.clearSelection();
+        OVDepositBG.clearSelection();
+        OVContBG.clearSelection();
+        OVMediaBG.clearSelection();
+        OVNameFailText.setText("");
+        OVAcctNumFailText.setText("");
+        OVMediaFailText.setText("");
+        OVContentFailText.setText("");
+        OVPayTypeFailText.setText("");
+        OVDepositFailText.setText("");
+        OVCommentsText.setText("");
+        OVCustNameValLbl.setVisible(false);       
+        OVCustIDValLbl.setVisible(false);
+        OVMediaCatValLbl.setVisible(false);
+        OVContentValLbl.setVisible(false);
+        OVPayTypeValLbl.setVisible(false);
+        OVDepositValLbl.setVisible(false);
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
@@ -2452,7 +2518,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             workingOV.setPaymentCheck(Boolean.FALSE);
             workingOV.setPaymentFailComment(OVPayTypeFailText.getText());
         }
-        if (OVDepositPassRb.isSelected()){
+        if (OVContentBG.isSelected()){
             workingOV.setDepositCheck(Boolean.TRUE);
         }
         else if(OVDepositFailRb.isSelected()){
@@ -2463,9 +2529,16 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
             workingOV.setCorrectiveActionComment(OVCommentsText.getText());
-        }        
-        workingOV = OrderVerify.insertOrUpdateOV(workingOV);
-        popOV();
+        }
+        
+        OrderVerify newOV = OrderVerify.insertOrUpdateOV(workingOV);
+        
+        OVClearFieldButton.doClick();
+        OVerIDText.setText(String.valueOf(newOV.getVerID()));
+        OVButtonLbl.setText("almost there");        
+        if(popOV()){        
+        OVButtonLbl.setText("Create/Update Successful");}
+             
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
 
     private void OrderTotalTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTotalTextActionPerformed
@@ -2533,6 +2606,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (this.OrderNumberCB.getSelectedIndex() != -1)
             this.selectOrderByIndex(this.OrderNumberCB.getSelectedIndex());
     }//GEN-LAST:event_OrderNumberCBActionPerformed
+
+    private void OVContentValLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OVContentValLblMouseClicked
+         JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
+    }//GEN-LAST:event_OVContentValLblMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
@@ -2607,6 +2684,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel LoginPassLbl;
     private javax.swing.JPasswordField LoginPassText;
     private javax.swing.JButton LogoutButton;
+    private javax.swing.ButtonGroup OVAccountBG;
     private javax.swing.JRadioButton OVAcctNumFailRb;
     private javax.swing.JTextField OVAcctNumFailText;
     private javax.swing.JLabel OVAcctNumLbl;
@@ -2619,6 +2697,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OVCommentsLbl;
     private javax.swing.JScrollPane OVCommentsTB;
     private javax.swing.JTextArea OVCommentsText;
+    private javax.swing.ButtonGroup OVContBG;
+    private javax.swing.JRadioButton OVContentBG;
     private javax.swing.JRadioButton OVContentFailRb;
     private javax.swing.JTextField OVContentFailText;
     private javax.swing.JLabel OVContentLbl;
@@ -2630,23 +2710,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OVCreateByLbl;
     private javax.swing.JLabel OVCustIDValLbl;
     private javax.swing.JLabel OVCustNameValLbl;
+    private javax.swing.ButtonGroup OVDepositBG;
     private javax.swing.JRadioButton OVDepositFailRb;
     private javax.swing.JTextField OVDepositFailText;
     private javax.swing.JLabel OVDepositLbl;
-    private javax.swing.JRadioButton OVDepositPassRb;
     private javax.swing.JLabel OVDepositValLbl;
     private javax.swing.JLabel OVFailLbl;
     private javax.swing.JLabel OVLastModfiedByLbl;
+    private javax.swing.ButtonGroup OVMediaBG;
     private javax.swing.JLabel OVMediaCatValLbl;
     private javax.swing.JTextField OVMediaFailText;
     private javax.swing.JRadioButton OVMediaNumFailRb;
     private javax.swing.JLabel OVMediaNumLbl;
     private javax.swing.JRadioButton OVMediaNumPassRb;
+    private javax.swing.ButtonGroup OVNameBG;
     private javax.swing.JTextField OVNameFailText;
     private javax.swing.JLabel OVNumberLbl;
     private javax.swing.JLabel OVOrderNumLbl;
     private javax.swing.JTextField OVOrderNumText;
     private javax.swing.JLabel OVPassLbl;
+    private javax.swing.ButtonGroup OVPayBG;
     private javax.swing.JRadioButton OVPayTypeFailRb;
     private javax.swing.JTextField OVPayTypeFailText;
     private javax.swing.JLabel OVPayTypePassLbl;
@@ -2692,13 +2775,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JRadioButton OrderTypePlaqueRB;
     private javax.swing.JRadioButton OrderTypeShirtRB;
     private javax.swing.JRadioButton OrderTypeTrophyRB;
-    private javax.swing.ButtonGroup OrderVerCorrectAccountNumBG;
-    private javax.swing.ButtonGroup OrderVerCorrectNameBG;
-    private javax.swing.ButtonGroup OrderVerDepositBG;
-    private javax.swing.ButtonGroup OrderVerJobTypeBG;
-    private javax.swing.ButtonGroup OrderVerPayTypeBG;
-    private javax.swing.ButtonGroup OrderVerValidContentBG;
-    private javax.swing.ButtonGroup OrderVerValidMediaBG;
     private javax.swing.JLabel OrderVerifyByLbl;
     private javax.swing.JPanel OrderVerifyPanel;
     private javax.swing.JLabel QAAssignedToLbl;
@@ -2741,10 +2817,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JComboBox jComboBox2;
