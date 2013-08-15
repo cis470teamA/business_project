@@ -2169,13 +2169,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            
            if (empUser == false)
            {
-             emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
+             emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
              Employee.AddUserLogin(emp);
            }
            
            if (empUser == true)
            {
-             emp = new Employee(Long.parseLong(EMPIDCB.getText()),passText);
+             emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
              Employee.UpdateUserLogin(emp);
            }
            
