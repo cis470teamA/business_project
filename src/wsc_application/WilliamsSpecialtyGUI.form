@@ -587,15 +587,12 @@
                                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="OrderSearchButton" min="-2" pref="91" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="OrderSearchButton" min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Component id="OrderClearFieldsButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderSubmitButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderUpdateBtn" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -625,7 +622,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="2" attributes="0">
@@ -684,21 +681,31 @@
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="2" attributes="0">
-                                      <Component id="OrderSearchButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderSubmitButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="OrderSearchButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="OrderSubmitButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="OrderUpdateBtn" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -822,7 +829,8 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="OrderSubmitButton">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Create/Update"/>
+                    <Property name="text" type="java.lang.String" value="Create"/>
+                    <Property name="actionCommand" type="java.lang.String" value="Create"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSubmitButtonActionPerformed"/>
@@ -920,6 +928,14 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="OrderUpdateBtn">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Update"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderUpdateBtnActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
