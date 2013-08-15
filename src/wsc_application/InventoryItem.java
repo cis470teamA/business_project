@@ -28,6 +28,14 @@ public class InventoryItem {
         setDeliveryDate(delDate);
     }
     
+    public static void findItem(){
+        
+    }
+    
+    public static void markItem(){
+        
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="Setters">
     
     public void setItemNum(String itemNum){
