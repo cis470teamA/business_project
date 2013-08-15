@@ -1,6 +1,10 @@
 
 package wsc_application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 public class QAReport {
     
     private Order order;
@@ -36,6 +40,7 @@ public class QAReport {
         setWorkmanshipFailComment(workFail); 
         setCorrectiveActionComment(corrAct);
         }
+
     
     public void setQAID(long qaID){
        this.QAID = qaID;
