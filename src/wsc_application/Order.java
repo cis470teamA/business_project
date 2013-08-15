@@ -43,8 +43,14 @@ public class Order {
     }
     protected static ArrayList<Order> orders;
     
+    /**
+     * Default (unused) constructor
+     */
     public Order() {}
 
+    /**
+     * Primary constructor to be used (Self-explanatory)
+     */
     public Order(Customer cust, int OrderId, String mediaType,
             String content, Boolean onAcct, float total, float deposit, 
             String orderStatus, String mediaStatus, Employee createdBy){
@@ -60,6 +66,11 @@ public class Order {
         setCreatedBy(createdBy);
     }
     
+    /**
+     * By Paul
+     * Override of super toString() method for use in Order ComboBox in GUI
+     * @return ORDID as a String
+     */
     @Override
     public String toString() {
         return Integer.toString(this.ORDID);
@@ -67,6 +78,7 @@ public class Order {
     
     // Search by Customer ID only?  Not sure!
     /**
+     * By Paul
      * Create an ArrayList of Order objects by customer.
      * @param CustId Customer ID as integer
      * @return An array list of order objects; A search by customer ID can 
@@ -110,6 +122,11 @@ public class Order {
         return orders;
     }
     
+    /**
+     * By Paul
+     * @param orderId
+     * @return wsc_application.Order Object
+     */
     public static Order getOrder(int orderId) {
         Order order = null;
         ResultSet rs;
@@ -144,6 +161,12 @@ public class Order {
         return order;
     }
     
+    /**
+     * By Paul
+     * Creates an order record  in the DB via an Order instance
+     * @param order wsc_application.Order object
+     * @return wsc_application.Order instance
+     */
     public static Order createOrder(Order order) {
         Order thisOrder = null;
         ResultSet rs;
