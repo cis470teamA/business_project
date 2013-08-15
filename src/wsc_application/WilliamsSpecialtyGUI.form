@@ -124,7 +124,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lblLoginStatus" min="-2" pref="114" max="-2" attributes="0"/>
-                      <EmptySpace pref="153" max="32767" attributes="0"/>
+                      <EmptySpace pref="117" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -147,7 +147,7 @@
                           <Component id="LogoutButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LoginButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="303" max="32767" attributes="0"/>
+                      <EmptySpace pref="262" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -266,7 +266,7 @@
                               <Component id="CustClearButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="240" max="32767" attributes="0"/>
+                      <EmptySpace pref="186" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -344,7 +344,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="InvSearchLbl5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -551,7 +551,7 @@
                               <Component id="OrderTypeShirtRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderTypePlaqueRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderTypeTrophyRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusLbl" alignment="0" pref="132" max="32767" attributes="0"/>
+                              <Component id="OrderMediaStatusLbl" alignment="0" max="32767" attributes="0"/>
                               <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                               <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -564,15 +564,15 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="OrderMediaStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderDepositText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderTotalText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderMediaCatNumText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderNumberCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderCUSTIDText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="OrderStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
@@ -580,7 +580,7 @@
                                       <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
                                       <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="95" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
@@ -668,7 +668,7 @@
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="OrderStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -695,9 +695,9 @@
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -835,7 +835,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderSearchButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="OrderStatusCB">
+                <Component class="javax.swing.JComboBox" name="OrderMediaStatusCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -852,7 +852,7 @@
                     <Property name="text" type="java.lang.String" value="Order Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="OrderMediaStatusCB">
+                <Component class="javax.swing.JComboBox" name="OrderStatusCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -864,7 +864,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderMediaStatusCBActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderStatusCBActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OrderMediaStatusLbl">
@@ -1148,7 +1148,7 @@
                               <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="77" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1525,7 +1525,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="192" max="32767" attributes="0"/>
+                          <EmptySpace pref="112" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1636,7 +1636,7 @@
                               <Component id="QAWorkmanshipFailRb" alignment="2" min="-2" max="-2" attributes="0"/>
                               <Component id="QAWorkmanshipFailText" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="6" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="QACommentLbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="QACommentTB" min="-2" max="-2" attributes="0"/>
@@ -2007,7 +2007,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="InvSearchLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="231" max="32767" attributes="0"/>
+                      <EmptySpace pref="159" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2180,7 +2180,7 @@
                               <Component id="EmpClearButton" linkSize="10" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="189" max="32767" attributes="0"/>
+                      <EmptySpace pref="121" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2229,7 +2229,7 @@
                           </Group>
                           <Component id="EmpOrderLB" min="-2" pref="179" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                      <EmptySpace pref="7" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -2245,7 +2245,7 @@
                               <Component id="EmpActiveOrderLbl1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="177" max="32767" attributes="0"/>
+                      <EmptySpace pref="137" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

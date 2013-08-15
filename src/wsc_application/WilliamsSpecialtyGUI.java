@@ -118,9 +118,9 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OrderClearFieldsButton = new javax.swing.JButton();
         OrderSubmitButton = new javax.swing.JButton();
         OrderSearchButton = new javax.swing.JButton();
-        OrderStatusCB = new javax.swing.JComboBox();
-        OrderStatusLbl = new javax.swing.JLabel();
         OrderMediaStatusCB = new javax.swing.JComboBox();
+        OrderStatusLbl = new javax.swing.JLabel();
+        OrderStatusCB = new javax.swing.JComboBox();
         OrderMediaStatusLbl = new javax.swing.JLabel();
         OrderTotalLbl = new javax.swing.JLabel();
         OrderTotalText = new javax.swing.JTextField();
@@ -314,7 +314,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
                             .addComponent(LoginPassText, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblLoginStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         LoginPanelLayout.setVerticalGroup(
             LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,7 +332,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
                 .addGroup(LoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LogoutButton)
                     .addComponent(LoginButton))
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
 
         WSCInterface.addTab("Login", LoginPanel);
@@ -480,7 +480,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addComponent(CustCreateButton)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(CustClearButton)))
-            .addContainerGap(240, Short.MAX_VALUE))
+            .addContainerGap(186, Short.MAX_VALUE))
     );
 
     CustomerInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CustCityText, CustEmailText, CustFNameText, CustLNameText, CustOrgText, CustPhoneText, CustStreet1Text, CustStreet2Text, CustZipText});
@@ -545,7 +545,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(CustClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvSearchLbl5)
-            .addContainerGap(123, Short.MAX_VALUE))
+            .addContainerGap(20, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Customer Info", CustomerInfoPanel);
@@ -628,14 +628,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    OrderStatusCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    OrderMediaStatusCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     OrderStatusLbl.setText("Order Status");
 
-    OrderMediaStatusCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    OrderMediaStatusCB.addActionListener(new java.awt.event.ActionListener() {
+    OrderStatusCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    OrderStatusCB.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderMediaStatusCBActionPerformed(evt);
+            OrderStatusCBActionPerformed(evt);
         }
     });
 
@@ -676,7 +676,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OrderTypeShirtRB)
                 .addComponent(OrderTypePlaqueRB)
                 .addComponent(OrderTypeTrophyRB)
-                .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(OrderStatusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderAccountPayRB)
                 .addComponent(OrderDeliverPayRB)
@@ -688,21 +688,21 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OrderCustNumberLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderDepositText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderTotalText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderMediaCatNumText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderNumberCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderCUSTIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                     .addGap(41, 41, 41)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(OrderContentLbl))
-                    .addContainerGap(95, Short.MAX_VALUE))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
                     .addGap(63, 63, 63)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -775,7 +775,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addGap(30, 30, 30)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(OrderStatusLbl)
-                        .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
@@ -794,8 +794,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGap(8, 8, 8)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OrderMediaStatusLbl)
-                .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OrderCreatedByLbl)
                 .addComponent(OrderAssignedToLbl))
@@ -1191,7 +1191,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVLastModfiedByLbl)
                 .addComponent(OVVerifyByLbl))
-            .addContainerGap(77, Short.MAX_VALUE))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     OrderTabbedPane.addTab("Order Verify", OrderVerifyPanel);
@@ -1349,7 +1349,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QAIDCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
-            .addContainerGap(192, Short.MAX_VALUE)
+            .addContainerGap(112, Short.MAX_VALUE)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1442,7 +1442,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QAWorkmanshipPassRb)
                 .addComponent(QAWorkmanshipFailRb)
                 .addComponent(QAWorkmanshipFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(QACommentLbl)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(QACommentTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1598,7 +1598,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(InvClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvSearchLbl)
-            .addContainerGap(231, Short.MAX_VALUE))
+            .addContainerGap(159, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Inventory", Inv);
@@ -1720,7 +1720,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(EmpSubmitButton)))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(EmpClearButton)))
-            .addContainerGap(189, Short.MAX_VALUE))
+            .addContainerGap(121, Short.MAX_VALUE))
     );
 
     EmployeeInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EmpClearButton, EmpEmail, EmpFNameText, EmpLNameText, EmpPass, EmpPassConfirm, EmpSubmitButton, EmpTypeCB});
@@ -1763,7 +1763,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(jLabel4)
                         .addComponent(EmpPassConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addComponent(EmpOrderLB, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
             .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeInfoPanelLayout.createSequentialGroup()
                     .addGroup(EmployeeInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1775,7 +1775,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addGroup(EmployeeInfoPanelLayout.createSequentialGroup()
                     .addGap(30, 30, 30)
                     .addComponent(EmpActiveOrderLbl1)))
-            .addContainerGap(177, Short.MAX_VALUE))
+            .addContainerGap(137, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Employee Info", EmployeeInfoPanel);
@@ -1785,7 +1785,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     layout.setHorizontalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addGap(0, 39, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE))
     );
     layout.setVerticalGroup(
@@ -2484,9 +2484,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_OVOrderNumTextActionPerformed
 
-    private void OrderMediaStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderMediaStatusCBActionPerformed
+    private void OrderStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderStatusCBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_OrderMediaStatusCBActionPerformed
+    }//GEN-LAST:event_OrderStatusCBActionPerformed
 
     private void OrderDeliverPayRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDeliverPayRBActionPerformed
         // TODO add your handling code here:
