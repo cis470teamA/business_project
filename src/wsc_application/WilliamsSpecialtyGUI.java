@@ -1866,6 +1866,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         for (Order.OrderStatus os : Order.OrderStatus.values())
             this.OrderStatusCB.addItem(os.toString());
         this.OrderStatusCB.setSelectedItem(order.getOrderStatus());
+        // Set the MediaStatusCB
+        this.OrderMediaStatusCB.removeAllItems();
+        for (Order.MediaStatus ms : Order.MediaStatus.values())
+            this.OrderMediaStatusCB.addItem(order.getMediaStatus());
+        this.OrderMediaStatusCB.setSelectedItem(order.getMediaStatus());
+        // Set Content Text
+        this.OrderContentText.setText(order.getContent());
+        this.OrderContentText.setEditable(true);
         
     }
     
