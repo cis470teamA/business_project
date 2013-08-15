@@ -156,17 +156,13 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVPassLbl = new javax.swing.JLabel();
         OVFailLbl = new javax.swing.JLabel();
         OVReasonLbl = new javax.swing.JLabel();
-        OVJobTypeFailRb = new javax.swing.JRadioButton();
         OVDepositPassRb = new javax.swing.JRadioButton();
         OVDepositLbl = new javax.swing.JLabel();
-        OVJobTypeLbl = new javax.swing.JLabel();
         OVDepositFailRb = new javax.swing.JRadioButton();
         OVPayTypeFailRb = new javax.swing.JRadioButton();
         OVPayTypePassLbl = new javax.swing.JLabel();
         OVDepositFailText = new javax.swing.JTextField();
-        OVJobTypeFailText = new javax.swing.JTextField();
         OVPayTypeFailText = new javax.swing.JTextField();
-        OVJobTypePassRb = new javax.swing.JRadioButton();
         OVPayTypePassRb = new javax.swing.JRadioButton();
         OVNumberLbl = new javax.swing.JLabel();
         OVerIDText = new javax.swing.JTextField();
@@ -174,7 +170,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVCustIDValLbl = new javax.swing.JLabel();
         OVMediaCatValLbl = new javax.swing.JLabel();
         OVContentValLbl = new javax.swing.JLabel();
-        OVJobTypeValLbl = new javax.swing.JLabel();
         OVPayTypeValLbl = new javax.swing.JLabel();
         OVDepositValLbl = new javax.swing.JLabel();
         OVAssignEmpCB = new javax.swing.JComboBox();
@@ -935,13 +930,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVReasonLbl.setText("Reason for Failure");
 
-    OrderVerJobTypeBG.add(OVJobTypeFailRb);
-    OVJobTypeFailRb.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVJobTypeFailRbActionPerformed(evt);
-        }
-    });
-
     OrderVerDepositBG.add(OVDepositPassRb);
     OVDepositPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -950,8 +938,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     });
 
     OVDepositLbl.setText("Sufficient Deposit");
-
-    OVJobTypeLbl.setText("Correct Job Type");
 
     OrderVerDepositBG.add(OVDepositFailRb);
     OVDepositFailRb.addActionListener(new java.awt.event.ActionListener() {
@@ -971,19 +957,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVDepositFailText.setEditable(false);
 
-    OVJobTypeFailText.setEditable(false);
-
     OVPayTypeFailText.setEditable(false);
     OVPayTypeFailText.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OVPayTypeFailTextActionPerformed(evt);
-        }
-    });
-
-    OrderVerJobTypeBG.add(OVJobTypePassRb);
-    OVJobTypePassRb.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVJobTypePassRbActionPerformed(evt);
         }
     });
 
@@ -1003,8 +980,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVMediaCatValLbl.setText("Media Catalog Number");
 
     OVContentValLbl.setText("Content Popup Link");
-
-    OVJobTypeValLbl.setText("Job Type");
 
     OVPayTypeValLbl.setText("Payment Type");
 
@@ -1057,14 +1032,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVAcctNumLbl)
                                 .addComponent(OVMediaNumLbl)
                                 .addComponent(OVContentLbl)
-                                .addComponent(OVJobTypeLbl)
                                 .addComponent(OVPayTypePassLbl)
                                 .addComponent(OVDepositLbl))
                             .addGap(15, 15, 15)
                             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                                 .addComponent(OVDepositPassRb)
                                 .addComponent(OVPayTypePassRb)
-                                .addComponent(OVJobTypePassRb)
                                 .addComponent(OVContentPassRb)
                                 .addComponent(OVMediaNumPassRb)
                                 .addComponent(OVAcctNumPassRb)
@@ -1075,7 +1048,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                                     .addComponent(OVDepositFailRb)
                                     .addComponent(OVPayTypeFailRb)
-                                    .addComponent(OVJobTypeFailRb)
                                     .addComponent(OVContentFailRb)
                                     .addComponent(OVAcctNumFailRb)
                                     .addComponent(OVCorrectNameFailRb)
@@ -1087,7 +1059,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVNameFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVAcctNumFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVMediaFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(OVJobTypeFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVPayTypeFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVReasonLbl))
@@ -1118,7 +1089,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OVDepositValLbl)
                         .addComponent(OVPayTypeValLbl)
-                        .addComponent(OVJobTypeValLbl)
                         .addComponent(OVContentValLbl)
                         .addComponent(OVMediaCatValLbl)
                         .addComponent(OVCustIDValLbl)
@@ -1134,7 +1104,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVAcctNumFailText, OVContentFailText, OVMediaFailText, OVNameFailText});
 
-    OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVDepositFailText, OVJobTypeFailText, OVPayTypeFailText});
+    OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVDepositFailText, OVPayTypeFailText});
 
     OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVOrderNumText, OVerIDText});
 
@@ -1184,13 +1154,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OVContentFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(OVJobTypeValLbl)
-                .addComponent(OVJobTypeLbl)
-                .addComponent(OVJobTypePassRb)
-                .addComponent(OVJobTypeFailRb)
-                .addComponent(OVJobTypeFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(OVPayTypeValLbl)
                 .addComponent(OVPayTypePassLbl)
                 .addComponent(OVPayTypePassRb)
@@ -1228,7 +1191,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVLastModfiedByLbl)
                 .addComponent(OVVerifyByLbl))
-            .addContainerGap(51, Short.MAX_VALUE))
+            .addContainerGap(77, Short.MAX_VALUE))
     );
 
     OrderTabbedPane.addTab("Order Verify", OrderVerifyPanel);
@@ -2302,12 +2265,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     }//GEN-LAST:event_OVPayTypePassRbActionPerformed
 
-    private void OVJobTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVJobTypePassRbActionPerformed
-        if(OVJobTypePassRb.isSelected()){
-            OVJobTypeFailText.setEditable(false);
-        }
-    }//GEN-LAST:event_OVJobTypePassRbActionPerformed
-
     private void OVPayTypeFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailTextActionPerformed
         
     }//GEN-LAST:event_OVPayTypeFailTextActionPerformed
@@ -2329,12 +2286,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVDepositFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVDepositPassRbActionPerformed
-
-    private void OVJobTypeFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVJobTypeFailRbActionPerformed
-        if(OVJobTypeFailRb.isSelected()){
-            OVJobTypeFailText.setEditable(true);
-        }
-    }//GEN-LAST:event_OVJobTypeFailRbActionPerformed
 
     private void OVAcctNumFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumFailTextActionPerformed
         // TODO add your handling code here:
@@ -2389,9 +2340,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
 
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
-        popOV();
-    }
-    private void popOV(){
+        popOV(); 
+    }//GEN-LAST:event_OVSearchButtonActionPerformed
+        private void popOV(){
         if ((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderNumText.getText()));
@@ -2410,10 +2361,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
                 + " " + workingOV.getOrder().getCustomer().getCustLName());        
         OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
- //       OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
+        //       OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
         OVContentValLbl.setText("Click for Content Popup");
         OVContentValLbl.setForeground(Color.BLUE);
-        OVJobTypeValLbl.setText(workingOV.getOrder().getMediaType());
         if (workingOV.getOrder().getPaymentOnAccount()){
             OVPayTypeValLbl.setText("On Account");
         }
@@ -2421,51 +2371,101 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVPayTypeValLbl.setText("On Delivery");
         }
         OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
-//        OVAssignEmpCB
+        //OVAssignEmpCB
         if(workingOV.getNameCheck()){
             OVCorrectNamePassRb.setSelected(true);}
         else if(!workingOV.getNameCheck()){
-            OVCorrectNameFailRb.setSelected(true);}
+            OVCorrectNameFailRb.setSelected(true);
+            OVNameFailText.setText(workingOV.getNameFailComment());}
         if(workingOV.getAccountCheck()){
             OVAcctNumPassRb.setSelected(true);}
         else if(!workingOV.getAccountCheck()){
-            OVAcctNumFailRb.setSelected(true);}
+            OVAcctNumFailRb.setSelected(true);
+            OVAcctNumFailText.setText(workingOV.getAccountFailComment());}
         if(workingOV.getMediaCheck()){
             OVMediaNumPassRb.setSelected(true);}
         else if(!workingOV.getMediaCheck()){
-            OVMediaNumFailRb.setSelected(true);}
+            OVMediaNumFailRb.setSelected(true);
+            OVMediaFailText.setText(workingOV.getMediaFailComment());}
         if(workingOV.getContentCheck()){
             OVContentPassRb.setSelected(true);}
         else if(!workingOV.getContentCheck()){
-            OVContentFailRb.setSelected(true);}
-        if(workingOV.getJobCheck()){
-            OVJobTypePassRb.setSelected(true);}
-        else if(!workingOV.getJobCheck()){
-            OVJobTypeFailRb.setSelected(true);}
+            OVContentFailRb.setSelected(true);
+            OVContentFailText.setText(workingOV.getContentFailComment());}
         if(workingOV.getPaymentCheck()){
             OVPayTypePassRb.setSelected(true);}
         else if(!workingOV.getPaymentCheck()){
-            OVPayTypeFailRb.setSelected(true);}
+            OVPayTypeFailRb.setSelected(true);
+            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());}
         if(workingOV.getDepositCheck()){
             OVDepositPassRb.setSelected(true);}
         else if(!workingOV.getDepositCheck()){
-            OVDepositFailRb.setSelected(true);}
-        OVNameFailText.setText(workingOV.getNameFailComment());
-        OVAcctNumFailText.setText(workingOV.getAccountFailComment());
-        OVMediaFailText.setText(workingOV.getMediaFailComment());
-        OVContentFailText.setText(workingOV.getContentFailComment());
-        OVJobTypeFailText.setText(workingOV.getJobTypeFailComment());
-        OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
-        OVDepositFailText.setText(workingOV.getDepositFailComment());
-
-    }//GEN-LAST:event_OVSearchButtonActionPerformed
-    
+            OVDepositFailRb.setSelected(true);
+            OVDepositFailText.setText(workingOV.getDepositFailComment());}
+        
+        if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
+                OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
+                OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
+            OVCommentsText.setText(workingOV.getCorrectiveActionComment());
+            }
+        }
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
-        // TODO add your handling code here:
+        workingOV.setVerID(Integer.parseInt(OVerIDText.getText()));
+        workingOV.setOrder(Order.getOrder(Integer.parseInt(OVOrderNumText.getText())));
+        workingOV.setVerifiedBy(Login.emp);
+        if(OVCorrectNamePassRb.isSelected()){
+            workingOV.setNameCheck(Boolean.TRUE);
+        }
+        else if(OVCorrectNameFailRb.isSelected()){
+            workingOV.setNameCheck(Boolean.FALSE);
+            workingOV.setNameFailComment(OVNameFailText.getText());
+        }
+        if(OVAcctNumPassRb.isSelected()){
+            workingOV.setAccountCheck(Boolean.TRUE);
+        }
+        else if(OVAcctNumFailRb.isSelected()){
+            workingOV.setAccountCheck(Boolean.FALSE);
+            workingOV.setAccountFailComment(OVAcctNumFailText.getText());
+        }
+        if(OVMediaNumPassRb.isSelected()){
+            workingOV.setMediaCheck(Boolean.TRUE);
+        }
+        else if(OVMediaNumFailRb.isSelected()){
+            workingOV.setMediaCheck(Boolean.FALSE);
+            workingOV.setMediaFailComment(OVMediaFailText.getText());
+        }
+        if(OVContentPassRb.isSelected()){
+            workingOV.setContentCheck(Boolean.TRUE);
+        }
+        else if(OVContentFailRb.isSelected()){
+            workingOV.setContentCheck(Boolean.FALSE);
+            workingOV.setContentFailComment(OVContentFailText.getText());
+        }
+        if(OVPayTypePassRb.isSelected()){
+            workingOV.setPaymentCheck(Boolean.TRUE);
+        }
+        else if(OVPayTypeFailRb.isSelected()){
+            workingOV.setPaymentCheck(Boolean.FALSE);
+            workingOV.setPaymentFailComment(OVPayTypeFailText.getText());
+        }
+        if (OVDepositPassRb.isSelected()){
+            workingOV.setDepositCheck(Boolean.TRUE);
+        }
+        else if(OVDepositFailRb.isSelected()){
+            workingOV.setDepositCheck(Boolean.FALSE);
+            workingOV.setDepositFailComment(OVDepositFailText.getText());
+        }
+        if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
+                OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
+                OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
+            workingOV.setCorrectiveActionComment(OVCommentsText.getText());
+        }        
+        workingOV = OrderVerify.insertOrUpdateOV(workingOV);
+        popOV();
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
 
     private void OrderTotalTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTotalTextActionPerformed
@@ -2636,11 +2636,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JRadioButton OVDepositPassRb;
     private javax.swing.JLabel OVDepositValLbl;
     private javax.swing.JLabel OVFailLbl;
-    private javax.swing.JRadioButton OVJobTypeFailRb;
-    private javax.swing.JTextField OVJobTypeFailText;
-    private javax.swing.JLabel OVJobTypeLbl;
-    private javax.swing.JRadioButton OVJobTypePassRb;
-    private javax.swing.JLabel OVJobTypeValLbl;
     private javax.swing.JLabel OVLastModfiedByLbl;
     private javax.swing.JLabel OVMediaCatValLbl;
     private javax.swing.JTextField OVMediaFailText;
