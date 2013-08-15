@@ -1802,7 +1802,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     Order workingOrder = new Order();
     OrderVerify workingOV = new OrderVerify();
     QAReport workingQA = new QAReport();
-    CatalogItem workingCA = new CatalogItem();
+    InventoryItem workingCA = new InventoryItem();
     
     public void HideEmpPassword()
     {
