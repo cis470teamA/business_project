@@ -13,14 +13,37 @@ public class Order {
     private float total;
     private int paymentOnAccount;
     private float deposit;
-    private String orderStatus;
+    private OrderStatus orderStatus;
     private Employee createdBy;
-    private String mediaStatus;
-    
+    public MediaStatus mediaStatus;
+    public enum OrderStatus {
+        Shipped("Shipped"), Pending("Pending"), Complete("Complete"),
+        Hold("On Hold"), InProgress("In Progress");
+        private String value;
+        private OrderStatus(String value) {
+            this.value = value;
+        }
+        @Override
+        public String toString() {
+            return this.value;
+        }
+    }
+    public enum MediaStatus {
+        Requested("Requested"), Sold("Sold"), enRoute("En Route"),
+        requestedOrder("Requested Order"), onOrder("On Order"), 
+        Delivered("Delivered");
+        private String value;
+        private MediaStatus(String value) {
+            this.value = value;
+        }
+        @Override
+        public String toString() {
+            return this.value;
+        }
+    }
     protected static ArrayList<Order> orders;
     
-    public Order(){
-    }
+    public Order() {}
 
     public Order(Customer cust, int OrderId, String mediaType,
             String content, Boolean onAcct, float total, float deposit, 
@@ -54,7 +77,7 @@ public class Order {
         Order order;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        String query = "select * from cis470.ORDER where CUSTID = " + CustId + ";";
+            String query = "select * from cis470.ORDER where CUSTID = " + CustId + ";";
         System.out.println(query);
         try {
             rs = mysql.doQuery(query);
@@ -208,17 +231,60 @@ public class Order {
     public void setDeposit(float dep){
         this.deposit = dep;
     }
+    // By Paul
     public String getOrderStatus(){
-        return orderStatus;
+        return orderStatus.toString();
     }
-    public void setOrderStatus(String ordStat){
-        this.orderStatus = ordStat;
+    // By Paul
+    public void setOrderStatus(String status){
+        switch (status.toLowerCase()) {
+            case "shipped":
+                this.orderStatus = OrderStatus.Shipped;
+                break;
+            case "in progress":
+                this.orderStatus = OrderStatus.InProgress;
+                break;
+            case "pending":
+                this.orderStatus = OrderStatus.Pending;
+                break;
+            case "hold":
+                this.orderStatus = OrderStatus.Hold;
+                break;
+            case "complete":
+                this.orderStatus = OrderStatus.Complete;
+                break;
+            default:
+                this.orderStatus = OrderStatus.Hold;
+        }    
     }
+    // By Paul
     public String getMediaStatus(){
-        return mediaStatus;
+        return this.mediaStatus.toString();
     }
-    public void setMediaStatus(String medStat){
-        this.mediaStatus = medStat;
+    // By Paul
+    public void setMediaStatus(String status){
+        switch (status.toLowerCase()) {
+            case "requested":
+                this.mediaStatus = MediaStatus.Requested;
+                break;
+            case "sold":
+                this.mediaStatus = MediaStatus.Sold;
+                break;
+            case "en route":
+                this.mediaStatus = MediaStatus.enRoute;
+                break;
+            case "requested order":
+                this.mediaStatus = MediaStatus.requestedOrder;
+                break;
+            case "on order":
+                this.mediaStatus = MediaStatus.onOrder;
+                break;
+            case "delivered":
+                this.mediaStatus = MediaStatus.Delivered;
+                break;
+            default:
+                this.mediaStatus = MediaStatus.Requested;
+    }
     }
     public Employee getCreatedBy(){
         return createdBy;

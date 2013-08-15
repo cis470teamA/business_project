@@ -1846,11 +1846,25 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 case "shirt":
                     this.OrderTypeShirtRB.setSelected(true);
                     break;
+                default:
+                    this.OrderTypeTrophyRB.setSelected(false);
+                    this.OrderTypePlaqueRB.setSelected(false);
+                    this.OrderTypeShirtRB.setSelected(false);
             }
         }
-        this.OrderTotalText.setText(Float.toString(order.getTotal()));
-        this.OrderDepositText.setText(Float.toString(order.getDeposit()));
-        
+        // Set OrderTotalText
+        this.OrderTotalText.setText(String.format("$%.2f", order.getTotal()));
+        // Set OrderDepositText
+        this.OrderDepositText.setText(String.format("$%.2f", order.getDeposit()));
+        // Set Accout Payment Radio button
+        if (order.getPaymentOnAccount())
+            this.OrderAccountPayRB.setSelected(true);
+        else if (!order.getPaymentOnAccount())
+            this.OrderDeliverPayRB.setSelected(true);
+        // Set Order Status CB
+        this.OrderStatusCB.removeAllItems();
+        for (Order.OrderStatus os : Order.OrderStatus.values())
+            this.OrderStatusCB.addItem(os.toString());
         
     }
     
