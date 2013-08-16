@@ -941,25 +941,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVNameFailText.setEditable(false);
 
     OVAcctNumFailText.setEditable(false);
-    OVAcctNumFailText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVAcctNumFailTextActionPerformed(evt);
-        }
-    });
 
     OVMediaFailText.setEditable(false);
-    OVMediaFailText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVMediaFailTextActionPerformed(evt);
-        }
-    });
 
     OVContentFailText.setEditable(false);
-    OVContentFailText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVContentFailTextActionPerformed(evt);
-        }
-    });
 
     OVPassLbl.setText("Pass");
 
@@ -995,11 +980,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVDepositFailText.setEditable(false);
 
     OVPayTypeFailText.setEditable(false);
-    OVPayTypeFailText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVPayTypeFailTextActionPerformed(evt);
-        }
-    });
 
     OVPaymentBG.add(OVPayTypePassRb);
     OVPayTypePassRb.addActionListener(new java.awt.event.ActionListener() {
@@ -1011,23 +991,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVNumberLbl.setText("Verification Number");
 
     OVContentValLbl.setToolTipText("");
-    OVContentValLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            OVContentValLblMouseClicked(evt);
-        }
-    });
 
     OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     OVAssignEmpLbl.setText("Assign Printer/Engraver");
 
     OVOrderNumLbl.setText("Order Number");
-
-    OVOrderIDText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVOrderIDTextActionPerformed(evt);
-        }
-    });
 
     OVVerifyByLbl.setText("Order Verified by ******");
 
@@ -1317,18 +1286,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     QACorrectiveActionTB.setViewportView(QACorrectiveActionText);
 
     QACommentLbl.setText("Comments");
-
-    QAContentFailText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAContentFailTextActionPerformed(evt);
-        }
-    });
-
-    QAMediaFailText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAMediaFailTextActionPerformed(evt);
-        }
-    });
 
     QAPassLbl.setText("Pass");
 
@@ -2241,7 +2198,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void OrderCUSTIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCUSTIDTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderCUSTIDTextActionPerformed
-
+    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA Search,Submit,Clear Buttons">
     private void QASubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASubmitButtonActionPerformed
         /* Brad Clawson: This method will pass GUI field data in the form of a 
          * QAReport object to QAReport.insertOrUpdateQA() that will determine if
@@ -2418,6 +2375,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //page successfully populated return true to indicate success
         return true;
     }
+    //</editor_fold>
     private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
         this.OrderCUSTIDText.setText("");
         this.OrderNumberCB.removeAllItems();
@@ -2524,7 +2482,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         ShowEmpPassword();
         }
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
-
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
        boolean empExist = false;
        boolean empUser = false;
@@ -2584,9 +2541,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                    JOptionPane.showMessageDialog(null, "Employee was not created.");
                }
     }//GEN-LAST:event_EmpSubmitButtonActionPerformed
-
-    public void EmpClear()
-    {
+    public void EmpClear(){
        EMPIDCB.setText("");
        EmpFNameText.setText("");
        EmpLNameText.setText("");
@@ -2653,20 +2608,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAWorkmanshipFailText.setEditable(true);
     }//GEN-LAST:event_QAWorkmanshipCheckFailRbActionPerformed
 
-    private void QAMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFailTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QAMediaFailTextActionPerformed
-
+    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: OV radio buttons">
     private void OVPayTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypePassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVPayTypePassRb.isSelected()){
             OVPayTypeFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVPayTypePassRbActionPerformed
-
-    private void OVPayTypeFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailTextActionPerformed
-        
-    }//GEN-LAST:event_OVPayTypeFailTextActionPerformed
 
     private void OVPayTypeFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
@@ -2688,10 +2636,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVDepositFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVDepositPassRbActionPerformed
-
-    private void OVAcctNumFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumFailTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OVAcctNumFailTextActionPerformed
 
     private void OVContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
@@ -2748,7 +2692,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVNameFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
-
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Brad Clawson: OV Search,Submit,Clear Buttons">
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
         //Brad Clawson: search by OVID or OrderID through popID() and indicate success or failure
         if(popOV()){
@@ -2987,21 +2933,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
 
+    private void OVContentValLblMouseClicked(java.awt.event.MouseEvent evt) {                                             
+        //Brad: popup content in JOption pane for easy access when verifying order 
+        JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
+    }
+    //</editor-fold>   
     private void OrderTotalTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTotalTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderTotalTextActionPerformed
-
-    private void OVMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaFailTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OVMediaFailTextActionPerformed
-
-    private void OVContentFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentFailTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OVContentFailTextActionPerformed
-
-    private void OVOrderIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVOrderIDTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OVOrderIDTextActionPerformed
 
     private void OrderStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderStatusCBActionPerformed
         // TODO add your handling code here:
@@ -3010,10 +2949,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void OrderDeliverPayRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDeliverPayRBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderDeliverPayRBActionPerformed
-
-    private void QAContentFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentFailTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QAContentFailTextActionPerformed
 
     private void emOrdersLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_emOrdersLstValueChanged
         // TODO add your handling code here:
@@ -3041,12 +2976,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             this.selectOrderByIndex(this.OrderNumberCB.getSelectedIndex());
     }//GEN-LAST:event_OrderNumberCBActionPerformed
 
-    private void OVContentValLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OVContentValLblMouseClicked
-        //Brad: popup content in JOption pane for easy access when verifying order 
-        JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
-    }//GEN-LAST:event_OVContentValLblMouseClicked
-
-
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -3061,6 +2990,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAIDText.setBackground(Color.white);
     }//GEN-LAST:event_QAIDTextFocusGained
 
+    // <editor-fold defaultstate="collapsed" desc="GUI Variable Declarations">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
     private javax.swing.JLabel CUSTIDLbl;
@@ -3275,4 +3205,5 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel jLabel4;
     protected javax.swing.JLabel lblLoginStatus;
     // End of variables declaration//GEN-END:variables
+//</editor-fold>
 }
