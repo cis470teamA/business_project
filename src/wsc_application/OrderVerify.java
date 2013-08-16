@@ -1,18 +1,20 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package wsc_application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Bradley Clawson
+/*
+ * OrderVerify Class
+ * Class Created By Brad Clawson
+ * Static SQL methods created by
+ * Paul Durivage & Brad Clawson 
+ * for CIS470 GroupA
+ * 8/16/2013 
  */
+
 public class OrderVerify {
+    //variable declaration, bool values are recorded as int for db use
     private int VERID;
     private Order order;
     private Employee verifiedBy;
@@ -33,6 +35,7 @@ public class OrderVerify {
     public OrderVerify(){
         
     }
+    //overloaded constructor for creating new OrderVerify object
     public OrderVerify(int verID, Employee verBy, Order ord, Boolean nameChk,
             Boolean acctChk, Boolean medChk, Boolean contChk, Boolean payChk,
             Boolean depChk, String nameFail, String acctFail, String medFail,
@@ -55,7 +58,7 @@ public class OrderVerify {
         setDepositFailComment(depFail);
         setCorrectiveActionComment(corrActComm);        
         }
-    
+    //this method checks to see if record exist in db by ORDERID or VERID
     public Boolean checkExistBy(String column, int id){
         Boolean ovExist = false;
         OrderVerify ov = null;
@@ -63,7 +66,7 @@ public class OrderVerify {
         MysqlConn mysql = new MysqlConn();
         String query = "Select * from cis470.ORDERVERIFY WHERE "
                     + column + " = " + id;
-                    
+        //if result set is populated then record exists & bool is set to true           
         rs = mysql.doQuery(query);
         try {
             if (rs.next()){
@@ -80,6 +83,7 @@ public class OrderVerify {
              mysql.closeAll();
        }return ovExist;
     }
+    //this method searches the db by ORDERID or VERID and returns an OrderVerify object if found 
     public static OrderVerify getOVby(String column, int id){
         OrderVerify ov = null;
          ResultSet rs;
@@ -90,6 +94,7 @@ public class OrderVerify {
         rs = mysql.doQuery(query);
         try {
             if (rs.next()) {
+                //Create new OrderVerify object with data from record
                 ov = new OrderVerify(
                         rs.getInt("VERID"),
                         Employee.searchBy(rs.getInt("EMPID")),  
@@ -115,18 +120,23 @@ public class OrderVerify {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
          }
+        //if no errors, return newly created OrderVerify object
          finally {
              mysql.closeAll();
              return ov;
          }
         
     }
+    //this method inserts or updates an ORDERVERIFY record in the database
     public static OrderVerify insertOrUpdateOV(OrderVerify ov){
         OrderVerify thisOV = null;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+             /*create query for INSERT INTO QA ON DUPLICATE KEY UPDATE. Using this method reduces redundant code
+             * and allowed for a single submit button to be used on the QA tab
+             */ 
             String query = "INSERT INTO ORDERVERIFY (VERID,EMPID,ORDERID,nameCheck,"
                     + "accountCheck,mediaCheck,contentCheck,paymentCheck,depositCheck,nameFailComment,"
                     + "accountFailComment,mediaFailComment,contentFailComment,paymentFailComment,"
@@ -148,6 +158,7 @@ public class OrderVerify {
                     + ov.paymentFailComment + "', '"
                     + ov.depositFailComment + "', '"
                     + ov.correctiveActionComment + "')"
+                    //if record with VERID exists UPDATE instead of INSERT
                     + "ON DUPLICATE KEY UPDATE " 
                     + "EMPID = " + ov.verifiedBy.getEmpId() + ", "
                     + "ORDERID = "+ ov.order.getORDID() + ", "
@@ -172,12 +183,10 @@ public class OrderVerify {
             if (rs.next()) {
                 key = rs.getInt(1);
             }
+            //search for updated/inserted record to verify action
             if (key > 0) {
                 thisOV = OrderVerify.getOVby("VERID", key);
             }
-            //else{
-            //    thisOV = OrderVerify.getOVby("VERID", ov.VERID);
-            //}
         }   
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
@@ -185,29 +194,22 @@ public class OrderVerify {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
+        //return verified object
         finally {
             mysql.closeAll();
             return thisOV;
         }
     }
+    // <editor-fold defaultstate="collapsed" desc="getters">
     public int getVerID(){
         return VERID;
-    }
-    public void setVerID(int verID){
-        VERID = verID;
     }
     public Order getOrder(){
         return order;
     }
-    public void setOrder(Order ord){
-        order = ord;
-    }
     public Employee getVerifiedBy(){
         return verifiedBy;
-    }
-    public void setVerifiedBy(Employee verBy){
-        verifiedBy = verBy;
-    }
+    }    
     public Boolean getNameCheck(){
         if (nameCheck == 1){
             return Boolean.TRUE;}
@@ -215,19 +217,78 @@ public class OrderVerify {
             return Boolean.FALSE;
         }
     }
-    public void setNameCheck(Boolean nameChk){
-        if (nameChk){
-            nameCheck = 1;
-        }
-        else{
-            nameCheck = 0;
-        }
+    public String getCorrectiveActionComment(){
+        return correctiveActionComment;
     }
     public Boolean getAccountCheck(){
         if (accountCheck == 1){
             return Boolean.TRUE;}
         else{
             return Boolean.FALSE;
+        }
+    }    public Boolean getContentCheck(){
+        if (contentCheck == 1){
+            return Boolean.TRUE;}
+        else{
+            return Boolean.FALSE;
+        }
+    }    public Boolean getPaymentCheck(){
+        if (paymentCheck == 1){
+            return Boolean.TRUE;}
+        else{
+            return Boolean.FALSE;
+        }
+    }
+    public String getNameFailComment(){
+        return nameFailComment;
+    }
+    public Boolean getMediaCheck(){
+        if (mediaCheck == 1){
+            return Boolean.TRUE;}
+        else{
+            return Boolean.FALSE;
+        }
+    }
+    public Boolean getDepositCheck(){
+        if (depositCheck == 1){
+            return Boolean.TRUE;}
+        else{
+            return Boolean.FALSE;
+        }
+    }
+    public String getAccountFailComment(){
+        return accountFailComment;
+    }
+    public String getMediaFailComment(){
+        return mediaFailComment;
+    }
+    public String getContentFailComment(){
+        return contentFailComment;
+    }
+    public String getDepositFailComment(){
+        return depositFailComment;
+    }
+    public String getPaymentFailComment(){
+        return paymentFailComment;
+    }
+
+    // </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="Setters">
+    public void setVerID(int verID){
+        VERID = verID;
+    }
+    public void setOrder(Order ord){
+        order = ord;
+    }
+    public void setVerifiedBy(Employee verBy){
+        verifiedBy = verBy;
+    }
+    public void setNameCheck(Boolean nameChk){
+        if (nameChk){
+            nameCheck = 1;
+        }
+        else{
+            nameCheck = 0;
         }
     }
     public void setAccountCheck(Boolean acctChk){
@@ -238,26 +299,12 @@ public class OrderVerify {
             accountCheck = 0;
         }
     }
-    public Boolean getMediaCheck(){
-        if (mediaCheck == 1){
-            return Boolean.TRUE;}
-        else{
-            return Boolean.FALSE;
-        }
-    }
     public void setMediaCheck(Boolean medChk){
         if (medChk){
             mediaCheck = 1;
         }
         else{
             mediaCheck = 0;
-        }
-    }
-    public Boolean getContentCheck(){
-        if (contentCheck == 1){
-            return Boolean.TRUE;}
-        else{
-            return Boolean.FALSE;
         }
     }
     public void setContentCheck(Boolean contChk){
@@ -268,26 +315,12 @@ public class OrderVerify {
             contentCheck = 0;
         }
     }
-    public Boolean getPaymentCheck(){
-        if (paymentCheck == 1){
-            return Boolean.TRUE;}
-        else{
-            return Boolean.FALSE;
-        }
-    }
     public void setPaymentCheck(Boolean payChk){
         if (payChk){
             paymentCheck = 1;
         }
         else{
             paymentCheck = 0;
-        }
-    }
-    public Boolean getDepositCheck(){
-        if (depositCheck == 1){
-            return Boolean.TRUE;}
-        else{
-            return Boolean.FALSE;
         }
     }
     public void setDepositCheck(Boolean depChk){
@@ -298,46 +331,26 @@ public class OrderVerify {
             depositCheck = 0;
         }
     }
-    public String getNameFailComment(){
-        return nameFailComment;
-    }
     public void setNameFailComment(String nameFail){
         nameFailComment = nameFail;
-    }
-    public String getAccountFailComment(){
-        return accountFailComment;
     }
     public void setAccountFailComment(String acctFail){
         accountFailComment = acctFail;
     }
-    public String getMediaFailComment(){
-        return mediaFailComment;
-    }
     public void setMediaFailComment(String medFail){
         mediaFailComment = medFail;
-    }
-    public String getContentFailComment(){
-        return contentFailComment;
     }
     public void setContentFailComment(String contFail){
         contentFailComment = contFail;
     }
-    public String getPaymentFailComment(){
-        return paymentFailComment;
-    }
     public void setPaymentFailComment(String payFail){
         paymentFailComment = payFail;
-    }
-    public String getDepositFailComment(){
-        return depositFailComment;
     }
     public void setDepositFailComment(String depFail){
         depositFailComment = depFail;
     }
-    public String getCorrectiveActionComment(){
-        return correctiveActionComment;
-    }
     public void setCorrectiveActionComment(String corrActComm){
         correctiveActionComment = corrActComm;
     }
+    //</editor-fold>
 }
