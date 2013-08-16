@@ -44,8 +44,8 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OrderEngMediaBG = new javax.swing.ButtonGroup();
         OVAccountBG = new javax.swing.ButtonGroup();
         OVNameBG = new javax.swing.ButtonGroup();
-        QAOrderContentBG = new javax.swing.ButtonGroup();
-        QAOrderMediaBG = new javax.swing.ButtonGroup();
+        QAContentBG = new javax.swing.ButtonGroup();
+        QAMediaBG = new javax.swing.ButtonGroup();
         QAMediaFinishBG = new javax.swing.ButtonGroup();
         QAWorkmanshipBG = new javax.swing.ButtonGroup();
         OVMediaBG = new javax.swing.ButtonGroup();
@@ -171,7 +171,7 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVAssignEmpCB = new javax.swing.JComboBox();
         OVAssignEmpLbl = new javax.swing.JLabel();
         OVOrderNumLbl = new javax.swing.JLabel();
-        OVOrderNumText = new javax.swing.JTextField();
+        OVOrderIDText = new javax.swing.JTextField();
         OVVerifyByLbl = new javax.swing.JLabel();
         OVCreateByLbl = new javax.swing.JLabel();
         OVAssignedToLbl = new javax.swing.JLabel();
@@ -181,20 +181,20 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         QASubmitButton = new javax.swing.JButton();
         QAClearButton = new javax.swing.JButton();
         QASearchButton = new javax.swing.JButton();
-        QACorrectContentLbl = new javax.swing.JLabel();
-        QACorrectOrderMediaLbl = new javax.swing.JLabel();
+        QAContentLbl = new javax.swing.JLabel();
+        QAMediaLbl = new javax.swing.JLabel();
         QAMediaFinishLbl = new javax.swing.JLabel();
-        QAEngrFinishLbl = new javax.swing.JLabel();
-        QACorrectContentPassRb = new javax.swing.JRadioButton();
-        QACorrectMediaPassRb = new javax.swing.JRadioButton();
-        QAMediaFinishPassRb = new javax.swing.JRadioButton();
-        QAWorkmanshipPassRb = new javax.swing.JRadioButton();
-        QACorrectContentFailRb = new javax.swing.JRadioButton();
-        QACorrectMediaFailRb = new javax.swing.JRadioButton();
-        QAMediaFinishFailRb = new javax.swing.JRadioButton();
-        QAWorkmanshipFailRb = new javax.swing.JRadioButton();
-        QACommentTB = new javax.swing.JScrollPane();
-        QACommentText = new javax.swing.JTextArea();
+        QAWorkmanshipLbl = new javax.swing.JLabel();
+        QAContentCheckPassRb = new javax.swing.JRadioButton();
+        QAMediaCheckPassRb = new javax.swing.JRadioButton();
+        QAMediaFinishCheckPassRb = new javax.swing.JRadioButton();
+        QAWorkmanshipCheckPassRb = new javax.swing.JRadioButton();
+        QAContentCheckFailRb = new javax.swing.JRadioButton();
+        QAMediaCheckFailRb = new javax.swing.JRadioButton();
+        QAMediaFinishCheckFailRb = new javax.swing.JRadioButton();
+        QAWorkmanshipCheckFailRb = new javax.swing.JRadioButton();
+        QACorrectiveActionTB = new javax.swing.JScrollPane();
+        QACorrectiveActionText = new javax.swing.JTextArea();
         QACommentLbl = new javax.swing.JLabel();
         QAContentFailText = new javax.swing.JTextField();
         QAOrderMediaFailText = new javax.swing.JTextField();
@@ -202,16 +202,15 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         QAWorkmanshipFailText = new javax.swing.JTextField();
         QAPassLbl = new javax.swing.JLabel();
         QAFailLbl = new javax.swing.JLabel();
-        QAReasonLbl = new javax.swing.JLabel();
+        QAFailCommentLbl = new javax.swing.JLabel();
         QAVerifiedByLbl = new javax.swing.JLabel();
         QACreatedByLbl = new javax.swing.JLabel();
         QAAssignedToLbl = new javax.swing.JLabel();
-        QAModifiedByLbl = new javax.swing.JLabel();
         QAOrderIDLbl = new javax.swing.JLabel();
-        QAOrderIDCB = new javax.swing.JComboBox();
         QAIDLbl = new javax.swing.JLabel();
-        QAIDCB = new javax.swing.JComboBox();
-        QASearchLbl = new javax.swing.JLabel();
+        QAButtonLbl = new javax.swing.JLabel();
+        QAOrderIDText = new javax.swing.JTextField();
+        QAIDText = new javax.swing.JTextField();
         Inv = new javax.swing.JPanel();
         InvItemIDLbl = new javax.swing.JLabel();
         InvManIDLbl = new javax.swing.JLabel();
@@ -993,9 +992,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVOrderNumLbl.setText("Order Number");
 
-    OVOrderNumText.addActionListener(new java.awt.event.ActionListener() {
+    OVOrderIDText.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVOrderNumTextActionPerformed(evt);
+            OVOrderIDTextActionPerformed(evt);
         }
     });
 
@@ -1023,7 +1022,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
-                            .addComponent(OVOrderNumText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OVOrderIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                             .addComponent(OVerIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1107,7 +1106,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVDepositFailText, OVPayTypeFailText});
 
-    OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVOrderNumText, OVerIDText});
+    OrderVerifyPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OVOrderIDText, OVerIDText});
 
     OrderVerifyPanelLayout.setVerticalGroup(
         OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1115,7 +1114,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGap(30, 30, 30)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVOrderNumLbl)
-                .addComponent(OVOrderNumText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(OVOrderIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1218,73 +1217,73 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    QACorrectContentLbl.setText("Correct Order Content");
+    QAContentLbl.setText("Correct Order Content");
 
-    QACorrectOrderMediaLbl.setText("Correct Order Media");
+    QAMediaLbl.setText("Correct Order Media");
 
     QAMediaFinishLbl.setText("Media Finish");
 
-    QAEngrFinishLbl.setText("Workmanship");
+    QAWorkmanshipLbl.setText("Workmanship");
 
-    QAOrderContentBG.add(QACorrectContentPassRb);
-    QACorrectContentPassRb.addActionListener(new java.awt.event.ActionListener() {
+    QAContentBG.add(QAContentCheckPassRb);
+    QAContentCheckPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QACorrectContentPassRbActionPerformed(evt);
+            QAContentCheckPassRbActionPerformed(evt);
         }
     });
 
-    QAOrderMediaBG.add(QACorrectMediaPassRb);
-    QACorrectMediaPassRb.addActionListener(new java.awt.event.ActionListener() {
+    QAMediaBG.add(QAMediaCheckPassRb);
+    QAMediaCheckPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QACorrectMediaPassRbActionPerformed(evt);
+            QAMediaCheckPassRbActionPerformed(evt);
         }
     });
 
-    QAMediaFinishBG.add(QAMediaFinishPassRb);
-    QAMediaFinishPassRb.addActionListener(new java.awt.event.ActionListener() {
+    QAMediaFinishBG.add(QAMediaFinishCheckPassRb);
+    QAMediaFinishCheckPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAMediaFinishPassRbActionPerformed(evt);
+            QAMediaFinishCheckPassRbActionPerformed(evt);
         }
     });
 
-    QAWorkmanshipBG.add(QAWorkmanshipPassRb);
-    QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
+    QAWorkmanshipBG.add(QAWorkmanshipCheckPassRb);
+    QAWorkmanshipCheckPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAWorkmanshipPassRbActionPerformed(evt);
+            QAWorkmanshipCheckPassRbActionPerformed(evt);
         }
     });
 
-    QAOrderContentBG.add(QACorrectContentFailRb);
-    QACorrectContentFailRb.addActionListener(new java.awt.event.ActionListener() {
+    QAContentBG.add(QAContentCheckFailRb);
+    QAContentCheckFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QACorrectContentFailRbActionPerformed(evt);
+            QAContentCheckFailRbActionPerformed(evt);
         }
     });
 
-    QAOrderMediaBG.add(QACorrectMediaFailRb);
-    QACorrectMediaFailRb.addActionListener(new java.awt.event.ActionListener() {
+    QAMediaBG.add(QAMediaCheckFailRb);
+    QAMediaCheckFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QACorrectMediaFailRbActionPerformed(evt);
+            QAMediaCheckFailRbActionPerformed(evt);
         }
     });
 
-    QAMediaFinishBG.add(QAMediaFinishFailRb);
-    QAMediaFinishFailRb.addActionListener(new java.awt.event.ActionListener() {
+    QAMediaFinishBG.add(QAMediaFinishCheckFailRb);
+    QAMediaFinishCheckFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAMediaFinishFailRbActionPerformed(evt);
+            QAMediaFinishCheckFailRbActionPerformed(evt);
         }
     });
 
-    QAWorkmanshipBG.add(QAWorkmanshipFailRb);
-    QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
+    QAWorkmanshipBG.add(QAWorkmanshipCheckFailRb);
+    QAWorkmanshipCheckFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAWorkmanshipFailRbActionPerformed(evt);
+            QAWorkmanshipCheckFailRbActionPerformed(evt);
         }
     });
 
-    QACommentText.setColumns(20);
-    QACommentText.setRows(5);
-    QACommentTB.setViewportView(QACommentText);
+    QACorrectiveActionText.setColumns(20);
+    QACorrectiveActionText.setRows(5);
+    QACorrectiveActionTB.setViewportView(QACorrectiveActionText);
 
     QACommentLbl.setText("Comments");
 
@@ -1304,7 +1303,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAFailLbl.setText("Fail");
 
-    QAReasonLbl.setText("Reason for Failure");
+    QAFailCommentLbl.setText("Reason for Failure");
 
     QAVerifiedByLbl.setText("Order Verified by ******");
 
@@ -1312,73 +1311,61 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAAssignedToLbl.setText("Work Assigned to ******");
 
-    QAModifiedByLbl.setText("Last Modified by ******");
-
     QAOrderIDLbl.setText("Order Number");
-
-    QAOrderIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    QAOrderIDCB.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAOrderIDCBActionPerformed(evt);
-        }
-    });
 
     QAIDLbl.setText("QA Inspection Number");
 
-    QAIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    QAIDCB.addActionListener(new java.awt.event.ActionListener() {
+    QAButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
+    QAButtonLbl.setText("* Use only one field for searches");
+
+    QAOrderIDText.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAIDCBActionPerformed(evt);
+            QAOrderIDTextActionPerformed(evt);
         }
     });
 
-    QASearchLbl.setForeground(new java.awt.Color(255, 51, 51));
-    QASearchLbl.setText("* Use only one field for searches");
+    QAIDText.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            QAIDTextActionPerformed(evt);
+        }
+    });
 
     javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
     QAPanel.setLayout(QAPanelLayout);
     QAPanelLayout.setHorizontalGroup(
         QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(QAPanelLayout.createSequentialGroup()
-            .addGap(81, 81, 81)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
+            .addGap(120, 120, 120)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(QAOrderIDLbl)
                 .addComponent(QAIDLbl))
-            .addGap(63, 63, 63)
-            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                .addComponent(QAOrderIDCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(QAIDCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
-            .addContainerGap(238, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(QAVerifiedByLbl)
                         .addComponent(QACreatedByLbl))
                     .addGap(48, 48, 48)
-                    .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(QAAssignedToLbl)
-                        .addComponent(QAModifiedByLbl)))
+                    .addComponent(QAAssignedToLbl))
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(QACorrectOrderMediaLbl)
+                        .addComponent(QAMediaLbl)
                         .addComponent(QAMediaFinishLbl)
-                        .addComponent(QAEngrFinishLbl)
-                        .addComponent(QACorrectContentLbl))
+                        .addComponent(QAWorkmanshipLbl)
+                        .addComponent(QAContentLbl))
                     .addGap(17, 17, 17)
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(QAMediaFinishPassRb)
-                        .addComponent(QAWorkmanshipPassRb)
-                        .addComponent(QACorrectMediaPassRb)
-                        .addComponent(QACorrectContentPassRb)
+                        .addComponent(QAMediaFinishCheckPassRb)
+                        .addComponent(QAWorkmanshipCheckPassRb)
+                        .addComponent(QAMediaCheckPassRb)
+                        .addComponent(QAContentCheckPassRb)
                         .addComponent(QAPassLbl))
-                    .addGap(18, 18, 18)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(QACorrectContentFailRb)
-                        .addComponent(QACorrectMediaFailRb)
-                        .addComponent(QAMediaFinishFailRb)
-                        .addComponent(QAWorkmanshipFailRb)
+                        .addComponent(QAContentCheckFailRb)
+                        .addComponent(QAMediaCheckFailRb)
+                        .addComponent(QAMediaFinishCheckFailRb)
+                        .addComponent(QAWorkmanshipCheckFailRb)
                         .addComponent(QAFailLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1386,8 +1373,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(QAMediaFinishFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(QAContentFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(QAOrderMediaFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(QAReasonLbl)))
-                .addComponent(QACommentTB, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(QAFailCommentLbl)))
+                .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(QACommentLbl)
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1395,73 +1382,76 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(QASearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(QASubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(QASearchLbl, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(QAButtonLbl, javax.swing.GroupLayout.Alignment.LEADING))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(QAClearButton)))
-            .addGap(200, 200, 200))
+                    .addComponent(QAClearButton))
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(QAOrderIDText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                    .addComponent(QAIDText, javax.swing.GroupLayout.Alignment.LEADING)))
+            .addGap(197, 197, 197))
     );
 
     QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAContentFailText, QAMediaFinishFailText, QAOrderMediaFailText, QAWorkmanshipFailText});
 
+    QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAIDText, QAOrderIDText});
+
     QAPanelLayout.setVerticalGroup(
         QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(QAPanelLayout.createSequentialGroup()
-            .addGap(36, 36, 36)
-            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(QAOrderIDLbl)
-                .addComponent(QAOrderIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(33, 33, 33)
+            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(QAOrderIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(QAOrderIDLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(QAIDLbl)
-                .addComponent(QAIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(QAIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(QAIDLbl))
             .addGap(24, 24, 24)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QAPassLbl)
                 .addComponent(QAFailLbl)
-                .addComponent(QAReasonLbl))
+                .addComponent(QAFailCommentLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(QACorrectContentPassRb)
                 .addComponent(QAContentFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(QACorrectContentFailRb)
-                .addComponent(QACorrectContentLbl))
+                .addComponent(QAContentCheckFailRb)
+                .addComponent(QAContentCheckPassRb)
+                .addComponent(QAContentLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(QAOrderMediaFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(QACorrectMediaFailRb)
-                .addComponent(QACorrectMediaPassRb)
-                .addComponent(QACorrectOrderMediaLbl))
+                .addComponent(QAMediaCheckFailRb)
+                .addComponent(QAMediaCheckPassRb)
+                .addComponent(QAMediaLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(QAMediaFinishCheckFailRb)
                 .addComponent(QAMediaFinishFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(QAMediaFinishFailRb)
-                .addComponent(QAMediaFinishPassRb)
+                .addComponent(QAMediaFinishCheckPassRb)
                 .addComponent(QAMediaFinishLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(QAEngrFinishLbl)
-                .addComponent(QAWorkmanshipPassRb)
-                .addComponent(QAWorkmanshipFailRb)
-                .addComponent(QAWorkmanshipFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addComponent(QAWorkmanshipFailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(QAWorkmanshipCheckFailRb)
+                .addComponent(QAWorkmanshipCheckPassRb)
+                .addComponent(QAWorkmanshipLbl))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
             .addComponent(QACommentLbl)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(QACommentTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(18, 18, 18)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QASearchButton)
                 .addComponent(QASubmitButton)
                 .addComponent(QAClearButton))
             .addGap(2, 2, 2)
-            .addComponent(QASearchLbl)
+            .addComponent(QAButtonLbl)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QACreatedByLbl)
                 .addComponent(QAAssignedToLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(QAModifiedByLbl)
-                .addComponent(QAVerifiedByLbl))
+            .addComponent(QAVerifiedByLbl)
             .addGap(88, 88, 88))
     );
 
@@ -2077,24 +2067,128 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void QAClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAClearButtonActionPerformed
         // Clear QA data
-        QAOrderIDCB.setSelectedIndex(0);
-        QAIDCB.setSelectedIndex(0);
+        QAIDText.setText("");
+        QAOrderIDText.setText("");
         QAContentFailText.setText("");
         QAOrderMediaFailText.setText("");
         QAMediaFinishFailText.setText("");
         QAWorkmanshipFailText.setText("");
-        QACommentText.setText("");
-        buttonGroup1.clearSelection();
-        buttonGroup2.clearSelection();
-        buttonGroup3.clearSelection();
-        buttonGroup4.clearSelection();
+        QACorrectiveActionText.setText("");
+        QAContentBG.clearSelection();
+        QAMediaBG.clearSelection();
+        QAMediaFinishBG.clearSelection();
+        QAWorkmanshipBG.clearSelection();
         
     }//GEN-LAST:event_QAClearButtonActionPerformed
 
     private void QASearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASearchButtonActionPerformed
-        // TODO add your handling code here:
+        if(popQA()){
+            QAButtonLbl.setText("Record Found");
+        }
     }//GEN-LAST:event_QASearchButtonActionPerformed
-
+    private Boolean popQA(){
+        /* Author: Brad Clawson
+         * Populates OrderVerify tab by searching either Order Number or Verification Number
+         */
+        
+        //search by Order Number
+        if ((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
+                && (QAIDText.getText() == null || QAIDText.getText().isEmpty())){
+            workingQA = QAReport.getQAby("ORDERID", Integer.parseInt(QAOrderIDText.getText()));
+            
+        }
+        //search by Verification Number
+        else if ((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
+                && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())){
+            workingQA = QAReport.getQAby("VERID", Integer.parseInt(QAIDText.getText()));
+        }
+        else if((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
+                && (QAIDText.getText() == null || QAIDText.getText().isEmpty())){
+            QAButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
+            QAButtonLbl.setVisible(true);
+            return false;
+        }
+        else if((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
+                && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())){
+            QAButtonLbl.setText("Use Only One Field for Searches");
+            QAButtonLbl.setVisible(true);
+            return false;
+        }
+        
+        OVCustNameValLbl.setVisible(true);       
+        OVCustIDValLbl.setVisible(true);
+        OVMediaCatValLbl.setVisible(true);
+        OVContentValLbl.setVisible(true);
+        OVPayTypeValLbl.setVisible(true);
+        OVDepositValLbl.setVisible(true);
+        OVOrderIDText.setText(String.valueOf(workingOV.getOrder().getORDID()));
+        OVerIDText.setText(String.valueOf(workingOV.getVerID()));
+        OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
+                + " " + workingOV.getOrder().getCustomer().getCustLName());        
+        OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
+//      OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
+        OVContentValLbl.setText("(Content)");
+        OVContentValLbl.setForeground(Color.BLUE);
+        if (workingOV.getOrder().getPaymentOnAccount()){
+            OVPayTypeValLbl.setText("On Account");
+        }
+        if (!workingOV.getOrder().getPaymentOnAccount()){
+            OVPayTypeValLbl.setText("On Delivery");
+        }
+        OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
+//      OVAssignEmpCB
+        if(workingOV.getNameCheck()){
+            OVCorrectNamePassRb.setSelected(true);
+            OVNameFailText.setEditable(false);}
+        else if(!workingOV.getNameCheck()){
+            OVCorrectNameFailRb.setSelected(true);
+            OVNameFailText.setText(workingOV.getNameFailComment());
+            OVNameFailText.setEditable(true);}
+        if(workingOV.getAccountCheck()){
+            OVAcctNumPassRb.setSelected(true);
+            OVAcctNumFailText.setEditable(false);}
+        else if(!workingOV.getAccountCheck()){
+            OVAcctNumFailRb.setSelected(true);
+            OVAcctNumFailText.setText(workingOV.getAccountFailComment());
+            OVAcctNumFailText.setEditable(true);}
+        if(workingOV.getMediaCheck()){
+            OVMediaNumPassRb.setSelected(true);
+            OVMediaFailText.setEditable(false);}
+        else if(!workingOV.getMediaCheck()){
+            OVMediaNumFailRb.setSelected(true);
+            OVMediaFailText.setText(workingOV.getMediaFailComment());
+            OVMediaFailText.setEditable(true);}
+        if(workingOV.getContentCheck()){
+            OVContentPassRb.setSelected(true);
+            OVContentFailText.setEditable(false);}
+        else if(!workingOV.getContentCheck()){
+            OVContentFailRb.setSelected(true);
+            OVContentFailText.setText(workingOV.getContentFailComment());
+            OVContentFailText.setEditable(true);}
+        if(workingOV.getPaymentCheck()){
+            OVPayTypePassRb.setSelected(true);
+            OVPayTypeFailText.setEditable(false);}
+        else if(!workingOV.getPaymentCheck()){
+            OVPayTypeFailRb.setSelected(true);
+            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
+            OVPayTypeFailText.setEditable(true);}
+        if(workingOV.getDepositCheck()){
+            OVDepositPassRb.setSelected(true);
+            OVDepositFailText.setEditable(false);}
+        else if(!workingOV.getDepositCheck()){
+            OVDepositFailRb.setSelected(true);
+            OVDepositFailText.setText(workingOV.getDepositFailComment());
+            OVDepositFailText.setEditable(true);}
+        
+        if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
+                OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
+                OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected())
+            {
+            OVCommentsText.setText(workingOV.getCorrectiveActionComment());
+            OVCommentsText.setEditable(true);
+            }
+        return true;
+    }
     private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
         this.OrderCUSTIDText.setText("");
         this.OrderNumberCB.removeAllItems();
@@ -2281,41 +2375,41 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_InvOnOrderTextActionPerformed
 
-    private void QACorrectContentPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentPassRbActionPerformed
+    private void QAContentCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentCheckPassRbActionPerformed
         QAContentFailText.setText("");
         QAContentFailText.setVisible(false);
-    }//GEN-LAST:event_QACorrectContentPassRbActionPerformed
+    }//GEN-LAST:event_QAContentCheckPassRbActionPerformed
 
-    private void QACorrectMediaPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaPassRbActionPerformed
+    private void QAMediaCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaCheckPassRbActionPerformed
         QAOrderMediaFailText.setText("");
         QAOrderMediaFailText.setVisible(false);
-    }//GEN-LAST:event_QACorrectMediaPassRbActionPerformed
+    }//GEN-LAST:event_QAMediaCheckPassRbActionPerformed
 
-    private void QAMediaFinishPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishPassRbActionPerformed
+    private void QAMediaFinishCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishCheckPassRbActionPerformed
         QAMediaFinishFailText.setText("");
         QAMediaFinishFailText.setVisible(false);
-    }//GEN-LAST:event_QAMediaFinishPassRbActionPerformed
+    }//GEN-LAST:event_QAMediaFinishCheckPassRbActionPerformed
 
-    private void QAWorkmanshipPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipPassRbActionPerformed
+    private void QAWorkmanshipCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipCheckPassRbActionPerformed
         QAWorkmanshipFailText.setText("");
         QAWorkmanshipFailText.setVisible(false);
-    }//GEN-LAST:event_QAWorkmanshipPassRbActionPerformed
+    }//GEN-LAST:event_QAWorkmanshipCheckPassRbActionPerformed
 
-    private void QACorrectContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectContentFailRbActionPerformed
+    private void QAContentCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentCheckFailRbActionPerformed
         QAContentFailText.setVisible(true);
-    }//GEN-LAST:event_QACorrectContentFailRbActionPerformed
+    }//GEN-LAST:event_QAContentCheckFailRbActionPerformed
 
-    private void QACorrectMediaFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QACorrectMediaFailRbActionPerformed
+    private void QAMediaCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaCheckFailRbActionPerformed
         QAOrderMediaFailText.setVisible(true);
-    }//GEN-LAST:event_QACorrectMediaFailRbActionPerformed
+    }//GEN-LAST:event_QAMediaCheckFailRbActionPerformed
 
-    private void QAMediaFinishFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishFailRbActionPerformed
+    private void QAMediaFinishCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishCheckFailRbActionPerformed
         QAMediaFinishFailText.setVisible(true);
-    }//GEN-LAST:event_QAMediaFinishFailRbActionPerformed
+    }//GEN-LAST:event_QAMediaFinishCheckFailRbActionPerformed
 
-    private void QAWorkmanshipFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipFailRbActionPerformed
+    private void QAWorkmanshipCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipCheckFailRbActionPerformed
         QAWorkmanshipFailText.setVisible(true);
-    }//GEN-LAST:event_QAWorkmanshipFailRbActionPerformed
+    }//GEN-LAST:event_QAWorkmanshipCheckFailRbActionPerformed
 
     private void QAOrderMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderMediaFailTextActionPerformed
         // TODO add your handling code here:
@@ -2412,23 +2506,23 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          */
         
         //search by Order Number
-        if ((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
+        if ((OVOrderIDText.getText() != null && !OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
-            workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderNumText.getText()));
+            workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderIDText.getText()));
             
         }
         //search by Verification Number
-        else if ((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
+        else if ((OVOrderIDText.getText() == null || OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("VERID", Integer.parseInt(OVerIDText.getText()));
         }
-        else if((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
+        else if((OVOrderIDText.getText() == null || OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
             OVButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
             OVButtonLbl.setVisible(true);
             return false;
         }
-        else if((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
+        else if((OVOrderIDText.getText() != null && !OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
             OVButtonLbl.setText("Use Only One Field for Searches");
             OVButtonLbl.setVisible(true);
@@ -2441,7 +2535,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVContentValLbl.setVisible(true);
         OVPayTypeValLbl.setVisible(true);
         OVDepositValLbl.setVisible(true);
-        OVOrderNumText.setText(String.valueOf(workingOV.getOrder().getORDID()));
+        OVOrderIDText.setText(String.valueOf(workingOV.getOrder().getORDID()));
         OVerIDText.setText(String.valueOf(workingOV.getVerID()));
         OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
                 + " " + workingOV.getOrder().getCustomer().getCustLName());        
@@ -2518,7 +2612,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVPayTypeValLbl.setText("");
         OVDepositValLbl.setText("");
 //      OVAssignEmpCB.setText("");
-        OVOrderNumText.setText("");
+        OVOrderIDText.setText("");
         OVerIDText.setText("");
         OVNameBG.clearSelection();
         OVAccountBG.clearSelection();
@@ -2596,13 +2690,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             correctiveActionComment = (OVCommentsText.getText());
         }
         OrderVerify newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())),Login.emp, 
-                Order.getOrder(Integer.parseInt(OVOrderNumText.getText())), 
+                Order.getOrder(Integer.parseInt(OVOrderIDText.getText())), 
                 nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
                 depositCheck, nameComment, accountComment, mediaComment, contentComment,
                 paymentComment, depositComment,correctiveActionComment);
         newOV = OrderVerify.insertOrUpdateOV(newOV);
         OVerIDText.setText(String.valueOf(newOV.getVerID()));
-        OVOrderNumText.setText("");
+        OVOrderIDText.setText("");
         
         if(popOV()){        
         OVButtonLbl.setText("Create/Update Successful");}
@@ -2620,9 +2714,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_OVContentFailTextActionPerformed
 
-    private void OVOrderNumTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVOrderNumTextActionPerformed
+    private void OVOrderIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVOrderIDTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_OVOrderNumTextActionPerformed
+    }//GEN-LAST:event_OVOrderIDTextActionPerformed
 
     private void OrderStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderStatusCBActionPerformed
         // TODO add your handling code here:
@@ -2636,10 +2730,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_QAContentFailTextActionPerformed
 
-    private void QAIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAIDCBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QAIDCBActionPerformed
-
     private void emOrdersLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_emOrdersLstValueChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_emOrdersLstValueChanged
@@ -2652,10 +2742,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void OrderTypeShirtRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTypeShirtRBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderTypeShirtRBActionPerformed
-
-    private void QAOrderIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderIDCBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QAOrderIDCBActionPerformed
 
     private void EmpTypeCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpTypeCBActionPerformed
         // TODO add your handling code here:
@@ -2685,6 +2771,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void QAOrderIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderIDTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAOrderIDTextActionPerformed
+
+    private void QAIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAIDTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QAIDTextActionPerformed
 */
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
@@ -2801,8 +2895,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.ButtonGroup OVNameBG;
     private javax.swing.JTextField OVNameFailText;
     private javax.swing.JLabel OVNumberLbl;
+    private javax.swing.JTextField OVOrderIDText;
     private javax.swing.JLabel OVOrderNumLbl;
-    private javax.swing.JTextField OVOrderNumText;
     private javax.swing.JLabel OVPassLbl;
     private javax.swing.JRadioButton OVPayTypeFailRb;
     private javax.swing.JTextField OVPayTypeFailText;
@@ -2854,44 +2948,43 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel OrderVerifyByLbl;
     private javax.swing.JPanel OrderVerifyPanel;
     private javax.swing.JLabel QAAssignedToLbl;
+    private javax.swing.JLabel QAButtonLbl;
     private javax.swing.JButton QAClearButton;
     private javax.swing.JLabel QACommentLbl;
-    private javax.swing.JScrollPane QACommentTB;
-    private javax.swing.JTextArea QACommentText;
+    private javax.swing.ButtonGroup QAContentBG;
+    private javax.swing.JRadioButton QAContentCheckFailRb;
+    private javax.swing.JRadioButton QAContentCheckPassRb;
     private javax.swing.JTextField QAContentFailText;
-    private javax.swing.JRadioButton QACorrectContentFailRb;
-    private javax.swing.JLabel QACorrectContentLbl;
-    private javax.swing.JRadioButton QACorrectContentPassRb;
-    private javax.swing.JRadioButton QACorrectMediaFailRb;
-    private javax.swing.JRadioButton QACorrectMediaPassRb;
-    private javax.swing.JLabel QACorrectOrderMediaLbl;
+    private javax.swing.JLabel QAContentLbl;
+    private javax.swing.JScrollPane QACorrectiveActionTB;
+    private javax.swing.JTextArea QACorrectiveActionText;
     private javax.swing.JLabel QACreatedByLbl;
-    private javax.swing.JLabel QAEngrFinishLbl;
+    private javax.swing.JLabel QAFailCommentLbl;
     private javax.swing.JLabel QAFailLbl;
-    private javax.swing.JComboBox QAIDCB;
     private javax.swing.JLabel QAIDLbl;
+    private javax.swing.JTextField QAIDText;
+    private javax.swing.ButtonGroup QAMediaBG;
+    private javax.swing.JRadioButton QAMediaCheckFailRb;
+    private javax.swing.JRadioButton QAMediaCheckPassRb;
     private javax.swing.ButtonGroup QAMediaFinishBG;
-    private javax.swing.JRadioButton QAMediaFinishFailRb;
+    private javax.swing.JRadioButton QAMediaFinishCheckFailRb;
+    private javax.swing.JRadioButton QAMediaFinishCheckPassRb;
     private javax.swing.JTextField QAMediaFinishFailText;
     private javax.swing.JLabel QAMediaFinishLbl;
-    private javax.swing.JRadioButton QAMediaFinishPassRb;
-    private javax.swing.JLabel QAModifiedByLbl;
-    private javax.swing.ButtonGroup QAOrderContentBG;
-    private javax.swing.JComboBox QAOrderIDCB;
+    private javax.swing.JLabel QAMediaLbl;
     private javax.swing.JLabel QAOrderIDLbl;
-    private javax.swing.ButtonGroup QAOrderMediaBG;
+    private javax.swing.JTextField QAOrderIDText;
     private javax.swing.JTextField QAOrderMediaFailText;
     private javax.swing.JPanel QAPanel;
     private javax.swing.JLabel QAPassLbl;
-    private javax.swing.JLabel QAReasonLbl;
     private javax.swing.JButton QASearchButton;
-    private javax.swing.JLabel QASearchLbl;
     private javax.swing.JButton QASubmitButton;
     private javax.swing.JLabel QAVerifiedByLbl;
     private javax.swing.ButtonGroup QAWorkmanshipBG;
-    private javax.swing.JRadioButton QAWorkmanshipFailRb;
+    private javax.swing.JRadioButton QAWorkmanshipCheckFailRb;
+    private javax.swing.JRadioButton QAWorkmanshipCheckPassRb;
     private javax.swing.JTextField QAWorkmanshipFailText;
-    private javax.swing.JRadioButton QAWorkmanshipPassRb;
+    private javax.swing.JLabel QAWorkmanshipLbl;
     private javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
