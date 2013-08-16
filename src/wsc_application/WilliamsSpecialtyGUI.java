@@ -9,7 +9,9 @@ package wsc_application;
  * 
  * Basic GUI Layout &
  * Order Verify Tab Events &
- * Quality Assurance Tab Events
+ * Quality Assurance Tab Events &
+ * User Access Level Events
+ * through Login/Logout
  * Created by Brad Clawson
  *  
  * GUI Modifications &
@@ -18,7 +20,8 @@ package wsc_application;
  * Created by Jacob Savage
  * 
  * GUI Modifications &
- * Order Tab Events
+ * Order Tab Events &
+ * Login Tab Events
  * Created by Paul Durivage
  * 
  * GUI Modifications &
