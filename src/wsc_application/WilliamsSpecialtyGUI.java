@@ -2362,22 +2362,45 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
 
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
-        popOV(); 
+        if(popOV()){
+            OVButtonLbl.setText("Record Found");
+        } 
     }//GEN-LAST:event_OVSearchButtonActionPerformed
-        private void popOV(){
+    private Boolean popOV(){
+        /* Author: Brad Clawson
+         * Populates OrderVerify tab by searching either Order Number or Verification Number
+         */
+        
+        //search by Order Number
         if ((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderNumText.getText()));
             
         }
+        //search by Verification Number
         else if ((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
                 && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("VERID", Integer.parseInt(OVerIDText.getText()));
         }
-        else {
-            OVButtonLbl.setText("Enter Valid Search Data");
+        else if((OVOrderNumText.getText() == null || OVOrderNumText.getText().isEmpty())
+                && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
+            OVButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
             OVButtonLbl.setVisible(true);
+            return false;
         }
+        else if((OVOrderNumText.getText() != null && !OVOrderNumText.getText().isEmpty())
+                && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
+            OVButtonLbl.setText("Use Only One Field for Searches");
+            OVButtonLbl.setVisible(true);
+            return false;
+        }
+        
+        OVCustNameValLbl.setVisible(true);       
+        OVCustIDValLbl.setVisible(true);
+        OVMediaCatValLbl.setVisible(true);
+        OVContentValLbl.setVisible(true);
+        OVPayTypeValLbl.setVisible(true);
+        OVDepositValLbl.setVisible(true);
         OVOrderNumText.setText(String.valueOf(workingOV.getOrder().getORDID()));
         OVerIDText.setText(String.valueOf(workingOV.getVerID()));
         OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
@@ -2430,7 +2453,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
             OVCommentsText.setText(workingOV.getCorrectiveActionComment());
             }
+        return true;
         }
+    
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
         OVCustNameValLbl.setText("");
         OVCustIDValLbl.setText("");
@@ -2464,7 +2489,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
-        workingOV.setVerID(Integer.parseInt(OVerIDText.getText()));
+         workingOV.setVerID(Integer.parseInt(OVerIDText.getText()));
         workingOV.setOrder(Order.getOrder(Integer.parseInt(OVOrderNumText.getText())));
         workingOV.setVerifiedBy(Login.emp);
         if(OVCorrectNamePassRb.isSelected()){
@@ -2514,8 +2539,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
             workingOV.setCorrectiveActionComment(OVCommentsText.getText());
         }
-        workingOV = OrderVerify.insertOrUpdateOV(workingOV);
-        popOV();
+        
+        OrderVerify newOV = OrderVerify.insertOrUpdateOV(workingOV);
+        
+        OVClearFieldButton.doClick();
+        OVerIDText.setText(String.valueOf(newOV.getVerID()));
+        OVButtonLbl.setText("almost there");        
+        if(popOV()){        
+        OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
 
     private void OrderTotalTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTotalTextActionPerformed
