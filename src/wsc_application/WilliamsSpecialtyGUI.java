@@ -1967,7 +1967,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             return false;
         }
         //populate Inventory Item Tab fields
-        
+        InvItemIDText.setText(String.valueOf(workingII.getItemNumber()));
+        InvManIDText.setText(String.valueOf(workingII.getManufacturerID()));
+        InvItemNameText.setText(workingII.getName());
+        InvOnHandText.setText(String.valueOf(workingII.getQtyOnHand()));
+        InvOnOrderText.setText(String.valueOf(workingII.getQtyOnOrder()));
+        InvDelDateText.setText(workingII.getDeliveryDate());
         return true;
     }
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
