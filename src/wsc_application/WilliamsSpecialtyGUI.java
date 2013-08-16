@@ -1765,7 +1765,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     
     // <editor-fold defaultstate="collapsed" desc="Brad Clawson: InventoryItem Search,Submit,Clear Buttons">
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
-                        // TODO add your handling code here:
+        if(popII()){
+            InvButtonLbl.setText("Item Found");
+        }
     }//GEN-LAST:event_InvSearchButtonActionPerformed
     private Boolean popII(){    /* 
          * Brad Clawson: Populates Inventory Item tab by searching either ItemID Number,
