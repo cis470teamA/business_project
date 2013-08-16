@@ -2664,11 +2664,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderUpdateBtnActionPerformed
         // By Paul
     }//GEN-LAST:event_OrderUpdateBtnActionPerformed
-
+/*
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
+*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
     private javax.swing.JLabel CUSTIDLbl;
