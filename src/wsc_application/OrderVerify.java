@@ -131,7 +131,8 @@ public class OrderVerify {
                     + "accountCheck,mediaCheck,contentCheck,paymentCheck,depositCheck,nameFailComment,"
                     + "accountFailComment,mediaFailComment,contentFailComment,paymentFailComment,"
                     + "depositFailComment,correctiveActionComment)"
-                    + " values (0, "
+                    + " values ("
+                    + ov.VERID + ", "
                     + ov.verifiedBy.getEmpId() + ", "
                     + ov.order.getORDID() + ", "
                     + ov.nameCheck + ", "
@@ -146,16 +147,16 @@ public class OrderVerify {
                     + ov.contentFailComment + "', '"
                     + ov.paymentFailComment + "', '"
                     + ov.depositFailComment + "', '"
-                    + ov.correctiveActionComment + "');"
-                   /* + "ON DUPLICATE KEY UPDATE cis470.ORDERVERIFY " 
-                    + "SET verifiedBy = " + ov.verifiedBy.getEmpId() + ", "
+                    + ov.correctiveActionComment + "')"
+                    + "ON DUPLICATE KEY UPDATE " 
+                    + "EMPID = " + ov.verifiedBy.getEmpId() + ", "
                     + "ORDERID = "+ ov.order.getORDID() + ", "
-                    + "nameCheck = " + ov.nameCheck + ", "
-                    + "accountCheck = " + ov.accountCheck + ", "
-                    + "mediaCheck = " + ov.mediaCheck + ", "
-                    + "contentCheck = " + ov.contentCheck + ", "
-                    + "paymentCheck = " + ov.paymentCheck + ", "
-                    + "depositCheck = " +ov.depositCheck + ", "
+                    + "nameCheck = " + ov.getNameCheck() + ", "
+                    + "accountCheck = " + ov.getAccountCheck() + ", "
+                    + "mediaCheck = " + ov.getMediaCheck() + ", "
+                    + "contentCheck = " + ov.getContentCheck() + ", "
+                    + "paymentCheck = " + ov.getPaymentCheck() + ", "
+                    + "depositCheck = " +ov.getDepositCheck() + ", "
                     + "nameFailComment = '" + ov.nameFailComment + "', "
                     + "accountFailComment = '" + ov.accountFailComment + "', "
                     + "mediaFailComment = '" + ov.mediaFailComment + "', "
@@ -163,7 +164,7 @@ public class OrderVerify {
                     + "paymentFailComment = '" + ov.paymentFailComment + "', "
                     + "depositFailComment = '" + ov.depositFailComment + "', "
                     + "correctiveActionComment = '" + ov.correctiveActionComment
-                    + "';"*/;
+                    + "';";
             System.out.println(query);
             mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
             int key = -1;
