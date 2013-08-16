@@ -2084,7 +2084,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          Login.processLogin(LoginEMPIDTxt.getText(), LoginPassText.getText());
 //         SetAccessLevel();
     }//GEN-LAST:event_LoginButtonActionPerformed
-  /*This method will set the access level of the program according to least
+  /*Brad Clawson: This method will set the access level of the program according to least
    *privelege principles. This will be implemented at login and the tabs will be
    *available according to Employee type
    */
@@ -2410,6 +2410,15 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void LogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutButtonActionPerformed
         Login.processLogout();
+/*      //Brad: make all tabs except login invisible Login action will set user access
+        CustomerInfoPanel.setVisible(false);
+        EmployeeInfoPanel.setVisible(false);
+        OrderTabbedPane.setVisible(false);
+        OrderInfoPanel.setVisible(false);
+        OrderVerifyPanel.setVisible(false);
+        QAPanel.setVisible(false);
+        InventoryPanel.setVisible(false);
+*/ 
     }//GEN-LAST:event_LogoutButtonActionPerformed
 
     private void EmpLNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpLNameTextActionPerformed
