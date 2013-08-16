@@ -47,13 +47,14 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
     public WilliamsSpecialtyGUI() {
         initComponents();
         HideEmpPassword();
- /*           CustomerInfoPanel.setVisible(false);
-            EmployeeInfoPanel.setVisible(false);
-            OrderTabbedPane.setVisible(false);
-            OrderInfoPanel.setVisible(false);
-            OrderVerifyPanel.setVisible(false);
-            QAPanel.setVisible(false);
-            InventoryPanel.setVisible(false);
+ /*     //Brad: make all tabs except login invisible Login action will set user access
+  *     CustomerInfoPanel.setVisible(false);
+        EmployeeInfoPanel.setVisible(false);
+        OrderTabbedPane.setVisible(false);
+        OrderInfoPanel.setVisible(false);
+        OrderVerifyPanel.setVisible(false);
+        QAPanel.setVisible(false);
+        InventoryPanel.setVisible(false);
 */    }
 
     /**
@@ -2083,7 +2084,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          Login.processLogin(LoginEMPIDTxt.getText(), LoginPassText.getText());
 //         SetAccessLevel();
     }//GEN-LAST:event_LoginButtonActionPerformed
-/*    private void SetAccessLevel(){
+  /*This method will set the access level of the program according to least
+   *privelege principles. This will be implemented at login and the tabs will be
+   *available according to Employee type
+   */
+/*  private void SetAccessLevel(){
         if ((Login.emp.getEmpType() == "OM")||(Login.emp.getEmpType() == "AD")){
             CustomerInfoPanel.setVisible(true);
             EmployeeInfoPanel.setVisible(true);
@@ -2104,7 +2109,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             InvOrderButton.setEnabled(false);
         }
         if ((Login.emp.getEmpType() == "PS")||(Login.emp.getEmpType() == "ES")){
-            CustomerInfoPanel.setVisible(true);            
+            CustomerInfoPanel.setVisible(false);            
             CustStreet1Text.setVisible(false);
             CustStreet2Text.setVisible(false);
             CustCityText.setVisible(false);
@@ -2131,7 +2136,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             InventoryPanel.setVisible(true);
         }
         if (Login.emp.getEmpType() == "SC"){
-            CustomerInfoPanel.setVisible(true);            
+            CustomerInfoPanel.setVisible(false);            
             CustStreet1Text.setVisible(false);
             CustStreet2Text.setVisible(false);
             CustCityText.setVisible(false);
