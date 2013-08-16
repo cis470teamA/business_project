@@ -104,14 +104,14 @@ public class QAReport {
          }
         
     }
-    public static QAReport insertOrUpdateOV(QAReport qa){
+    public static QAReport insertOrUpdateQA(QAReport qa){
         QAReport thisQA = null;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            String query = "INSERT INTO QUALITYASSURANCE (QAID,EMPID,ORDID,contentCheck,mediaCheck,"
-                    + "workmanshipCheck,contentFailComment,mediaFailComment,mediaFinishFailComment,"
+            String query = "INSERT INTO QUALITYASSURANCE (QAID,EMPID,ORDERID,contentCheck,mediaCheck,"
+                    + "mediaFinish, workmanship,contentFailComment,mediaFailComment,mediaFinishFailComment,"
                     + "workmanshipFailComment,correctiveActionComment) values ("
                     + qa.QAID + ", "
                     + qa.inspectedBy.getEmpId() + ", "
@@ -146,7 +146,7 @@ public class QAReport {
                 key = rs.getInt(1);
             }
             if (key > 0) {
-                thisQA = QAReport.getQAby("VERID", key);
+                thisQA = QAReport.getQAby("QAID", key);
             }
             //else{
             //    thisOV = OrderVerify.getOVby("VERID", qa.VERID);
@@ -222,6 +222,9 @@ public class QAReport {
     }
     public int getQAID(){
         return QAID;
+    }
+    public Order getOrder(){
+        return order;
     }
     public Employee getInspectedBy(){
         return inspectedBy;
