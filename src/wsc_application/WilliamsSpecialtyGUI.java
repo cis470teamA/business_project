@@ -5,9 +5,33 @@
 package wsc_application;
 
 /**
- *
- * @author Bradley
- */
+ * CIS470 Senior Project
+ * Williams Specialty
+ * Business Automation Project
+ * 
+ * Group A:
+ * 
+ * Basic GUI Layout &
+ * Order Verify Tab Events &
+ * Quality Assurance Tab Events
+ * Created by Brad Clawson
+ * for CIS470 GroupA
+ * 
+ * GUI Modifications &
+ * Employee Tab Events &
+ * Customer Tab Events 
+ * Created by Jacob Savage
+ * 
+ * GUI Modifications &
+ * Order Tab Events
+ * Created by Paul Durivage
+ * 
+ * GUI Modifications &
+ * Inventory Tab Events
+ * Created by Joshua Petersen
+ **/
+
+
 import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -1313,16 +1337,28 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     QAButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
     QAButtonLbl.setText("* Use only one field for searches");
 
+    QAOrderIDText.addFocusListener(new java.awt.event.FocusAdapter() {
+        public void focusGained(java.awt.event.FocusEvent evt) {
+            QAOrderIDTextFocusGained(evt);
+        }
+    });
+
+    QAIDText.addFocusListener(new java.awt.event.FocusAdapter() {
+        public void focusGained(java.awt.event.FocusEvent evt) {
+            QAIDTextFocusGained(evt);
+        }
+    });
+
     javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
     QAPanel.setLayout(QAPanelLayout);
     QAPanelLayout.setHorizontalGroup(
         QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QAPanelLayout.createSequentialGroup()
+        .addGroup(QAPanelLayout.createSequentialGroup()
             .addGap(120, 120, 120)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(QAOrderIDLbl)
                 .addComponent(QAIDLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+            .addGap(23, 23, 23)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1357,26 +1393,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(QAContentFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(QAMediaFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(QAFailCommentLbl)))
-                .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(QACommentLbl)
                 .addGroup(QAPanelLayout.createSequentialGroup()
-                    .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, QAPanelLayout.createSequentialGroup()
-                            .addComponent(QASearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(QASubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(QAButtonLbl, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(QASearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(QASubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(QAClearButton))
+                .addComponent(QAOrderIDText, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                .addComponent(QAIDText)
                 .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(QAOrderIDText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                    .addComponent(QAIDText, javax.swing.GroupLayout.Alignment.LEADING)))
-            .addGap(197, 197, 197))
+                    .addComponent(QAButtonLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
+            .addContainerGap(197, Short.MAX_VALUE))
     );
 
     QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAContentFailText, QAMediaFailText, QAMediaFinishFailText, QAWorkmanshipFailText});
 
     QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAIDText, QAOrderIDText});
+
+    QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAClearButton, QASearchButton, QASubmitButton});
 
     QAPanelLayout.setVerticalGroup(
         QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1418,18 +1454,18 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QAWorkmanshipCheckFailRb)
                 .addComponent(QAWorkmanshipCheckPassRb)
                 .addComponent(QAWorkmanshipLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
             .addComponent(QACommentLbl)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(18, 18, 18)
-            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(QASearchButton)
                 .addComponent(QASubmitButton)
                 .addComponent(QAClearButton))
             .addGap(2, 2, 2)
-            .addComponent(QAButtonLbl)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(QAButtonLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(QACreatedByLbl)
                 .addComponent(QAAssignedToLbl))
@@ -1771,6 +1807,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
+    /* Brad Clawson: These class objects are created to represent the global objects
+     * that are passed between the tabs in the GUI -
+     */
     Employee login = new Employee();
     Customer workingCustomer = new Customer();
     Order workingOrder = new Order();
@@ -2045,11 +2084,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderCUSTIDTextActionPerformed
 
     private void QASubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASubmitButtonActionPerformed
+        /* Brad Clawson: This method will pass GUI field data in the form of a 
+         * QAReport object to QAReport.insertOrUpdateQA() that will determine if
+         * the report id number exists. If the report id does not exist, or is 0, 
+         * the method will create a new record. If the report id does exist the 
+         * method updates that record with the information on the screen. The 
+         * method clears the OrderIDText field and populates the QAIDText field 
+         * to populate the screen with the information that is searched for and 
+         * verified by the popQA() method. If popQA() finds the new or updated 
+         * record, and populates the screen, the button information label will 
+         * indicate that the insert/update was successful. If not successful the
+         * label will indicate that as well. -
+         */
+        //Assign bool and string variables for object constructor
         Boolean contentCheck = false, mediaCheck = false, mediaFinishCheck = false, 
                 workmanshipCheck = false, depositCheck = false; 
         String contentComment = "", mediaComment = "", mediaFinishComment = "",
                  workmanshipComment = "", depositComment = "", 
                 correctiveActionComment = "";
+        //Assign bool values according to the Radio buttons selected
+        //Set fail comment string values if QA check fails
         if(QAContentCheckPassRb.isSelected()){
             contentCheck = Boolean.TRUE;
         }
@@ -2084,21 +2138,27 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 QAWorkmanshipCheckFailRb.isSelected()){
             correctiveActionComment = (QACorrectiveActionText.getText());
         }
+        //Create new QAReport object with screen data to be passed to insertOrUpdateQA()
         QAReport newQA = new QAReport((Integer.parseInt(QAIDText.getText())), 
                 Order.getOrder(Integer.parseInt(QAOrderIDText.getText())),
                 Login.emp, contentCheck, mediaCheck, mediaFinishCheck, 
                 workmanshipCheck, contentComment, mediaComment, mediaFinishComment,
                 workmanshipComment, correctiveActionComment);
+        //Object that is returned verifies that the object was created
         newQA = QAReport.insertOrUpdateQA(newQA);
+        //prepare the screen for popQA;
         QAIDText.setText(String.valueOf(newQA.getQAID()));
         QAOrderIDText.setText("");
-        
+        //Object is verified a second time through popQA and QAbuttonLbl informs results
         if(popQA()){        
         QAButtonLbl.setText("Create/Update Successful");}
+        else {
+            QAButtonLbl.setText("Create/Update Unsuccessful");
+        }
     }//GEN-LAST:event_QASubmitButtonActionPerformed
 
     private void QAClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAClearButtonActionPerformed
-        // Clear QA data
+        //Brad Clawson: Clear information entered into QA tab
         QAIDText.setText("");
         QAOrderIDText.setText("");
         QAContentFailText.setText("");
@@ -2110,44 +2170,64 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAMediaBG.clearSelection();
         QAMediaFinishBG.clearSelection();
         QAWorkmanshipBG.clearSelection();
+        QAIDText.setBackground(Color.white);
+        QAOrderIDText.setBackground(Color.white);
         
     }//GEN-LAST:event_QAClearButtonActionPerformed
 
     private void QASearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASearchButtonActionPerformed
+        //Brad Clawson: This method calls the popQA() method to populate the tab
         if(popQA()){
             QAButtonLbl.setText("Record Found");
         }
+        else{
+            QAButtonLbl.setText(QAButtonLbl.getText() + ".\n"+"Record Not Found");
+        }
     }//GEN-LAST:event_QASearchButtonActionPerformed
     private Boolean popQA(){
-        /* Author: Brad Clawson
-         * Populates Quality Assurance tab by searching either Order Number or Verification Number
+        /* 
+         * Brad Clawson: Populates Quality Assurance tab by searching either Order Number
+         * or Verification Number, but not both. If search results
          */
         
-        //search by Order Number
+        //IF OrderID is not null or empty AND QAID is null or empty search by OrderID
         if ((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
                 && (QAIDText.getText() == null || QAIDText.getText().isEmpty())){
             workingQA = QAReport.getQAby("ORDERID", Integer.parseInt(QAOrderIDText.getText()));
-            
+            QAIDText.setBackground(Color.white);
+            QAOrderIDText.setBackground(Color.white);
         }
-        //search by Verification Number
+        //IF QAID is not null or empty AND OrderID is null or empty search by QAID
         else if ((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
                 && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())){
             workingQA = QAReport.getQAby("QAID", Integer.parseInt(QAIDText.getText()));
+            QAIDText.setBackground(Color.white);
+            QAOrderIDText.setBackground(Color.white);
         }
+        //IF OrderID and QAID are null or empty, notify user to enter proper search criteria
         else if((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
                 && (QAIDText.getText() == null || QAIDText.getText().isEmpty())){
-            QAButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
+            QAButtonLbl.setText("Please enter a search Criteria");
             QAButtonLbl.setVisible(true);
+            QAIDText.setBackground(Color.YELLOW);
+            QAOrderIDText.setBackground(Color.YELLOW);
+            //page not populated, return false for failure
             return false;
         }
+        //IF OrderID and QAID both not null or empty, notify user to enter single search criteria
         else if((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
                 && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())){
-            QAButtonLbl.setText("Use Only One Field for Searches");
+            QAButtonLbl.setText("Use a single search Criteria");
             QAButtonLbl.setVisible(true);
+            QAIDText.setBackground(Color.YELLOW);
+            QAOrderIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
             return false;
         }
+        //fill tab content with values from QAReport that was returned in search
         QAOrderIDText.setText(String.valueOf(workingQA.getOrder().getORDID()));
         QAIDText.setText(String.valueOf(workingQA.getQAID()));
+        //select correct radio boxes and set fail comments editable or ineditable
         if(workingQA.getContentCheck()){
             QAContentCheckPassRb.setSelected(true);
             QAContentFailText.setEditable(false);}
@@ -2176,6 +2256,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             QAWorkmanshipCheckFailRb.setSelected(true);
             QAWorkmanshipFailText.setText(workingQA.getWorkmanshipFailComment());
             QAWorkmanshipFailText.setEditable(true);}
+        //page successfully populated return true to indicate success
         return true;
     }
     private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
@@ -2365,39 +2446,43 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_InvOnOrderTextActionPerformed
 
     private void QAContentCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentCheckPassRbActionPerformed
-        QAContentFailText.setText("");
-        QAContentFailText.setVisible(false);
+        //Brad: when passRb is pressed, failure comment becomes uneditable
+        QAContentFailText.setEditable(false);
     }//GEN-LAST:event_QAContentCheckPassRbActionPerformed
 
     private void QAMediaCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaCheckPassRbActionPerformed
-        QAMediaFailText.setText("");
-        QAMediaFailText.setVisible(false);
+        //Brad: when passRb is pressed, failure comment becomes uneditable
+        QAMediaFailText.setEditable(false);
     }//GEN-LAST:event_QAMediaCheckPassRbActionPerformed
 
     private void QAMediaFinishCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishCheckPassRbActionPerformed
-        QAMediaFinishFailText.setText("");
-        QAMediaFinishFailText.setVisible(false);
+        //Brad: when passRb is pressed, failure comment becomes uneditable
+        QAMediaFinishFailText.setEditable(false);
     }//GEN-LAST:event_QAMediaFinishCheckPassRbActionPerformed
 
     private void QAWorkmanshipCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipCheckPassRbActionPerformed
-        QAWorkmanshipFailText.setText("");
-        QAWorkmanshipFailText.setVisible(false);
+        //Brad: when passRb is pressed, failure comment becomes uneditable
+        QAWorkmanshipFailText.setEditable(false);
     }//GEN-LAST:event_QAWorkmanshipCheckPassRbActionPerformed
 
     private void QAContentCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentCheckFailRbActionPerformed
-        QAContentFailText.setVisible(true);
+        //Brad: when failRb is pressed, failure comment becomes editable
+        QAContentFailText.setEditable(true);
     }//GEN-LAST:event_QAContentCheckFailRbActionPerformed
 
     private void QAMediaCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaCheckFailRbActionPerformed
-        QAMediaFailText.setVisible(true);
+        //Brad: when failRb is pressed, failure comment becomes editable
+        QAMediaFailText.setEditable(true);
     }//GEN-LAST:event_QAMediaCheckFailRbActionPerformed
 
     private void QAMediaFinishCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFinishCheckFailRbActionPerformed
-        QAMediaFinishFailText.setVisible(true);
+        //Brad: when failRb is pressed, failure comment becomes editable
+        QAMediaFinishFailText.setEditable(true);
     }//GEN-LAST:event_QAMediaFinishCheckFailRbActionPerformed
 
     private void QAWorkmanshipCheckFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAWorkmanshipCheckFailRbActionPerformed
-        QAWorkmanshipFailText.setVisible(true);
+        //Brad: when failRb is pressed, failure comment becomes editable
+        QAWorkmanshipFailText.setEditable(true);
     }//GEN-LAST:event_QAWorkmanshipCheckFailRbActionPerformed
 
     private void QAMediaFailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAMediaFailTextActionPerformed
@@ -2405,6 +2490,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_QAMediaFailTextActionPerformed
 
     private void OVPayTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypePassRbActionPerformed
+        //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVPayTypePassRb.isSelected()){
             OVPayTypeFailText.setEditable(false);
         }
@@ -2415,18 +2501,21 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVPayTypeFailTextActionPerformed
 
     private void OVPayTypeFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailRbActionPerformed
+        //Brad: when failRb is pressed, failure comment becomes editable
         if(OVPayTypeFailRb.isSelected()){
             OVPayTypeFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVPayTypeFailRbActionPerformed
 
     private void OVDepositFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositFailRbActionPerformed
+        //Brad: when failRb is pressed, failure comment becomes editable
         if(OVDepositFailRb.isSelected()){
             OVDepositFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVDepositFailRbActionPerformed
 
     private void OVDepositPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositPassRbActionPerformed
+        //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVDepositPassRb.isSelected()){
             OVDepositFailText.setEditable(false);
         }
@@ -2437,87 +2526,104 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVAcctNumFailTextActionPerformed
 
     private void OVContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentFailRbActionPerformed
+        //Brad: when failRb is pressed, failure comment becomes editable
         if(OVContentFailRb.isSelected()){
             OVContentFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVContentFailRbActionPerformed
 
     private void OVMediaNumFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaNumFailRbActionPerformed
+        //Brad: when failRb is pressed, failure comment becomes editable
         if(OVMediaNumFailRb.isSelected()){
             OVMediaFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVMediaNumFailRbActionPerformed
 
     private void OVAcctNumFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumFailRbActionPerformed
+        //Brad: when failRb is pressed, failure comment becomes editable
         if(OVAcctNumFailRb.isSelected()){
             OVAcctNumFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVAcctNumFailRbActionPerformed
 
     private void OVCorrectNameFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVCorrectNameFailRbActionPerformed
+        //Brad: when failRb is pressed, failure comment becomes editable
         if(OVCorrectNameFailRb.isSelected()){
             OVNameFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVCorrectNameFailRbActionPerformed
 
     private void OVContentPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentPassRbActionPerformed
+        //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVContentPassRb.isSelected()){
             OVContentFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVContentPassRbActionPerformed
 
     private void OVMediaNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaNumPassRbActionPerformed
+        //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVMediaNumPassRb.isSelected()){
             OVMediaFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVMediaNumPassRbActionPerformed
 
     private void OVAcctNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumPassRbActionPerformed
+        //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVAcctNumPassRb.isSelected()){
             OVAcctNumFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVAcctNumPassRbActionPerformed
 
     private void OVCorrectNamePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVCorrectNamePassRbActionPerformed
+        //Brad: when passRb is pressed, failure comment becomes uneditable
         if(OVCorrectNamePassRb.isSelected()){
             OVNameFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
 
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
+        //Brad Clawson: search by OVID or OrderID through popID() and indicate success or failure
         if(popOV()){
             OVButtonLbl.setText("Record Found");
         } 
+        else{
+            OVButtonLbl.setText(OVButtonLbl.getText()+ ". Record not Found")
+        }
     }//GEN-LAST:event_OVSearchButtonActionPerformed
     private Boolean popOV(){
-        /* Author: Brad Clawson
-         * Populates OrderVerify tab by searching either Order Number or Verification Number
+        /* 
+         * Brad Clawson: Populates Quality Assurance tab by searching either Order Number
+         * or Verification Number, but not both. If search results
          */
         
-        //search by Order Number
+        //IF OrderID is not null or empty AND OVID is null or empty search by OrderID
         if ((OVOrderIDText.getText() != null && !OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderIDText.getText()));
             
         }
-        //search by Verification Number
+        //IF OVID is not null or empty AND OrderID is null or empty search by OVID
         else if ((OVOrderIDText.getText() == null || OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
             workingOV = OrderVerify.getOVby("VERID", Integer.parseInt(OVerIDText.getText()));
         }
+        //If both OVID and OrderID are null or empty notify and return search failed
         else if((OVOrderIDText.getText() == null || OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() == null || OVerIDText.getText().isEmpty())){
             OVButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
             OVButtonLbl.setVisible(true);
+            //search failed return false
             return false;
         }
+        //If neither OVID and OrderID are null or empty notify and return search failed
         else if((OVOrderIDText.getText() != null && !OVOrderIDText.getText().isEmpty())
                 && (OVerIDText.getText() != null && !OVerIDText.getText().isEmpty())){
             OVButtonLbl.setText("Use Only One Field for Searches");
             OVButtonLbl.setVisible(true);
+            //search failed return false
             return false;
         }
-        
+        // make Order information available for easy evaluation
         OVCustNameValLbl.setVisible(true);       
         OVCustIDValLbl.setVisible(true);
         OVMediaCatValLbl.setVisible(true);
@@ -2532,6 +2638,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 //      OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getMedia().getItemID));
         OVContentValLbl.setText("(Content)");
         OVContentValLbl.setForeground(Color.BLUE);
+        //set screen values for returned OrderVerify object
         if (workingOV.getOrder().getPaymentOnAccount()){
             OVPayTypeValLbl.setText("On Account");
         }
@@ -2540,6 +2647,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
         OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
 //      OVAssignEmpCB
+        //set radio button values and set fail comments editable or ineditable
         if(workingOV.getNameCheck()){
             OVCorrectNamePassRb.setSelected(true);
             OVNameFailText.setEditable(false);}
@@ -2590,10 +2698,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVCommentsText.setText(workingOV.getCorrectiveActionComment());
             OVCommentsText.setEditable(true);
             }
+        //tab items successfully populated, return true for success
         return true;
         }
     
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
+        //Brad Clawson: reset all values on OV tab
         OVCustNameValLbl.setText("");
         OVCustIDValLbl.setText("");
         OVMediaCatValLbl.setText("");
@@ -2626,11 +2736,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
+        /* Brad Clawson: This method will pass GUI field data in the form of a 
+         * OrderVerify object to OrderVerify.insertOrUpdateOV() that will determine if
+         * the report id number exists. If the report id does not exist, or is 0, 
+         * the method will create a new record. If the report id does exist the 
+         * method updates that record with the information on the screen. The 
+         * method clears the OrderIDText field and populates the OVIDText field 
+         * to populate the screen with the information that is searched for and 
+         * verified by the popOV() method. If popOV() finds the new or updated 
+         * record, and populates the screen, the button information label will 
+         * indicate that the insert/update was successful. If not successful the
+         * label will indicate that as well. -
+         */
+        //Assign bool and string variables for object constructor
         Boolean nameCheck = false, accountCheck = false, mediaCheck = false, 
                 contentCheck = false,paymentCheck = false, depositCheck = false; 
         String nameComment = "", accountComment = "", mediaComment = "",
                 contentComment = "", paymentComment = "", depositComment = "", 
                 correctiveActionComment = "";
+        //Assign bool values according to the Radio buttons selected
+        //Set fail comment string values if QA check fails
         if(OVCorrectNamePassRb.isSelected()){
             nameCheck = Boolean.TRUE;
         }
@@ -2678,15 +2803,18 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
             correctiveActionComment = (OVCommentsText.getText());
         }
+        //Create new OV object with screen data to be passed to insertOrUpdateOV()
         OrderVerify newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())),Login.emp, 
                 Order.getOrder(Integer.parseInt(OVOrderIDText.getText())), 
                 nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
                 depositCheck, nameComment, accountComment, mediaComment, contentComment,
                 paymentComment, depositComment,correctiveActionComment);
+        //Object that is returned verifies that the object was created
         newOV = OrderVerify.insertOrUpdateOV(newOV);
+        //prepare screen for popOV()
         OVerIDText.setText(String.valueOf(newOV.getVerID()));
         OVOrderIDText.setText("");
-        
+        //Record is searched for and verified a second time through popOV()
         if(popOV()){        
         OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
@@ -2750,13 +2878,24 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderNumberCBActionPerformed
 
     private void OVContentValLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OVContentValLblMouseClicked
-         JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
+        //Brad: popup content in JOption pane for easy access when verifying order 
+        JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
     }//GEN-LAST:event_OVContentValLblMouseClicked
 
 
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void QAOrderIDTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_QAOrderIDTextFocusGained
+        //Brad:reset background color if changed from invalid search param
+        QAOrderIDText.setBackground(Color.white);
+    }//GEN-LAST:event_QAOrderIDTextFocusGained
+
+    private void QAIDTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_QAIDTextFocusGained
+        //Brad: reset background color if changed from invalid search param
+        QAIDText.setBackground(Color.white);
+    }//GEN-LAST:event_QAIDTextFocusGained
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
