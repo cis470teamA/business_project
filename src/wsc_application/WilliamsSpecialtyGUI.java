@@ -2587,7 +2587,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVButtonLbl.setText("Record Found");
         } 
         else{
-            OVButtonLbl.setText(OVButtonLbl.getText()+ ". Record not Found")
+            OVButtonLbl.setText(OVButtonLbl.getText()+ ". Record not Found");
         }
     }//GEN-LAST:event_OVSearchButtonActionPerformed
     private Boolean popOV(){
