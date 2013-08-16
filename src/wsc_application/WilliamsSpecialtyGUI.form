@@ -527,61 +527,49 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="OrderTypeShirtRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderTypePlaqueRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderTypeTrophyRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusLbl" alignment="0" pref="137" max="32767" attributes="0"/>
-                              <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                              <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="OrderTypeShirtRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTypePlaqueRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTypeTrophyRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderStatusLbl" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                      <Component id="OrderAccountPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderDeliverPayRB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderPaymentTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderTotalLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaTypeLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderMediaCatNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrderCustNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="OrderMediaStatusLbl" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderMediaStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderDepositText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderTotalText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderMediaCatNumText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderNumberCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="OrderCUSTIDText" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="OrderMediaStatusCB" linkSize="9" alignment="2" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                          <EmptySpace pref="53" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderContentText" min="-2" pref="317" max="-2" attributes="0"/>
-                                      <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="131" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="OrderClearFieldsButton" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrderUpdateBtn" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrderCreateBtn" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="OrderSearchButton" linkSize="15" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="81" pref="81" max="-2" attributes="0"/>
-                                          <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="239" pref="239" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="OrderClearFieldsButton" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderUpdateBtn" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderCreateBtn" linkSize="15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderSearchButton" linkSize="15" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="OrderContentText" alignment="0" min="-2" pref="317" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace pref="131" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -592,24 +580,29 @@
                                       <Component id="OrderCreatedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OrderAssignedToLbl" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderLastModifiedByLbl" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="OrderAssignedToLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="58" pref="58" max="-2" attributes="0"/>
                                   <Component id="OrderDepositLbl" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="371" pref="371" max="-2" attributes="0"/>
+                                  <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="331" pref="331" max="-2" attributes="0"/>
+                                  <Component id="OrderContentLbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="272" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="2" attributes="0">
@@ -650,13 +643,8 @@
                                       <Component id="OrderDepositText" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="OrderDepositLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="OrderStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
@@ -671,35 +659,29 @@
                                   <Component id="OrderSearchButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="OrderCreateBtn" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="OrderUpdateBtn" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="OrderClearFieldsButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="OrderMediaStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrderMediaStatusCB" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="68" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderUpdateBtn" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderStatusCB" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderStatusLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace pref="7" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="2" attributes="0">
+                              <Component id="OrderMediaStatusLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderMediaStatusCB" linkSize="6" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="OrderClearFieldsButton" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="67" max="32767" attributes="0"/>
+                          <Component id="OrderSearchLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="OrderCreatedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OrderAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OrderLastModifiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrderVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="OrderVerifyByLbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -872,11 +854,6 @@
                     <Property name="text" type="java.lang.String" value="Order Created by ******"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="OrderLastModifiedByLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JComboBox" name="OrderNumberCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -985,10 +962,7 @@
                                                   <Component id="OVCreateByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="OVAssignedToLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="OVLastModfiedByLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="OVAssignedToLbl" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
@@ -1124,10 +1098,7 @@
                               <Component id="OVAssignedToLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="OVVerifyByLbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="176" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1435,11 +1406,6 @@
                 <Component class="javax.swing.JLabel" name="OVAssignedToLbl">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Work Assigned to ******"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="OVLastModfiedByLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Last Modified by ******"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVButtonLbl">
@@ -1826,9 +1792,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                      <EmptySpace min="137" pref="137" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="InvDelDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="InvOnOrderLbl" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1836,59 +1802,84 @@
                                   <Component id="InvItemNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="InvManIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="InvItemIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvSearchButton" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Component id="InvSearchButton" linkSize="7" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="InvOrderButton" linkSize="7" alignment="2" max="32767" attributes="0"/>
+                                  <Component id="InvDelDateText" linkSize="7" alignment="2" pref="75" max="32767" attributes="0"/>
+                                  <Component id="InvOnOrderText" linkSize="7" alignment="2" max="32767" attributes="0"/>
+                                  <Component id="InvOnHandText" linkSize="7" alignment="2" max="32767" attributes="0"/>
+                                  <Component id="InvItemNameText" linkSize="7" alignment="2" max="32767" attributes="0"/>
+                                  <Component id="InvManIDText" linkSize="7" alignment="2" pref="111" max="32767" attributes="0"/>
+                                  <Component id="InvItemIDText" linkSize="7" alignment="2" pref="111" max="32767" attributes="0"/>
+                                  <Component id="jTextField1" linkSize="7" alignment="2" min="-2" pref="111" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="InvDelDateText" linkSize="7" alignment="0" pref="75" max="32767" attributes="0"/>
-                                  <Component id="InvOnOrderText" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="InvOnHandText" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="InvItemNameText" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="InvItemIDText" linkSize="7" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                  <Component id="InvManIDText" linkSize="7" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                  <Component id="InvOrderButton" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="InvClearButton" linkSize="7" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane1" min="-2" pref="83" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="InvClearButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="InvButtonLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="361" max="32767" attributes="0"/>
+                      <EmptySpace pref="302" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="InvItemIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvItemIDText" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="InvManIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvManIDText" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="InvItemNameText" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvItemNameLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="InvOnHandText" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvOnHandLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="InvOnOrderText" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvOnOrderLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="InvDelDateText" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvDelDateLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="InvItemIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvItemIDText" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="InvManIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvManIDText" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="InvItemNameText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvItemNameLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="InvOnHandText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOnHandLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="InvOnOrderText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOnOrderLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="InvDelDateText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvDelDateLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jScrollPane1" min="-2" pref="182" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
@@ -1898,7 +1889,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="InvButtonLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="316" max="32767" attributes="0"/>
+                      <EmptySpace pref="307" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1977,6 +1968,40 @@
             <Component class="javax.swing.JTextField" name="InvItemIDText">
             </Component>
             <Component class="javax.swing.JTextField" name="InvManIDText">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Order"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField1">
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="jList1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                        <StringItem index="4" value="Item 5"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Item:"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

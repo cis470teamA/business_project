@@ -152,7 +152,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OrderVerifyByLbl = new javax.swing.JLabel();
         OrderAssignedToLbl = new javax.swing.JLabel();
         OrderCreatedByLbl = new javax.swing.JLabel();
-        OrderLastModifiedByLbl = new javax.swing.JLabel();
         OrderNumberCB = new javax.swing.JComboBox();
         OrderSearchLbl = new javax.swing.JLabel();
         OrderUpdateBtn = new javax.swing.JButton();
@@ -205,7 +204,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVVerifyByLbl = new javax.swing.JLabel();
         OVCreateByLbl = new javax.swing.JLabel();
         OVAssignedToLbl = new javax.swing.JLabel();
-        OVLastModfiedByLbl = new javax.swing.JLabel();
         OVButtonLbl = new javax.swing.JLabel();
         QAPanel = new javax.swing.JPanel();
         QASubmitButton = new javax.swing.JButton();
@@ -258,6 +256,11 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         InvDelDateText = new javax.swing.JTextField();
         InvItemIDText = new javax.swing.JTextField();
         InvManIDText = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jLabel5 = new javax.swing.JLabel();
         EmployeeInfoPanel = new javax.swing.JPanel();
         EmpFNameText = new javax.swing.JTextField();
         EmpLNameText = new javax.swing.JTextField();
@@ -628,8 +631,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderCreatedByLbl.setText("Order Created by ******");
 
-    OrderLastModifiedByLbl.setText("Last Modified by ******");
-
     OrderNumberCB.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             OrderNumberCBActionPerformed(evt);
@@ -646,51 +647,43 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderInfoPanelLayout.setHorizontalGroup(
         OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-            .addGap(37, 37, 37)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(OrderTypeShirtRB)
-                .addComponent(OrderTypePlaqueRB)
-                .addComponent(OrderTypeTrophyRB)
-                .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                .addComponent(OrderStatusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(OrderAccountPayRB)
-                .addComponent(OrderDeliverPayRB)
-                .addComponent(OrderPaymentTypeLbl)
-                .addComponent(OrderTotalLbl)
-                .addComponent(OrderMediaTypeLbl)
-                .addComponent(OrderMediaCatNumLbl)
-                .addComponent(OrderNumberLbl)
-                .addComponent(OrderCustNumberLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                    .addGap(37, 37, 37)
+                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(OrderTypeShirtRB)
+                        .addComponent(OrderTypePlaqueRB)
+                        .addComponent(OrderTypeTrophyRB)
+                        .addComponent(OrderStatusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(OrderAccountPayRB)
+                        .addComponent(OrderDeliverPayRB)
+                        .addComponent(OrderPaymentTypeLbl)
+                        .addComponent(OrderTotalLbl)
+                        .addComponent(OrderMediaTypeLbl)
+                        .addComponent(OrderMediaCatNumLbl)
+                        .addComponent(OrderNumberLbl)
+                        .addComponent(OrderCustNumberLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
+                    .addGap(39, 39, 39)
+                    .addComponent(OrderMediaStatusLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderDepositText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderTotalText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderMediaCatNumText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(OrderNumberCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(OrderCUSTIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(OrderCUSTIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(OrderContentLbl))
-                    .addContainerGap(131, Short.MAX_VALUE))
-                .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
-                            .addGap(99, 99, 99)
-                            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(OrderClearFieldsButton)
-                                .addComponent(OrderUpdateBtn)
-                                .addComponent(OrderCreateBtn)
-                                .addComponent(OrderSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                            .addGap(81, 81, 81)
-                            .addComponent(OrderSearchLbl)))
-                    .addGap(239, 239, 239))))
+                .addComponent(OrderClearFieldsButton)
+                .addComponent(OrderUpdateBtn)
+                .addComponent(OrderCreateBtn)
+                .addComponent(OrderSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(OrderContentText, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(131, Short.MAX_VALUE))
         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
@@ -699,13 +692,17 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(OrderVerifyByLbl)
                         .addComponent(OrderCreatedByLbl))
                     .addGap(48, 48, 48)
-                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(OrderAssignedToLbl)
-                        .addComponent(OrderLastModifiedByLbl)))
+                    .addComponent(OrderAssignedToLbl))
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                     .addGap(58, 58, 58)
-                    .addComponent(OrderDepositLbl)))
-            .addContainerGap(272, Short.MAX_VALUE))
+                    .addComponent(OrderDepositLbl))
+                .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                    .addGap(371, 371, 371)
+                    .addComponent(OrderSearchLbl))
+                .addGroup(OrderInfoPanelLayout.createSequentialGroup()
+                    .addGap(331, 331, 331)
+                    .addComponent(OrderContentLbl)))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     OrderInfoPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {OrderCUSTIDText, OrderDepositText, OrderMediaCatNumText, OrderMediaStatusCB, OrderNumberCB, OrderStatusCB, OrderTotalText});
@@ -715,7 +712,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderInfoPanelLayout.setVerticalGroup(
         OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -750,11 +747,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(OrderDepositText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(OrderDepositLbl))
-                    .addGap(30, 30, 30)
-                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(OrderStatusLbl)
-                        .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(OrderDepositLbl)))
                 .addGroup(OrderInfoPanelLayout.createSequentialGroup()
                     .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(OrderInfoPanelLayout.createSequentialGroup()
@@ -766,28 +759,25 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addGap(18, 18, 18)
                     .addComponent(OrderSearchButton)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(OrderCreateBtn)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(OrderUpdateBtn)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OrderClearFieldsButton)
-                    .addGap(12, 12, 12)))
-            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(OrderInfoPanelLayout.createSequentialGroup()
-                    .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(OrderMediaStatusLbl)
-                        .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE))
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderInfoPanelLayout.createSequentialGroup()
-                    .addComponent(OrderSearchLbl)
-                    .addGap(18, 18, 18)))
+                    .addComponent(OrderCreateBtn)))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(OrderUpdateBtn)
+                .addComponent(OrderStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(OrderStatusLbl))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(OrderMediaStatusLbl)
+                .addComponent(OrderMediaStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(OrderClearFieldsButton))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+            .addComponent(OrderSearchLbl)
+            .addGap(18, 18, 18)
             .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OrderCreatedByLbl)
                 .addComponent(OrderAssignedToLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(OrderInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(OrderLastModifiedByLbl)
-                .addComponent(OrderVerifyByLbl))
+            .addComponent(OrderVerifyByLbl)
             .addGap(51, 51, 51))
     );
 
@@ -957,8 +947,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVAssignedToLbl.setText("Work Assigned to ******");
 
-    OVLastModfiedByLbl.setText("Last Modified by ******");
-
     OVButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
 
     javax.swing.GroupLayout OrderVerifyPanelLayout = new javax.swing.GroupLayout(OrderVerifyPanel);
@@ -1025,9 +1013,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                     .addComponent(OVVerifyByLbl)
                                     .addComponent(OVCreateByLbl))
                                 .addGap(48, 48, 48)
-                                .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(OVAssignedToLbl)
-                                    .addComponent(OVLastModfiedByLbl)))
+                                .addComponent(OVAssignedToLbl))
                             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, OrderVerifyPanelLayout.createSequentialGroup()
                                     .addComponent(OVCommentsLbl)
@@ -1141,9 +1127,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(OVCreateByLbl)
                 .addComponent(OVAssignedToLbl))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(OVLastModfiedByLbl)
-                .addComponent(OVVerifyByLbl))
+            .addComponent(OVVerifyByLbl)
             .addContainerGap(176, Short.MAX_VALUE))
     );
 
@@ -1424,6 +1408,17 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     InvButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
     InvButtonLbl.setText("* Use only one field for searches");
 
+    jLabel2.setText("Order");
+
+    jList1.setModel(new javax.swing.AbstractListModel() {
+        String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        public int getSize() { return strings.length; }
+        public Object getElementAt(int i) { return strings[i]; }
+    });
+    jScrollPane1.setViewportView(jList1);
+
+    jLabel5.setText("Item:");
+
     javax.swing.GroupLayout InventoryPanelLayout = new javax.swing.GroupLayout(InventoryPanel);
     InventoryPanel.setLayout(InventoryPanelLayout);
     InventoryPanelLayout.setHorizontalGroup(
@@ -1439,51 +1434,69 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(InvItemNameLbl)
                         .addComponent(InvManIDLbl)
                         .addComponent(InvItemIDLbl)
-                        .addComponent(InvSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(InvSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(InvOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(InvDelDateText, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                         .addComponent(InvOnOrderText)
                         .addComponent(InvOnHandText)
                         .addComponent(InvItemNameText)
-                        .addComponent(InvItemIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(InvManIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(InvOrderButton))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(InvClearButton))
+                        .addComponent(InvManIDText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                        .addComponent(InvItemIDText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(InventoryPanelLayout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(InvClearButton))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InventoryPanelLayout.createSequentialGroup()
+                            .addGap(34, 34, 34)
+                            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addComponent(InvButtonLbl))
-            .addContainerGap(361, Short.MAX_VALUE))
+            .addContainerGap(302, Short.MAX_VALUE))
     );
 
-    InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvDelDateText, InvItemIDText, InvItemNameText, InvManIDText, InvOnHandText, InvOnOrderText, InvOrderButton});
+    InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvClearButton, InvDelDateText, InvItemIDText, InvItemNameText, InvManIDText, InvOnHandText, InvOnOrderText, InvOrderButton, InvSearchButton, jTextField1});
 
     InventoryPanelLayout.setVerticalGroup(
         InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(InventoryPanelLayout.createSequentialGroup()
-            .addGap(110, 110, 110)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(InvItemIDLbl)
-                .addComponent(InvItemIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(67, 67, 67)
+            .addComponent(jLabel5)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(InvManIDLbl)
-                .addComponent(InvManIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(InvItemNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(InvItemNameLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(InvOnHandText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(InvOnHandLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(InvOnOrderText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(InvOnOrderLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(InvDelDateText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(InvDelDateLbl))
+            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(InventoryPanelLayout.createSequentialGroup()
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(InvItemIDLbl)
+                        .addComponent(InvItemIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(InvManIDLbl)
+                        .addComponent(InvManIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(InvItemNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvItemNameLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(InvOnHandText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvOnHandLbl))
+                    .addGap(12, 12, 12)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(InvOnOrderText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvOnOrderLbl))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(InvDelDateText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvDelDateLbl)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(18, 18, 18)
             .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(InvSearchButton)
@@ -1491,7 +1504,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(InvClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(InvButtonLbl)
-            .addContainerGap(316, Short.MAX_VALUE))
+            .addContainerGap(307, Short.MAX_VALUE))
     );
 
     WSCInterface.addTab("Inventory", InventoryPanel);
@@ -2895,7 +2908,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JRadioButton OVDepositPassRb;
     private javax.swing.JLabel OVDepositValLbl;
     private javax.swing.JLabel OVFailLbl;
-    private javax.swing.JLabel OVLastModfiedByLbl;
     private javax.swing.ButtonGroup OVMediaBG;
     private javax.swing.JLabel OVMediaCatValLbl;
     private javax.swing.JTextField OVMediaFailText;
@@ -2933,7 +2945,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField OrderDepositText;
     private javax.swing.ButtonGroup OrderEngMediaBG;
     private javax.swing.JPanel OrderInfoPanel;
-    private javax.swing.JLabel OrderLastModifiedByLbl;
     private javax.swing.JLabel OrderMediaCatNumLbl;
     private javax.swing.JTextField OrderMediaCatNumText;
     private javax.swing.JComboBox OrderMediaStatusCB;
@@ -2999,8 +3010,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JList jList1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     protected javax.swing.JLabel lblLoginStatus;
     // End of variables declaration//GEN-END:variables
 //</editor-fold>
