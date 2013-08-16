@@ -662,11 +662,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderSearchLbl.setText("* Use only one field for searches");
 
     OrderUpdateBtn.setText("Update");
-    OrderUpdateBtn.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderUpdateBtnActionPerformed(evt);
-        }
-    });
 
     javax.swing.GroupLayout OrderInfoPanelLayout = new javax.swing.GroupLayout(OrderInfoPanel);
     OrderInfoPanel.setLayout(OrderInfoPanelLayout);
@@ -1317,18 +1312,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
     QAButtonLbl.setText("* Use only one field for searches");
-
-    QAOrderIDText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAOrderIDTextActionPerformed(evt);
-        }
-    });
-
-    QAIDText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            QAIDTextActionPerformed(evt);
-        }
-    });
 
     javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
     QAPanel.setLayout(QAPanelLayout);
@@ -2062,7 +2045,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderCUSTIDTextActionPerformed
 
     private void QASubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASubmitButtonActionPerformed
-        // TODO add your handling code here:
+        Boolean contentCheck = false, mediaCheck = false, mediaFinishCheck = false, 
+                workmanshipCheck = false, depositCheck = false; 
+        String contentComment = "", mediaComment = "", mediaFinishComment = "",
+                 workmanshipComment = "", depositComment = "", 
+                correctiveActionComment = "";
+        if(QAContentCheckPassRb.isSelected()){
+            contentCheck = Boolean.TRUE;
+        }
+        else if(QAContentCheckFailRb.isSelected()){
+            contentCheck = Boolean.FALSE;
+            contentComment = QAContentFailText.getText();
+        }
+        if(QAMediaCheckPassRb.isSelected()){
+            mediaCheck  = Boolean.TRUE;
+        }
+        else if(QAMediaCheckFailRb.isSelected()){
+            mediaCheck = Boolean.FALSE;
+            mediaComment = QAMediaFailText.getText();
+        }
+        if(QAMediaFinishCheckPassRb.isSelected()){
+            mediaFinishCheck = Boolean.TRUE;
+        }
+        else if(QAMediaFinishCheckFailRb.isSelected()){
+            mediaFinishCheck = Boolean.FALSE;
+            mediaFinishComment = QAMediaFailText.getText();
+        }
+        if(QAWorkmanshipCheckPassRb.isSelected()){
+            workmanshipCheck = (Boolean.TRUE);
+        }
+        else if(QAWorkmanshipCheckFailRb.isSelected()){
+            workmanshipCheck = (Boolean.FALSE);
+            workmanshipComment = (QAWorkmanshipFailText.getText());
+        }
+        if(QAContentCheckFailRb.isSelected()||
+                QAMediaCheckFailRb.isSelected()||
+                QAMediaFinishCheckFailRb.isSelected()||
+                QAWorkmanshipCheckFailRb.isSelected()){
+            correctiveActionComment = (QACorrectiveActionText.getText());
+        }
+        QAReport newQA = new QAReport((Integer.parseInt(QAIDText.getText())), 
+                Order.getOrder(Integer.parseInt(QAOrderIDText.getText())),
+                Login.emp, contentCheck, mediaCheck, mediaFinishCheck, 
+                workmanshipCheck, contentComment, mediaComment, mediaFinishComment,
+                workmanshipComment, correctiveActionComment);
+        newQA = QAReport.insertOrUpdateQA(newQA);
+        QAIDText.setText(String.valueOf(newQA.getQAID()));
+        QAOrderIDText.setText("");
+        
+        if(popOV()){        
+        OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_QASubmitButtonActionPerformed
 
     private void QAClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAClearButtonActionPerformed
@@ -2721,22 +2753,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
     }//GEN-LAST:event_OVContentValLblMouseClicked
 
-    private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderUpdateBtnActionPerformed
-        // By Paul
-    }//GEN-LAST:event_OrderUpdateBtnActionPerformed
-/*
+
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void QAOrderIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAOrderIDTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QAOrderIDTextActionPerformed
-
-    private void QAIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAIDTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QAIDTextActionPerformed
-*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
     private javax.swing.JLabel CUSTIDLbl;

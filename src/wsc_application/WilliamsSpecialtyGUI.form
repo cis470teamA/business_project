@@ -919,9 +919,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Update"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderUpdateBtnActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1854,14 +1851,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="QAOrderIDText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAOrderIDTextActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="QAIDText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QAIDTextActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
