@@ -972,18 +972,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OVNumberLbl.setText("Verification Number");
 
-    OVCustNameValLbl.setText("Customer Name F/L");
-
-    OVCustIDValLbl.setText("Customer ID Number");
-
-    OVMediaCatValLbl.setText("Media Catalog Number");
-
-    OVContentValLbl.setText("Content Popup Link");
-
-    OVPayTypeValLbl.setText("Payment Type");
-
-    OVDepositValLbl.setText("Deposit Amount");
-
     OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     OVAssignEmpLbl.setText("Assign Printer/Engraver");
@@ -1005,7 +993,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVLastModfiedByLbl.setText("Last Modified by ******");
 
     OVButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
-    OVButtonLbl.setText("* Use only one field for searches");
 
     javax.swing.GroupLayout OrderVerifyPanelLayout = new javax.swing.GroupLayout(OrderVerifyPanel);
     OrderVerifyPanel.setLayout(OrderVerifyPanelLayout);
@@ -1190,7 +1177,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVLastModfiedByLbl)
                 .addComponent(OVVerifyByLbl))
-            .addContainerGap(77, Short.MAX_VALUE))
+            .addContainerGap(91, Short.MAX_VALUE))
     );
 
     OrderTabbedPane.addTab("Order Verify", OrderVerifyPanel);
@@ -1799,7 +1786,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     Employee login = new Employee();
     Customer workingCustomer = new Customer();
     Order workingOrder = new Order();
-    OrderVerify workingOV = new OrderVerify();
+    OrderVerify workingOV = null;
     QAReport workingQA = new QAReport();
     InventoryItem workingCA = new InventoryItem();
     
@@ -2489,7 +2476,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
-         workingOV.setVerID(Integer.parseInt(OVerIDText.getText()));
+   /*     workingOV = new OrderVerify();
+        workingOV.setVerID(Integer.parseInt(OVerIDText.getText()));
         workingOV.setOrder(Order.getOrder(Integer.parseInt(OVOrderNumText.getText())));
         workingOV.setVerifiedBy(Login.emp);
         if(OVCorrectNamePassRb.isSelected()){
@@ -2540,11 +2528,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             workingOV.setCorrectiveActionComment(OVCommentsText.getText());
         }
         
-        OrderVerify newOV = OrderVerify.insertOrUpdateOV(workingOV);
+        */OrderVerify newOV = new OrderVerify(2, Employee.searchBy(1), Order.getOrder(1), false, true, false
+                , false, true, true, "comment","","","","","",""); 
+        newOV = OrderVerify.insertOrUpdateOV(newOV);
         
         OVClearFieldButton.doClick();
         OVerIDText.setText(String.valueOf(newOV.getVerID()));
-        OVButtonLbl.setText("almost there");        
         if(popOV()){        
         OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_OVSubmitButtonActionPerformed

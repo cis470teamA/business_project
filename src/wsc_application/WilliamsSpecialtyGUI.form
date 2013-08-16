@@ -1146,7 +1146,7 @@
                               <Component id="OVLastModfiedByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="OVVerifyByLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="77" max="32767" attributes="0"/>
+                          <EmptySpace pref="91" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1411,34 +1411,16 @@
                 <Component class="javax.swing.JTextField" name="OVerIDText">
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVCustNameValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Customer Name F/L"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVCustIDValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Customer ID Number"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVMediaCatValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Media Catalog Number"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVContentValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Content Popup Link"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVPayTypeValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Payment Type"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVDepositValLbl">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Deposit Amount"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="OVAssignEmpCB">
                   <Properties>
@@ -1492,7 +1474,6 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="* Use only one field for searches"/>
                   </Properties>
                 </Component>
               </SubComponents>
