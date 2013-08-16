@@ -1430,6 +1430,12 @@
                 <Component class="javax.swing.JLabel" name="OVMediaCatValLbl">
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVContentValLbl">
+                  <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="OVContentValLblMouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVPayTypeValLbl">
                 </Component>
