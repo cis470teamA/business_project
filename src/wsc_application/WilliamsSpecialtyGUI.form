@@ -343,18 +343,12 @@
             <Component class="javax.swing.JTextField" name="CustFNameText">
             </Component>
             <Component class="javax.swing.JTextField" name="CustLNameText">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustLNameTextActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="CustOrgText">
             </Component>
             <Component class="javax.swing.JTextField" name="CustStreet1Text">
             </Component>
             <Component class="javax.swing.JTextField" name="CustStreet2Text">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustStreet2TextActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="CustFNameLbl">
               <Properties>
@@ -384,9 +378,6 @@
             <Component class="javax.swing.JTextField" name="CustCityText">
             </Component>
             <Component class="javax.swing.JTextField" name="CustZipText">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CustZipTextActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="CustCityLbl">
               <Properties>
@@ -727,9 +718,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Payment on Delivery"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDeliverPayRBActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="OrderAccountPayRB">
                   <Properties>
@@ -745,9 +733,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="OrderDepositText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderDepositTextActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="OrderTypeShirtRB">
                   <Properties>
@@ -756,9 +741,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Shirt"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderTypeShirtRBActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="OrderTypeTrophyRB">
                   <Properties>
@@ -782,9 +764,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="OrderContentText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderContentTextActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OrderMediaCatNumLbl">
                   <Properties>
@@ -804,9 +783,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="OrderCUSTIDText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderCUSTIDTextActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OrderPaymentTypeLbl">
                   <Properties>
@@ -880,9 +856,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="OrderTotalText">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrderTotalTextActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OrderVerifyByLbl">
                   <Properties>
@@ -998,7 +971,7 @@
                                               <Component id="OVDepositFailText" linkSize="3" alignment="0" max="-2" attributes="0"/>
                                               <Component id="OVReasonLbl" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="41" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1417,6 +1390,9 @@
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="OVContentValLblMouseClick"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="OVPayTypeValLbl">
                 </Component>
@@ -1830,14 +1806,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="QAOrderIDText">
-                  <Events>
-                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="QAOrderIDTextFocusGained"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="QAIDText">
-                  <Events>
-                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="QAIDTextFocusGained"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1999,14 +1969,8 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="InvOnHandText">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InvOnHandTextActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="InvOnOrderText">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InvOnOrderTextActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="InvDelDateText">
             </Component>
@@ -2152,9 +2116,6 @@
             <Component class="javax.swing.JTextField" name="EmpFNameText">
             </Component>
             <Component class="javax.swing.JTextField" name="EmpLNameText">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpLNameTextActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="EmpFNameLbl">
               <Properties>
@@ -2284,9 +2245,6 @@
             <Component class="javax.swing.JPasswordField" name="EmpPassConfirm">
             </Component>
             <Component class="javax.swing.JTextField" name="EMPIDCB">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EMPIDCBActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>

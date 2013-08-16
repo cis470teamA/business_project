@@ -362,18 +362,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
 
         WSCInterface.addTab("Login", LoginPanel);
 
-        CustLNameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustLNameTextActionPerformed(evt);
-            }
-        });
-
-        CustStreet2Text.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustStreet2TextActionPerformed(evt);
-            }
-        });
-
         CustFNameLbl.setText("First Name");
 
         CustLNameLbl.setText("Last Name");
@@ -383,12 +371,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         CustStreet1Lbl.setText("Street Address Line 1");
 
         CustStreet2Lbl.setText("Street Address Line 2");
-
-        CustZipText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CustZipTextActionPerformed(evt);
-            }
-        });
 
         CustCityLbl.setText("City");
 
@@ -579,30 +561,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderPayTypeBG.add(OrderDeliverPayRB);
     OrderDeliverPayRB.setText("Payment on Delivery");
-    OrderDeliverPayRB.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderDeliverPayRBActionPerformed(evt);
-        }
-    });
 
     OrderPayTypeBG.add(OrderAccountPayRB);
     OrderAccountPayRB.setText("Payment on Account");
 
     OrderDepositLbl.setText("Deposit Amount");
 
-    OrderDepositText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderDepositTextActionPerformed(evt);
-        }
-    });
-
     OrderTypeBG.add(OrderTypeShirtRB);
     OrderTypeShirtRB.setText("Shirt");
-    OrderTypeShirtRB.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderTypeShirtRBActionPerformed(evt);
-        }
-    });
 
     OrderTypeBG.add(OrderTypeTrophyRB);
     OrderTypeTrophyRB.setText("Trophy");
@@ -612,23 +578,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     OrderContentLbl.setText("Printing/Engraving Content:");
 
-    OrderContentText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderContentTextActionPerformed(evt);
-        }
-    });
-
     OrderMediaCatNumLbl.setText("Media Catalog Number");
 
     OrderMediaTypeLbl.setText("Media Type");
 
     OrderCustNumberLbl.setText("Customer Number");
-
-    OrderCUSTIDText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderCUSTIDTextActionPerformed(evt);
-        }
-    });
 
     OrderPaymentTypeLbl.setText("Payment Type");
 
@@ -667,12 +621,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderMediaStatusLbl.setText("Media Status");
 
     OrderTotalLbl.setText("Estimated Total");
-
-    OrderTotalText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OrderTotalTextActionPerformed(evt);
-        }
-    });
 
     OrderVerifyByLbl.setText("Order Verified by ******");
 
@@ -991,6 +939,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OVNumberLbl.setText("Verification Number");
 
     OVContentValLbl.setToolTipText("");
+    OVContentValLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            OVContentValLblMouseClick(evt);
+        }
+    });
 
     OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -1062,7 +1015,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVPayTypeFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVReasonLbl))
-                            .addContainerGap(41, Short.MAX_VALUE))))
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OVButtonLbl)
@@ -1306,18 +1259,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     QAButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
     QAButtonLbl.setText("* Use only one field for searches");
 
-    QAOrderIDText.addFocusListener(new java.awt.event.FocusAdapter() {
-        public void focusGained(java.awt.event.FocusEvent evt) {
-            QAOrderIDTextFocusGained(evt);
-        }
-    });
-
-    QAIDText.addFocusListener(new java.awt.event.FocusAdapter() {
-        public void focusGained(java.awt.event.FocusEvent evt) {
-            QAIDTextFocusGained(evt);
-        }
-    });
-
     javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
     QAPanel.setLayout(QAPanelLayout);
     QAPanelLayout.setHorizontalGroup(
@@ -1483,18 +1424,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     InvButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
     InvButtonLbl.setText("* Use only one field for searches");
 
-    InvOnHandText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            InvOnHandTextActionPerformed(evt);
-        }
-    });
-
-    InvOnOrderText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            InvOnOrderTextActionPerformed(evt);
-        }
-    });
-
     javax.swing.GroupLayout InventoryPanelLayout = new javax.swing.GroupLayout(InventoryPanel);
     InventoryPanel.setLayout(InventoryPanelLayout);
     InventoryPanelLayout.setHorizontalGroup(
@@ -1567,12 +1496,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     WSCInterface.addTab("Inventory", InventoryPanel);
 
-    EmpLNameText.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EmpLNameTextActionPerformed(evt);
-        }
-    });
-
     EmpFNameLbl.setText("First Name");
 
     EmpLNameLbl.setText("Last Name");
@@ -1634,12 +1557,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     jLabel3.setText("Login Password");
 
     jLabel4.setText("Confirm Password");
-
-    EMPIDCB.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            EMPIDCBActionPerformed(evt);
-        }
-    });
 
     javax.swing.GroupLayout EmployeeInfoPanelLayout = new javax.swing.GroupLayout(EmployeeInfoPanel);
     EmployeeInfoPanel.setLayout(EmployeeInfoPanelLayout);
@@ -1846,6 +1763,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         this.populateOrderTab(order);
     }
     
+    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: InventoryItem Search,Submit,Clear Buttons">
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
                         // TODO add your handling code here:
     }//GEN-LAST:event_InvSearchButtonActionPerformed
@@ -1932,6 +1850,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         InvDelDateText.setText(workingII.getDeliveryDate());
         return true;
     }
+    
+    
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
         // Clear Inventory data
         InvItemIDText.setText("");
@@ -1945,7 +1865,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
        
     }//GEN-LAST:event_InvOrderButtonActionPerformed
-
+    //</editor-fold>
+    
     private void CustStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStateCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CustStateCBActionPerformed
@@ -1955,8 +1876,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustClear();
     }//GEN-LAST:event_CustClearButtonActionPerformed
     
-    //Jacob: Created clear method as it will need called once the customer is created.
     public void CustClear() {
+        //Jacob: Created clear method as it will need called once the customer is created.
         CUSTIDCB.setText("");
         CustFNameText.setText("");
         CustLNameText.setText("");
@@ -2087,18 +2008,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // </editor-fold>
     }//GEN-LAST:event_CustFindButtonActionPerformed
 
-    private void CustZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustZipTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustZipTextActionPerformed
-
-    private void CustStreet2TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStreet2TextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustStreet2TextActionPerformed
-
-    private void CustLNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustLNameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CustLNameTextActionPerformed
-
     private void LoginPassTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPassTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginPassTextActionPerformed
@@ -2111,94 +2020,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          Login.processLogin(LoginEMPIDTxt.getText(), LoginPassText.getText());
 //         SetAccessLevel();
     }//GEN-LAST:event_LoginButtonActionPerformed
-  /*Brad Clawson: This method will set the access level of the program according to least
-   *privelege principles. This will be implemented at login and the tabs will be
-   *available according to Employee type
-   */
-/*  private void SetAccessLevel(){
-        if ((Login.emp.getEmpType() == "OM")||(Login.emp.getEmpType() == "AD")){
-            CustomerInfoPanel.setVisible(true);
-            EmployeeInfoPanel.setVisible(true);
-            OrderTabbedPane.setVisible(true);
-            OrderInfoPanel.setVisible(true);
-            OrderVerifyPanel.setVisible(true);
-            QAPanel.setVisible(true);
-            InventoryPanel.setVisible(true);
-        }
-        if (Login.emp.getEmpType() == "SP"){
-            CustomerInfoPanel.setVisible(true);
-            EmployeeInfoPanel.setVisible(true);
-            OrderTabbedPane.setVisible(true);
-            OrderInfoPanel.setVisible(true);
-            OrderVerifyPanel.setVisible(false);
-            QAPanel.setVisible(false);
-            InventoryPanel.setVisible(true);
-            InvOrderButton.setEnabled(false);
-        }
-        if ((Login.emp.getEmpType() == "PS")||(Login.emp.getEmpType() == "ES")){
-            CustomerInfoPanel.setVisible(false);            
-            CustStreet1Text.setVisible(false);
-            CustStreet2Text.setVisible(false);
-            CustCityText.setVisible(false);
-            CustStateCB.setVisible(false);
-            CustZipText.setVisible(false);
-            CustPhoneText.setVisible(false);
-            EmployeeInfoPanel.setVisible(true);
-            OrderTabbedPane.setVisible(true);
 
-            OrderInfoPanel.setVisible(true);
-            OrderMediaCatNumText.setEditable(false);
-            OrderTypePlaqueRB.setEnabled(false);
-            OrderTypeShirtRB.setEnabled(false);
-            OrderTypeTrophyRB.setEnabled(false);
-            OrderTotalText.setEditable(false);
-            OrderAccountPayRB.setEnabled(false);
-            OrderDeliverPayRB.setEnabled(false);
-            OrderDepositText.setEditable(false);
-            OrderStatusCB.setEditable(false);
-            OrderMediaStatusCB.setEditable(false);
-            OrderContentText.setEditable(false);          
-            OrderVerifyPanel.setVisible(false);
-            QAPanel.setVisible(true);            
-            InventoryPanel.setVisible(true);
-        }
-        if (Login.emp.getEmpType() == "SC"){
-            CustomerInfoPanel.setVisible(false);            
-            CustStreet1Text.setVisible(false);
-            CustStreet2Text.setVisible(false);
-            CustCityText.setVisible(false);
-            CustStateCB.setVisible(false);
-            CustZipText.setVisible(false);
-            CustPhoneText.setVisible(false);
-            OrderTabbedPane.setVisible(true);
-            EmployeeInfoPanel.setVisible(true);
-            OrderInfoPanel.setVisible(true);
-            OrderMediaCatNumText.setEditable(false);
-            OrderTypePlaqueRB.setEnabled(false);
-            OrderTypeShirtRB.setEnabled(false);
-            OrderTypeTrophyRB.setEnabled(false);
-            OrderTotalText.setEditable(false);
-            OrderAccountPayRB.setEnabled(false);
-            OrderDeliverPayRB.setEnabled(false);
-            OrderDepositText.setEditable(false);
-            OrderStatusCB.setEditable(false);
-            OrderMediaStatusCB.setEditable(false);
-            OrderContentText.setEditable(false);          
-            OrderVerifyPanel.setVisible(false);
-            QAPanel.setVisible(false);
-            OrderVerifyPanel.setVisible(false);
-            QAPanel.setVisible(false);
-            InventoryPanel.setVisible(true);
-        }
-    }*/
-    private void OrderDepositTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDepositTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderDepositTextActionPerformed
-
-    private void OrderCUSTIDTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCUSTIDTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderCUSTIDTextActionPerformed
-    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA Search,Submit,Clear Buttons">
+   // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA Search,Submit,Clear Buttons">
     private void QASubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASubmitButtonActionPerformed
         /* Brad Clawson: This method will pass GUI field data in the form of a 
          * QAReport object to QAReport.insertOrUpdateQA() that will determine if
@@ -2375,7 +2198,17 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //page successfully populated return true to indicate success
         return true;
     }
-    //</editor_fold>
+        private void QAOrderIDTextFocusGained(java.awt.event.FocusEvent evt) {                                          
+        //Brad:reset background color if changed from invalid search param
+        QAOrderIDText.setBackground(Color.white);
+    }                                         
+
+    private void QAIDTextFocusGained(java.awt.event.FocusEvent evt) {                                     
+        //Brad: reset background color if changed from invalid search param
+        QAIDText.setBackground(Color.white);
+    }     
+    //</editor-fold>
+    
     private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
         this.OrderCUSTIDText.setText("");
         this.OrderNumberCB.removeAllItems();
@@ -2432,10 +2265,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         
     }//GEN-LAST:event_OrderSearchButtonActionPerformed
 
-    private void OrderContentTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderContentTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderContentTextActionPerformed
-
     private void LogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutButtonActionPerformed
         Login.processLogout();
 /*      //Brad: make all tabs except login invisible Login action will set user access
@@ -2448,10 +2277,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         InventoryPanel.setVisible(false);
 */ 
     }//GEN-LAST:event_LogoutButtonActionPerformed
-
-    private void EmpLNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpLNameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpLNameTextActionPerformed
 
     private void EmpSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSearchButtonActionPerformed
         // TODO add your handling code here:
@@ -2481,6 +2306,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         EmpTypeCB.setSelectedItem(emp.getEmpType());
         ShowEmpPassword();
         }
+
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
        boolean empExist = false;
@@ -2559,15 +2385,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         EmpTypeCB.setSelectedIndex(0);
         emOrdersLst.setListData(new Object[0]);
     }//GEN-LAST:event_EmpClearButtonActionPerformed
-
-    private void InvOnHandTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOnHandTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InvOnHandTextActionPerformed
-
-    private void InvOnOrderTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOnOrderTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InvOnOrderTextActionPerformed
-
+    
+    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA radio buttons">
     private void QAContentCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentCheckPassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
         QAContentFailText.setEditable(false);
@@ -2608,6 +2427,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAWorkmanshipFailText.setEditable(true);
     }//GEN-LAST:event_QAWorkmanshipCheckFailRbActionPerformed
 
+    //</editor-fold>
+    
     // <editor-fold defaultstate="collapsed" desc="Brad Clawson: OV radio buttons">
     private void OVPayTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypePassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
@@ -2815,7 +2636,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //tab items successfully populated, return true for success
         return true;
         }
-    
+
     private void OVClearFieldButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVClearFieldButtonActionPerformed
         //Brad Clawson: reset all values on OV tab
         OVCustNameValLbl.setText("");
@@ -2932,23 +2753,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if(popOV()){        
         OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
-
-    private void OVContentValLblMouseClicked(java.awt.event.MouseEvent evt) {                                             
-        //Brad: popup content in JOption pane for easy access when verifying order 
-        JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
-    }
-    //</editor-fold>   
-    private void OrderTotalTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTotalTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderTotalTextActionPerformed
-
+    //</editor-fold>
+    
     private void OrderStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderStatusCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderStatusCBActionPerformed
-
-    private void OrderDeliverPayRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderDeliverPayRBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderDeliverPayRBActionPerformed
 
     private void emOrdersLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_emOrdersLstValueChanged
         // TODO add your handling code here:
@@ -2959,17 +2768,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         
     }//GEN-LAST:event_custOrdLstValueChanged
 
-    private void OrderTypeShirtRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderTypeShirtRBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrderTypeShirtRBActionPerformed
-
     private void EmpTypeCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpTypeCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpTypeCBActionPerformed
-
-    private void EMPIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EMPIDCBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EMPIDCBActionPerformed
 
     private void OrderNumberCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderNumberCBActionPerformed
         if (this.OrderNumberCB.getSelectedIndex() != -1)
@@ -2980,15 +2781,10 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void QAOrderIDTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_QAOrderIDTextFocusGained
-        //Brad:reset background color if changed from invalid search param
-        QAOrderIDText.setBackground(Color.white);
-    }//GEN-LAST:event_QAOrderIDTextFocusGained
-
-    private void QAIDTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_QAIDTextFocusGained
-        //Brad: reset background color if changed from invalid search param
-        QAIDText.setBackground(Color.white);
-    }//GEN-LAST:event_QAIDTextFocusGained
+    private void OVContentValLblMouseClick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OVContentValLblMouseClick
+          //Brad: popup content in JOption pane for easy access when verifying order 
+        JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
+    }//GEN-LAST:event_OVContentValLblMouseClick
 
     // <editor-fold defaultstate="collapsed" desc="GUI Variable Declarations">
     // Variables declaration - do not modify//GEN-BEGIN:variables
