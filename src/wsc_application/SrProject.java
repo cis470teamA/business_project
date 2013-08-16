@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 
 public class SrProject {
-    protected static WilliamsSpecialtyGUI win = new WilliamsSpecialtyGUI();
+    protected static WilliamsSpecialtyGUI win = new WilliamsSpecialtyGUI();        
     /*
      * @param args the command line arguments
      */
