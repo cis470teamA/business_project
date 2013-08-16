@@ -4,6 +4,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+/*
+ * OrderVerify Class
+ * Class Created By Jacob Savage
+ * Static SQL methods created by
+ * Paul Durivage & Brad Clawson 
+ * for CIS470 GroupA
+ * 8/17/2013 
+ */
+
 public class InventoryItem {
     
     //Global Variables
@@ -29,7 +38,7 @@ public class InventoryItem {
         setDeliveryDate(delDate);
     }
     
-public Boolean checkExistBy(String column, int id){
+    public Boolean checkExistBy(String column, String id){
         Boolean itemExist = false;
         InventoryItem ii = null;
          ResultSet rs;
@@ -54,7 +63,7 @@ public Boolean checkExistBy(String column, int id){
        }return itemExist;
     }
     //This method searches for a InventoryItem by ITEMID or MANID and returns a copy of the II that is found
-    public static InventoryItem getIIby(String column, int id){
+    public static InventoryItem getIIby(String column, String id){
         InventoryItem ii = null;
          ResultSet rs;
         MysqlConn mysql = new MysqlConn();
@@ -122,7 +131,7 @@ public Boolean checkExistBy(String column, int id){
             }
             //search for updated/inserted record to verify action
             if (key > 0) {
-                thisII = InventoryItem.getIIby("ITEMID", key);
+                thisII = InventoryItem.getIIby("ITEMID", String.valueOf(key));
             }
         }   
         catch (SQLException ex) {
@@ -137,7 +146,7 @@ public Boolean checkExistBy(String column, int id){
             return thisII;
         }
     }
-
+    // <editor-fold defaultstate="collapsed" desc="Inc/Dec onOrder onHand">
     public void incrementQtyOnHand(){
         this.qtyOnHand = qtyOnHand + 1;
     }
@@ -150,6 +159,7 @@ public Boolean checkExistBy(String column, int id){
     public void decrementQtyOnOrder(){
         this.qtyOnOrder = qtyOnOrder - 1;
     }
+    //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="Setters">
     
     public void setItemNum(int itemId){
@@ -177,9 +187,7 @@ public Boolean checkExistBy(String column, int id){
         this.deliveryDate = deliveryDate;
     }
       // </editor-fold>
-     
-     
-     // <editor-fold defaultstate="collapsed" desc="Getters">
+    // <editor-fold defaultstate="collapsed" desc="Getters">
      public int getItemNumber(){
          return itemId;
      }
