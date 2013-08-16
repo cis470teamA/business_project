@@ -2476,64 +2476,67 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
-   /*     workingOV = new OrderVerify();
-        workingOV.setVerID(Integer.parseInt(OVerIDText.getText()));
-        workingOV.setOrder(Order.getOrder(Integer.parseInt(OVOrderNumText.getText())));
-        workingOV.setVerifiedBy(Login.emp);
+        Boolean nameCheck = false, accountCheck = false, mediaCheck = false, 
+                contentCheck = false,paymentCheck = false, depositCheck = false; 
+        String nameComment = "", accountComment = "", mediaComment = "",
+                contentComment = "", paymentComment = "", depositComment = "", 
+                correctiveActionComment = "";
         if(OVCorrectNamePassRb.isSelected()){
-            workingOV.setNameCheck(Boolean.TRUE);
+            nameCheck = Boolean.TRUE;
         }
         else if(OVCorrectNameFailRb.isSelected()){
-            workingOV.setNameCheck(Boolean.FALSE);
-            workingOV.setNameFailComment(OVNameFailText.getText());
+            nameCheck = Boolean.FALSE;
+            nameComment = OVNameFailText.getText();
         }
         if(OVAcctNumPassRb.isSelected()){
-            workingOV.setAccountCheck(Boolean.TRUE);
+            accountCheck  = Boolean.TRUE;
         }
         else if(OVAcctNumFailRb.isSelected()){
-            workingOV.setAccountCheck(Boolean.FALSE);
-            workingOV.setAccountFailComment(OVAcctNumFailText.getText());
+            accountCheck = Boolean.FALSE;
+            accountComment = OVAcctNumFailText.getText();
         }
         if(OVMediaNumPassRb.isSelected()){
-            workingOV.setMediaCheck(Boolean.TRUE);
+            mediaCheck = Boolean.TRUE;
         }
         else if(OVMediaNumFailRb.isSelected()){
-            workingOV.setMediaCheck(Boolean.FALSE);
-            workingOV.setMediaFailComment(OVMediaFailText.getText());
+            mediaCheck = Boolean.FALSE;
+            mediaComment = OVMediaFailText.getText();
         }
         if(OVContentPassRb.isSelected()){
-            workingOV.setContentCheck(Boolean.TRUE);
+            contentCheck = (Boolean.TRUE);
         }
         else if(OVContentFailRb.isSelected()){
-            workingOV.setContentCheck(Boolean.FALSE);
-            workingOV.setContentFailComment(OVContentFailText.getText());
+            contentCheck = (Boolean.FALSE);
+            contentComment = (OVContentFailText.getText());
         }
         if(OVPayTypePassRb.isSelected()){
-            workingOV.setPaymentCheck(Boolean.TRUE);
+            paymentCheck = (Boolean.TRUE);
         }
         else if(OVPayTypeFailRb.isSelected()){
-            workingOV.setPaymentCheck(Boolean.FALSE);
-            workingOV.setPaymentFailComment(OVPayTypeFailText.getText());
+            paymentCheck = (Boolean.FALSE);
+            paymentComment = (OVPayTypeFailText.getText());
         }
         if (OVDepositPassRb.isSelected()){
-            workingOV.setDepositCheck(Boolean.TRUE);
+            depositCheck = (Boolean.TRUE);
         }
         else if(OVDepositFailRb.isSelected()){
-            workingOV.setDepositCheck(Boolean.FALSE);
-            workingOV.setDepositFailComment(OVDepositFailText.getText());
+            depositCheck = (Boolean.FALSE);
+            depositComment = (OVDepositFailText.getText());
         }
         if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
                 OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
-            workingOV.setCorrectiveActionComment(OVCommentsText.getText());
+            correctiveActionComment = (OVCommentsText.getText());
         }
-        
-        */OrderVerify newOV = new OrderVerify(2, Employee.searchBy(1), Order.getOrder(1), false, true, false
-                , false, true, true, "comment","","","","","",""); 
+       OrderVerify  newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())),Login.emp, 
+                Order.getOrder(Integer.parseInt(OVOrderNumText.getText())), 
+                nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
+                depositCheck, nameComment, accountComment, mediaComment, contentComment,
+                paymentComment, depositComment,correctiveActionComment);
         newOV = OrderVerify.insertOrUpdateOV(newOV);
-        
-        OVClearFieldButton.doClick();
         OVerIDText.setText(String.valueOf(newOV.getVerID()));
+        OVOrderNumText.setText("");
+        
         if(popOV()){        
         OVButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
