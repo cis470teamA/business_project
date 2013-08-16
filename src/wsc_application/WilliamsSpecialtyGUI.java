@@ -15,8 +15,7 @@ package wsc_application;
  * Order Verify Tab Events &
  * Quality Assurance Tab Events
  * Created by Brad Clawson
- * for CIS470 GroupA
- * 
+ *  
  * GUI Modifications &
  * Employee Tab Events &
  * Customer Tab Events 
