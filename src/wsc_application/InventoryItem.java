@@ -137,7 +137,19 @@ public Boolean checkExistBy(String column, int id){
             return thisII;
         }
     }
-    
+
+    public void incrementQtyOnHand(){
+        this.qtyOnHand = qtyOnHand + 1;
+    }
+    public void decrementQtyOnHand(){
+        this.qtyOnHand = qtyOnHand - 1;
+    }
+    public void incrementQtyOnOrder(){
+        this.qtyOnOrder = qtyOnOrder + 1;
+    }
+    public void decrementQtyOnOrder(){
+        this.qtyOnOrder = qtyOnOrder - 1;
+    }
     // <editor-fold defaultstate="collapsed" desc="Setters">
     
     public void setItemNum(int itemId){
@@ -155,6 +167,7 @@ public Boolean checkExistBy(String column, int id){
     public void setQtyOnHand(int qtyOnHand){
         this.qtyOnHand = qtyOnHand;
     }
+    
     
     public void setQtyOnOrder(int qtyOnOrder){
         this.qtyOnOrder = qtyOnOrder;
