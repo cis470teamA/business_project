@@ -67,8 +67,8 @@ public class InventoryItem {
         InventoryItem ii = null;
          ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        String query = "Select * from cis470.QUALITYASSURANCE WHERE "
-                    + column + " = " + id;
+        String query = "Select * from cis470.INVENTORY WHERE "
+                    + column + " = '" + id + "'";
                     
         rs = mysql.doQuery(query);
         //create new InventoryItem object with data found in Database
@@ -80,7 +80,7 @@ public class InventoryItem {
                         rs.getString("Name") != null ? rs.getString("Name") : new String(),
                         rs.getInt("QtyOnHand"),
                         rs.getInt("QtyOnOrder"),
-                        rs.getString("DiliveryDate") != null ? rs.getString("DeliveryDate") : new String());         
+                        rs.getString("DeliveryDate") != null ? rs.getString("DeliveryDate") : new String());         
             }
         }
         catch (SQLException ex) {
