@@ -2592,7 +2592,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVSearchButtonActionPerformed
     private Boolean popOV(){
         /* 
-         * Brad Clawson: Populates Quality Assurance tab by searching either Order Number
+         * Brad Clawson: Populates Order Verify tab by searching either Order Number
          * or Verification Number, but not both. If search results
          */
         
@@ -2755,7 +2755,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 contentComment = "", paymentComment = "", depositComment = "", 
                 correctiveActionComment = "";
         //Assign bool values according to the Radio buttons selected
-        //Set fail comment string values if QA check fails
+        //Set fail comment string values if OV check fails
         if(OVCorrectNamePassRb.isSelected()){
             nameCheck = Boolean.TRUE;
         }
