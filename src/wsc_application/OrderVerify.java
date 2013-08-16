@@ -33,10 +33,10 @@ public class OrderVerify {
     public OrderVerify(){
         
     }
-    public OrderVerify(int verID, Order ord, Employee verBy, Boolean nameChk,
-            Boolean acctChk, Boolean medChk, Boolean contChk, Boolean jobChk, Boolean payChk,
-            Boolean depChk, String nameFail, String acctFail, String medFail,
-            String contFail, String jobFail, String payFail, String depFail,
+    public OrderVerify(int verID, Order ord, Employee verBy, int nameChk,
+            int acctChk, int medChk, int contChk, int payChk,
+            int depChk, String nameFail, String acctFail, String medFail,
+            String contFail, String payFail, String depFail,
             String corrActComm){
         }
     
@@ -78,12 +78,12 @@ public class OrderVerify {
                         rs.getInt("VERID"),
                         Order.getOrder(rs.getInt("ORDERID")),
                         Employee.searchBy(rs.getInt("EMPID")),               
-                        rs.getBoolean("nameCheck"),
-                        rs.getBoolean("accountCheck"),
-                        rs.getBoolean("mediaCheck"),
-                        rs.getBoolean("contentCheck"),
-                        rs.getBoolean("paymentCheck"),
-                        rs.getBoolean("depositCheck"),
+                        rs.getInt("nameCheck"),
+                        rs.getInt("accountCheck"),
+                        rs.getInt("mediaCheck"),
+                        rs.getInt("contentCheck"),
+                        rs.getInt("paymentCheck"),
+                        rs.getInt("depositCheck"),
                         rs.getString("nameFailComment") != null ? rs.getString("nameFailComment") : new String(),
                         rs.getString("accountFailComment") != null ? rs.getString("accountFailComment") : new String(),                        
                         rs.getString("mediaFailComment") != null ? rs.getString("mediaFailComment") : new String(),
