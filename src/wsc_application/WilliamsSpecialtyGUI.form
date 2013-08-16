@@ -1894,30 +1894,20 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="InvItemNameText" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="InvOnHandText" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="InvOnOrderText" linkSize="7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="InvDelDateText" linkSize="7" alignment="0" pref="75" max="32767" attributes="0"/>
-                                          <Component id="InvItemIDCB" pref="0" max="32767" attributes="0"/>
-                                          <Component id="jComboBox2" alignment="1" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="918" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="InvOrderButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="InvClearButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="InvDelDateText" linkSize="7" alignment="0" pref="75" max="32767" attributes="0"/>
+                                  <Component id="InvOnOrderText" linkSize="7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="InvOnHandText" linkSize="7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="InvItemNameText" linkSize="7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="InvItemIDText" linkSize="7" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Component id="InvManIDText" linkSize="7" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Component id="InvOrderButton" linkSize="7" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="InvClearButton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="InvSearchLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="InvButtonLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace pref="361" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1925,14 +1915,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="InvItemIDLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="InvItemIDCB" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="InvItemIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvItemIDText" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="InvManIDLbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox2" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="InvManIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="InvManIDText" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
@@ -1961,7 +1951,7 @@
                           <Component id="InvClearButton" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="InvSearchLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="InvButtonLbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="316" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -2024,7 +2014,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="InvItemNameText">
             </Component>
-            <Component class="javax.swing.JLabel" name="InvSearchLbl">
+            <Component class="javax.swing.JLabel" name="InvButtonLbl">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -2044,32 +2034,9 @@
             </Component>
             <Component class="javax.swing.JTextField" name="InvDelDateText">
             </Component>
-            <Component class="javax.swing.JComboBox" name="InvItemIDCB">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InvItemIDCBActionPerformed"/>
-              </Events>
+            <Component class="javax.swing.JTextField" name="InvItemIDText">
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
+            <Component class="javax.swing.JTextField" name="InvManIDText">
             </Component>
           </SubComponents>
         </Container>

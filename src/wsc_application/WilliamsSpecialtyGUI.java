@@ -252,12 +252,12 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         InvSearchButton = new javax.swing.JButton();
         InvItemNameLbl = new javax.swing.JLabel();
         InvItemNameText = new javax.swing.JTextField();
-        InvSearchLbl = new javax.swing.JLabel();
+        InvButtonLbl = new javax.swing.JLabel();
         InvOnHandText = new javax.swing.JTextField();
         InvOnOrderText = new javax.swing.JTextField();
         InvDelDateText = new javax.swing.JTextField();
-        InvItemIDCB = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
+        InvItemIDText = new javax.swing.JTextField();
+        InvManIDText = new javax.swing.JTextField();
         EmployeeInfoPanel = new javax.swing.JPanel();
         EmpFNameText = new javax.swing.JTextField();
         EmpLNameText = new javax.swing.JTextField();
@@ -1523,8 +1523,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     InvItemNameLbl.setText("Item Name");
 
-    InvSearchLbl.setForeground(new java.awt.Color(255, 51, 51));
-    InvSearchLbl.setText("* Use only one field for searches");
+    InvButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
+    InvButtonLbl.setText("* Use only one field for searches");
 
     InvOnHandText.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1537,15 +1537,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             InvOnOrderTextActionPerformed(evt);
         }
     });
-
-    InvItemIDCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    InvItemIDCB.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            InvItemIDCBActionPerformed(evt);
-        }
-    });
-
-    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     javax.swing.GroupLayout InventoryPanelLayout = new javax.swing.GroupLayout(InventoryPanel);
     InventoryPanel.setLayout(InventoryPanelLayout);
@@ -1565,38 +1556,32 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(InvSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(InventoryPanelLayout.createSequentialGroup()
-                            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(InvItemNameText)
-                                .addComponent(InvOnHandText)
-                                .addComponent(InvOnOrderText)
-                                .addComponent(InvDelDateText, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                                .addComponent(InvItemIDCB, 0, 0, Short.MAX_VALUE)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, 0, 0, Short.MAX_VALUE))
-                            .addGap(918, 918, 918))
-                        .addGroup(InventoryPanelLayout.createSequentialGroup()
-                            .addComponent(InvOrderButton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(InvClearButton)
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGroup(InventoryPanelLayout.createSequentialGroup()
-                    .addComponent(InvSearchLbl)
-                    .addContainerGap())))
+                        .addComponent(InvDelDateText, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                        .addComponent(InvOnOrderText)
+                        .addComponent(InvOnHandText)
+                        .addComponent(InvItemNameText)
+                        .addComponent(InvItemIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvManIDText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvOrderButton))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(InvClearButton))
+                .addComponent(InvButtonLbl))
+            .addContainerGap(361, Short.MAX_VALUE))
     );
 
-    InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvDelDateText, InvItemNameText, InvOnHandText, InvOnOrderText});
+    InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvDelDateText, InvItemIDText, InvItemNameText, InvManIDText, InvOnHandText, InvOnOrderText, InvOrderButton});
 
     InventoryPanelLayout.setVerticalGroup(
         InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(InventoryPanelLayout.createSequentialGroup()
             .addGap(110, 110, 110)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(InvItemIDLbl)
-                .addComponent(InvItemIDCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(InvItemIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+            .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(InvManIDLbl)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(InvManIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(InvItemNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1619,7 +1604,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(InvOrderButton)
                 .addComponent(InvClearButton))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(InvSearchLbl)
+            .addComponent(InvButtonLbl)
             .addContainerGap(316, Short.MAX_VALUE))
     );
 
@@ -1827,7 +1812,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     Order workingOrder = new Order();
     OrderVerify workingOV = null;
     QAReport workingQA = new QAReport();
-    InventoryItem workingCA = new InventoryItem();
+    InventoryItem workingII = new InventoryItem();
     
     public void HideEmpPassword()
     {
@@ -1905,13 +1890,90 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }
     
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
-        // TODO add your handling code here:
+                        // TODO add your handling code here:
     }//GEN-LAST:event_InvSearchButtonActionPerformed
-
+    private Boolean popII(){    /* 
+         * Brad Clawson: Populates Inventory Item tab by searching either ItemID Number,
+         * Manufacturer, or name but not by more than one field.
+         */
+        
+        //search by ITEMID if ManID and ItemName are null or empty
+        if ((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+            workingII = InventoryItem.getIIby("ITEMID", InvItemIDText.getText());
+            InvManIDText.setBackground(Color.white);
+            InvItemIDText.setBackground(Color.white);
+        }
+        //search by MANID if ITEMID and ItemName are null or empty
+        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+            workingII = InventoryItem.getIIby("MANID", InvManIDText.getText());
+            InvManIDText.setBackground(Color.white);
+            InvItemIDText.setBackground(Color.white);
+        }
+        //search by ItemName if ManID and ITEMID are null or empty
+        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+            workingII = InventoryItem.getIIby("Name", InvItemNameText.getText());
+            InvManIDText.setBackground(Color.white);
+            InvItemIDText.setBackground(Color.white);
+        }
+        //if search criteria are all null or empty, return false with notification
+        else if((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+            InvButtonLbl.setText("Please enter a search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            InvItemNameText.setBackground(Color.YELLOW);
+            //page not populated, return false for failure
+            return false;
+        }
+        //if two search criteria are entere, return false with notification
+        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                || (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+            InvButtonLbl.setText("Use a single search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
+            return false;
+        }
+        //if two search criteria are entere, return false with notification
+        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
+                || (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+            InvButtonLbl.setText("Use a single search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
+            return false;
+        }
+         //if two search criteria are entere, return false with notification       
+        else if((InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())
+                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                || (InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())){
+            InvButtonLbl.setText("Use a single search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
+            return false;
+        }
+        //populate Inventory Item Tab fields
+        
+        return true;
+    }
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
         // Clear Inventory data
-        InvItemIDCB.setSelectedIndex(0);
-        jComboBox2.setSelectedIndex(0);
+        InvItemIDText.setText("");
+        InvManIDText.setText("");
         InvItemNameText.setText("");
         InvOnHandText.setText("");
         InvOnOrderText.setText("");
@@ -2969,10 +3031,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_EMPIDCBActionPerformed
 
-    private void InvItemIDCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvItemIDCBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InvItemIDCBActionPerformed
-
     private void OrderNumberCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderNumberCBActionPerformed
         if (this.OrderNumberCB.getSelectedIndex() != -1)
             this.selectOrderByIndex(this.OrderNumberCB.getSelectedIndex());
@@ -3047,21 +3105,22 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JComboBox EmpTypeCB;
     private javax.swing.JLabel EmpTypeLbl;
     private javax.swing.JPanel EmployeeInfoPanel;
+    private javax.swing.JLabel InvButtonLbl;
     private javax.swing.JButton InvClearButton;
     private javax.swing.JLabel InvDelDateLbl;
     private javax.swing.JTextField InvDelDateText;
-    private javax.swing.JComboBox InvItemIDCB;
     private javax.swing.JLabel InvItemIDLbl;
+    private javax.swing.JTextField InvItemIDText;
     private javax.swing.JLabel InvItemNameLbl;
     private javax.swing.JTextField InvItemNameText;
     private javax.swing.JLabel InvManIDLbl;
+    private javax.swing.JTextField InvManIDText;
     private javax.swing.JLabel InvOnHandLbl;
     private javax.swing.JTextField InvOnHandText;
     private javax.swing.JLabel InvOnOrderLbl;
     private javax.swing.JTextField InvOnOrderText;
     private javax.swing.JButton InvOrderButton;
     private javax.swing.JButton InvSearchButton;
-    private javax.swing.JLabel InvSearchLbl;
     private javax.swing.JLabel InvSearchLbl5;
     private javax.swing.JPanel InventoryPanel;
     private javax.swing.JButton LoginButton;
@@ -3206,7 +3265,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
