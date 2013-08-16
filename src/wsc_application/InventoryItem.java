@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 public class InventoryItem {
     
-    //Global Variables
+    //Variable declaration
     private int itemId;
     private int manid;
     private String name;
@@ -62,7 +62,7 @@ public class InventoryItem {
              mysql.closeAll();
        }return itemExist;
     }
-    //This method searches for a InventoryItem by ITEMID or MANID and returns a copy of the II that is found
+    //This method searches by ITEMID, MANID, or Name and returns a copy of the Item that is found
     public static InventoryItem getIIby(String column, String id){
         InventoryItem ii = null;
          ResultSet rs;
@@ -89,14 +89,14 @@ public class InventoryItem {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
          }
-        //if no sql errors, return created II object
+        //if no sql errors, return created InventoryItem object
          finally {
              mysql.closeAll();
              return ii;
          }
         
     }
-    //this method inserts or updates a II record in the database
+    //this method inserts or updates an Item record in the database
     public static InventoryItem insertOrUpdateII(InventoryItem ii){
         InventoryItem thisII = null;
         ResultSet rs;
