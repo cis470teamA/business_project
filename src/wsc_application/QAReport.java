@@ -4,7 +4,12 @@ package wsc_application;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-
+/*
+ * Created By Brad Clawson
+ * for CIS470 GroupA
+ * 8/16/2013
+ * 
+ */
 public class QAReport {
     
     private Order order;
@@ -110,6 +115,7 @@ public class QAReport {
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+            //create query for INSERT INTO QA ON DUPLICATE KEY UPDATE 
             String query = "INSERT INTO QUALITYASSURANCE (QAID,EMPID,ORDERID,contentCheck,mediaCheck,"
                     + "mediaFinish, workmanship,contentFailComment,mediaFailComment,mediaFinishFailComment,"
                     + "workmanshipFailComment,correctiveActionComment) values ("
@@ -148,9 +154,6 @@ public class QAReport {
             if (key > 0) {
                 thisQA = QAReport.getQAby("QAID", key);
             }
-            //else{
-            //    thisOV = OrderVerify.getOVby("VERID", qa.VERID);
-            //}
         }   
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
