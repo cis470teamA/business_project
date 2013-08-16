@@ -3,6 +3,7 @@ package wsc_application;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+
 /*
  * QAReport Class
  * Class Created By Brad Clawson
