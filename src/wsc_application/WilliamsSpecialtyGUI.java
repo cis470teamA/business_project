@@ -2462,40 +2462,54 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
 //      OVAssignEmpCB
         if(workingOV.getNameCheck()){
-            OVCorrectNamePassRb.setSelected(true);}
+            OVCorrectNamePassRb.setSelected(true);
+            OVNameFailText.setEditable(false);}
         else if(!workingOV.getNameCheck()){
             OVCorrectNameFailRb.setSelected(true);
-            OVNameFailText.setText(workingOV.getNameFailComment());}
+            OVNameFailText.setText(workingOV.getNameFailComment());
+            OVNameFailText.setEditable(true);}
         if(workingOV.getAccountCheck()){
-            OVAcctNumPassRb.setSelected(true);}
+            OVAcctNumPassRb.setSelected(true);
+            OVAcctNumFailText.setEditable(false);}
         else if(!workingOV.getAccountCheck()){
             OVAcctNumFailRb.setSelected(true);
-            OVAcctNumFailText.setText(workingOV.getAccountFailComment());}
+            OVAcctNumFailText.setText(workingOV.getAccountFailComment());
+            OVAcctNumFailText.setEditable(true);}
         if(workingOV.getMediaCheck()){
-            OVMediaNumPassRb.setSelected(true);}
+            OVMediaNumPassRb.setSelected(true);
+            OVMediaFailText.setEditable(false);}
         else if(!workingOV.getMediaCheck()){
             OVMediaNumFailRb.setSelected(true);
-            OVMediaFailText.setText(workingOV.getMediaFailComment());}
+            OVMediaFailText.setText(workingOV.getMediaFailComment());
+            OVMediaFailText.setEditable(true);}
         if(workingOV.getContentCheck()){
-            OVContentPassRb.setSelected(true);}
+            OVContentPassRb.setSelected(true);
+            OVContentFailText.setEditable(false);}
         else if(!workingOV.getContentCheck()){
             OVContentFailRb.setSelected(true);
-            OVContentFailText.setText(workingOV.getContentFailComment());}
+            OVContentFailText.setText(workingOV.getContentFailComment());
+            OVContentFailText.setEditable(true);}
         if(workingOV.getPaymentCheck()){
-            OVPayTypePassRb.setSelected(true);}
+            OVPayTypePassRb.setSelected(true);
+            OVPayTypeFailText.setEditable(false);}
         else if(!workingOV.getPaymentCheck()){
             OVPayTypeFailRb.setSelected(true);
-            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());}
+            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
+            OVPayTypeFailText.setEditable(true);}
         if(workingOV.getDepositCheck()){
-            OVDepositPassRb.setSelected(true);}
+            OVDepositPassRb.setSelected(true);
+            OVDepositFailText.setEditable(false);}
         else if(!workingOV.getDepositCheck()){
             OVDepositFailRb.setSelected(true);
-            OVDepositFailText.setText(workingOV.getDepositFailComment());}
+            OVDepositFailText.setText(workingOV.getDepositFailComment());
+            OVDepositFailText.setEditable(true);}
         
         if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
                 OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
-                OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
+                OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected())
+            {
             OVCommentsText.setText(workingOV.getCorrectiveActionComment());
+            OVCommentsText.setEditable(true);
             }
         return true;
         }
@@ -2585,7 +2599,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected()){
             correctiveActionComment = (OVCommentsText.getText());
         }
-       OrderVerify  newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())),Login.emp, 
+        OrderVerify newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())),Login.emp, 
                 Order.getOrder(Integer.parseInt(OVOrderNumText.getText())), 
                 nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
                 depositCheck, nameComment, accountComment, mediaComment, contentComment,
