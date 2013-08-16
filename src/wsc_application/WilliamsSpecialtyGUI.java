@@ -2093,8 +2093,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAIDText.setText(String.valueOf(newQA.getQAID()));
         QAOrderIDText.setText("");
         
-        if(popOV()){        
-        OVButtonLbl.setText("Create/Update Successful");}
+        if(popQA()){        
+        QAButtonLbl.setText("Create/Update Successful");}
     }//GEN-LAST:event_QASubmitButtonActionPerformed
 
     private void QAClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAClearButtonActionPerformed
