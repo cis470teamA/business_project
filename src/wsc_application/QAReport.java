@@ -1,17 +1,19 @@
-
 package wsc_application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 /*
- * Created By Brad Clawson
+ * QAReport Class
+ * Class Created By Brad Clawson
+ * Static SQL methods created by
+ * Paul Durivage & Brad Clawson 
  * for CIS470 GroupA
- * 8/16/2013
- * 
+ * 8/16/2013 
  */
+
 public class QAReport {
-    
+    //variable declaration, bool values are recorded as int for db use
     private Order order;
     private int QAID;
     private Employee inspectedBy;
@@ -28,7 +30,7 @@ public class QAReport {
     public QAReport(){
         
     }
-    
+    //overloaded constructor for creating new QAReport object
     public QAReport(int qaid, Order order, Employee inspectedBy, Boolean contentCheck,
         Boolean mediaCheck, Boolean mediaFinish, Boolean workmanship, String contentFail, String mediaFail,
         String medFinFail, String workmanshipFail, String corrActComment){
@@ -46,19 +48,19 @@ public class QAReport {
         setCorrectiveActionComment(corrActComment);
         }
     
-    
-     public Boolean checkExistBy(String column, int id){
-        Boolean ovExist = false;
-        OrderVerify ov = null;
+    //This method checks to see if QAReport exists by OrderID or QAID
+    public Boolean checkExistBy(String column, int id){
+        Boolean QAExist = false;
+        QAReport qa = null;
          ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        String query = "Select * from cis470.ORDERVERIFY WHERE "
+        String query = "Select * from cis470.QUALITYASSURANCE WHERE "
                     + column + " = " + id;
-                    
+        //if result set is populated record exists & bool value set to true          
         rs = mysql.doQuery(query);
         try {
             if (rs.next()){
-                ovExist = true;
+                QAExist = true;
             }
         }
         catch (SQLException ex) {
@@ -69,8 +71,9 @@ public class QAReport {
          }
          finally {
              mysql.closeAll();
-       }return ovExist;
+       }return QAExist;
     }
+    //This method searches for a QAReport by QAID or OrderID and returns a copy of the QAReport that is found
     public static QAReport getQAby(String column, int id){
         QAReport qa = null;
          ResultSet rs;
@@ -79,6 +82,7 @@ public class QAReport {
                     + column + " = " + id;
                     
         rs = mysql.doQuery(query);
+        //create new QAReport object with data found in Database
         try {
             if (rs.next()) {
                 qa = new QAReport(
@@ -103,19 +107,23 @@ public class QAReport {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
          }
+        //if no sql errors, return created QA object
          finally {
              mysql.closeAll();
              return qa;
          }
         
     }
+    //this method inserts or updates a QUALITYASSURANCE record in the database
     public static QAReport insertOrUpdateQA(QAReport qa){
         QAReport thisQA = null;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            //create query for INSERT INTO QA ON DUPLICATE KEY UPDATE 
+            /*create query for INSERT INTO QA ON DUPLICATE KEY UPDATE. Using this method reduces redundant code
+             * and allowed for a single submit button to be used on the QA tab
+             */ 
             String query = "INSERT INTO QUALITYASSURANCE (QAID,EMPID,ORDERID,contentCheck,mediaCheck,"
                     + "mediaFinish, workmanship,contentFailComment,mediaFailComment,mediaFinishFailComment,"
                     + "workmanshipFailComment,correctiveActionComment) values ("
@@ -131,6 +139,7 @@ public class QAReport {
                     + qa.mediaFinishFailComment + "', '"
                     + qa.workmanshipFailComment + "', '"
                     + qa.correctiveActionComment + "')"
+                    //if record with QAID exists UPDATE instead of INSERT
                     + "ON DUPLICATE KEY UPDATE " 
                     + "EMPID = " + qa.inspectedBy.getEmpId() + ", "
                     + "ORDERID = "+ qa.order.getORDID() + ", "
@@ -151,6 +160,7 @@ public class QAReport {
             if (rs.next()) {
                 key = rs.getInt(1);
             }
+            //search for updated/inserted record to verify action
             if (key > 0) {
                 thisQA = QAReport.getQAby("QAID", key);
             }
@@ -161,12 +171,13 @@ public class QAReport {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
+        //return verified object
         finally {
             mysql.closeAll();
             return thisQA;
         }
     }
-    
+    // <editor-fold defaultstate="collapsed" desc="getters">
     public void setQAID(int qaid){
        this.QAID = qaid;
     } 
@@ -223,6 +234,8 @@ public class QAReport {
     public void setCorrectiveActionComment(String corrAct){
         this.correctiveActionComment = corrAct;
     }
+    // </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="Setters">
     public int getQAID(){
         return QAID;
     }
@@ -279,4 +292,5 @@ public class QAReport {
     public String getCorrectiveActionComment(){
         return correctiveActionComment;
     }
+    // </editor-fold>
 }    
