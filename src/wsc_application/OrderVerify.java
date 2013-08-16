@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Bradley
+ * @author Bradley Clawson
  */
 public class OrderVerify {
     private int VERID;
@@ -33,11 +33,27 @@ public class OrderVerify {
     public OrderVerify(){
         
     }
-    public OrderVerify(int verID, Order ord, Employee verBy, int nameChk,
-            int acctChk, int medChk, int contChk, int payChk,
-            int depChk, String nameFail, String acctFail, String medFail,
+    public OrderVerify(int verID, Employee verBy, Order ord, Boolean nameChk,
+            Boolean acctChk, Boolean medChk, Boolean contChk, Boolean payChk,
+            Boolean depChk, String nameFail, String acctFail, String medFail,
             String contFail, String payFail, String depFail,
             String corrActComm){
+        setVerID(verID);
+        setOrder(ord);
+        setVerifiedBy(verBy);
+        setNameCheck(nameChk);
+        setAccountCheck(acctChk);
+        setMediaCheck(medChk);
+        setContentCheck(contChk);
+        setPaymentCheck(payChk);
+        setDepositCheck(depChk);
+        setNameFailComment(nameFail);
+        setAccountFailComment(acctFail);
+        setMediaFailComment(medFail);
+        setContentFailComment(contFail);
+        setPaymentFailComment(payFail);
+        setDepositFailComment(depFail);
+        setCorrectiveActionComment(corrActComm);        
         }
     
     public Boolean checkExistBy(String column, int id){
@@ -76,14 +92,14 @@ public class OrderVerify {
             if (rs.next()) {
                 ov = new OrderVerify(
                         rs.getInt("VERID"),
+                        Employee.searchBy(rs.getInt("EMPID")),  
                         Order.getOrder(rs.getInt("ORDERID")),
-                        Employee.searchBy(rs.getInt("EMPID")),               
-                        rs.getInt("nameCheck"),
-                        rs.getInt("accountCheck"),
-                        rs.getInt("mediaCheck"),
-                        rs.getInt("contentCheck"),
-                        rs.getInt("paymentCheck"),
-                        rs.getInt("depositCheck"),
+                        rs.getBoolean("nameCheck"),
+                        rs.getBoolean("accountCheck"),
+                        rs.getBoolean("mediaCheck"),
+                        rs.getBoolean("contentCheck"),
+                        rs.getBoolean("paymentCheck"),
+                        rs.getBoolean("depositCheck"),
                         rs.getString("nameFailComment") != null ? rs.getString("nameFailComment") : new String(),
                         rs.getString("accountFailComment") != null ? rs.getString("accountFailComment") : new String(),                        
                         rs.getString("mediaFailComment") != null ? rs.getString("mediaFailComment") : new String(),
@@ -111,40 +127,43 @@ public class OrderVerify {
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            String query = "INSERT INTO cis470.ORDERVERIFY values ('"
-                    + ov.VERID + "', '"
-                    + ov.verifiedBy.getEmpId() + "', '"
-                    + ov.order.getORDID() + "', '"
-                    + ov.nameCheck + "', '"
-                    + ov.accountCheck + "', '"
-                    + ov.mediaCheck + "', '"
-                    + ov.contentCheck + "', '"
-                    + ov.paymentCheck + "', '"
-                    + ov.depositCheck + "', '"
+            String query = "INSERT INTO ORDERVERIFY (VERID,EMPID,ORDERID,nameCheck,"
+                    + "accountCheck,mediaCheck,contentCheck,paymentCheck,depositCheck,nameFailComment,"
+                    + "accountFailComment,mediaFailComment,contentFailComment,paymentFailComment,"
+                    + "depositFailComment,correctiveActionComment)"
+                    + " values (0, "
+                    + ov.verifiedBy.getEmpId() + ", "
+                    + ov.order.getORDID() + ", "
+                    + ov.nameCheck + ", "
+                    + ov.accountCheck + ", "
+                    + ov.mediaCheck + ", "
+                    + ov.contentCheck + ", "
+                    + ov.paymentCheck + ", "
+                    + ov.depositCheck + ", '"
                     + ov.nameFailComment + "', '"
                     + ov.accountFailComment + "', '"
                     + ov.mediaFailComment + "', '"
                     + ov.contentFailComment + "', '"
                     + ov.paymentFailComment + "', '"
                     + ov.depositFailComment + "', '"
-                    + ov.correctiveActionComment + "')"
-                    + "ON DUPLICATE KEY UPDATE cis470.ORDERVERIFY " 
-                    + "SET verifiedBy = '" + ov.verifiedBy.getEmpId() + "', '"
-                    + "ORDERID = '"+ ov.order.getORDID() + "', '"
-                    + "nameCheck = '" + ov.nameCheck + "', '"
-                    + "accountCheck = '" + ov.accountCheck + "', '"
-                    + "mediaCheck = '" + ov.mediaCheck + "', '"
-                    + "contentCheck = '" + ov.contentCheck + "', '"
-                    + "paymentCheck = '" + ov.paymentCheck + "', '"
-                    + "depositCheck = '" +ov.depositCheck + "', '"
-                    + "nameFailComment = '" + ov.nameFailComment + "', '"
-                    + "accountFailComment = '" + ov.accountFailComment + "', '"
-                    + "mediaFailComment = '" + ov.mediaFailComment + "', '"
-                    + "contentFailComment = '" + ov.contentFailComment + "', '"
-                    + "paymentFailComment = '" + ov.paymentFailComment + "', '"
-                    + "depositFailComment = '" + ov.depositFailComment + "', '"
+                    + ov.correctiveActionComment + "');"
+                   /* + "ON DUPLICATE KEY UPDATE cis470.ORDERVERIFY " 
+                    + "SET verifiedBy = " + ov.verifiedBy.getEmpId() + ", "
+                    + "ORDERID = "+ ov.order.getORDID() + ", "
+                    + "nameCheck = " + ov.nameCheck + ", "
+                    + "accountCheck = " + ov.accountCheck + ", "
+                    + "mediaCheck = " + ov.mediaCheck + ", "
+                    + "contentCheck = " + ov.contentCheck + ", "
+                    + "paymentCheck = " + ov.paymentCheck + ", "
+                    + "depositCheck = " +ov.depositCheck + ", "
+                    + "nameFailComment = '" + ov.nameFailComment + "', "
+                    + "accountFailComment = '" + ov.accountFailComment + "', "
+                    + "mediaFailComment = '" + ov.mediaFailComment + "', "
+                    + "contentFailComment = '" + ov.contentFailComment + "', "
+                    + "paymentFailComment = '" + ov.paymentFailComment + "', "
+                    + "depositFailComment = '" + ov.depositFailComment + "', "
                     + "correctiveActionComment = '" + ov.correctiveActionComment
-                    + "';";
+                    + "';"*/;
             System.out.println(query);
             mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
             int key = -1;
@@ -155,9 +174,9 @@ public class OrderVerify {
             if (key > 0) {
                 thisOV = OrderVerify.getOVby("VERID", key);
             }
-            else{
-                thisOV = OrderVerify.getOVby("VERID", ov.getVerID());
-            }
+            //else{
+            //    thisOV = OrderVerify.getOVby("VERID", ov.VERID);
+            //}
         }   
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
@@ -188,7 +207,7 @@ public class OrderVerify {
     public void setVerifiedBy(Employee verBy){
         verifiedBy = verBy;
     }
- public Boolean getNameCheck(){
+    public Boolean getNameCheck(){
         if (nameCheck == 1){
             return Boolean.TRUE;}
         else{
@@ -302,7 +321,6 @@ public class OrderVerify {
     public void setContentFailComment(String contFail){
         contentFailComment = contFail;
     }
-
     public String getPaymentFailComment(){
         return paymentFailComment;
     }
