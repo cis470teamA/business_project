@@ -13,7 +13,7 @@ public class Login {
      * doQuery method is already doing that -- refer to the class vars set
      * there.
      */
-    public static Employee emp; // App-level Employee obj.
+    public static Employee emp = null; // App-level Employee obj.
     
     private static long empid;
     private static String passwd;
