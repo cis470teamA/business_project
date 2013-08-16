@@ -52,10 +52,6 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         OVContentBG = new javax.swing.ButtonGroup();
         OVPaymentBG = new javax.swing.ButtonGroup();
         OVDepositBG = new javax.swing.ButtonGroup();
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
         WSCInterface = new javax.swing.JTabbedPane();
         LoginPanel = new javax.swing.JPanel();
         LoginButton = new javax.swing.JButton();
@@ -1230,56 +1226,56 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAEngrFinishLbl.setText("Workmanship");
 
-    buttonGroup1.add(QACorrectContentPassRb);
+    QAOrderContentBG.add(QACorrectContentPassRb);
     QACorrectContentPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup2.add(QACorrectMediaPassRb);
+    QAOrderMediaBG.add(QACorrectMediaPassRb);
     QACorrectMediaPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup3.add(QAMediaFinishPassRb);
+    QAMediaFinishBG.add(QAMediaFinishPassRb);
     QAMediaFinishPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup4.add(QAWorkmanshipPassRb);
+    QAWorkmanshipBG.add(QAWorkmanshipPassRb);
     QAWorkmanshipPassRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipPassRbActionPerformed(evt);
         }
     });
 
-    buttonGroup1.add(QACorrectContentFailRb);
+    QAOrderContentBG.add(QACorrectContentFailRb);
     QACorrectContentFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectContentFailRbActionPerformed(evt);
         }
     });
 
-    buttonGroup2.add(QACorrectMediaFailRb);
+    QAOrderMediaBG.add(QACorrectMediaFailRb);
     QACorrectMediaFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QACorrectMediaFailRbActionPerformed(evt);
         }
     });
 
-    buttonGroup3.add(QAMediaFinishFailRb);
+    QAMediaFinishBG.add(QAMediaFinishFailRb);
     QAMediaFinishFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAMediaFinishFailRbActionPerformed(evt);
         }
     });
 
-    buttonGroup4.add(QAWorkmanshipFailRb);
+    QAWorkmanshipBG.add(QAWorkmanshipFailRb);
     QAWorkmanshipFailRb.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             QAWorkmanshipFailRbActionPerformed(evt);
@@ -2897,10 +2893,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JRadioButton QAWorkmanshipPassRb;
     private javax.swing.JTabbedPane WSCInterface;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JComboBox jComboBox2;
