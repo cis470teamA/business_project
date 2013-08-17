@@ -2,6 +2,7 @@ package wsc_application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Customer {
@@ -207,6 +208,31 @@ public class Customer {
             mysql.closeAll();
             return retval;
         }
+    }
+    
+    //Jacob: Added to get orders for customer tab
+      public static ArrayList<String> getOrders(long custid)
+    {
+        int i = 1;
+        String temp = "";
+        ArrayList<String> orders = new ArrayList<String>();
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select ORDERID from `ORDER` WHERE CUSTID = " + Long.toString(custid) + ";";
+        rs = mysql.doQuery(query);
+        
+         try {
+            while (rs.next()) {
+                temp = rs.getString("ORDERID");
+                orders.add(temp);
+                temp = "";
+            }
+            return orders;
+         }
+            catch (SQLException ex) {
+            
+                    }
+         return null;
     }
      
      
