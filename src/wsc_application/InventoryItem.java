@@ -19,16 +19,19 @@ public class InventoryItem {
     
     //Variable declaration
     private int itemId;
-    private int manid;
-    private String name;
+    private int manufacturerId;
+    private String itemName;
     private int qtyOnHand;
     private int qtyOnOrder;
     private String deliveryDate;
     
     //Constructor
+    
+    protected static ArrayList<InventoryItem> manufacturerItems;
     public InventoryItem(){
         
-    }
+    }    
+    
     //Overloaded constructor to create InventoryItem Object
     public InventoryItem(int itemNum,int manufacturer, String itemName, int onHand,
             int onOrder, String delDate){
@@ -113,16 +116,16 @@ public class InventoryItem {
             String query = "INSERT INTO INVENTORY (ITEMID,MANID,Name,QtyOnHand,QtyOnOrder,DeliveryDate)"
                     + " values ("
                     + ii.itemId + ", "
-                    + ii.manid + ", '"
-                    + ii.name + "', "
+                    + ii.manufacturerId + ", '"
+                    + ii.itemName + "', "
                     + ii.qtyOnHand + ", "
                     + ii.qtyOnOrder + ", '"
                     + ii.deliveryDate + "')"
                     //if record with ItemID exists UPDATE instead of INSERT
                     + "ON DUPLICATE KEY UPDATE " 
                     + "ITEMID" + ii.itemId + ", "
-                    + "MANID = "+ ii.manid + ", "
-                    + "Name = '" + ii.name + "', "
+                    + "MANID = "+ ii.manufacturerId + ", "
+                    + "Name = '" + ii.itemName + "', "
                     + "QtyOnHand = " + ii.qtyOnHand + ", "
                     + "QtyOnOrder = " + ii.qtyOnOrder + ", "
                     + "workmanship = '" + ii.deliveryDate + "';";
@@ -151,33 +154,25 @@ public class InventoryItem {
         }
     }
     
-    public static ArrayList getManufacturerItems(int CustId) {
-        orders = new ArrayList(0);
-        Order order;
+    public static ArrayList getManufacturerItems(int manufacturerId) {
+        manufacturerItems = new ArrayList(0);
+        InventoryItem inventoryItem;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-            String query = "select * from cis470.ORDER where CUSTID = " + CustId + ";";
+            String query = "select * from cis470.INVENTORY where  MANID = " + manufacturerId + ";";
         System.out.println(query);
         try {
             rs = mysql.doQuery(query);
             while (rs.next()) {
-                Employee employee;
-                Customer customer;
-                employee = Employee.searchBy(rs.getLong("EMPID"));
-                customer = Customer.searchBy("CUSTID", rs.getString("CUSTID"));
-                order = new Order(
-                        customer,
-                        rs.getInt("ORDERID"),
-                        rs.getString("MediaType"),
-                        rs.getString("Content"),
-                        rs.getBoolean("PaymentOnAccount"),
-                        rs.getFloat("Total"),
-                        rs.getFloat("Deposit"),
-                        rs.getString("OrderStatus"),
-                        rs.getString("MediaStatus"),
-                        employee);
+                inventoryItem = new InventoryItem(
+                        rs.getInt("ITEMID"),
+                        rs.getInt("MANID"),
+                        rs.getString("Name"),
+                        rs.getInt("QtyOnHand"),
+                        rs.getInt("QtyOnOrder"),
+                        rs.getString("DeliveryDate"));
                 // Add the new order to the ArrayList
-                orders.add(order);
+                manufacturerItems.add(inventoryItem);
             }
         }
         catch (SQLException ex) {
@@ -186,7 +181,7 @@ public class InventoryItem {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
-        return orders;
+        return manufacturerItems;
     }
         
     // <editor-fold defaultstate="collapsed" desc="Inc/Dec onOrder onHand">
@@ -209,12 +204,12 @@ public class InventoryItem {
         this.itemId = itemId;
     }
     
-    public void setManufacturerID(int manufacturerID){
-        this.manid = manufacturerID;
+    public void setManufacturerID(int manufacturerId){
+        this.manufacturerId = manufacturerId;
     }
     
     public void setName(String itemName){
-        this.name = itemName;
+        this.itemName = itemName;
     }
     
     public void setQtyOnHand(int qtyOnHand){
@@ -235,10 +230,10 @@ public class InventoryItem {
          return itemId;
      }
      public String getName(){
-         return name;
+         return itemName;
      }
      public int getManufacturerID(){
-         return manid;
+         return manufacturerId;
      }
      public int getQtyOnHand(){
          return qtyOnHand;
