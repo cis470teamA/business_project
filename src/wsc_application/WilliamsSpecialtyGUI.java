@@ -2198,9 +2198,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (!"".equals(EMPIDCB.getText()))
         {
             emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
-            //orders = Employee.GetOrders(Long.parseLong(EMPIDCB.getText()));
+            orders = Employee.getOrders(Long.parseLong(EMPIDCB.getText()));
            // JList list = new JList(orders.toArray());
-           // emOrdersLst.add(list);
+            //emOrdersLst.add(orders);
 
         }
         
@@ -2254,7 +2254,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
            Employee.updateBy(emp);
            emp = null;
-           empUser = Employee.EmpUserExist(Long.parseLong(EMPIDCB.getText()));
+           empUser = Employee.empUserExist(Long.parseLong(EMPIDCB.getText()));
            
            if (empUser == false)
            {
@@ -2265,7 +2265,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            if (empUser == true)
            {
              emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
-             Employee.UpdateUserLogin(emp);
+             Employee.updateUserLogin(emp);
            }
            
            JOptionPane.showMessageDialog(null, "Employee updated.");
