@@ -2480,7 +2480,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVPayTypeValLbl.setVisible(true);
         OVDepositValLbl.setVisible(true);
         OVOrderIDText.setText(String.valueOf(workingOV.getOrder().getORDID()));
-        OVerIDText.setText(String.valueOf(workingOV.getVerId()));
+        OVerIDText.setText(String.valueOf(workingOV.getVerID()));
         OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
                 + " " + workingOV.getOrder().getCustomer().getCustLName());        
         OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
@@ -2661,7 +2661,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //Object that is returned verifies that the object was created
         newOV = OrderVerify.insertOrUpdateOV(newOV);
         //prepare screen for popOV()
-        OVerIDText.setText(String.valueOf(newOV.getVerId()));
+        OVerIDText.setText(String.valueOf(newOV.getVerID()));
         OVOrderIDText.setText("");
         //Record is searched for and verified a second time through popOV()
         if(popOV()){        
