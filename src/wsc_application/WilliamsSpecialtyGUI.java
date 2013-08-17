@@ -1450,13 +1450,14 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addGroup(InventoryPanelLayout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(InvClearButton))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InventoryPanelLayout.createSequentialGroup()
+                        .addGroup(InventoryPanelLayout.createSequentialGroup()
                             .addGap(34, 34, 34)
                             .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel5)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(143, 143, 143))
                 .addComponent(InvButtonLbl))
-            .addContainerGap(302, Short.MAX_VALUE))
+            .addContainerGap(151, Short.MAX_VALUE))
     );
 
     InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvClearButton, InvDelDateText, InvItemIDText, InvItemNameText, InvManIDText, InvOnHandText, InvOnOrderText, InvOrderButton, InvSearchButton, jTextField1});
@@ -1696,12 +1697,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     /* Brad Clawson: These class objects are created to represent the global objects
      * that are passed between the tabs in the GUI -
      */
-    Employee login = new Employee();
-    Customer workingCustomer = new Customer();
-    Order workingOrder = new Order();
-    OrderVerify workingOV = null;
-    QAReport workingQA = new QAReport();
-    InventoryItem workingII = new InventoryItem();
+    private Employee login = new Employee();
+    private Customer workingCustomer = new Customer();
+    private Order workingOrder = new Order();
+    private OrderVerify workingOV = null;
+    private QAReport workingQA = new QAReport();
+    private InventoryItem workingII = new InventoryItem();
     
     public void HideEmpPassword()
     {
@@ -1777,113 +1778,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         Order order = (Order)this.OrderNumberCB.getItemAt(index);
         this.populateOrderTab(order);
     }
-    
-    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: InventoryItem Search,Submit,Clear Buttons">
-    private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
-        if(popII()){
-            InvButtonLbl.setText("Item Found");
-        }
-    }//GEN-LAST:event_InvSearchButtonActionPerformed
-    private Boolean popII(){    /* 
-         * Brad Clawson: Populates Inventory Item tab by searching either ItemID Number,
-         * Manufacturer, or name but not by more than one field.
-         */
-        
-        //search by ITEMID if ManID and ItemName are null or empty
-        if ((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
-                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
-            workingII = InventoryItem.getIIby("ITEMID", InvItemIDText.getText());
-            InvManIDText.setBackground(Color.white);
-            InvItemIDText.setBackground(Color.white);
-        }
-        //search by MANID if ITEMID and ItemName are null or empty
-        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
-                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
-            workingII = InventoryItem.getIIby("MANID", InvManIDText.getText());
-            InvManIDText.setBackground(Color.white);
-            InvItemIDText.setBackground(Color.white);
-        }
-        //search by ItemName if ManID and ITEMID are null or empty
-        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
-                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
-            workingII = InventoryItem.getIIby("Name", InvItemNameText.getText());
-            InvManIDText.setBackground(Color.white);
-            InvItemIDText.setBackground(Color.white);
-        }
-        //if search criteria are all null or empty, return false with notification
-        else if((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
-                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
-            InvButtonLbl.setText("Please enter a search Criteria");
-            InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
-            InvItemNameText.setBackground(Color.YELLOW);
-            //page not populated, return false for failure
-            return false;
-        }
-        //if two search criteria are entere, return false with notification
-        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
-                || (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
-            InvButtonLbl.setText("Use a single search Criteria");
-            InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
-            //page not populated return false for failure
-            return false;
-        }
-        //if two search criteria are entere, return false with notification
-        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
-                || (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
-                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
-            InvButtonLbl.setText("Use a single search Criteria");
-            InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
-            //page not populated return false for failure
-            return false;
-        }
-         //if two search criteria are entere, return false with notification       
-        else if((InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())
-                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
-                || (InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())){
-            InvButtonLbl.setText("Use a single search Criteria");
-            InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
-            //page not populated return false for failure
-            return false;
-        }
-        //populate Inventory Item Tab fields
-        InvItemIDText.setText(String.valueOf(workingII.getItemNumber()));
-        InvManIDText.setText(String.valueOf(workingII.getManufacturerID()));
-        InvItemNameText.setText(workingII.getName());
-        InvOnHandText.setText(String.valueOf(workingII.getQtyOnHand()));
-        InvOnOrderText.setText(String.valueOf(workingII.getQtyOnOrder()));
-        InvDelDateText.setText(workingII.getDeliveryDate());
-        return true;
-    }
-    
-    
-    private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
-        // Clear Inventory data
-        InvItemIDText.setText("");
-        InvManIDText.setText("");
-        InvItemNameText.setText("");
-        InvOnHandText.setText("");
-        InvOnOrderText.setText("");
-        InvDelDateText.setText("");
-    }//GEN-LAST:event_InvClearButtonActionPerformed
-
-    private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
-       
-    }//GEN-LAST:event_InvOrderButtonActionPerformed
-    //</editor-fold>
-    
+ 
     private void CustStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStateCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CustStateCBActionPerformed
@@ -2803,6 +2698,112 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
     }//GEN-LAST:event_OVContentValLblMouseClick
 
+    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: InventoryItem Search,Submit,Clear Buttons">
+    private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
+        // Clear Inventory data
+        InvItemIDText.setText("");
+        InvManIDText.setText("");
+        InvItemNameText.setText("");
+        InvOnHandText.setText("");
+        InvOnOrderText.setText("");
+        InvDelDateText.setText("");
+    }//GEN-LAST:event_InvClearButtonActionPerformed
+
+    private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
+
+    }//GEN-LAST:event_InvOrderButtonActionPerformed
+
+    private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
+        if(popII()){
+            InvButtonLbl.setText("Item(s) found");
+        }
+    }//GEN-LAST:event_InvSearchButtonActionPerformed
+
+     private Boolean popII(){    /* 
+         * Brad Clawson: Populates Inventory Item tab by searching either ItemID Number,
+         * Manufacturer, or name but not by more than one field.
+         */
+        
+        //search by ITEMID if ManID and ItemName are null or empty
+        if ((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+            workingII = InventoryItem.getIIby("ITEMID", InvItemIDText.getText());
+            InvManIDText.setBackground(Color.white);
+            InvItemIDText.setBackground(Color.white);
+        }
+        //search by MANID if ITEMID and ItemName are null or empty
+        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+            workingII = InventoryItem.getIIby("MANID", InvManIDText.getText());
+            InvManIDText.setBackground(Color.white);
+            InvItemIDText.setBackground(Color.white);
+        }
+        //search by ItemName if ManID and ITEMID are null or empty
+        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+            workingII = InventoryItem.getIIby("Name", InvItemNameText.getText());
+            InvManIDText.setBackground(Color.white);
+            InvItemIDText.setBackground(Color.white);
+        }
+        //if search criteria are all null or empty, return false with notification
+        else if((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+            InvButtonLbl.setText("Please enter a search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            InvItemNameText.setBackground(Color.YELLOW);
+            //page not populated, return false for failure
+            return false;
+        }
+        //if two search criteria are entere, return false with notification
+        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
+                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                || (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+            InvButtonLbl.setText("Use a single search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
+            return false;
+        }
+        //if two search criteria are entere, return false with notification
+        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
+                || (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+            InvButtonLbl.setText("Use a single search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
+            return false;
+        }
+         //if two search criteria are entere, return false with notification       
+        else if((InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())
+                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+                || (InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())){
+            InvButtonLbl.setText("Use a single search Criteria");
+            InvButtonLbl.setVisible(true);
+            InvManIDText.setBackground(Color.YELLOW);
+            InvItemIDText.setBackground(Color.YELLOW);
+            //page not populated return false for failure
+            return false;
+        }
+        //populate Inventory Item Tab fields
+        InvItemIDText.setText(String.valueOf(workingII.getItemNumber()));
+        InvManIDText.setText(String.valueOf(workingII.getManufacturerID()));
+        InvItemNameText.setText(workingII.getName());
+        InvOnHandText.setText(String.valueOf(workingII.getQtyOnHand()));
+        InvOnOrderText.setText(String.valueOf(workingII.getQtyOnOrder()));
+        InvDelDateText.setText(workingII.getDeliveryDate());
+        return true;
+    }
+     //</editor-fold>
+    
     // <editor-fold defaultstate="collapsed" desc="GUI Variable Declarations">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;

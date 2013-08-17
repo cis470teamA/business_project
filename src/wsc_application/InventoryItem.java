@@ -2,7 +2,9 @@ package wsc_application;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import static wsc_application.Order.orders;
 
 /*
  * OrderVerify Class
@@ -62,6 +64,7 @@ public class InventoryItem {
              mysql.closeAll();
        }return itemExist;
     }
+    
     //This method searches by ITEMID, MANID, or Name and returns a copy of the Item that is found
     public static InventoryItem getIIby(String column, String id){
         InventoryItem ii = null;
@@ -96,6 +99,7 @@ public class InventoryItem {
          }
         
     }
+    
     //this method inserts or updates an Item record in the database
     public static InventoryItem insertOrUpdateII(InventoryItem ii){
         InventoryItem thisII = null;
@@ -146,6 +150,45 @@ public class InventoryItem {
             return thisII;
         }
     }
+    
+    public static ArrayList getManufacturerItems(int CustId) {
+        orders = new ArrayList(0);
+        Order order;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+            String query = "select * from cis470.ORDER where CUSTID = " + CustId + ";";
+        System.out.println(query);
+        try {
+            rs = mysql.doQuery(query);
+            while (rs.next()) {
+                Employee employee;
+                Customer customer;
+                employee = Employee.searchBy(rs.getLong("EMPID"));
+                customer = Customer.searchBy("CUSTID", rs.getString("CUSTID"));
+                order = new Order(
+                        customer,
+                        rs.getInt("ORDERID"),
+                        rs.getString("MediaType"),
+                        rs.getString("Content"),
+                        rs.getBoolean("PaymentOnAccount"),
+                        rs.getFloat("Total"),
+                        rs.getFloat("Deposit"),
+                        rs.getString("OrderStatus"),
+                        rs.getString("MediaStatus"),
+                        employee);
+                // Add the new order to the ArrayList
+                orders.add(order);
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return orders;
+    }
+        
     // <editor-fold defaultstate="collapsed" desc="Inc/Dec onOrder onHand">
     public void incrementQtyOnHand(){
         this.qtyOnHand = qtyOnHand + 1;
