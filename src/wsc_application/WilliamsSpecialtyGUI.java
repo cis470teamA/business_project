@@ -1858,6 +1858,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     
     private void CustFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButtonActionPerformed
         Customer searchCust = null;
+         ArrayList<String> cust = new ArrayList<String>();
         //Search input to specify column to seach
         
         // <editor-fold defaultstate="collapsed" desc="Get Query for cust search">
@@ -1915,6 +1916,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustEmailText.setText(searchCust.getCustEmail());
         CustStateCB.setSelectedItem(searchCust.getCustState());
         CustOrgText.setText(searchCust.getCustOrg());
+        cust = Customer.getOrders(Long.parseLong(CUSTIDCB.getText()));
+        custOrdLst.setListData(cust.toArray());
             // </editor-fold>
         }
         // </editor-fold>
