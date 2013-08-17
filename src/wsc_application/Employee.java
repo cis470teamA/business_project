@@ -124,7 +124,7 @@ public class Employee{
         }
     }
     
-     public static void AddUserLogin(Employee employee) {
+     public static void addUserLogin(Employee employee) {
         Employee emp = null;
         MysqlConn mysql = new MysqlConn();
         try {
@@ -142,7 +142,7 @@ public class Employee{
         }
     }
      
-          public static void UpdateUserLogin(Employee employee) {
+          public static void updateUserLogin(Employee employee) {
         Employee emp = null;
         MysqlConn mysql = new MysqlConn();
         try {
@@ -159,7 +159,7 @@ public class Employee{
         }
     }
      
-     public static boolean EmpUserExist(long EmpID){
+     public static boolean empUserExist(long EmpID){
         boolean checkExist = false;
          ResultSet rs;
          MysqlConn mysql = new MysqlConn();
@@ -228,14 +228,14 @@ public class Employee{
         
     }
     
-    public static ArrayList<String> GetOrders(long empid)
+    public static ArrayList<String> getOrders(long empid)
     {
         int i = 1;
         String temp = "";
         ArrayList<String> orders = new ArrayList<String>();
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        String query = "select ORDERID from ORDER WHERE EMPID = " + Long.toString(empid) + ";";
+        String query = "select ORDERID from `ORDER` WHERE EMPID = " + Long.toString(empid) + ";";
         rs = mysql.doQuery(query);
         
          try {

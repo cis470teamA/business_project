@@ -1857,6 +1857,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     
     private void CustFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButtonActionPerformed
         Customer searchCust = null;
+         ArrayList<String> cust = new ArrayList<String>();
         //Search input to specify column to seach
         
         // <editor-fold defaultstate="collapsed" desc="Get Query for cust search">
@@ -1914,6 +1915,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustEmailText.setText(searchCust.getCustEmail());
         CustStateCB.setSelectedItem(searchCust.getCustState());
         CustOrgText.setText(searchCust.getCustOrg());
+        cust = Customer.getOrders(Long.parseLong(CUSTIDCB.getText()));
+        custOrdLst.setListData(cust.toArray());
             // </editor-fold>
         }
         // </editor-fold>
@@ -2197,9 +2200,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (!"".equals(EMPIDCB.getText()))
         {
             emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
-            //orders = Employee.GetOrders(Long.parseLong(EMPIDCB.getText()));
-           // JList list = new JList(orders.toArray());
-           // emOrdersLst.add(list);
+            orders = Employee.getOrders(Long.parseLong(EMPIDCB.getText()));
+           
+            emOrdersLst.setListData(orders.toArray());
 
         }
         
@@ -2253,18 +2256,18 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
            Employee.updateBy(emp);
            emp = null;
-           empUser = Employee.EmpUserExist(Long.parseLong(EMPIDCB.getText()));
+           empUser = Employee.empUserExist(Long.parseLong(EMPIDCB.getText()));
            
            if (empUser == false)
            {
              emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
-             Employee.AddUserLogin(emp);
+             Employee.addUserLogin(emp);
            }
            
            if (empUser == true)
            {
              emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
-             Employee.UpdateUserLogin(emp);
+             Employee.updateUserLogin(emp);
            }
            
            JOptionPane.showMessageDialog(null, "Employee updated.");
