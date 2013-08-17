@@ -241,10 +241,10 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         QAIDText = new javax.swing.JTextField();
         InventoryPanel = new javax.swing.JPanel();
         InvItemIDLbl = new javax.swing.JLabel();
-        InvManIDLbl = new javax.swing.JLabel();
-        InvOnHandLbl = new javax.swing.JLabel();
-        InvOnOrderLbl = new javax.swing.JLabel();
-        InvDelDateLbl = new javax.swing.JLabel();
+        InvManufacturerIdLbl = new javax.swing.JLabel();
+        InvQtyOnHandLbl = new javax.swing.JLabel();
+        InvQtyOnOrderLbl = new javax.swing.JLabel();
+        InvDeliveryDateLbl = new javax.swing.JLabel();
         InvOrderButton = new javax.swing.JButton();
         InvClearButton = new javax.swing.JButton();
         InvSearchButton = new javax.swing.JButton();
@@ -253,14 +253,14 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
         InvButtonLbl = new javax.swing.JLabel();
         InvOnHandText = new javax.swing.JTextField();
         InvOnOrderText = new javax.swing.JTextField();
-        InvDelDateText = new javax.swing.JTextField();
-        InvItemIDText = new javax.swing.JTextField();
-        InvManIDText = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
-        jLabel5 = new javax.swing.JLabel();
+        InvDeliveryDateText = new javax.swing.JTextField();
+        InvItemIdText = new javax.swing.JTextField();
+        InvManufacturerIdText = new javax.swing.JTextField();
+        InvOrderIdLbl = new javax.swing.JLabel();
+        InvOrderIdText = new javax.swing.JTextField();
+        InvManufacturerItemScrollPane = new javax.swing.JScrollPane();
+        InvManufacturerItemList = new javax.swing.JList();
+        InvManufacturerItemLbl = new javax.swing.JLabel();
         EmployeeInfoPanel = new javax.swing.JPanel();
         EmpFNameText = new javax.swing.JTextField();
         EmpLNameText = new javax.swing.JTextField();
@@ -1374,13 +1374,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     InvItemIDLbl.setText("Item Number");
 
-    InvManIDLbl.setText("Manufacturer");
+    InvManufacturerIdLbl.setText("Manufacturer");
 
-    InvOnHandLbl.setText("On Hand");
+    InvQtyOnHandLbl.setText("On Hand");
 
-    InvOnOrderLbl.setText("On Order");
+    InvQtyOnOrderLbl.setText("On Order");
 
-    InvDelDateLbl.setText("Delivery Date");
+    InvDeliveryDateLbl.setText("Delivery Date");
 
     InvOrderButton.setText("Order/Mark Sold");
     InvOrderButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1408,16 +1408,16 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     InvButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
     InvButtonLbl.setText("* Use only one field for searches");
 
-    jLabel2.setText("Order");
+    InvOrderIdLbl.setText("Order");
 
-    jList1.setModel(new javax.swing.AbstractListModel() {
+    InvManufacturerItemList.setModel(new javax.swing.AbstractListModel() {
         String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
         public int getSize() { return strings.length; }
         public Object getElementAt(int i) { return strings[i]; }
     });
-    jScrollPane1.setViewportView(jList1);
+    InvManufacturerItemScrollPane.setViewportView(InvManufacturerItemList);
 
-    jLabel5.setText("Items:");
+    InvManufacturerItemLbl.setText("Items:");
 
     javax.swing.GroupLayout InventoryPanelLayout = new javax.swing.GroupLayout(InventoryPanel);
     InventoryPanel.setLayout(InventoryPanelLayout);
@@ -1428,24 +1428,24 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(InventoryPanelLayout.createSequentialGroup()
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(InvDelDateLbl)
-                        .addComponent(InvOnOrderLbl)
-                        .addComponent(InvOnHandLbl)
+                        .addComponent(InvDeliveryDateLbl)
+                        .addComponent(InvQtyOnOrderLbl)
+                        .addComponent(InvQtyOnHandLbl)
                         .addComponent(InvItemNameLbl)
-                        .addComponent(InvManIDLbl)
+                        .addComponent(InvManufacturerIdLbl)
                         .addComponent(InvItemIDLbl)
                         .addComponent(InvSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2))
+                        .addComponent(InvOrderIdLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(InvOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(InvDelDateText, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                        .addComponent(InvDeliveryDateText, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                         .addComponent(InvOnOrderText)
                         .addComponent(InvOnHandText)
                         .addComponent(InvItemNameText)
-                        .addComponent(InvManIDText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                        .addComponent(InvItemIDText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(InvManufacturerIdText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                        .addComponent(InvItemIdText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                        .addComponent(InvOrderIdText, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(InventoryPanelLayout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1453,14 +1453,13 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                         .addGroup(InventoryPanelLayout.createSequentialGroup()
                             .addGap(34, 34, 34)
                             .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(143, 143, 143))
+                                .addComponent(InvManufacturerItemLbl)
+                                .addComponent(InvManufacturerItemScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addComponent(InvButtonLbl))
-            .addContainerGap(151, Short.MAX_VALUE))
+            .addContainerGap(294, Short.MAX_VALUE))
     );
 
-    InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvClearButton, InvDelDateText, InvItemIDText, InvItemNameText, InvManIDText, InvOnHandText, InvOnOrderText, InvOrderButton, InvSearchButton, jTextField1});
+    InventoryPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {InvClearButton, InvDeliveryDateText, InvItemIdText, InvItemNameText, InvManufacturerIdText, InvOnHandText, InvOnOrderText, InvOrderButton, InvOrderIdText, InvSearchButton});
 
     InventoryPanelLayout.setVerticalGroup(
         InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1469,16 +1468,16 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addGroup(InventoryPanelLayout.createSequentialGroup()
                     .addGap(93, 93, 93)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(InvOrderIdLbl)
+                        .addComponent(InvOrderIdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(InvItemIDLbl)
-                        .addComponent(InvItemIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(InvItemIdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(InvManIDLbl)
-                        .addComponent(InvManIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(InvManufacturerIdLbl)
+                        .addComponent(InvManufacturerIdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(InvItemNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1486,20 +1485,20 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(InvOnHandText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(InvOnHandLbl))
+                        .addComponent(InvQtyOnHandLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(InvOnOrderText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(InvOnOrderLbl))
+                        .addComponent(InvQtyOnOrderLbl))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(InvDelDateText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(InvDelDateLbl)))
+                        .addComponent(InvDeliveryDateText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(InvDeliveryDateLbl)))
                 .addGroup(InventoryPanelLayout.createSequentialGroup()
                     .addGap(72, 72, 72)
-                    .addComponent(jLabel5)
+                    .addComponent(InvManufacturerItemLbl)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(InvManufacturerItemScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGap(18, 18, 18)
             .addGroup(InventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(InvSearchButton)
@@ -2478,7 +2477,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVPayTypeValLbl.setVisible(true);
         OVDepositValLbl.setVisible(true);
         OVOrderIDText.setText(String.valueOf(workingOV.getOrder().getORDID()));
-        OVerIDText.setText(String.valueOf(workingOV.getVerID()));
+        OVerIDText.setText(String.valueOf(workingOV.getVerId()));
         OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
                 + " " + workingOV.getOrder().getCustomer().getCustLName());        
         OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
@@ -2659,7 +2658,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //Object that is returned verifies that the object was created
         newOV = OrderVerify.insertOrUpdateOV(newOV);
         //prepare screen for popOV()
-        OVerIDText.setText(String.valueOf(newOV.getVerID()));
+        OVerIDText.setText(String.valueOf(newOV.getVerId()));
         OVOrderIDText.setText("");
         //Record is searched for and verified a second time through popOV()
         if(popOV()){        
@@ -2701,12 +2700,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     // <editor-fold defaultstate="collapsed" desc="Brad Clawson: InventoryItem Search,Submit,Clear Buttons">
     private void InvClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvClearButtonActionPerformed
         // Clear Inventory data
-        InvItemIDText.setText("");
-        InvManIDText.setText("");
+        InvItemIdText.setText("");
+        InvManufacturerIdText.setText("");
         InvItemNameText.setText("");
         InvOnHandText.setText("");
         InvOnOrderText.setText("");
-        InvDelDateText.setText("");
+        InvDeliveryDateText.setText("");
     }//GEN-LAST:event_InvClearButtonActionPerformed
 
     private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
@@ -2725,81 +2724,81 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          */
         
         //search by ITEMID if ManID and ItemName are null or empty
-        if ((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+        if ((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
+                && (InvManufacturerIdText.getText() == null || InvManufacturerIdText.getText().isEmpty())
                 && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
-            workingII = InventoryItem.getIIby("ITEMID", InvItemIDText.getText());
-            InvManIDText.setBackground(Color.white);
-            InvItemIDText.setBackground(Color.white);
+            workingII = InventoryItem.getIIby("ITEMID", InvItemIdText.getText());
+            InvManufacturerIdText.setBackground(Color.white);
+            InvItemIdText.setBackground(Color.white);
         }
         //search by MANID if ITEMID and ItemName are null or empty
-        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+        else if ((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
+                && (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
                 && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
-            workingII = InventoryItem.getIIby("MANID", InvManIDText.getText());
-            InvManIDText.setBackground(Color.white);
-            InvItemIDText.setBackground(Color.white);
+            workingII = InventoryItem.getIIby("MANID", InvManufacturerIdText.getText());
+            InvManufacturerIdText.setBackground(Color.white);
+            InvItemIdText.setBackground(Color.white);
         }
         //search by ItemName if ManID and ITEMID are null or empty
-        else if ((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+        else if ((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
+                && (InvManufacturerIdText.getText() == null || InvManufacturerIdText.getText().isEmpty())
                 && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
             workingII = InventoryItem.getIIby("Name", InvItemNameText.getText());
-            InvManIDText.setBackground(Color.white);
-            InvItemIDText.setBackground(Color.white);
+            InvManufacturerIdText.setBackground(Color.white);
+            InvItemIdText.setBackground(Color.white);
         }
         //if search criteria are all null or empty, return false with notification
-        else if((InvItemIDText.getText() == null || InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() == null || InvManIDText.getText().isEmpty())
+        else if((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
+                && (InvManufacturerIdText.getText() == null || InvManufacturerIdText.getText().isEmpty())
                 && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
             InvButtonLbl.setText("Please enter a search Criteria");
             InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
+            InvManufacturerIdText.setBackground(Color.YELLOW);
+            InvItemIdText.setBackground(Color.YELLOW);
             InvItemNameText.setBackground(Color.YELLOW);
             //page not populated, return false for failure
             return false;
         }
         //if two search criteria are entere, return false with notification
-        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
-                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+        else if((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
+                && (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
                 || (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
             InvButtonLbl.setText("Use a single search Criteria");
             InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
+            InvManufacturerIdText.setBackground(Color.YELLOW);
+            InvItemIdText.setBackground(Color.YELLOW);
             //page not populated return false for failure
             return false;
         }
         //if two search criteria are entere, return false with notification
-        else if((InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())
-                || (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
+        else if((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
+                || (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
                 && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
             InvButtonLbl.setText("Use a single search Criteria");
             InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
+            InvManufacturerIdText.setBackground(Color.YELLOW);
+            InvItemIdText.setBackground(Color.YELLOW);
             //page not populated return false for failure
             return false;
         }
          //if two search criteria are entere, return false with notification       
         else if((InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())
-                && (InvManIDText.getText() != null && !InvManIDText.getText().isEmpty())
-                || (InvItemIDText.getText() != null && !InvItemIDText.getText().isEmpty())){
+                && (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
+                || (InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())){
             InvButtonLbl.setText("Use a single search Criteria");
             InvButtonLbl.setVisible(true);
-            InvManIDText.setBackground(Color.YELLOW);
-            InvItemIDText.setBackground(Color.YELLOW);
+            InvManufacturerIdText.setBackground(Color.YELLOW);
+            InvItemIdText.setBackground(Color.YELLOW);
             //page not populated return false for failure
             return false;
         }
         //populate Inventory Item Tab fields
-        InvItemIDText.setText(String.valueOf(workingII.getItemNumber()));
-        InvManIDText.setText(String.valueOf(workingII.getManufacturerID()));
+        InvItemIdText.setText(String.valueOf(workingII.getItemNumber()));
+        InvManufacturerIdText.setText(String.valueOf(workingII.getManufacturerID()));
         InvItemNameText.setText(workingII.getName());
         InvOnHandText.setText(String.valueOf(workingII.getQtyOnHand()));
         InvOnOrderText.setText(String.valueOf(workingII.getQtyOnOrder()));
-        InvDelDateText.setText(workingII.getDeliveryDate());
+        InvDeliveryDateText.setText(workingII.getDeliveryDate());
         return true;
     }
      //</editor-fold>
@@ -2856,19 +2855,24 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JPanel EmployeeInfoPanel;
     private javax.swing.JLabel InvButtonLbl;
     private javax.swing.JButton InvClearButton;
-    private javax.swing.JLabel InvDelDateLbl;
-    private javax.swing.JTextField InvDelDateText;
+    private javax.swing.JLabel InvDeliveryDateLbl;
+    private javax.swing.JTextField InvDeliveryDateText;
     private javax.swing.JLabel InvItemIDLbl;
-    private javax.swing.JTextField InvItemIDText;
+    private javax.swing.JTextField InvItemIdText;
     private javax.swing.JLabel InvItemNameLbl;
     private javax.swing.JTextField InvItemNameText;
-    private javax.swing.JLabel InvManIDLbl;
-    private javax.swing.JTextField InvManIDText;
-    private javax.swing.JLabel InvOnHandLbl;
+    private javax.swing.JLabel InvManufacturerIdLbl;
+    private javax.swing.JTextField InvManufacturerIdText;
+    private javax.swing.JLabel InvManufacturerItemLbl;
+    private javax.swing.JList InvManufacturerItemList;
+    private javax.swing.JScrollPane InvManufacturerItemScrollPane;
     private javax.swing.JTextField InvOnHandText;
-    private javax.swing.JLabel InvOnOrderLbl;
     private javax.swing.JTextField InvOnOrderText;
     private javax.swing.JButton InvOrderButton;
+    private javax.swing.JLabel InvOrderIdLbl;
+    private javax.swing.JTextField InvOrderIdText;
+    private javax.swing.JLabel InvQtyOnHandLbl;
+    private javax.swing.JLabel InvQtyOnOrderLbl;
     private javax.swing.JButton InvSearchButton;
     private javax.swing.JLabel InvSearchLbl5;
     private javax.swing.JPanel InventoryPanel;
@@ -3013,13 +3017,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JList jList1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     protected javax.swing.JLabel lblLoginStatus;
     // End of variables declaration//GEN-END:variables
 //</editor-fold>

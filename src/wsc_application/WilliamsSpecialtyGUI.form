@@ -1796,25 +1796,25 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="InvDelDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvOnOrderLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvOnHandLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvDeliveryDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvQtyOnOrderLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvQtyOnHandLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="InvItemNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvManIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvManufacturerIdLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="InvItemIDLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="InvSearchButton" linkSize="7" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOrderIdLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
                                   <Component id="InvOrderButton" linkSize="7" alignment="2" max="32767" attributes="0"/>
-                                  <Component id="InvDelDateText" linkSize="7" alignment="2" pref="75" max="32767" attributes="0"/>
+                                  <Component id="InvDeliveryDateText" linkSize="7" alignment="2" pref="75" max="32767" attributes="0"/>
                                   <Component id="InvOnOrderText" linkSize="7" alignment="2" max="32767" attributes="0"/>
                                   <Component id="InvOnHandText" linkSize="7" alignment="2" max="32767" attributes="0"/>
                                   <Component id="InvItemNameText" linkSize="7" alignment="2" max="32767" attributes="0"/>
-                                  <Component id="InvManIDText" linkSize="7" alignment="2" pref="111" max="32767" attributes="0"/>
-                                  <Component id="InvItemIDText" linkSize="7" alignment="2" pref="111" max="32767" attributes="0"/>
-                                  <Component id="jTextField1" linkSize="7" alignment="2" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Component id="InvManufacturerIdText" linkSize="7" alignment="2" pref="111" max="32767" attributes="0"/>
+                                  <Component id="InvItemIdText" linkSize="7" alignment="2" pref="111" max="32767" attributes="0"/>
+                                  <Component id="InvOrderIdText" linkSize="7" alignment="2" min="-2" pref="111" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -1824,16 +1824,15 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane1" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <Component id="InvManufacturerItemLbl" min="-2" max="-2" attributes="0"/>
+                                          <Component id="InvManufacturerItemScrollPane" min="-2" pref="91" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
                           </Group>
                           <Component id="InvButtonLbl" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="151" max="32767" attributes="0"/>
+                      <EmptySpace pref="294" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1844,18 +1843,18 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOrderIdLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvOrderIdText" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="InvItemIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvItemIDText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvItemIdText" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="InvManIDLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvManIDText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvManufacturerIdLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvManufacturerIdText" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
@@ -1865,24 +1864,24 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
                                   <Component id="InvOnHandText" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvOnHandLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvQtyOnHandLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
                                   <Component id="InvOnOrderText" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvOnOrderLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvQtyOnOrderLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="InvDelDateText" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="InvDelDateLbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvDeliveryDateText" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="InvDeliveryDateLbl" alignment="2" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="InvManufacturerItemLbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="177" max="-2" attributes="0"/>
+                              <Component id="InvManufacturerItemScrollPane" min="-2" pref="177" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1904,22 +1903,22 @@
                 <Property name="text" type="java.lang.String" value="Item Number"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="InvManIDLbl">
+            <Component class="javax.swing.JLabel" name="InvManufacturerIdLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Manufacturer"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="InvOnHandLbl">
+            <Component class="javax.swing.JLabel" name="InvQtyOnHandLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On Hand"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="InvOnOrderLbl">
+            <Component class="javax.swing.JLabel" name="InvQtyOnOrderLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On Order"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="InvDelDateLbl">
+            <Component class="javax.swing.JLabel" name="InvDeliveryDateLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delivery Date"/>
               </Properties>
@@ -1967,27 +1966,27 @@
             </Component>
             <Component class="javax.swing.JTextField" name="InvOnOrderText">
             </Component>
-            <Component class="javax.swing.JTextField" name="InvDelDateText">
+            <Component class="javax.swing.JTextField" name="InvDeliveryDateText">
             </Component>
-            <Component class="javax.swing.JTextField" name="InvItemIDText">
+            <Component class="javax.swing.JTextField" name="InvItemIdText">
             </Component>
-            <Component class="javax.swing.JTextField" name="InvManIDText">
+            <Component class="javax.swing.JTextField" name="InvManufacturerIdText">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="InvOrderIdLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Order"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="InvOrderIdText">
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Container class="javax.swing.JScrollPane" name="InvManufacturerItemScrollPane">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="jList1">
+                <Component class="javax.swing.JList" name="InvManufacturerItemList">
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="5">
@@ -2002,7 +2001,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="InvManufacturerItemLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Items:"/>
               </Properties>
