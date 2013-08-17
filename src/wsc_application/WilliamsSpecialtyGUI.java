@@ -2199,8 +2199,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         {
             emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
             orders = Employee.getOrders(Long.parseLong(EMPIDCB.getText()));
-           // JList list = new JList(orders.toArray());
-            //emOrdersLst.add(orders);
+           
+            emOrdersLst.setListData(orders.toArray());
 
         }
         
