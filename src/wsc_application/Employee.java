@@ -235,7 +235,7 @@ public class Employee{
         ArrayList<String> orders = new ArrayList<String>();
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
-        String query = "select ORDERID from ORDER WHERE EMPID = " + Long.toString(empid) + ";";
+        String query = "select ORDERID from `ORDER` WHERE EMPID = " + Long.toString(empid) + ";";
         rs = mysql.doQuery(query);
         
          try {
