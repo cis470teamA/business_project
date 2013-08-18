@@ -183,16 +183,31 @@ public class Order {
         MysqlConn mysql = new MysqlConn();
         try {
             mysql.stmt = mysql.conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-            String query = "INSERT INTO cis470.ORDER values (0, '"
-                    + order.customer.getCustId() + "', '"
-                    + order.createdBy.getEmpId() + "', '"
-                    + order.orderStatus + "', '"
-                    + order.mediaType + "', '"
-                    + order.mediaStatus + "', '"
-                    + order.content + "', '"
-                    + order.paymentOnAccount + "', '"
-                    + order.total + "', '" +
-                    + order.deposit + "');";
+            String query;
+            if (order.ORDID > 0) {
+                query = "UPDATE cis470.ORDER set CUSTID='"
+                        + order.customer.getCustId() + "', EMPID='"
+                        + order.createdBy.getEmpId() + "', OrderStatus='"
+                        + order.orderStatus + "', MediaType='"
+                        + order.mediaType + "', MediaStatus='"
+                        + order.mediaStatus + "', Content='"
+                        + order.content + "', PaymentOnAccount='"
+                        + order.paymentOnAccount + "', Total='"
+                        + order.total + "', Deposit='" +
+                        + order.deposit + "' where ORDERID='"
+                        + order.ORDID +"';";
+            } else {
+                query = "INSERT INTO cis470.ORDER values (0, '"
+                        + order.customer.getCustId() + "', '"
+                        + order.createdBy.getEmpId() + "', '"
+                        + order.orderStatus + "', '"
+                        + order.mediaType + "', '"
+                        + order.mediaStatus + "', '"
+                        + order.content + "', '"
+                        + order.paymentOnAccount + "', '"
+                        + order.total + "', '" +
+                        + order.deposit + "');";
+            }
             System.out.println(query);
             mysql.stmt.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
             int key = -1;

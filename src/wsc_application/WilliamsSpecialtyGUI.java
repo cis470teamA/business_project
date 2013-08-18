@@ -642,6 +642,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderSearchLbl.setText("* Use only one field for searches");
 
     OrderUpdateBtn.setText("Update");
+    OrderUpdateBtn.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            OrderUpdateBtnActionPerformed(evt);
+        }
+    });
 
     jScrollPane1.setViewportView(OrderContentText);
 
@@ -2713,7 +2718,42 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderNumberCBActionPerformed
 
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // By Paul
+        Customer cust;
+        if (this.OrderCUSTIDText.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Customer ID required!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        cust = Customer.searchBy("CUSTID", this.OrderCUSTIDText.getText());
+        if (cust == null) {
+            JOptionPane.showMessageDialog(null, "Customer ID not found!", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            Order o = (Order)this.OrderNumberCB.getSelectedItem();
+            int ordId = o.getORDID();
+            String content = this.OrderContentText.getText();
+            boolean onAcct = false;
+            String mediaType = "";
+            if (this.OrderTypePlaqueRB.isSelected())
+                mediaType = "plaque";
+            else if (this.OrderTypeShirtRB.isSelected())
+                mediaType = "shirt";
+            else if (this.OrderTypeTrophyRB.isSelected())
+                mediaType = "trophy";
+            if (this.OrderAccountPayRB.isSelected())
+                onAcct = true;
+            float total = Float.parseFloat(this.OrderTotalText.getText());
+            float deposit = Float.parseFloat(this.OrderDepositText.getText());
+            String orderStatus = (String)this.OrderStatusCB.getSelectedItem();
+            String mediaStatus = (String)this.OrderMediaStatusCB.getSelectedItem();
+            Employee employee;
+            if (Login.emp != null)
+                employee = Login.emp;
+            else
+                employee = Employee.searchBy(1);
+            // Create new Order obj
+            Order order = new Order(cust, ordId, mediaType, content, onAcct, total, deposit, orderStatus, mediaStatus, employee);
+            order = Order.createOrder(order); // Put into DB
+            this.populateOrderTab(order); // Populate view from the created obj (see errors this way)
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void OVContentValLblMouseClick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OVContentValLblMouseClick
