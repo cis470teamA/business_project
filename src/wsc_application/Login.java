@@ -5,6 +5,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+/*
+ * Login.java
+ * Paul Durivage
+ * for CIS470 GroupA
+ */
+
 public class Login {
     public static boolean isAuthenticated = false;
     /*
@@ -22,6 +28,12 @@ public class Login {
     private static String email;
     private static String type;
     
+    /**
+     * 
+     * @param user 
+     * @param pass
+     * @return Boolean indicating success of login method
+     */
     public static boolean processLogin(String user, String pass) {
         System.out.println("Processing login.");
         boolean result = doQuery(user, pass);
@@ -39,6 +51,7 @@ public class Login {
             SrProject.win.lblLoginStatus.setText("Login successful");
             SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
             SrProject.win.lblLoginStatus.setVisible(true);
+            return true;
         } else {
             System.out.println("Login failed");
             SrProject.win.lblLoginStatus.setText("Login failed.");
@@ -49,7 +62,11 @@ public class Login {
     }
     
     public static void processLogout(){
-        
+        isAuthenticated = false;
+        emp = null;
+        SrProject.win.lblLoginStatus.setText("Logout complete.");
+        SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
+        SrProject.win.lblLoginStatus.setVisible(true);
     }
     
     private static boolean doQuery(String user, String pass) {
