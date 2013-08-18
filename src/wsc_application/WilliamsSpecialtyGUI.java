@@ -1415,6 +1415,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         public int getSize() { return strings.length; }
         public Object getElementAt(int i) { return strings[i]; }
     });
+    InvManufacturerItemList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+        public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+            InvManufacturerItemListValueChanged(evt);
+        }
+    });
     InvManufacturerItemScrollPane.setViewportView(InvManufacturerItemList);
 
     InvManufacturerItemLbl.setText("Items:");
@@ -2721,10 +2726,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     }//GEN-LAST:event_InvSearchButtonActionPerformed
 
+    private void InvManufacturerItemListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_InvManufacturerItemListValueChanged
+        InventoryItem InvItem = new InventoryItem();
+        
+        InvItem = InventoryItem.GetItemChangeFromList(Integer.parseInt(InvManufacturerIdText.getText()), Integer.parseInt(InvManufacturerItemList.getSelectedValue().toString()));
+        InvItemIdText.setText(Integer.toString(InvItem.getItemNumber()));
+        InvManufacturerIdText.setText(Integer.toString(InvItem.getManufacturerID()));
+        InvItemNameText.setText(InvItem.getName());
+        InvOnHandText.setText(Integer.toString(InvItem.getQtyOnHand()));
+        InvOnOrderText.setText(Integer.toString(InvItem.getQtyOnOrder()));
+        InvDeliveryDateText.setText(InvItem.getDeliveryDate());
+        
+        
+      
+    }//GEN-LAST:event_InvManufacturerItemListValueChanged
+
      private Boolean popII(){    /* 
          * Brad Clawson: Populates Inventory Item tab by searching either ItemID Number,
          * Manufacturer, or name but not by more than one field.
          */
+         ArrayList<String> invItems = new ArrayList<String>();
         
         //search by ITEMID if ManID and ItemName are null or empty
         if ((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
@@ -2741,6 +2762,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             workingII = InventoryItem.getIIby("MANID", InvManufacturerIdText.getText());
             InvManufacturerIdText.setBackground(Color.white);
             InvItemIdText.setBackground(Color.white);
+            invItems = InventoryItem.getManufacturerItems(Integer.parseInt(InvManufacturerIdText.getText()));
+            InvManufacturerItemList.setListData(invItems.toArray());
         }
         //search by ItemName if ManID and ITEMID are null or empty
         else if ((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
