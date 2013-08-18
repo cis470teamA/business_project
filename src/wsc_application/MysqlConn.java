@@ -8,6 +8,11 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
+/*
+ * MysqlConn.java
+ * By Paul Durivage
+ */
+
 public class MysqlConn {
     private String user = "appl_user";
     private String pass = "password12"; // Select only user
@@ -45,13 +50,23 @@ public class MysqlConn {
         }   
     }
     
+    /**
+     * By Paul
+     * Beware, this was recently changed to prevent dialog boxes from popping 
+     * up.  Now it prints to stderr on exceptions.  
+     * 
+     * @param query MySQL query as a string
+     * @return java.mysql.ResultSet obj
+     */
     protected ResultSet doQuery(String query) {
         try {
             this.stmt = this.conn.createStatement();
             this.rs = this.stmt.executeQuery(query);
         }
         catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            System.err.println("SQLException: " + ex.getMessage());
+            System.err.println("SQLState: " + ex.getSQLState());
+            System.err.println("VendorError: " + ex.getErrorCode());
         }
         finally {
             return rs;

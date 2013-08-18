@@ -35,7 +35,6 @@ public class Login {
      * @return Boolean indicating success of login method
      */
     public static boolean processLogin(String user, String pass) {
-        System.out.println("Processing login.");
         boolean result = doQuery(user, pass);
         if (result) {
             isAuthenticated = true;
@@ -51,6 +50,7 @@ public class Login {
             SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
             SrProject.win.lblLoginStatus.setVisible(true);
             SrProject.win.WSCInterface.setEnabled(true);
+            SrProject.win.WSCInterface.setToolTipText("Enabled");
             return true;
         } else {
             SrProject.win.lblLoginStatus.setText("Login failed.");
@@ -63,6 +63,7 @@ public class Login {
     public static void processLogout(){
         isAuthenticated = false;
         emp = null;
+        SrProject.win.WSCInterface.setEnabled(false);
         SrProject.win.lblLoginStatus.setText("Logout complete.");
         SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
         SrProject.win.lblLoginStatus.setVisible(true);
@@ -78,7 +79,6 @@ public class Login {
         rs = mysql.doQuery(query);
         try {
             if (rs.next()) {
-                System.out.println("Found row.");
                 empid = rs.getInt("EMPID");
                 passwd = rs.getString("pass");
                 fname = rs.getString("EmpFirstName");
@@ -91,7 +91,9 @@ public class Login {
             }
         }
         catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
         }
         finally {
             mysql.closeAll();
