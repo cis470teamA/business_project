@@ -5,6 +5,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+/*
+ * Order.java
+ * by Paul Durivage
+ * for CIS470 GroupA
+ */
+
+/**
+ *
+ * @author Paul Durivage <pauldurivage@gmail.com>
+ */
 public class Order {    
     private Customer customer;
     private int ORDID;

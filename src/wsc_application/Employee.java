@@ -5,6 +5,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+/*
+ * Employee.java
+ * by Paul Durivage and Jacob Savage
+ * for CIS470 GroupA
+ */
 
 public class Employee{
     
