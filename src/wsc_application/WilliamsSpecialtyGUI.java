@@ -1909,6 +1909,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         else
         {
              // <editor-fold defaultstate="collapsed" desc="Set customer data to tab">
+        workingCustomer = searchCust;
         CUSTIDCB.setText(String.valueOf(searchCust.getCustId()));
         CustFNameText.setText(searchCust.getCustFName());
         CustLNameText.setText(searchCust.getCustLName());
@@ -2260,6 +2261,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
           
            Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
            Employee.updateBy(emp);
+           
            emp = null;
            empUser = Employee.empUserExist(Long.parseLong(EMPIDCB.getText()));
            
@@ -2276,6 +2278,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
            }
            
            JOptionPane.showMessageDialog(null, "Employee updated.");
+           
            //EmpClear();
            HideEmpPassword();
           }
