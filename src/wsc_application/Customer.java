@@ -72,7 +72,7 @@ public class Customer {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+            System.out.println("VendorError: " + ex.getErrorCode()); 
          }
          finally {
              mysql.closeAll();

@@ -1938,7 +1938,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_LoginEMPIDTxtActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-         Login.processLogin(LoginEMPIDTxt.getText(), LoginPassText.getText());
+        // By Paul 
+        Login.processLogin(LoginEMPIDTxt.getText(), LoginPassText.getText());
 //         SetAccessLevel();
     }//GEN-LAST:event_LoginButtonActionPerformed
 
@@ -2131,6 +2132,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     //</editor-fold>
     
     private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
+        // By Paul
         this.OrderCUSTIDText.setText("");
         this.OrderNumberCB.removeAllItems();
         this.OrderMediaCatNumText.setText("");
@@ -2156,33 +2158,35 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (cust == null) {
             JOptionPane.showMessageDialog(null, "Customer ID not found!", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
-        String content = this.OrderContentText.getText();
-        boolean onAcct = false;
-        String mediaType = "";
-        if (this.OrderTypePlaqueRB.isSelected())
-            mediaType = "plaque";
-        else if (this.OrderTypeShirtRB.isSelected())
-            mediaType = "shirt";
-        else if (this.OrderTypeTrophyRB.isSelected())
-            mediaType = "trophy";
-        if (this.OrderAccountPayRB.isSelected())
-            onAcct = true;
-        float total = Float.parseFloat(this.OrderTotalText.getText());
-        float deposit = Float.parseFloat(this.OrderDepositText.getText());
-        String orderStatus = (String)this.OrderStatusCB.getSelectedItem();
-        String mediaStatus = (String)this.OrderMediaStatusCB.getSelectedItem();
-        Employee employee;
-        if (Login.emp != null)
-            employee = Login.emp;
-        else
-            employee = Employee.searchBy(1);
-        // Create new Order obj
-        Order order = new Order(cust, 0, mediaType, content, onAcct, total, deposit, orderStatus, mediaStatus, employee);
-        order = Order.createOrder(order); // Put into DB
-        this.populateOrderTab(order); // Populate view from the created obj (see errors this way)
+            String content = this.OrderContentText.getText();
+            boolean onAcct = false;
+            String mediaType = "";
+            if (this.OrderTypePlaqueRB.isSelected())
+                mediaType = "plaque";
+            else if (this.OrderTypeShirtRB.isSelected())
+                mediaType = "shirt";
+            else if (this.OrderTypeTrophyRB.isSelected())
+                mediaType = "trophy";
+            if (this.OrderAccountPayRB.isSelected())
+                onAcct = true;
+            float total = Float.parseFloat(this.OrderTotalText.getText());
+            float deposit = Float.parseFloat(this.OrderDepositText.getText());
+            String orderStatus = (String)this.OrderStatusCB.getSelectedItem();
+            String mediaStatus = (String)this.OrderMediaStatusCB.getSelectedItem();
+            Employee employee;
+            if (Login.emp != null)
+                employee = Login.emp;
+            else
+                employee = Employee.searchBy(1);
+            // Create new Order obj
+            Order order = new Order(cust, 0, mediaType, content, onAcct, total, deposit, orderStatus, mediaStatus, employee);
+            order = Order.createOrder(order); // Put into DB
+            this.populateOrderTab(order); // Populate view from the created obj (see errors this way)
+        }
     }//GEN-LAST:event_OrderCreateBtnActionPerformed
     
     private void OrderSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSearchButtonActionPerformed
+        // By Paul
         if (this.OrderCUSTIDText.getText().length() > 0) {
             this.orders = Order.getOrders(Integer.parseInt(this.OrderCUSTIDText.getText()));
             this.setOrderNumberCBModel(orders);
