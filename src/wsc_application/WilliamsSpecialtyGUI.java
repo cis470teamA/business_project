@@ -288,6 +288,8 @@ public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
 
         setPreferredSize(new java.awt.Dimension(600, 549));
 
+        WSCInterface.setToolTipText("Disabled until user is logged in");
+        WSCInterface.setEnabled(false);
         WSCInterface.setPreferredSize(new java.awt.Dimension(600, 549));
 
         LoginPanel.setDoubleBuffered(false);
@@ -1697,9 +1699,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(layout.createSequentialGroup()
-            .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 665, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(0, 0, Short.MAX_VALUE))
+        .addComponent(WSCInterface, javax.swing.GroupLayout.PREFERRED_SIZE, 665, Short.MAX_VALUE)
     );
 
     getAccessibleContext().setAccessibleName("");
@@ -3102,7 +3102,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JRadioButton QAWorkmanshipCheckPassRb;
     private javax.swing.JTextField QAWorkmanshipFailText;
     private javax.swing.JLabel QAWorkmanshipLbl;
-    private javax.swing.JTabbedPane WSCInterface;
+    protected javax.swing.JTabbedPane WSCInterface;
     private javax.swing.JList custOrdLst;
     private javax.swing.JList emOrdersLst;
     private javax.swing.JLabel jLabel1;

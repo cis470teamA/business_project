@@ -47,13 +47,12 @@ public class Login {
             emp.setEmpType(type);
             emp.setEmail(email);
             // Done.
-            System.out.println("Login successful");
             SrProject.win.lblLoginStatus.setText("Login successful");
             SrProject.win.lblLoginStatus.setForeground(Color.GREEN);
             SrProject.win.lblLoginStatus.setVisible(true);
+            SrProject.win.WSCInterface.setEnabled(true);
             return true;
         } else {
-            System.out.println("Login failed");
             SrProject.win.lblLoginStatus.setText("Login failed.");
             SrProject.win.lblLoginStatus.setForeground(Color.red);
             SrProject.win.lblLoginStatus.setVisible(true);
