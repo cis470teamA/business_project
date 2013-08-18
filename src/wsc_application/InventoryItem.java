@@ -27,7 +27,7 @@ public class InventoryItem {
     
     //Constructor
     
-    protected static ArrayList<InventoryItem> manufacturerItems;
+    protected static ArrayList<String> manufacturerItems;
     public InventoryItem(){
         
     }    
@@ -155,8 +155,9 @@ public class InventoryItem {
     }
     
     public static ArrayList getManufacturerItems(int manufacturerId) {
-        manufacturerItems = new ArrayList(0);
-        InventoryItem inventoryItem;
+        manufacturerItems = new ArrayList<String>();
+       // InventoryItem inventoryItem;
+        String temp;
         ResultSet rs;
         MysqlConn mysql = new MysqlConn();
             String query = "select * from cis470.INVENTORY where  MANID = " + manufacturerId + ";";
@@ -164,15 +165,10 @@ public class InventoryItem {
         try {
             rs = mysql.doQuery(query);
             while (rs.next()) {
-                inventoryItem = new InventoryItem(
-                        rs.getInt("ITEMID"),
-                        rs.getInt("MANID"),
-                        rs.getString("Name"),
-                        rs.getInt("QtyOnHand"),
-                        rs.getInt("QtyOnOrder"),
-                        rs.getString("DeliveryDate"));
+             
+                       temp = Integer.toString(rs.getInt("ITEMID"));
                 // Add the new order to the ArrayList
-                manufacturerItems.add(inventoryItem);
+                manufacturerItems.add(temp);
             }
         }
         catch (SQLException ex) {
@@ -182,6 +178,38 @@ public class InventoryItem {
             System.out.println("VendorError: " + ex.getErrorCode());
         }
         return manufacturerItems;
+    }
+    
+    public static InventoryItem GetItemChangeFromList(int id, int itmNum){
+        InventoryItem ii = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "Select * from cis470.INVENTORY WHERE MANID = " + Integer.toString(id) + " AND ITEMID = " + Integer.toString(itmNum);
+                    
+        rs = mysql.doQuery(query);
+        //create new InventoryItem object with data found in Database
+        try {
+            if (rs.next()) {
+                ii = new InventoryItem(
+                        rs.getInt("ITEMID"),
+                        rs.getInt("MANID"),
+                        rs.getString("Name") != null ? rs.getString("Name") : new String(),
+                        rs.getInt("QtyOnHand"),
+                        rs.getInt("QtyOnOrder"),
+                        rs.getString("DeliveryDate") != null ? rs.getString("DeliveryDate") : new String());         
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+         }
+        //if no sql errors, return created InventoryItem object
+         finally {
+             mysql.closeAll();
+             return ii;
+         }
     }
         
     // <editor-fold defaultstate="collapsed" desc="Inc/Dec onOrder onHand">
