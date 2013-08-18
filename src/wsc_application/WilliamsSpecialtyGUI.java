@@ -1777,7 +1777,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // Set the MediaStatusCB
         this.OrderMediaStatusCB.removeAllItems();
         for (Order.MediaStatus ms : Order.MediaStatus.values())
-            this.OrderMediaStatusCB.addItem(order.getMediaStatus());
+            this.OrderMediaStatusCB.addItem(ms.toString());
         this.OrderMediaStatusCB.setSelectedItem(order.getMediaStatus());
         // Set Content Text
         this.OrderContentText.setText(order.getContent());
