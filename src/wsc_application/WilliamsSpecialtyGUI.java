@@ -2147,7 +2147,15 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OrderClearFieldsButtonActionPerformed
 
     private void OrderCreateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderCreateBtnActionPerformed
-         Customer cust = Customer.searchBy("CUSTID", "1");
+        // By Paul
+        Customer cust;
+        if (this.OrderCUSTIDText.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Customer ID required!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        cust = Customer.searchBy("CUSTID", this.OrderCUSTIDText.getText());
+        if (cust == null) {
+            JOptionPane.showMessageDialog(null, "Customer ID not found!", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
         String content = this.OrderContentText.getText();
         boolean onAcct = false;
         String mediaType = "";
