@@ -2729,7 +2729,12 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private void InvManufacturerItemListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_InvManufacturerItemListValueChanged
         InventoryItem InvItem = new InventoryItem();
         
-        InvItem = InventoryItem.GetItemChangeFromList(Integer.parseInt(InvManufacturerIdText.getText()), Integer.parseInt(InvManufacturerItemList.getSelectedValue().toString()));
+        if (!"".equals(InvManufacturerIdText.getText()))
+        {
+           InvItem = InventoryItem.GetItemChangeFromList(Integer.parseInt(InvManufacturerIdText.getText()), Integer.parseInt(InvManufacturerItemList.getSelectedValue().toString()));
+        }
+        if (InvItem != null)
+        {
         InvItemIdText.setText(Integer.toString(InvItem.getItemNumber()));
         InvManufacturerIdText.setText(Integer.toString(InvItem.getManufacturerID()));
         InvItemNameText.setText(InvItem.getName());
@@ -2737,6 +2742,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         InvOnOrderText.setText(Integer.toString(InvItem.getQtyOnOrder()));
         InvDeliveryDateText.setText(InvItem.getDeliveryDate());
         
+        workingII = InvItem;
+        }
         
       
     }//GEN-LAST:event_InvManufacturerItemListValueChanged
