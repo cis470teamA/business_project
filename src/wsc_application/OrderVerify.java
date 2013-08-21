@@ -90,7 +90,7 @@ public class OrderVerify {
         MysqlConn mysql = new MysqlConn();
         String query = "Select * from cis470.ORDERVERIFY WHERE "
                     + column + " = " + id;
-                    
+        System.out.println(query);
         rs = mysql.doQuery(query);
         try {
             if (rs.next()) {
