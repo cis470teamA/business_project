@@ -41,10 +41,12 @@ import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import java.util.*;
 
+
 public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
     
 //    protected Order order;
     protected ArrayList<Order> orders;
+    protected ArrayList<Employee> employees;
 
     
     public WilliamsSpecialtyGUI() {
@@ -2464,6 +2466,17 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVButtonLbl.setText("Record Found");
         } 
     }//GEN-LAST:event_OVSearchButtonActionPerformed
+    private void setOVAssignEmpCBModel(ArrayList<Employee> employees) {
+        this.OVAssignEmpCB.removeAllItems();
+        for (Employee e : employees) {
+            this.OVAssignEmpCB.addItem(e.getEmpId());
+        }
+    }
+        private void selectOVAssignedToByIndex(int index) {
+        long empid = (long)this.OVAssignEmpCB.getItemAt(index);
+        workingOV.getOrder().setCreatedBy(Employee.searchBy(empid));
+    }
+    
     private Boolean popOV(){
         /* 
          * Brad Clawson: Populates Order Verify tab by searching either Order Number
@@ -2499,6 +2512,26 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             //search failed return false
             return false;
         }
+        
+        try{
+            String empType = "";
+            if(this.workingOV.getOrder().getMediaType().toLowerCase().equals("shirt")){
+                empType = "PS";
+            }
+            else if(this.workingOV.getOrder().getMediaType().toLowerCase().equals("plaque")|| 
+                this.workingOV.getOrder().getMediaType().toLowerCase().equals("trophy")){
+                empType = "ES";
+            }
+      
+            this.employees = Employee.getEmployeesBy("EmpType", empType);
+            this.setOVAssignEmpCBModel(employees);
+            
+            
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
         // make Order information available for easy evaluation & pop OV fields
         try
         {
@@ -2526,8 +2559,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             OVPayTypeValLbl.setText("On Delivery");
         }
         OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
-//      OVAssignEmpCB
-        //set radio button values and set fail comments editable or ineditable
+        //set radio button values and fail text
+        //<editor-fold> defaultstate="collapsed" desc="set radio button values">
         if(workingOV.getNameCheck()){
             OVCorrectNamePassRb.setSelected(true);
             OVNameFailText.setEditable(false);}
@@ -2569,8 +2602,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         else if(!workingOV.getDepositCheck()){
             OVDepositFailRb.setSelected(true);
             OVDepositFailText.setText(workingOV.getDepositFailComment());
-            OVDepositFailText.setEditable(true);}
-        
+            OVDepositFailText.setEditable(true);}        
         if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
                 OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
                 OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected())
@@ -2581,8 +2613,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVVerifyByLbl.setText("Verified By " + workingOV.getVerifiedBy().getFirstName()
                 +" "+workingOV.getVerifiedBy().getLastName());
         OVAssignedToLbl.setText("Assigned To " + workingOV.getOrder().getCreatedBy().getFirstName()
-                + workingOV.getOrder().getCreatedBy().getLastName());
-                
+                + " " + workingOV.getOrder().getCreatedBy().getLastName());
+          //</editor-fold>      
         //tab fields successfully populated, return true for success
         return true;
         }
@@ -2715,7 +2747,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 Order.getOrder(Integer.parseInt(OVOrderIDText.getText())), 
                 nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
                 depositCheck, nameComment, accountComment, mediaComment, contentComment,
-                paymentComment, depositComment,correctiveActionComment);
+                paymentComment, depositComment,"");
         //Object that is returned verifies that the object was created
         newOV = OrderVerify.insertOrUpdateOV(newOV);
         //prepare screen for popOV()
@@ -2735,6 +2767,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 Messaging.sendMessage(newOV.getOrder().getCustomer().getCustEmail(), correctiveActionComment);
                 Messaging.sendMessage(newOV.getVerifiedBy().getEmail(), opsManMsg);}
             else if(nameCheck&&accountCheck&&mediaCheck&&contentCheck&&paymentCheck&&depositCheck){
+                Order.createOrder(newOV.getOrder());
                 String assignToMsg = "Please review order #" + newOV.getOrder().getORDID() + " and begin work.";
                 Messaging.sendMessage(newOV.getOrder().getCreatedBy().getEmail(), assignToMsg);
             }
@@ -2865,8 +2898,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVerIDTextFocusGained
 
     private void OVAssignEmpCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAssignEmpCBActionPerformed
-               if (this.OrderNumberCB.getSelectedIndex() != -1)
-            this.selectOrderByIndex(this.OrderNumberCB.getSelectedIndex());
+               if (this.OVAssignEmpCB.getSelectedIndex() != -1)
+            this.selectOVAssignedToByIndex(this.OVAssignEmpCB.getSelectedIndex());
     }//GEN-LAST:event_OVAssignEmpCBActionPerformed
 
      private Boolean popII(){    /* 
