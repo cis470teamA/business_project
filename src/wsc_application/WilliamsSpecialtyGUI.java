@@ -2432,8 +2432,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_OVSearchButtonActionPerformed
     private void setOVAssignEmpCBModel(ArrayList<Employee> employees) {
         this.OVAssignEmpCB.removeAllItems();
-        Employee emp = new Employee();
-        this.OVAssignEmpCB.addItem(emp.EMPID);
         for (Employee e : employees) {
             this.OVAssignEmpCB.addItem(e.getEmpId());
         }
@@ -2617,7 +2615,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVButtonLbl.setText("");
         OVAssignedToLbl.setText("");
         OVVerifyByLbl.setText("");
-        OVAssignEmpCB.setSelectedIndex(0);
+        this.OVAssignEmpCB.removeAllItems();
 
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
@@ -2691,40 +2689,43 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
                 depositCheck, nameComment, accountComment, mediaComment, contentComment,
                 paymentComment, depositComment, "");
+        Order newOVOrder = newOV.getOrder();
         //Object that is returned verifies that the object was created
+        if (nameCheck && accountCheck && mediaCheck && contentCheck && paymentCheck && depositCheck) {
+            if (this.OVAssignEmpCB.getSelectedIndex() != -1) {
+                newOVOrder.setCreatedBy(selectOVAssignedToByIndex(this.OVAssignEmpCB.getSelectedIndex()));
+            }
+            Order.createOrder(newOVOrder);
+        }
         try {
             newOV = OrderVerify.insertOrUpdateOV(newOV);
 
             //prepare screen for popOV()
             OVerIDText.setText(String.valueOf(newOV.getVerID()));
             OVOrderIDText.setText("");
-            if (popOV()) {
-                OVButtonLbl.setText("Create/Update Successful");
+            popOV();
+            OVButtonLbl.setText("Create/Update Successful");
+            if (!nameCheck || !accountCheck || !mediaCheck || !contentCheck || !paymentCheck || !depositCheck) {
+                correctiveActionComment += ("/n We will be contacting you shortly to"
+                        + " resolve these issues.");
+                String opsManMsg = "Call " + newOV.getOrder().getCustomer().getCustFName()
+                        + " " + newOV.getOrder().getCustomer().getCustLName() + " at "
+                        + newOV.getOrder().getCustomer().getCustPhone()
+                        + " for correct information on order #"
+                        + newOV.getOrder().getORDID();
+                Messaging.sendMessage(newOV.getOrder().getCustomer().getCustEmail(), correctiveActionComment);
+                Messaging.sendMessage(newOV.getVerifiedBy().getEmail(), opsManMsg);
+
             }
         } catch (NullPointerException e) {
             OVButtonLbl.setText("No New Data for Existing Record");
         }
-        //Record is searched for and verified a second time through popOV()
+        if (nameCheck && accountCheck && mediaCheck && contentCheck && paymentCheck && depositCheck) {
+            this.OVAssignedToLbl.setText("Assigned To " + newOVOrder.getCreatedBy().getFirstName()
+                    + " " + newOVOrder.getCreatedBy().getLastName());
+            String assignToMsg = "Please review order #" + newOVOrder.getORDID() + " and begin work.";
+            Messaging.sendMessage(newOVOrder.getCreatedBy().getEmail(), assignToMsg);
 
-        if (!nameCheck || !accountCheck || !mediaCheck || !contentCheck || !paymentCheck || !depositCheck) {
-            correctiveActionComment += ("/n We will be contacting you shortly to"
-                    + " resolve these issues.");
-            String opsManMsg = "Call " + newOV.getOrder().getCustomer().getCustFName()
-                    + " " + newOV.getOrder().getCustomer().getCustLName() + " at "
-                    + newOV.getOrder().getCustomer().getCustPhone()
-                    + " for correct information on order #"
-                    + newOV.getOrder().getORDID();
-            Messaging.sendMessage(newOV.getOrder().getCustomer().getCustEmail(), correctiveActionComment);
-            Messaging.sendMessage(newOV.getVerifiedBy().getEmail(), opsManMsg);
-        } else if (nameCheck && accountCheck && mediaCheck && contentCheck && paymentCheck && depositCheck) {
-            if (this.OVAssignEmpCB.getSelectedIndex() != -1) {
-                newOV.getOrder().setCreatedBy(selectOVAssignedToByIndex(this.OVAssignEmpCB.getSelectedIndex()));
-            }
-            Order.createOrder(newOV.getOrder());
-            this.OVAssignedToLbl.setText("Assigned To " + newOV.getOrder().getCreatedBy().getFirstName()
-                    + " " + newOV.getOrder().getCreatedBy().getLastName());
-            String assignToMsg = "Please review order #" + newOV.getOrder().getORDID() + " and begin work.";
-            Messaging.sendMessage(newOV.getOrder().getCreatedBy().getEmail(), assignToMsg);
         }
 
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
