@@ -95,7 +95,7 @@ public class Order {
      * @return An array list of order objects; A search by customer ID can 
      * 
      */
-    public static ArrayList getOrdersBy(String column, int id) {
+    public static ArrayList getOrdersBy(String column, String id) {
         orders = new ArrayList(0);
         Order order;
         ResultSet rs;
