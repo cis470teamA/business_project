@@ -1,35 +1,22 @@
 package wsc_application;
 
 /**
- * CIS470 Senior Project
- * Williams Specialty
- * Business Automation Project
- * 
+ * CIS470 Senior Project Williams Specialty Business Automation Project
+ *
  * Group A:
- * 
- * Basic GUI Layout &
- * Order Verify Tab Events &
- * Quality Assurance Tab Events &
- * User Access Level Events
- * through Login/Logout
- * Created by Brad Clawson
- *  
- * GUI Modifications &
- * Employee Tab Events &
- * Customer Tab Events 
- * Created by Jacob Savage
- * 
- * GUI Modifications &
- * Order Tab Events &
- * Login Tab Events
- * Created by Paul Durivage
- * 
- * GUI Modifications &
- * Inventory Tab Events
- * Created by Joshua Petersen
- **/
-
-
+ *
+ * Basic GUI Layout & Order Verify Tab Events & Quality Assurance Tab Events &
+ * User Access Level Events through Login/Logout Created by Brad Clawson
+ *
+ * GUI Modifications & Employee Tab Events & Customer Tab Events Created by
+ * Jacob Savage
+ *
+ * GUI Modifications & Order Tab Events & Login Tab Events Created by Paul
+ * Durivage
+ *
+ * GUI Modifications & Inventory Tab Events Created by Joshua Petersen
+ *
+ */
 import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -40,27 +27,27 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import java.util.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
+public class WilliamsSpecialtyGUI extends javax.swing.JPanel {
 
-public class WilliamsSpecialtyGUI extends javax.swing.JPanel{
-    
 //    protected Order order;
     protected ArrayList<Order> orders;
     protected ArrayList<Employee> employees;
 
-    
     public WilliamsSpecialtyGUI() {
         initComponents();
         HideEmpPassword();
- /*     //Brad: make all tabs except login invisible Login action will set user access
-  *     CustomerInfoPanel.setVisible(false);
-        EmployeeInfoPanel.setVisible(false);
-        OrderTabbedPane.setVisible(false);
-        OrderInfoPanel.setVisible(false);
-        OrderVerifyPanel.setVisible(false);
-        QAPanel.setVisible(false);
-        InventoryPanel.setVisible(false);
-*/    }
+        /*     //Brad: make all tabs except login invisible Login action will set user access
+         *     CustomerInfoPanel.setVisible(false);
+         EmployeeInfoPanel.setVisible(false);
+         OrderTabbedPane.setVisible(false);
+         OrderInfoPanel.setVisible(false);
+         OrderVerifyPanel.setVisible(false);
+         QAPanel.setVisible(false);
+         InventoryPanel.setVisible(false);
+         */    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -945,11 +932,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     });
 
     OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    OVAssignEmpCB.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            OVAssignEmpCBActionPerformed(evt);
-        }
-    });
 
     OVAssignEmpLbl.setText("Assign Printer/Engraver");
 
@@ -1717,34 +1699,32 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     private OrderVerify workingOV = null;
     private QAReport workingQA = new QAReport();
     private InventoryItem workingII = new InventoryItem();
-    
-    public void HideEmpPassword()
-    {
-           // <editor-fold defaultstate="collapsed" desc="Hide password employee fields by default">
+
+    public void HideEmpPassword() {
+        // <editor-fold defaultstate="collapsed" desc="Hide password employee fields by default">
         EmpPass.setVisible(false);
         EmpPassConfirm.setVisible(false);
         jLabel3.setVisible(false);
         jLabel4.setVisible(false);
-         // </editor-fold>
+        // </editor-fold>
     }
-    
-    public void ShowEmpPassword()
-    {
-           // <editor-fold defaultstate="collapsed" desc="Show password employee fields by default">
+
+    public void ShowEmpPassword() {
+        // <editor-fold defaultstate="collapsed" desc="Show password employee fields by default">
         EmpPass.setVisible(true);
         EmpPassConfirm.setVisible(true);
         jLabel3.setVisible(true);
         jLabel4.setVisible(true);
-         // </editor-fold>
+        // </editor-fold>
     }
-    
+
     private void setOrderNumberCBModel(ArrayList<Order> orders) {
         this.OrderNumberCB.removeAllItems();
         for (Order o : orders) {
             this.OrderNumberCB.addItem(o);
         }
     }
-    
+
     private void populateOrderTab(Order order) {
         // Media Type Radio Buttons
         if (order.getMediaType() != null) {
@@ -1769,30 +1749,33 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         // Set OrderDepositText
         this.OrderDepositText.setText(String.format("%.2f", order.getDeposit()));
         // Set Accout Payment Radio button
-        if (order.getPaymentOnAccount())
+        if (order.getPaymentOnAccount()) {
             this.OrderAccountPayRB.setSelected(true);
-        else if (!order.getPaymentOnAccount())
+        } else if (!order.getPaymentOnAccount()) {
             this.OrderDeliverPayRB.setSelected(true);
+        }
         // Set Order Status CB
         this.OrderStatusCB.removeAllItems();
-        for (Order.OrderStatus os : Order.OrderStatus.values())
+        for (Order.OrderStatus os : Order.OrderStatus.values()) {
             this.OrderStatusCB.addItem(os.toString());
+        }
         this.OrderStatusCB.setSelectedItem(order.getOrderStatus());
         // Set the MediaStatusCB
         this.OrderMediaStatusCB.removeAllItems();
-        for (Order.MediaStatus ms : Order.MediaStatus.values())
+        for (Order.MediaStatus ms : Order.MediaStatus.values()) {
             this.OrderMediaStatusCB.addItem(ms.toString());
+        }
         this.OrderMediaStatusCB.setSelectedItem(order.getMediaStatus());
         // Set Content Text
         this.OrderContentText.setText(order.getContent());
         this.OrderContentText.setEditable(true);
     }
-    
+
     private void selectOrderByIndex(int index) {
-        Order order = (Order)this.OrderNumberCB.getItemAt(index);
+        Order order = (Order) this.OrderNumberCB.getItemAt(index);
         this.populateOrderTab(order);
     }
- 
+
     private void CustStateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustStateCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CustStateCBActionPerformed
@@ -1801,7 +1784,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //Clear all fields on customer info
         CustClear();
     }//GEN-LAST:event_CustClearButtonActionPerformed
-    
+
     public void CustClear() {
         //Jacob: Created clear method as it will need called once the customer is created.
         CUSTIDCB.setText("");
@@ -1817,122 +1800,104 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         CustStateCB.setSelectedIndex(0);
         custOrdLst.setListData(new Object[0]);
     }
-    
+
     private void CustCreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustCreateButtonActionPerformed
-       //Jacob: Added Try and Catch to check if parse was successful 
-       //if not through a message explaining
+        //Jacob: Added Try and Catch to check if parse was successful 
+        //if not through a message explaining
         boolean CustExist = false;
         String temp;
-  try{
-      //Get address and assign an empty string if it doesnt exist
-        if ("".equals(CustStreet1Text.getText()))
-        {
-            temp = "";
-        }
-        else
-        {
-            temp = CustStreet1Text.getText();
-        }
-        //Check if customer exists
-        CustExist = Customer.isCustomer(Integer.parseInt(CUSTIDCB.getText()),temp);
-       
-        //If the customer doesnt exist create them else cust already exists update
-      if (CustExist == false)
-      {
+        try {
+            //Get address and assign an empty string if it doesnt exist
+            if ("".equals(CustStreet1Text.getText())) {
+                temp = "";
+            } else {
+                temp = CustStreet1Text.getText();
+            }
+            //Check if customer exists
+            CustExist = Customer.isCustomer(Integer.parseInt(CUSTIDCB.getText()), temp);
 
-        Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
-                CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
-                CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
-                CustStateCB.getSelectedItem().toString(),Integer.parseInt(CustZipText.getText()),
-                Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
-        Customer.createCust(customer);
-        JOptionPane.showMessageDialog(null, "Customer created successfully.");
-       // CustClear();
-      }
-      else
-      {
-          //Update the customer
-          Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
-                CustFNameText.getText(),CustLNameText.getText(), CustOrgText.getText(),
-                CustStreet1Text.getText(),CustStreet2Text.getText(),CustCityText.getText(),
-                CustStateCB.getSelectedItem().toString(),Integer.parseInt(CustZipText.getText()),
-                Long.parseLong(CustPhoneText.getText()),CustEmailText.getText());
-           Customer.updateBy(customer);
-           JOptionPane.showMessageDialog(null, "Customer updated.");
-         //  CustClear();
-           
-      }
-       }
-       catch (Exception e)
-               {
-                   JOptionPane.showMessageDialog(null, "A numeric value is required for the following:\nCustomer ID\nCustomer Zip\nCustomer Phone Number", "Numeric Value Required", JOptionPane.INFORMATION_MESSAGE);
-                   JOptionPane.showMessageDialog(null, "Customer was not created.");
-               }
+            //If the customer doesnt exist create them else cust already exists update
+            if (CustExist == false) {
+
+                Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
+                        CustFNameText.getText(), CustLNameText.getText(), CustOrgText.getText(),
+                        CustStreet1Text.getText(), CustStreet2Text.getText(), CustCityText.getText(),
+                        CustStateCB.getSelectedItem().toString(), Integer.parseInt(CustZipText.getText()),
+                        Long.parseLong(CustPhoneText.getText()), CustEmailText.getText());
+                Customer.createCust(customer);
+                JOptionPane.showMessageDialog(null, "Customer created successfully.");
+                // CustClear();
+            } else {
+                //Update the customer
+                Customer customer = new Customer(Integer.parseInt(CUSTIDCB.getText()),
+                        CustFNameText.getText(), CustLNameText.getText(), CustOrgText.getText(),
+                        CustStreet1Text.getText(), CustStreet2Text.getText(), CustCityText.getText(),
+                        CustStateCB.getSelectedItem().toString(), Integer.parseInt(CustZipText.getText()),
+                        Long.parseLong(CustPhoneText.getText()), CustEmailText.getText());
+                Customer.updateBy(customer);
+                JOptionPane.showMessageDialog(null, "Customer updated.");
+                //  CustClear();
+
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "A numeric value is required for the following:\nCustomer ID\nCustomer Zip\nCustomer Phone Number", "Numeric Value Required", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Customer was not created.");
+        }
     }//GEN-LAST:event_CustCreateButtonActionPerformed
-    
+
     private void CustFindButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustFindButtonActionPerformed
         Customer searchCust = null;
-         ArrayList<String> cust = new ArrayList<String>();
+        ArrayList<String> cust = new ArrayList<String>();
         //Search input to specify column to seach
-        
+
         // <editor-fold defaultstate="collapsed" desc="Get Query for cust search">
-        if (!"".equals(CUSTIDCB.getText()))
-        {
+        if (!"".equals(CUSTIDCB.getText())) {
             searchCust = Customer.searchBy("CUSTID", CUSTIDCB.getText());
         }
-        
-        if (!"".equals(CustFNameText.getText()) & searchCust == null)
-        {
+
+        if (!"".equals(CustFNameText.getText()) & searchCust == null) {
             searchCust = Customer.searchBy("CustFirstName", CustFNameText.getText());
         }
-        
-        if (!"".equals(CustLNameText.getText()) & searchCust == null)
-        {
+
+        if (!"".equals(CustLNameText.getText()) & searchCust == null) {
             searchCust = Customer.searchBy("CustLastName", CustLNameText.getText());
         }
-        
-        if (!"".equals(CustOrgText.getText()) & searchCust == null)
-        {
+
+        if (!"".equals(CustOrgText.getText()) & searchCust == null) {
             searchCust = Customer.searchBy("CustOrg", CustOrgText.getText());
         }
-        
-        if (!"".equals(CustStreet1Text.getText()) & searchCust == null)
-        {
+
+        if (!"".equals(CustStreet1Text.getText()) & searchCust == null) {
             searchCust = Customer.searchBy("CustStreet1", CustStreet1Text.getText());
         }
-        
-        if (!"".equals(CustStreet2Text.getText()) & searchCust == null)
-        {
+
+        if (!"".equals(CustStreet2Text.getText()) & searchCust == null) {
             searchCust = Customer.searchBy("CustStreet2", CustStreet2Text.getText());
         }
-        
-        if (!"".equals(CustPhoneText.getText()) & searchCust == null)
-        {
+
+        if (!"".equals(CustPhoneText.getText()) & searchCust == null) {
             searchCust = Customer.searchBy("CustPhone", CustPhoneText.getText());
         }
-        
+
         //Check if searchCust is null, if not set the customer information
-        if (searchCust == null)
-        {
+        if (searchCust == null) {
             JOptionPane.showMessageDialog(null, "A search value is required", "Search Value", JOptionPane.INFORMATION_MESSAGE);
-        }
-        else
-        {
-             // <editor-fold defaultstate="collapsed" desc="Set customer data to tab">
-        workingCustomer = searchCust;
-        CUSTIDCB.setText(String.valueOf(searchCust.getCustId()));
-        CustFNameText.setText(searchCust.getCustFName());
-        CustLNameText.setText(searchCust.getCustLName());
-        CustStreet1Text.setText(searchCust.getCustStreet1());
-        CustStreet2Text.setText(searchCust.getCustStreet2());
-        CustCityText.setText(searchCust.getCustCity());
-        CustZipText.setText(String.valueOf(searchCust.getCustZip()));
-        CustPhoneText.setText(String.valueOf(searchCust.getCustPhone()));
-        CustEmailText.setText(searchCust.getCustEmail());
-        CustStateCB.setSelectedItem(searchCust.getCustState());
-        CustOrgText.setText(searchCust.getCustOrg());
-        cust = Customer.getOrders(Long.parseLong(CUSTIDCB.getText()));
-        custOrdLst.setListData(cust.toArray());
+        } else {
+            // <editor-fold defaultstate="collapsed" desc="Set customer data to tab">
+            workingCustomer = searchCust;
+            CUSTIDCB.setText(String.valueOf(searchCust.getCustId()));
+            CustFNameText.setText(searchCust.getCustFName());
+            CustLNameText.setText(searchCust.getCustLName());
+            CustStreet1Text.setText(searchCust.getCustStreet1());
+            CustStreet2Text.setText(searchCust.getCustStreet2());
+            CustCityText.setText(searchCust.getCustCity());
+            CustZipText.setText(String.valueOf(searchCust.getCustZip()));
+            CustPhoneText.setText(String.valueOf(searchCust.getCustPhone()));
+            CustEmailText.setText(searchCust.getCustEmail());
+            CustStateCB.setSelectedItem(searchCust.getCustState());
+            CustOrgText.setText(searchCust.getCustOrg());
+            cust = Customer.getOrders(Long.parseLong(CUSTIDCB.getText()));
+            custOrdLst.setListData(cust.toArray());
             // </editor-fold>
         }
         // </editor-fold>
@@ -1952,7 +1917,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 //         SetAccessLevel();
     }//GEN-LAST:event_LoginButtonActionPerformed
 
-   // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA Search,Submit,Clear Buttons">
+    // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA Search,Submit,Clear Buttons">
     private void QASubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASubmitButtonActionPerformed
         /* Brad Clawson: This method will pass GUI field data in the form of a 
          * QAReport object to QAReport.insertOrUpdateQA() that will determine if
@@ -1967,51 +1932,47 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          * label will indicate that as well. -
          */
         //Assign bool and string variables for object constructor
-        Boolean contentCheck = false, mediaCheck = false, mediaFinishCheck = false, 
-                workmanshipCheck = false, depositCheck = false; 
+        Boolean contentCheck = false, mediaCheck = false, mediaFinishCheck = false,
+                workmanshipCheck = false;
         String contentComment = "", mediaComment = "", mediaFinishComment = "",
-                 workmanshipComment = "", depositComment = "", 
+                workmanshipComment = "",
                 correctiveActionComment = "";
         //Assign bool values according to the Radio buttons selected
         //Set fail comment string values if QA check fails
-        if(QAContentCheckPassRb.isSelected()){
+        if (QAContentCheckPassRb.isSelected()) {
             contentCheck = Boolean.TRUE;
-        }
-        else if(QAContentCheckFailRb.isSelected()){
+        } else if (QAContentCheckFailRb.isSelected()) {
             contentCheck = Boolean.FALSE;
             contentComment = QAContentFailText.getText();
         }
-        if(QAMediaCheckPassRb.isSelected()){
-            mediaCheck  = Boolean.TRUE;
-        }
-        else if(QAMediaCheckFailRb.isSelected()){
+        if (QAMediaCheckPassRb.isSelected()) {
+            mediaCheck = Boolean.TRUE;
+        } else if (QAMediaCheckFailRb.isSelected()) {
             mediaCheck = Boolean.FALSE;
             mediaComment = QAMediaFailText.getText();
         }
-        if(QAMediaFinishCheckPassRb.isSelected()){
+        if (QAMediaFinishCheckPassRb.isSelected()) {
             mediaFinishCheck = Boolean.TRUE;
-        }
-        else if(QAMediaFinishCheckFailRb.isSelected()){
+        } else if (QAMediaFinishCheckFailRb.isSelected()) {
             mediaFinishCheck = Boolean.FALSE;
             mediaFinishComment = QAMediaFailText.getText();
         }
-        if(QAWorkmanshipCheckPassRb.isSelected()){
+        if (QAWorkmanshipCheckPassRb.isSelected()) {
             workmanshipCheck = (Boolean.TRUE);
-        }
-        else if(QAWorkmanshipCheckFailRb.isSelected()){
+        } else if (QAWorkmanshipCheckFailRb.isSelected()) {
             workmanshipCheck = (Boolean.FALSE);
             workmanshipComment = (QAWorkmanshipFailText.getText());
         }
-        if(QAContentCheckFailRb.isSelected()||
-                QAMediaCheckFailRb.isSelected()||
-                QAMediaFinishCheckFailRb.isSelected()||
-                QAWorkmanshipCheckFailRb.isSelected()){
+        if (QAContentCheckFailRb.isSelected()
+                || QAMediaCheckFailRb.isSelected()
+                || QAMediaFinishCheckFailRb.isSelected()
+                || QAWorkmanshipCheckFailRb.isSelected()) {
             correctiveActionComment = (QACorrectiveActionText.getText());
         }
         //Create new QAReport object with screen data to be passed to insertOrUpdateQA()
-        QAReport newQA = new QAReport((Integer.parseInt(QAIDText.getText())), 
+        QAReport newQA = new QAReport((Integer.parseInt(QAIDText.getText())),
                 Order.getOrder(Integer.parseInt(QAOrderIDText.getText())),
-                Login.emp, contentCheck, mediaCheck, mediaFinishCheck, 
+                Login.emp, contentCheck, mediaCheck, mediaFinishCheck,
                 workmanshipCheck, contentComment, mediaComment, mediaFinishComment,
                 workmanshipComment, correctiveActionComment);
         //Object that is returned verifies that the object was created
@@ -2020,9 +1981,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAIDText.setText(String.valueOf(newQA.getQAID()));
         QAOrderIDText.setText("");
         //Object is verified a second time through popQA and QAbuttonLbl informs results
-        if(popQA()){        
-        QAButtonLbl.setText("Create/Update Successful");}
-        else {
+        if (popQA()) {
+            QAButtonLbl.setText("Create/Update Successful");
+        } else {
             QAButtonLbl.setText("Create/Update Unsuccessful");
         }
     }//GEN-LAST:event_QASubmitButtonActionPerformed
@@ -2042,51 +2003,47 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAWorkmanshipBG.clearSelection();
         QAIDText.setBackground(Color.white);
         QAOrderIDText.setBackground(Color.white);
-        
+
     }//GEN-LAST:event_QAClearButtonActionPerformed
 
     private void QASearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QASearchButtonActionPerformed
         //Brad Clawson: This method calls the popQA() method to populate the tab
-        if(popQA()){
+        if (popQA()) {
             QAButtonLbl.setText("Record Found");
-        }
-        else{
-            QAButtonLbl.setText(QAButtonLbl.getText() + ".\n"+"Record Not Found");
+        } else {
+            QAButtonLbl.setText(QAButtonLbl.getText() + ".\n" + "Record Not Found");
         }
     }//GEN-LAST:event_QASearchButtonActionPerformed
-    private Boolean popQA(){
+    private Boolean popQA() {
         /* 
          * Brad Clawson: Populates Quality Assurance tab by searching either Order Number
          * or Verification Number, but not both. If search results
          */
-        
+
         //IF OrderID is not null or empty AND QAID is null or empty search by OrderID
         if ((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
-                && (QAIDText.getText() == null || QAIDText.getText().isEmpty())){
+                && (QAIDText.getText() == null || QAIDText.getText().isEmpty())) {
             workingQA = QAReport.getQAby("ORDERID", Integer.parseInt(QAOrderIDText.getText()));
             QAIDText.setBackground(Color.white);
             QAOrderIDText.setBackground(Color.white);
-        }
-        //IF QAID is not null or empty AND OrderID is null or empty search by QAID
+        } //IF QAID is not null or empty AND OrderID is null or empty search by QAID
         else if ((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
-                && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())){
+                && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())) {
             workingQA = QAReport.getQAby("QAID", Integer.parseInt(QAIDText.getText()));
             QAIDText.setBackground(Color.white);
             QAOrderIDText.setBackground(Color.white);
-        }
-        //IF OrderID and QAID are null or empty, notify user to enter proper search criteria
-        else if((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
-                && (QAIDText.getText() == null || QAIDText.getText().isEmpty())){
+        } //IF OrderID and QAID are null or empty, notify user to enter proper search criteria
+        else if ((QAOrderIDText.getText() == null || QAOrderIDText.getText().isEmpty())
+                && (QAIDText.getText() == null || QAIDText.getText().isEmpty())) {
             QAButtonLbl.setText("Please enter a search Criteria");
             QAButtonLbl.setVisible(true);
             QAIDText.setBackground(Color.YELLOW);
             QAOrderIDText.setBackground(Color.YELLOW);
             //page not populated, return false for failure
             return false;
-        }
-        //IF OrderID and QAID both not null or empty, notify user to enter single search criteria
-        else if((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
-                && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())){
+        } //IF OrderID and QAID both not null or empty, notify user to enter single search criteria
+        else if ((QAOrderIDText.getText() != null && !QAOrderIDText.getText().isEmpty())
+                && (QAIDText.getText() != null && !QAIDText.getText().isEmpty())) {
             QAButtonLbl.setText("Use a single search Criteria");
             QAButtonLbl.setVisible(true);
             QAIDText.setBackground(Color.YELLOW);
@@ -2098,48 +2055,43 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAOrderIDText.setText(String.valueOf(workingQA.getOrder().getORDID()));
         QAIDText.setText(String.valueOf(workingQA.getQAID()));
         //select correct radio boxes and set fail comments editable or ineditable
-        if(workingQA.getContentCheck()){
+        if (workingQA.getContentCheck()) {
             QAContentCheckPassRb.setSelected(true);
-            QAContentFailText.setEditable(false);}
-        else if(!workingQA.getContentCheck()){
+            QAContentFailText.setEditable(false);
+        } else if (!workingQA.getContentCheck()) {
             QAContentCheckFailRb.setSelected(true);
             QAContentFailText.setText(workingQA.getContentFailComment());
-            QAContentFailText.setEditable(true);} 
-        if(workingQA.getMediaCheck()){
+            QAContentFailText.setEditable(true);
+        }
+        if (workingQA.getMediaCheck()) {
             QAMediaCheckPassRb.setSelected(true);
-            QAMediaFailText.setEditable(false);}
-        else if(!workingQA.getMediaCheck()){
+            QAMediaFailText.setEditable(false);
+        } else if (!workingQA.getMediaCheck()) {
             QAMediaCheckFailRb.setSelected(true);
             QAMediaFailText.setText(workingQA.getMediaFailComment());
-            QAMediaFailText.setEditable(true);}
-        if(workingQA.getMediaFinishCheck()){
+            QAMediaFailText.setEditable(true);
+        }
+        if (workingQA.getMediaFinishCheck()) {
             QAMediaFinishCheckPassRb.setSelected(true);
-            QAMediaFinishFailText.setEditable(false);}
-        else if(!workingQA.getMediaFinishCheck()){
+            QAMediaFinishFailText.setEditable(false);
+        } else if (!workingQA.getMediaFinishCheck()) {
             QAMediaFinishCheckFailRb.setSelected(true);
             QAMediaFinishFailText.setText(workingQA.getMediaFinishFailComment());
-            QAMediaFinishFailText.setEditable(true);}
-        if(workingQA.getWorkmanshipCheck()){
+            QAMediaFinishFailText.setEditable(true);
+        }
+        if (workingQA.getWorkmanshipCheck()) {
             QAWorkmanshipCheckPassRb.setSelected(true);
-            QAWorkmanshipFailText.setEditable(false);}
-        else if(!workingQA.getWorkmanshipCheck()){
+            QAWorkmanshipFailText.setEditable(false);
+        } else if (!workingQA.getWorkmanshipCheck()) {
             QAWorkmanshipCheckFailRb.setSelected(true);
             QAWorkmanshipFailText.setText(workingQA.getWorkmanshipFailComment());
-            QAWorkmanshipFailText.setEditable(true);}
+            QAWorkmanshipFailText.setEditable(true);
+        }
         //page successfully populated return true to indicate success
         return true;
     }
-        private void QAOrderIDTextFocusGained(java.awt.event.FocusEvent evt) {                                          
-        //Brad:reset background color if changed from invalid search param
-        QAOrderIDText.setBackground(Color.white);
-    }                                         
 
-    private void QAIDTextFocusGained(java.awt.event.FocusEvent evt) {                                     
-        //Brad: reset background color if changed from invalid search param
-        QAIDText.setBackground(Color.white);
-    }     
     //</editor-fold>
-    
     private void OrderClearFieldsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderClearFieldsButtonActionPerformed
         // By Paul
         this.OrderCUSTIDText.setText("");
@@ -2170,153 +2122,141 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             String content = this.OrderContentText.getText();
             boolean onAcct = false;
             String mediaType = "";
-            if (this.OrderTypePlaqueRB.isSelected())
+            if (this.OrderTypePlaqueRB.isSelected()) {
                 mediaType = "plaque";
-            else if (this.OrderTypeShirtRB.isSelected())
+            } else if (this.OrderTypeShirtRB.isSelected()) {
                 mediaType = "shirt";
-            else if (this.OrderTypeTrophyRB.isSelected())
+            } else if (this.OrderTypeTrophyRB.isSelected()) {
                 mediaType = "trophy";
-            if (this.OrderAccountPayRB.isSelected())
+            }
+            if (this.OrderAccountPayRB.isSelected()) {
                 onAcct = true;
+            }
             float total = Float.parseFloat(this.OrderTotalText.getText());
             float deposit = Float.parseFloat(this.OrderDepositText.getText());
-            String orderStatus = (String)this.OrderStatusCB.getSelectedItem();
-            String mediaStatus = (String)this.OrderMediaStatusCB.getSelectedItem();
+            String orderStatus = (String) this.OrderStatusCB.getSelectedItem();
+            String mediaStatus = (String) this.OrderMediaStatusCB.getSelectedItem();
             Employee employee;
-            if (Login.emp != null)
+            if (Login.emp != null) {
                 employee = Login.emp;
-            else
+            } else {
                 employee = Employee.searchBy(1);
+            }
             // Create new Order obj
             Order order = new Order(cust, 0, mediaType, content, onAcct, total, deposit, orderStatus, mediaStatus, employee);
             order = Order.createOrder(order); // Put into DB
             this.populateOrderTab(order); // Populate view from the created obj (see errors this way)
         }
     }//GEN-LAST:event_OrderCreateBtnActionPerformed
-    
+
     private void OrderSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderSearchButtonActionPerformed
         // By Paul
         if (this.OrderCUSTIDText.getText().length() > 0) {
             this.orders = Order.getOrders(Integer.parseInt(this.OrderCUSTIDText.getText()));
             this.setOrderNumberCBModel(orders);
             this.selectOrderByIndex(0);
+        } else {
+            JOptionPane.showMessageDialog(null, "Please search by Customer ID", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        else {
-            JOptionPane.showMessageDialog(null, "Please search by Customer ID", "Error", JOptionPane.ERROR_MESSAGE); 
-        }
-        
+
     }//GEN-LAST:event_OrderSearchButtonActionPerformed
 
     private void LogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutButtonActionPerformed
         Login.processLogout();
-/*      //Brad: make all tabs except login invisible Login action will set user access
-        CustomerInfoPanel.setVisible(false);
-        EmployeeInfoPanel.setVisible(false);
-        OrderTabbedPane.setVisible(false);
-        OrderInfoPanel.setVisible(false);
-        OrderVerifyPanel.setVisible(false);
-        QAPanel.setVisible(false);
-        InventoryPanel.setVisible(false);
-*/ 
+        /*      //Brad: make all tabs except login invisible Login action will set user access
+         CustomerInfoPanel.setVisible(false);
+         EmployeeInfoPanel.setVisible(false);
+         OrderTabbedPane.setVisible(false);
+         OrderInfoPanel.setVisible(false);
+         OrderVerifyPanel.setVisible(false);
+         QAPanel.setVisible(false);
+         InventoryPanel.setVisible(false);
+         */
     }//GEN-LAST:event_LogoutButtonActionPerformed
 
     private void EmpSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSearchButtonActionPerformed
         // TODO add your handling code here:
         Employee emp = null;
         ArrayList<String> orders = new ArrayList<String>();
-        
-        if (!"".equals(EMPIDCB.getText()))
-        {
+
+        if (!"".equals(EMPIDCB.getText())) {
             emp = Employee.searchBy(Long.parseLong(EMPIDCB.getText()));
             orders = Employee.getOrders(Long.parseLong(EMPIDCB.getText()));
-           
+
             emOrdersLst.setListData(orders.toArray());
 
         }
-        
-        if (emp == null)
-        {
+
+        if (emp == null) {
             JOptionPane.showMessageDialog(null, "A search value is required", "Search Value", JOptionPane.INFORMATION_MESSAGE);
-        }
-        else
-        {
-             
-        EMPIDCB.setText(String.valueOf(emp.getEmpId()));
-        EmpFNameText.setText(emp.getFirstName());
-        EmpLNameText.setText(emp.getLastName());
-        EmpEmail.setText(emp.getEmail());
-        EmpTypeCB.setSelectedItem(emp.getEmpType());
-        ShowEmpPassword();
+        } else {
+
+            EMPIDCB.setText(String.valueOf(emp.getEmpId()));
+            EmpFNameText.setText(emp.getFirstName());
+            EmpLNameText.setText(emp.getLastName());
+            EmpEmail.setText(emp.getEmail());
+            EmpTypeCB.setSelectedItem(emp.getEmpType());
+            ShowEmpPassword();
         }
 
     }//GEN-LAST:event_EmpSearchButtonActionPerformed
     private void EmpSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpSubmitButtonActionPerformed
-       boolean empExist = false;
-       boolean empUser = false;
-       String temp;
-       
-    try{
-        //Check if employee exists
-        empExist = Employee.isEmployee(Long.parseLong(EMPIDCB.getText()));
-       
-        //If the employee doesn't exist create them else employee already exists update
-      if (empExist == false)
-      {
-        Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());
-        Employee.createEmp(emp);
-        JOptionPane.showMessageDialog(null, "Employee created successfully.");
-        //EmpClear();
-        HideEmpPassword();
-      }
-      else
-      {
-          String passText = new String(EmpPass.getPassword());
-          String passTextConfirm = new String(EmpPassConfirm.getPassword());
-          
-          if (!passText.equals(passTextConfirm))
-          {
-              JOptionPane.showMessageDialog(null, "Employee password does not match.");
-          }
-          else
-          {
-          //Update the employee
-          
-           Employee emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
-           Employee.updateBy(emp);
-           
-           emp = null;
-           empUser = Employee.empUserExist(Long.parseLong(EMPIDCB.getText()));
-           
-           if (empUser == false)
-           {
-             emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
-             Employee.addUserLogin(emp);
-           }
-           
-           if (empUser == true)
-           {
-             emp = new Employee(EmpFNameText.getText(),EmpLNameText.getText(),Long.parseLong(EMPIDCB.getText()),EmpEmail.getText(),EmpTypeCB.getSelectedItem().toString());		
-             Employee.updateUserLogin(emp);
-           }
-           
-           JOptionPane.showMessageDialog(null, "Employee updated.");
-           
-           //EmpClear();
-           HideEmpPassword();
-          }
-      }
-       }
-       catch (Exception e)
-               {
-                   JOptionPane.showMessageDialog(null, "Employee was not created.");
-               }
+        boolean empExist = false;
+        boolean empUser = false;
+        String temp;
+
+        try {
+            //Check if employee exists
+            empExist = Employee.isEmployee(Long.parseLong(EMPIDCB.getText()));
+
+            //If the employee doesn't exist create them else employee already exists update
+            if (empExist == false) {
+                Employee emp = new Employee(EmpFNameText.getText(), EmpLNameText.getText(), Long.parseLong(EMPIDCB.getText()), EmpEmail.getText(), EmpTypeCB.getSelectedItem().toString());
+                Employee.createEmp(emp);
+                JOptionPane.showMessageDialog(null, "Employee created successfully.");
+                //EmpClear();
+                HideEmpPassword();
+            } else {
+                String passText = new String(EmpPass.getPassword());
+                String passTextConfirm = new String(EmpPassConfirm.getPassword());
+
+                if (!passText.equals(passTextConfirm)) {
+                    JOptionPane.showMessageDialog(null, "Employee password does not match.");
+                } else {
+                    //Update the employee
+
+                    Employee emp = new Employee(EmpFNameText.getText(), EmpLNameText.getText(), Long.parseLong(EMPIDCB.getText()), EmpEmail.getText(), EmpTypeCB.getSelectedItem().toString());
+                    Employee.updateBy(emp);
+
+                    emp = null;
+                    empUser = Employee.empUserExist(Long.parseLong(EMPIDCB.getText()));
+
+                    if (empUser == false) {
+                        emp = new Employee(EmpFNameText.getText(), EmpLNameText.getText(), Long.parseLong(EMPIDCB.getText()), EmpEmail.getText(), EmpTypeCB.getSelectedItem().toString());
+                        Employee.addUserLogin(emp);
+                    }
+
+                    if (empUser == true) {
+                        emp = new Employee(EmpFNameText.getText(), EmpLNameText.getText(), Long.parseLong(EMPIDCB.getText()), EmpEmail.getText(), EmpTypeCB.getSelectedItem().toString());
+                        Employee.updateUserLogin(emp);
+                    }
+
+                    JOptionPane.showMessageDialog(null, "Employee updated.");
+
+                    //EmpClear();
+                    HideEmpPassword();
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Employee was not created.");
+        }
     }//GEN-LAST:event_EmpSubmitButtonActionPerformed
-    public void EmpClear(){
-       EMPIDCB.setText("");
-       EmpFNameText.setText("");
-       EmpLNameText.setText("");
-       EmpEmail.setText("");
-       EmpTypeCB.setSelectedIndex(0);
+    public void EmpClear() {
+        EMPIDCB.setText("");
+        EmpFNameText.setText("");
+        EmpLNameText.setText("");
+        EmpEmail.setText("");
+        EmpTypeCB.setSelectedIndex(0);
     }
     private void EmpClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpClearButtonActionPerformed
         // Clear Employee data
@@ -2329,7 +2269,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         EmpTypeCB.setSelectedIndex(0);
         emOrdersLst.setListData(new Object[0]);
     }//GEN-LAST:event_EmpClearButtonActionPerformed
-    
+
     // <editor-fold defaultstate="collapsed" desc="Brad Clawson: QA radio buttons">
     private void QAContentCheckPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QAContentCheckPassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
@@ -2372,256 +2312,264 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_QAWorkmanshipCheckFailRbActionPerformed
 
     //</editor-fold>
-    
     // <editor-fold defaultstate="collapsed" desc="Brad Clawson: OV radio buttons">
     private void OVPayTypePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypePassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
-        if(OVPayTypePassRb.isSelected()){
+        if (OVPayTypePassRb.isSelected()) {
             OVPayTypeFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVPayTypePassRbActionPerformed
 
     private void OVPayTypeFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVPayTypeFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
-        if(OVPayTypeFailRb.isSelected()){
+        if (OVPayTypeFailRb.isSelected()) {
             OVPayTypeFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVPayTypeFailRbActionPerformed
 
     private void OVDepositFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
-        if(OVDepositFailRb.isSelected()){
+        if (OVDepositFailRb.isSelected()) {
             OVDepositFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVDepositFailRbActionPerformed
 
     private void OVDepositPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVDepositPassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
-        if(OVDepositPassRb.isSelected()){
+        if (OVDepositPassRb.isSelected()) {
             OVDepositFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVDepositPassRbActionPerformed
 
     private void OVContentFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
-        if(OVContentFailRb.isSelected()){
+        if (OVContentFailRb.isSelected()) {
             OVContentFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVContentFailRbActionPerformed
 
     private void OVMediaNumFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaNumFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
-        if(OVMediaNumFailRb.isSelected()){
+        if (OVMediaNumFailRb.isSelected()) {
             OVMediaFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVMediaNumFailRbActionPerformed
 
     private void OVAcctNumFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
-        if(OVAcctNumFailRb.isSelected()){
+        if (OVAcctNumFailRb.isSelected()) {
             OVAcctNumFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVAcctNumFailRbActionPerformed
 
     private void OVCorrectNameFailRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVCorrectNameFailRbActionPerformed
         //Brad: when failRb is pressed, failure comment becomes editable
-        if(OVCorrectNameFailRb.isSelected()){
+        if (OVCorrectNameFailRb.isSelected()) {
             OVNameFailText.setEditable(true);
         }
     }//GEN-LAST:event_OVCorrectNameFailRbActionPerformed
 
     private void OVContentPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVContentPassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
-        if(OVContentPassRb.isSelected()){
+        if (OVContentPassRb.isSelected()) {
             OVContentFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVContentPassRbActionPerformed
 
     private void OVMediaNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVMediaNumPassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
-        if(OVMediaNumPassRb.isSelected()){
+        if (OVMediaNumPassRb.isSelected()) {
             OVMediaFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVMediaNumPassRbActionPerformed
 
     private void OVAcctNumPassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAcctNumPassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
-        if(OVAcctNumPassRb.isSelected()){
+        if (OVAcctNumPassRb.isSelected()) {
             OVAcctNumFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVAcctNumPassRbActionPerformed
 
     private void OVCorrectNamePassRbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVCorrectNamePassRbActionPerformed
         //Brad: when passRb is pressed, failure comment becomes uneditable
-        if(OVCorrectNamePassRb.isSelected()){
+        if (OVCorrectNamePassRb.isSelected()) {
             OVNameFailText.setEditable(false);
         }
     }//GEN-LAST:event_OVCorrectNamePassRbActionPerformed
     //</editor-fold>
-    
+
     //<editor-fold defaultstate="collapsed" desc="Brad Clawson: OV Search,Submit,Clear Buttons">
     private void OVSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSearchButtonActionPerformed
-        //Brad Clawson: search by OVID or OrderID through popID() and indicate success or failure
-        if(popOV()){
+        //Brad Clawson: search by OVID or OrderID through popID() and indicate success
+        if (popOV()) {
             OVButtonLbl.setText("Record Found");
-        } 
+            //pop AssignTo CB by employee type based on media type
+            try {
+                String empType;
+                switch (this.workingOV.getOrder().getMediaType().toLowerCase()) {
+                    case "shirt":
+                        empType = "PS";
+                        break;
+                    case "plaque":
+                        empType = "ES";
+                        break;
+                    case "trophy":
+                        empType = "ES";
+                        break;
+                    default:
+                        empType = "";
+                        break;
+                }
+
+                this.employees = Employee.getEmployeesBy("EmpType", empType);
+                this.setOVAssignEmpCBModel(employees);
+
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }//GEN-LAST:event_OVSearchButtonActionPerformed
     private void setOVAssignEmpCBModel(ArrayList<Employee> employees) {
         this.OVAssignEmpCB.removeAllItems();
+        Employee emp = new Employee();
+        this.OVAssignEmpCB.addItem(emp.EMPID);
         for (Employee e : employees) {
             this.OVAssignEmpCB.addItem(e.getEmpId());
         }
     }
-        private void selectOVAssignedToByIndex(int index) {
-        long empid = (long)this.OVAssignEmpCB.getItemAt(index);
-        workingOV.getOrder().setCreatedBy(Employee.searchBy(empid));
+
+    private Employee selectOVAssignedToByIndex(int index) {
+        long empid = (long) this.OVAssignEmpCB.getItemAt(index);
+        Employee emp = (Employee.searchBy(empid));
+        return emp;
     }
-    
-    private Boolean popOV(){
+
+    private Boolean popOV() {
         /* 
          * Brad Clawson: Populates Order Verify tab by searching either Order Number
          * or Verification Number, but not both. If search results
          */
-        
+
         //IF OrderID is not null or empty AND OVID is null or empty search by OrderID
         if ((OVOrderIDText.getText().length() > 0)
-                && (OVerIDText.getText().length() == 0)){
+                && (OVerIDText.getText().length() == 0)) {
             workingOV = OrderVerify.getOVby("ORDERID", Integer.parseInt(OVOrderIDText.getText()));
-            
-        }
-        //IF OVID is not null or empty AND OrderID is null or empty search by OVID
+
+        } //IF OVID is not null or empty AND OrderID is null or empty search by OVID
         else if ((OVOrderIDText.getText().length() == 0)
-                && (OVerIDText.getText().length() > 0)){
+                && (OVerIDText.getText().length() > 0)) {
             workingOV = OrderVerify.getOVby("VERID", Integer.parseInt(OVerIDText.getText()));
-        }
-        //If both OVID and OrderID are null or empty notify and return search failed
-        else if((OVOrderIDText.getText().length() == 0)
-                && (OVerIDText.getText().length() == 0)){
+        } //If both OVID and OrderID are null or empty notify and return search failed
+        else if ((OVOrderIDText.getText().length() == 0)
+                && (OVerIDText.getText().length() == 0)) {
             OVButtonLbl.setText("Please enter a Order ID or Verification ID for Search");
             OVOrderIDText.setBackground(Color.yellow);
             OVerIDText.setBackground(Color.yellow);
-             //search failed return false
+            //search failed return false
             return false;
-        }
-        //If neither OVID and OrderID are null or empty notify and return search failed
-        else if((OVOrderIDText.getText().length() > 0)
-                && (OVerIDText.getText().length() > 0)){
+        } //If neither OVID and OrderID are null or empty notify and return search failed
+        else if ((OVOrderIDText.getText().length() > 0)
+                && (OVerIDText.getText().length() > 0)) {
             OVButtonLbl.setText("Use Only One Field for Searches");
             OVOrderIDText.setBackground(Color.yellow);
             OVerIDText.setBackground(Color.yellow);
             //search failed return false
             return false;
         }
-        
-        try{
-            String empType = "";
-            if(this.workingOV.getOrder().getMediaType().toLowerCase().equals("shirt")){
-                empType = "PS";
-            }
-            else if(this.workingOV.getOrder().getMediaType().toLowerCase().equals("plaque")|| 
-                this.workingOV.getOrder().getMediaType().toLowerCase().equals("trophy")){
-                empType = "ES";
-            }
-      
-            this.employees = Employee.getEmployeesBy("EmpType", empType);
-            this.setOVAssignEmpCBModel(employees);
-            
-            
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        
+
         // make Order information available for easy evaluation & pop OV fields
-        try
-        {
-        OVCustNameValLbl.setVisible(true);       
-        OVCustIDValLbl.setVisible(true);
-        OVMediaCatValLbl.setVisible(true);
-        OVContentValLbl.setVisible(true);
-        OVPayTypeValLbl.setVisible(true);
-        OVDepositValLbl.setVisible(true);
-        OVVerifyByLbl.setVisible(true);
-        OVAssignedToLbl.setVisible(true);
-        OVOrderIDText.setText(String.valueOf(workingOV.getOrder().getORDID()));
-        OVerIDText.setText(String.valueOf(workingOV.getVerID()));
-        OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
-                + " " + workingOV.getOrder().getCustomer().getCustLName());        
-        OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
+        try {
+            OVCustNameValLbl.setVisible(true);
+            OVCustIDValLbl.setVisible(true);
+            OVMediaCatValLbl.setVisible(true);
+            OVContentValLbl.setVisible(true);
+            OVPayTypeValLbl.setVisible(true);
+            OVDepositValLbl.setVisible(true);
+            OVVerifyByLbl.setVisible(true);
+            OVAssignedToLbl.setVisible(true);
+            OVOrderIDText.setText(String.valueOf(workingOV.getOrder().getORDID()));
+            OVerIDText.setText(String.valueOf(workingOV.getVerID()));
+            OVCustNameValLbl.setText(workingOV.getOrder().getCustomer().getCustFName()
+                    + " " + workingOV.getOrder().getCustomer().getCustLName());
+            OVCustIDValLbl.setText(String.valueOf(workingOV.getOrder().getCustomer().getCustId()));
 //      OVMedCatValLbl.setText(String.valueOf(workingOV.getOrder().getInventoryItem().getItemId));
-        OVContentValLbl.setText("(Content)");
-        OVContentValLbl.setForeground(Color.BLUE);
-        //set screen values for returned OrderVerify object
-        if (workingOV.getOrder().getPaymentOnAccount()){
-            OVPayTypeValLbl.setText("On Account");
-        }
-        if (!workingOV.getOrder().getPaymentOnAccount()){
-            OVPayTypeValLbl.setText("On Delivery");
-        }
-        OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
-        //set radio button values and fail text
-        //<editor-fold> defaultstate="collapsed" desc="set radio button values">
-        if(workingOV.getNameCheck()){
-            OVCorrectNamePassRb.setSelected(true);
-            OVNameFailText.setEditable(false);}
-        else if(!workingOV.getNameCheck()){
-            OVCorrectNameFailRb.setSelected(true);
-            OVNameFailText.setText(workingOV.getNameFailComment());
-            OVNameFailText.setEditable(true);}
-        if(workingOV.getAccountCheck()){
-            OVAcctNumPassRb.setSelected(true);
-            OVAcctNumFailText.setEditable(false);}
-        else if(!workingOV.getAccountCheck()){
-            OVAcctNumFailRb.setSelected(true);
-            OVAcctNumFailText.setText(workingOV.getAccountFailComment());
-            OVAcctNumFailText.setEditable(true);}
-        if(workingOV.getMediaCheck()){
-            OVMediaNumPassRb.setSelected(true);
-            OVMediaFailText.setEditable(false);}
-        else if(!workingOV.getMediaCheck()){
-            OVMediaNumFailRb.setSelected(true);
-            OVMediaFailText.setText(workingOV.getMediaFailComment());
-            OVMediaFailText.setEditable(true);}
-        if(workingOV.getContentCheck()){
-            OVContentPassRb.setSelected(true);
-            OVContentFailText.setEditable(false);}
-        else if(!workingOV.getContentCheck()){
-            OVContentFailRb.setSelected(true);
-            OVContentFailText.setText(workingOV.getContentFailComment());
-            OVContentFailText.setEditable(true);}
-        if(workingOV.getPaymentCheck()){
-            OVPayTypePassRb.setSelected(true);
-            OVPayTypeFailText.setEditable(false);}
-        else if(!workingOV.getPaymentCheck()){
-            OVPayTypeFailRb.setSelected(true);
-            OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
-            OVPayTypeFailText.setEditable(true);}
-        if(workingOV.getDepositCheck()){
-            OVDepositPassRb.setSelected(true);
-            OVDepositFailText.setEditable(false);}
-        else if(!workingOV.getDepositCheck()){
-            OVDepositFailRb.setSelected(true);
-            OVDepositFailText.setText(workingOV.getDepositFailComment());
-            OVDepositFailText.setEditable(true);}        
-        if(OVCorrectNameFailRb.isSelected()||OVAcctNumFailRb.isSelected()||
-                OVMediaNumFailRb.isSelected()||OVContentFailRb.isSelected()||
-                OVPayTypeFailRb.isSelected()||OVDepositFailRb.isSelected())
-            {
-            OVCommentsText.setText(workingOV.getCorrectiveActionComment());
-            OVCommentsText.setEditable(true);
+            OVContentValLbl.setText("(Content)");
+            OVContentValLbl.setForeground(Color.BLUE);
+            //set screen values for returned OrderVerify object
+            if (workingOV.getOrder().getPaymentOnAccount()) {
+                OVPayTypeValLbl.setText("On Account");
             }
-        OVVerifyByLbl.setText("Verified By " + workingOV.getVerifiedBy().getFirstName()
-                +" "+workingOV.getVerifiedBy().getLastName());
-        OVAssignedToLbl.setText("Assigned To " + workingOV.getOrder().getCreatedBy().getFirstName()
-                + " " + workingOV.getOrder().getCreatedBy().getLastName());
-          //</editor-fold>      
-        //tab fields successfully populated, return true for success
-        return true;
-        }
-        catch(NullPointerException e)
-        {
+            if (!workingOV.getOrder().getPaymentOnAccount()) {
+                OVPayTypeValLbl.setText("On Delivery");
+            }
+            OVDepositValLbl.setText(String.valueOf(workingOV.getOrder().getDeposit()));
+            //set radio button values and fail text
+            //<editor-fold> defaultstate="collapsed" desc="set radio button values">
+            if (workingOV.getNameCheck()) {
+                OVCorrectNamePassRb.setSelected(true);
+                OVNameFailText.setEditable(false);
+            } else if (!workingOV.getNameCheck()) {
+                OVCorrectNameFailRb.setSelected(true);
+                OVNameFailText.setText(workingOV.getNameFailComment());
+                OVNameFailText.setEditable(true);
+            }
+            if (workingOV.getAccountCheck()) {
+                OVAcctNumPassRb.setSelected(true);
+                OVAcctNumFailText.setEditable(false);
+            } else if (!workingOV.getAccountCheck()) {
+                OVAcctNumFailRb.setSelected(true);
+                OVAcctNumFailText.setText(workingOV.getAccountFailComment());
+                OVAcctNumFailText.setEditable(true);
+            }
+            if (workingOV.getMediaCheck()) {
+                OVMediaNumPassRb.setSelected(true);
+                OVMediaFailText.setEditable(false);
+            } else if (!workingOV.getMediaCheck()) {
+                OVMediaNumFailRb.setSelected(true);
+                OVMediaFailText.setText(workingOV.getMediaFailComment());
+                OVMediaFailText.setEditable(true);
+            }
+            if (workingOV.getContentCheck()) {
+                OVContentPassRb.setSelected(true);
+                OVContentFailText.setEditable(false);
+            } else if (!workingOV.getContentCheck()) {
+                OVContentFailRb.setSelected(true);
+                OVContentFailText.setText(workingOV.getContentFailComment());
+                OVContentFailText.setEditable(true);
+            }
+            if (workingOV.getPaymentCheck()) {
+                OVPayTypePassRb.setSelected(true);
+                OVPayTypeFailText.setEditable(false);
+            } else if (!workingOV.getPaymentCheck()) {
+                OVPayTypeFailRb.setSelected(true);
+                OVPayTypeFailText.setText(workingOV.getPaymentFailComment());
+                OVPayTypeFailText.setEditable(true);
+            }
+            if (workingOV.getDepositCheck()) {
+                OVDepositPassRb.setSelected(true);
+                OVDepositFailText.setEditable(false);
+            } else if (!workingOV.getDepositCheck()) {
+                OVDepositFailRb.setSelected(true);
+                OVDepositFailText.setText(workingOV.getDepositFailComment());
+                OVDepositFailText.setEditable(true);
+            }
+            if (OVCorrectNameFailRb.isSelected() || OVAcctNumFailRb.isSelected()
+                    || OVMediaNumFailRb.isSelected() || OVContentFailRb.isSelected()
+                    || OVPayTypeFailRb.isSelected() || OVDepositFailRb.isSelected()) {
+                OVCommentsText.setText(workingOV.getCorrectiveActionComment());
+                OVCommentsText.setEditable(true);
+            }
+            OVVerifyByLbl.setText("Verified By " + workingOV.getVerifiedBy().getFirstName()
+                    + " " + workingOV.getVerifiedBy().getLastName());
+            OVAssignedToLbl.setText("Assigned To " + workingOV.getOrder().getCreatedBy().getFirstName()
+                    + " " + workingOV.getOrder().getCreatedBy().getLastName());
+            //</editor-fold>      
+            //tab fields successfully populated, return true for success
+            return true;
+        } catch (NullPointerException e) {
             //item not found, return false
-            OVButtonLbl.setText(OVButtonLbl.getText()+ "Record not Found");
+            OVButtonLbl.setText(OVButtonLbl.getText() + "Record not Found");
             return false;
         }
     }
@@ -2660,7 +2608,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVDepositBG.clearSelection();
         OVContentBG.clearSelection();
         OVMediaBG.clearSelection();
-        OVCustNameValLbl.setVisible(false);       
+        OVCustNameValLbl.setVisible(false);
         OVCustIDValLbl.setVisible(false);
         OVMediaCatValLbl.setVisible(false);
         OVContentValLbl.setVisible(false);
@@ -2669,7 +2617,8 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVButtonLbl.setText("");
         OVAssignedToLbl.setText("");
         OVVerifyByLbl.setText("");
-    
+        OVAssignEmpCB.setSelectedIndex(0);
+
     }//GEN-LAST:event_OVClearFieldButtonActionPerformed
 
     private void OVSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVSubmitButtonActionPerformed
@@ -2686,95 +2635,101 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
          * label will indicate that as well. -
          */
         //Assign bool and string variables for object constructor
-        Boolean nameCheck = false, accountCheck = false, mediaCheck = false, 
-                contentCheck = false,paymentCheck = false, depositCheck = false; 
+        Boolean nameCheck = false, accountCheck = false, mediaCheck = false,
+                contentCheck = false, paymentCheck = false, depositCheck = false;
         String nameComment = "", accountComment = "", mediaComment = "",
-                contentComment = "", paymentComment = "", depositComment = "", 
+                contentComment = "", paymentComment = "", depositComment = "",
                 correctiveActionComment = "The following issues were found with your recent order: ";
-        
+
         //Assign bool values according to the Radio buttons selected
         //Set fail comment string values if OV check fails
-        if(OVCorrectNamePassRb.isSelected()){
+        if (OVCorrectNamePassRb.isSelected()) {
             nameCheck = Boolean.TRUE;
-        }
-        else if(OVCorrectNameFailRb.isSelected()){
+        } else if (OVCorrectNameFailRb.isSelected()) {
             nameCheck = Boolean.FALSE;
             nameComment = OVNameFailText.getText();
             correctiveActionComment += ("/n Incorrect Name: " + nameComment);
         }
-        if(OVAcctNumPassRb.isSelected()){
-            accountCheck  = Boolean.TRUE;
-        }
-        else if(OVAcctNumFailRb.isSelected()){
+        if (OVAcctNumPassRb.isSelected()) {
+            accountCheck = Boolean.TRUE;
+        } else if (OVAcctNumFailRb.isSelected()) {
             accountCheck = Boolean.FALSE;
             accountComment = OVAcctNumFailText.getText();
             correctiveActionComment += ("/n Account issue: " + accountComment);
         }
-        if(OVMediaNumPassRb.isSelected()){
+        if (OVMediaNumPassRb.isSelected()) {
             mediaCheck = Boolean.TRUE;
-        }
-        else if(OVMediaNumFailRb.isSelected()){
+        } else if (OVMediaNumFailRb.isSelected()) {
             mediaCheck = Boolean.FALSE;
             mediaComment = OVMediaFailText.getText();
             correctiveActionComment += ("/n Media issue: " + mediaComment);
         }
-        if(OVContentPassRb.isSelected()){
+        if (OVContentPassRb.isSelected()) {
             contentCheck = (Boolean.TRUE);
-        }
-        else if(OVContentFailRb.isSelected()){
+        } else if (OVContentFailRb.isSelected()) {
             contentCheck = (Boolean.FALSE);
             contentComment = (OVContentFailText.getText());
-            correctiveActionComment += ("/n Content issue: " + contentComment); 
+            correctiveActionComment += ("/n Content issue: " + contentComment);
         }
-        if(OVPayTypePassRb.isSelected()){
+        if (OVPayTypePassRb.isSelected()) {
             paymentCheck = (Boolean.TRUE);
-        }
-        else if(OVPayTypeFailRb.isSelected()){
+        } else if (OVPayTypeFailRb.isSelected()) {
             paymentCheck = (Boolean.FALSE);
             paymentComment = (OVPayTypeFailText.getText());
             correctiveActionComment += ("/n Payment issue: " + paymentComment);
         }
-        if (OVDepositPassRb.isSelected()){
+        if (OVDepositPassRb.isSelected()) {
             depositCheck = (Boolean.TRUE);
-        }
-        else if(OVDepositFailRb.isSelected()){
+        } else if (OVDepositFailRb.isSelected()) {
             depositCheck = (Boolean.FALSE);
             depositComment = (OVDepositFailText.getText());
             correctiveActionComment += ("/n Deposit issue: " + depositComment);
         }
         //Create new OV object with screen data to be passed to insertOrUpdateOV()
-        OrderVerify newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())),Login.emp, 
-                Order.getOrder(Integer.parseInt(OVOrderIDText.getText())), 
+        OrderVerify newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())), Login.emp,
+                Order.getOrder(Integer.parseInt(OVOrderIDText.getText())),
                 nameCheck, accountCheck, mediaCheck, contentCheck, paymentCheck,
                 depositCheck, nameComment, accountComment, mediaComment, contentComment,
-                paymentComment, depositComment,"");
+                paymentComment, depositComment, "");
         //Object that is returned verifies that the object was created
-        newOV = OrderVerify.insertOrUpdateOV(newOV);
-        //prepare screen for popOV()
-        OVerIDText.setText(String.valueOf(newOV.getVerID()));
-        OVOrderIDText.setText("");
-        //Record is searched for and verified a second time through popOV()
-        if(popOV()){        
-        OVButtonLbl.setText("Create/Update Successful");
-            if(!nameCheck||!accountCheck||!mediaCheck||!contentCheck||!paymentCheck||!depositCheck){
-                correctiveActionComment += ("/n We will be contacting you shortly to"
-                        + " resolve these issues.");
-                String opsManMsg = "Call "+newOV.getOrder().getCustomer().getCustFName()
-                        +" "+newOV.getOrder().getCustomer().getCustLName()+ " at "+
-                        newOV.getOrder().getCustomer().getCustPhone()+
-                        " for correct information on order #" + 
-                        newOV.getOrder().getORDID();
-                Messaging.sendMessage(newOV.getOrder().getCustomer().getCustEmail(), correctiveActionComment);
-                Messaging.sendMessage(newOV.getVerifiedBy().getEmail(), opsManMsg);}
-            else if(nameCheck&&accountCheck&&mediaCheck&&contentCheck&&paymentCheck&&depositCheck){
-                Order.createOrder(newOV.getOrder());
-                String assignToMsg = "Please review order #" + newOV.getOrder().getORDID() + " and begin work.";
-                Messaging.sendMessage(newOV.getOrder().getCreatedBy().getEmail(), assignToMsg);
+        try {
+            newOV = OrderVerify.insertOrUpdateOV(newOV);
+
+            //prepare screen for popOV()
+            OVerIDText.setText(String.valueOf(newOV.getVerID()));
+            OVOrderIDText.setText("");
+            if (popOV()) {
+                OVButtonLbl.setText("Create/Update Successful");
             }
+        } catch (NullPointerException e) {
+            OVButtonLbl.setText("No New Data for Existing Record");
         }
+        //Record is searched for and verified a second time through popOV()
+
+        if (!nameCheck || !accountCheck || !mediaCheck || !contentCheck || !paymentCheck || !depositCheck) {
+            correctiveActionComment += ("/n We will be contacting you shortly to"
+                    + " resolve these issues.");
+            String opsManMsg = "Call " + newOV.getOrder().getCustomer().getCustFName()
+                    + " " + newOV.getOrder().getCustomer().getCustLName() + " at "
+                    + newOV.getOrder().getCustomer().getCustPhone()
+                    + " for correct information on order #"
+                    + newOV.getOrder().getORDID();
+            Messaging.sendMessage(newOV.getOrder().getCustomer().getCustEmail(), correctiveActionComment);
+            Messaging.sendMessage(newOV.getVerifiedBy().getEmail(), opsManMsg);
+        } else if (nameCheck && accountCheck && mediaCheck && contentCheck && paymentCheck && depositCheck) {
+            if (this.OVAssignEmpCB.getSelectedIndex() != -1) {
+                newOV.getOrder().setCreatedBy(selectOVAssignedToByIndex(this.OVAssignEmpCB.getSelectedIndex()));
+            }
+            Order.createOrder(newOV.getOrder());
+            this.OVAssignedToLbl.setText("Assigned To " + newOV.getOrder().getCreatedBy().getFirstName()
+                    + " " + newOV.getOrder().getCreatedBy().getLastName());
+            String assignToMsg = "Please review order #" + newOV.getOrder().getORDID() + " and begin work.";
+            Messaging.sendMessage(newOV.getOrder().getCreatedBy().getEmail(), assignToMsg);
+        }
+
     }//GEN-LAST:event_OVSubmitButtonActionPerformed
     //</editor-fold>
-    
+
     private void OrderStatusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderStatusCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderStatusCBActionPerformed
@@ -2785,7 +2740,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     private void custOrdLstValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_custOrdLstValueChanged
         //Add code for customer orders 
-        
     }//GEN-LAST:event_custOrdLstValueChanged
 
     private void EmpTypeCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpTypeCBActionPerformed
@@ -2793,8 +2747,9 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_EmpTypeCBActionPerformed
 
     private void OrderNumberCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderNumberCBActionPerformed
-        if (this.OrderNumberCB.getSelectedIndex() != -1)
+        if (this.OrderNumberCB.getSelectedIndex() != -1) {
             this.selectOrderByIndex(this.OrderNumberCB.getSelectedIndex());
+        }
     }//GEN-LAST:event_OrderNumberCBActionPerformed
 
     private void OrderUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2807,28 +2762,31 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         if (cust == null) {
             JOptionPane.showMessageDialog(null, "Customer ID not found!", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
-            Order o = (Order)this.OrderNumberCB.getSelectedItem();
+            Order o = (Order) this.OrderNumberCB.getSelectedItem();
             int ordId = o.getORDID();
             String content = this.OrderContentText.getText();
             boolean onAcct = false;
             String mediaType = "";
-            if (this.OrderTypePlaqueRB.isSelected())
+            if (this.OrderTypePlaqueRB.isSelected()) {
                 mediaType = "plaque";
-            else if (this.OrderTypeShirtRB.isSelected())
+            } else if (this.OrderTypeShirtRB.isSelected()) {
                 mediaType = "shirt";
-            else if (this.OrderTypeTrophyRB.isSelected())
+            } else if (this.OrderTypeTrophyRB.isSelected()) {
                 mediaType = "trophy";
-            if (this.OrderAccountPayRB.isSelected())
+            }
+            if (this.OrderAccountPayRB.isSelected()) {
                 onAcct = true;
+            }
             float total = Float.parseFloat(this.OrderTotalText.getText());
             float deposit = Float.parseFloat(this.OrderDepositText.getText());
-            String orderStatus = (String)this.OrderStatusCB.getSelectedItem();
-            String mediaStatus = (String)this.OrderMediaStatusCB.getSelectedItem();
+            String orderStatus = (String) this.OrderStatusCB.getSelectedItem();
+            String mediaStatus = (String) this.OrderMediaStatusCB.getSelectedItem();
             Employee employee;
-            if (Login.emp != null)
+            if (Login.emp != null) {
                 employee = Login.emp;
-            else
+            } else {
                 employee = Employee.searchBy(1);
+            }
             // Create new Order obj
             Order order = new Order(cust, ordId, mediaType, content, onAcct, total, deposit, orderStatus, mediaStatus, employee);
             order = Order.createOrder(order); // Put into DB
@@ -2837,7 +2795,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void OVContentValLblMouseClick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OVContentValLblMouseClick
-          //Brad: popup content in JOption pane for easy access when verifying order 
+        //Brad: popup content in JOption pane for easy access when verifying order 
         JOptionPane.showMessageDialog(null, workingOV.getOrder().getContent());
     }//GEN-LAST:event_OVContentValLblMouseClick
 
@@ -2853,38 +2811,35 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     }//GEN-LAST:event_InvClearButtonActionPerformed
 
     private void InvOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvOrderButtonActionPerformed
-        if(Login.emp.getEmpType() == "ES" || Login.emp.getEmpType()== "PS"){
-            
+        if (Login.emp.getEmpType() == "ES" || Login.emp.getEmpType() == "PS") {
         }
-            
+
     }//GEN-LAST:event_InvOrderButtonActionPerformed
 
     private void InvSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvSearchButtonActionPerformed
-        if(popII()){
+        if (popII()) {
             InvButtonLbl.setText("Item(s) found");
         }
     }//GEN-LAST:event_InvSearchButtonActionPerformed
 
     private void InvManufacturerItemListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_InvManufacturerItemListValueChanged
         InventoryItem InvItem = new InventoryItem();
-        
-        if (!"".equals(InvManufacturerIdText.getText()))
-        {
-           InvItem = InventoryItem.GetItemChangeFromList(Integer.parseInt(InvManufacturerIdText.getText()), Integer.parseInt(InvManufacturerItemList.getSelectedValue().toString()));
+
+        if (!"".equals(InvManufacturerIdText.getText())) {
+            InvItem = InventoryItem.GetItemChangeFromList(Integer.parseInt(InvManufacturerIdText.getText()), Integer.parseInt(InvManufacturerItemList.getSelectedValue().toString()));
         }
-        if (InvItem != null)
-        {
-        InvItemIdText.setText(Integer.toString(InvItem.getItemNumber()));
-        InvManufacturerIdText.setText(Integer.toString(InvItem.getManufacturerID()));
-        InvItemNameText.setText(InvItem.getName());
-        InvOnHandText.setText(Integer.toString(InvItem.getQtyOnHand()));
-        InvOnOrderText.setText(Integer.toString(InvItem.getQtyOnOrder()));
-        InvDeliveryDateText.setText(InvItem.getDeliveryDate());
-        
-        workingII = InvItem;
+        if (InvItem != null) {
+            InvItemIdText.setText(Integer.toString(InvItem.getItemNumber()));
+            InvManufacturerIdText.setText(Integer.toString(InvItem.getManufacturerID()));
+            InvItemNameText.setText(InvItem.getName());
+            InvOnHandText.setText(Integer.toString(InvItem.getQtyOnHand()));
+            InvOnOrderText.setText(Integer.toString(InvItem.getQtyOnOrder()));
+            InvDeliveryDateText.setText(InvItem.getDeliveryDate());
+
+            workingII = InvItem;
         }
-        
-      
+
+
     }//GEN-LAST:event_InvManufacturerItemListValueChanged
 
     private void OVOrderIDTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_OVOrderIDTextFocusGained
@@ -2897,47 +2852,39 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         OVerIDText.setBackground(Color.white);
     }//GEN-LAST:event_OVerIDTextFocusGained
 
-    private void OVAssignEmpCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OVAssignEmpCBActionPerformed
-               if (this.OVAssignEmpCB.getSelectedIndex() != -1)
-            this.selectOVAssignedToByIndex(this.OVAssignEmpCB.getSelectedIndex());
-    }//GEN-LAST:event_OVAssignEmpCBActionPerformed
-
-     private Boolean popII(){    /* 
+    private Boolean popII() {    /* 
          * Brad Clawson: Populates Inventory Item tab by searching either ItemID Number,
          * Manufacturer, or name but not by more than one field.
          */
-         ArrayList<String> invItems = new ArrayList<String>();
-        
+        ArrayList<String> invItems = new ArrayList<String>();
+
         //search by ITEMID if ManID and ItemName are null or empty
         if ((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
                 && (InvManufacturerIdText.getText() == null || InvManufacturerIdText.getText().isEmpty())
-                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())) {
             workingII = InventoryItem.getIIby("ITEMID", InvItemIdText.getText());
             InvManufacturerIdText.setBackground(Color.white);
             InvItemIdText.setBackground(Color.white);
-        }
-        //search by MANID if ITEMID and ItemName are null or empty
+        } //search by MANID if ITEMID and ItemName are null or empty
         else if ((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
                 && (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
-                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())) {
             workingII = InventoryItem.getIIby("MANID", InvManufacturerIdText.getText());
             InvManufacturerIdText.setBackground(Color.white);
             InvItemIdText.setBackground(Color.white);
             invItems = InventoryItem.getManufacturerItems(Integer.parseInt(InvManufacturerIdText.getText()));
             InvManufacturerItemList.setListData(invItems.toArray());
-        }
-        //search by ItemName if ManID and ITEMID are null or empty
+        } //search by ItemName if ManID and ITEMID are null or empty
         else if ((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
                 && (InvManufacturerIdText.getText() == null || InvManufacturerIdText.getText().isEmpty())
-                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())) {
             workingII = InventoryItem.getIIby("Name", InvItemNameText.getText());
             InvManufacturerIdText.setBackground(Color.white);
             InvItemIdText.setBackground(Color.white);
-        }
-        //if search criteria are all null or empty, return false with notification
-        else if((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
+        } //if search criteria are all null or empty, return false with notification
+        else if ((InvItemIdText.getText() == null || InvItemIdText.getText().isEmpty())
                 && (InvManufacturerIdText.getText() == null || InvManufacturerIdText.getText().isEmpty())
-                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())){
+                && (InvItemNameText.getText() == null || InvItemNameText.getText().isEmpty())) {
             InvButtonLbl.setText("Please enter a search Criteria");
             InvButtonLbl.setVisible(true);
             InvManufacturerIdText.setBackground(Color.YELLOW);
@@ -2945,33 +2892,30 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             InvItemNameText.setBackground(Color.YELLOW);
             //page not populated, return false for failure
             return false;
-        }
-        //if two search criteria are entere, return false with notification
-        else if((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
+        } //if two search criteria are entere, return false with notification
+        else if ((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
                 && (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
-                || (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+                || (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())) {
             InvButtonLbl.setText("Use a single search Criteria");
             InvButtonLbl.setVisible(true);
             InvManufacturerIdText.setBackground(Color.YELLOW);
             InvItemIdText.setBackground(Color.YELLOW);
             //page not populated return false for failure
             return false;
-        }
-        //if two search criteria are entere, return false with notification
-        else if((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
+        } //if two search criteria are entere, return false with notification
+        else if ((InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())
                 || (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
-                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())){
+                && (InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())) {
             InvButtonLbl.setText("Use a single search Criteria");
             InvButtonLbl.setVisible(true);
             InvManufacturerIdText.setBackground(Color.YELLOW);
             InvItemIdText.setBackground(Color.YELLOW);
             //page not populated return false for failure
             return false;
-        }
-         //if two search criteria are entere, return false with notification       
-        else if((InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())
+        } //if two search criteria are entere, return false with notification       
+        else if ((InvItemNameText.getText() != null && !InvItemNameText.getText().isEmpty())
                 && (InvManufacturerIdText.getText() != null && !InvManufacturerIdText.getText().isEmpty())
-                || (InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())){
+                || (InvItemIdText.getText() != null && !InvItemIdText.getText().isEmpty())) {
             InvButtonLbl.setText("Use a single search Criteria");
             InvButtonLbl.setVisible(true);
             InvManufacturerIdText.setBackground(Color.YELLOW);
@@ -2988,8 +2932,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         InvDeliveryDateText.setText(workingII.getDeliveryDate());
         return true;
     }
-     //</editor-fold>
-    
+    //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="GUI Variable Declarations">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CUSTIDCB;
