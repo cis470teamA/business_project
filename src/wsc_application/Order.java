@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
 public class Order {    
     private Customer customer;
     private int ORDID;
+    private InventoryItem inventoryItem;
     private String mediaType;
     private String content;
     private float total;
@@ -94,6 +95,44 @@ public class Order {
      * @return An array list of order objects; A search by customer ID can 
      * 
      */
+    public static ArrayList getOrdersBy(String column, int id) {
+        orders = new ArrayList(0);
+        Order order;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+            String query = "select * from cis470.ORDER where" + column + " = " + id + ";";
+        System.out.println(query);
+        try {
+            rs = mysql.doQuery(query);
+            while (rs.next()) {
+                Employee employee;
+                Customer customer;
+                employee = Employee.searchBy(rs.getLong("EMPID"));
+                customer = Customer.searchBy("CUSTID", rs.getString("CUSTID"));
+                order = new Order(
+                        customer,
+                        rs.getInt("ORDERID"),
+                        rs.getString("MediaType"),
+                        rs.getString("Content"),
+                        rs.getBoolean("PaymentOnAccount"),
+                        rs.getFloat("Total"),
+                        rs.getFloat("Deposit"),
+                        rs.getString("OrderStatus"),
+                        rs.getString("MediaStatus"),
+                        employee);
+                // Add the new order to the ArrayList
+                orders.add(order);
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return orders;
+    }
+    
     public static ArrayList getOrders(int CustId) {
         orders = new ArrayList(0);
         Order order;
@@ -267,6 +306,9 @@ public class Order {
         else
             return true;
     }
+    public InventoryItem getInventoryItem(){
+        return inventoryItem;
+    }
     public void setPaymentOnAccount(Boolean onAcct){
         if (onAcct)
             this.paymentOnAccount = 1;
@@ -339,6 +381,9 @@ public class Order {
     }
     public void setCreatedBy(Employee createdBy){
         this.createdBy = createdBy;
+    }
+    public void setInventoryItem(InventoryItem inventoryItem){
+        this.inventoryItem = inventoryItem;
     }
     //</editor-fold>
 }
