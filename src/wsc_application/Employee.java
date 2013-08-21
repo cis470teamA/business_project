@@ -32,6 +32,7 @@ public class Employee{
             this.abbrev = value;
         }
     }
+    protected static ArrayList<Employee> employees;
     
     public Employee(){
         
@@ -61,7 +62,35 @@ public class Employee{
         setEmail(eMail);
         setEmpType(empType);
     }
-    
+    public static ArrayList getEmployeesBy(String column, String id) {
+        employees = new ArrayList(0);
+        Employee employee = null;
+        ResultSet rs;
+        MysqlConn mysql = new MysqlConn();
+        String query = "select * from EMPLOYEE where " + column + "='" + id + "';";
+        rs = mysql.doQuery(query);
+        try {
+            if (rs.next()) {
+                employee = new Employee(
+                        rs.getString("EmpFirstName"),
+                        rs.getString("EmpLastName"),
+                        rs.getLong("EMPID"),
+                        rs.getString("EmpEmail"),
+                        rs.getString("EmpType"));
+                employees.add(employee);
+            }
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "MySQL Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+         }
+         finally {
+             mysql.closeAll();
+             return employees;
+         }
+    }
     // Employee class code goes here.  Methods and stuff.
     public static Employee searchBy(long EmpId) {
         Employee employee = null;
