@@ -931,8 +931,6 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    OVAssignEmpCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
     OVAssignEmpLbl.setText("Assign Printer/Engraver");
 
     OVOrderNumLbl.setText("Order Number");
@@ -950,7 +948,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderVerifyPanelLayout.setHorizontalGroup(
         OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
-            .addGap(78, 78, 78)
+            .addGap(99, 99, 99)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -999,7 +997,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVPayTypeFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVReasonLbl))
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addContainerGap(145, Short.MAX_VALUE))))
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OVButtonLbl)
@@ -1027,7 +1025,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                             .addComponent(OVSubmitButton)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(OVClearFieldButton)))
-                    .addGap(373, 419, Short.MAX_VALUE))))
+                    .addContainerGap())))
         .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
             .addGap(217, 217, 217)
             .addComponent(OVVerifyByLbl)
@@ -1045,7 +1043,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderVerifyPanelLayout.setVerticalGroup(
         OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrderVerifyPanelLayout.createSequentialGroup()
-            .addGap(30, 30, 30)
+            .addGap(84, 84, 84)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(OVOrderNumLbl)
                 .addComponent(OVOrderIDText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1121,7 +1119,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                 .addComponent(OVVerifyByLbl)
                 .addComponent(OVAssignedToLbl))
-            .addContainerGap(168, Short.MAX_VALUE))
+            .addContainerGap(114, Short.MAX_VALUE))
     );
 
     OrderTabbedPane.addTab("Order Verify", OrderVerifyPanel);
