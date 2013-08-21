@@ -11,7 +11,7 @@ public class Messaging {
     public static void sendMessage(String recipient, String message) {
         JOptionPane.showMessageDialog(null, 
                 "To: " + recipient + ".\n" + 
-                "Body: Message in dialogue box",
+                "Body: " + message,
                 "Sending Message", JOptionPane.INFORMATION_MESSAGE);
                 System.out.println(message);
     }
