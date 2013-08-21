@@ -69,8 +69,9 @@ public class Employee{
         MysqlConn mysql = new MysqlConn();
         String query = "select * from EMPLOYEE where " + column + "='" + id + "';";
         rs = mysql.doQuery(query);
+        System.out.println(query);
         try {
-            if (rs.next()) {
+            while (rs.next()) {
                 employee = new Employee(
                         rs.getString("EmpFirstName"),
                         rs.getString("EmpLastName"),
