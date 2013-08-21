@@ -1223,16 +1223,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
 
     QAFailCommentLbl.setText("Reason for Failure");
 
-    QAVerifiedByLbl.setText("Order Verified by ******");
-
-    QAAssignedToLbl.setText("Work Assigned to ******");
-
     QAOrderIDLbl.setText("Order Number");
 
     QAIDLbl.setText("QA Inspection Number");
 
     QAButtonLbl.setForeground(new java.awt.Color(255, 51, 51));
-    QAButtonLbl.setText("* Use only one field for searches");
 
     javax.swing.GroupLayout QAPanelLayout = new javax.swing.GroupLayout(QAPanel);
     QAPanel.setLayout(QAPanelLayout);
@@ -1245,6 +1240,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QAIDLbl))
             .addGap(23, 23, 23)
             .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(QAAssignedToLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(QAPanelLayout.createSequentialGroup()
                     .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(QAMediaLbl)
@@ -1281,14 +1277,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                     .addComponent(QAClearButton))
                 .addComponent(QAOrderIDText, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                 .addComponent(QAIDText)
-                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, QAPanelLayout.createSequentialGroup()
-                        .addComponent(QAVerifiedByLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(QAAssignedToLbl))
-                    .addComponent(QAButtonLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
-            .addContainerGap(197, Short.MAX_VALUE))
+                .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(QAVerifiedByLbl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(QAButtonLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(183, Short.MAX_VALUE))
     );
 
     QAPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {QAContentFailText, QAMediaFailText, QAMediaFinishFailText, QAWorkmanshipFailText});
@@ -1337,7 +1330,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QAWorkmanshipCheckFailRb)
                 .addComponent(QAWorkmanshipCheckPassRb)
                 .addComponent(QAWorkmanshipLbl))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
             .addComponent(QACommentLbl)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(QACorrectiveActionTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1347,11 +1340,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 .addComponent(QASubmitButton)
                 .addComponent(QAClearButton))
             .addGap(2, 2, 2)
-            .addComponent(QAButtonLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(26, 26, 26)
-            .addGroup(QAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(QAVerifiedByLbl)
-                .addComponent(QAAssignedToLbl))
+            .addComponent(QAButtonLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(QAAssignedToLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(QAVerifiedByLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 5, Short.MAX_VALUE)
             .addGap(88, 88, 88))
     );
 
@@ -1936,55 +1929,82 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                 workmanshipCheck = false;
         String contentComment = "", mediaComment = "", mediaFinishComment = "",
                 workmanshipComment = "",
-                correctiveActionComment = "";
+                correctiveActionComment = "\n";
         //Assign bool values according to the Radio buttons selected
         //Set fail comment string values if QA check fails
         if (QAContentCheckPassRb.isSelected()) {
             contentCheck = Boolean.TRUE;
+            QAContentFailText.setText("");
         } else if (QAContentCheckFailRb.isSelected()) {
             contentCheck = Boolean.FALSE;
             contentComment = QAContentFailText.getText();
+            correctiveActionComment += "Content: " + contentComment + "\n";
         }
         if (QAMediaCheckPassRb.isSelected()) {
             mediaCheck = Boolean.TRUE;
+            QAMediaFailText.setText("");
         } else if (QAMediaCheckFailRb.isSelected()) {
             mediaCheck = Boolean.FALSE;
             mediaComment = QAMediaFailText.getText();
+            correctiveActionComment += "Media: " + mediaComment + "\n";
         }
         if (QAMediaFinishCheckPassRb.isSelected()) {
             mediaFinishCheck = Boolean.TRUE;
+            QAMediaFinishFailText.setText("");
         } else if (QAMediaFinishCheckFailRb.isSelected()) {
             mediaFinishCheck = Boolean.FALSE;
-            mediaFinishComment = QAMediaFailText.getText();
+            mediaFinishComment = QAMediaFinishFailText.getText();
+            correctiveActionComment += "Media Finish: " + mediaFinishComment + "\n";
         }
         if (QAWorkmanshipCheckPassRb.isSelected()) {
             workmanshipCheck = (Boolean.TRUE);
+            QAWorkmanshipFailText.setText("");
         } else if (QAWorkmanshipCheckFailRb.isSelected()) {
             workmanshipCheck = (Boolean.FALSE);
             workmanshipComment = (QAWorkmanshipFailText.getText());
+            correctiveActionComment += "Workmanship: " + workmanshipComment + "\n";
+
         }
-        if (QAContentCheckFailRb.isSelected()
-                || QAMediaCheckFailRb.isSelected()
-                || QAMediaFinishCheckFailRb.isSelected()
-                || QAWorkmanshipCheckFailRb.isSelected()) {
-            correctiveActionComment = (QACorrectiveActionText.getText());
+        if (!contentCheck || !mediaCheck || !mediaFinishCheck || !workmanshipCheck) {
+            correctiveActionComment += "Corrective Action:"
+                    + QACorrectiveActionText.getText();
+
+        } else {
+            QACorrectiveActionText.setEditable(false);
+            QACorrectiveActionText.setText("");
         }
         //Create new QAReport object with screen data to be passed to insertOrUpdateQA()
         QAReport newQA = new QAReport((Integer.parseInt(QAIDText.getText())),
                 Order.getOrder(Integer.parseInt(QAOrderIDText.getText())),
                 Login.emp, contentCheck, mediaCheck, mediaFinishCheck,
                 workmanshipCheck, contentComment, mediaComment, mediaFinishComment,
-                workmanshipComment, correctiveActionComment);
+                workmanshipComment, QACorrectiveActionText.getText());
         //Object that is returned verifies that the object was created
-        newQA = QAReport.insertOrUpdateQA(newQA);
-        //prepare the screen for popQA;
-        QAIDText.setText(String.valueOf(newQA.getQAID()));
-        QAOrderIDText.setText("");
-        //Object is verified a second time through popQA and QAbuttonLbl informs results
-        if (popQA()) {
-            QAButtonLbl.setText("Create/Update Successful");
-        } else {
-            QAButtonLbl.setText("Create/Update Unsuccessful");
+        try {
+            newQA = QAReport.insertOrUpdateQA(newQA);
+
+            //prepare the screen for popQA;
+            QAIDText.setText(String.valueOf(newQA.getQAID()));
+            QAOrderIDText.setText("");
+            //Object is verified a second time through popQA and QAbuttonLbl informs results
+            if (popQA()) {
+                QAButtonLbl.setText("Create/Update Successful");
+                if (contentCheck && mediaCheck && mediaFinishCheck && workmanshipCheck) {
+                    Messaging.sendMessage(newQA.getOrder().getCustomer().getCustEmail(),
+                            "Order #" + newQA.getOrder().getORDID() + " from William's "
+                            + "Specialty Company is complete.\nContact any of our sales persons"
+                            + "to arrange pickup.");
+                } else {
+                    Messaging.sendMessage(newQA.getOrder().getCreatedBy().getEmail(),
+                            "Order #" + newQA.getOrder().getORDID()
+                            + " did not pass QA Inspection for the following reasons: \n"
+                            + correctiveActionComment);
+                }
+            } else {
+                QAButtonLbl.setText("Create/Update Unsuccessful");
+            }
+        } catch (NullPointerException e) {
+            QAButtonLbl.setText("QA Report Not Found.");
         }
     }//GEN-LAST:event_QASubmitButtonActionPerformed
 
@@ -2003,6 +2023,11 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         QAWorkmanshipBG.clearSelection();
         QAIDText.setBackground(Color.white);
         QAOrderIDText.setBackground(Color.white);
+        QAContentFailText.setEditable(false);
+        QAMediaFailText.setEditable(false);
+        QAMediaFinishFailText.setEditable(false);
+        QAWorkmanshipFailText.setEditable(false);
+        QACorrectiveActionText.setEditable(false);
 
     }//GEN-LAST:event_QAClearButtonActionPerformed
 
@@ -2010,8 +2035,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         //Brad Clawson: This method calls the popQA() method to populate the tab
         if (popQA()) {
             QAButtonLbl.setText("Record Found");
-        } else {
-            QAButtonLbl.setText(QAButtonLbl.getText() + ".\n" + "Record Not Found");
+
         }
     }//GEN-LAST:event_QASearchButtonActionPerformed
     private Boolean popQA() {
@@ -2052,43 +2076,63 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             return false;
         }
         //fill tab content with values from QAReport that was returned in search
-        QAOrderIDText.setText(String.valueOf(workingQA.getOrder().getORDID()));
-        QAIDText.setText(String.valueOf(workingQA.getQAID()));
-        //select correct radio boxes and set fail comments editable or ineditable
-        if (workingQA.getContentCheck()) {
-            QAContentCheckPassRb.setSelected(true);
-            QAContentFailText.setEditable(false);
-        } else if (!workingQA.getContentCheck()) {
-            QAContentCheckFailRb.setSelected(true);
-            QAContentFailText.setText(workingQA.getContentFailComment());
-            QAContentFailText.setEditable(true);
+        try {
+            QAOrderIDText.setText(String.valueOf(workingQA.getOrder().getORDID()));
+            QAIDText.setText(String.valueOf(workingQA.getQAID()));
+            //select correct radio boxes and set fail comments editable or ineditable
+            if (workingQA.getContentCheck()) {
+                QAContentCheckPassRb.setSelected(true);
+                QAContentFailText.setEditable(false);
+            } else if (!workingQA.getContentCheck()) {
+                QAContentCheckFailRb.setSelected(true);
+                QAContentFailText.setText(workingQA.getContentFailComment());
+                QAContentFailText.setEditable(true);
+            }
+            if (workingQA.getMediaCheck()) {
+                QAMediaCheckPassRb.setSelected(true);
+                QAMediaFailText.setEditable(false);
+            } else if (!workingQA.getMediaCheck()) {
+                QAMediaCheckFailRb.setSelected(true);
+                QAMediaFailText.setText(workingQA.getMediaFailComment());
+                QAMediaFailText.setEditable(true);
+            }
+            if (workingQA.getMediaFinishCheck()) {
+                QAMediaFinishCheckPassRb.setSelected(true);
+                QAMediaFinishFailText.setEditable(false);
+            } else if (!workingQA.getMediaFinishCheck()) {
+                QAMediaFinishCheckFailRb.setSelected(true);
+                QAMediaFinishFailText.setText(workingQA.getMediaFinishFailComment());
+                QAMediaFinishFailText.setEditable(true);
+            }
+            if (workingQA.getWorkmanshipCheck()) {
+                QAWorkmanshipCheckPassRb.setSelected(true);
+                QAWorkmanshipFailText.setEditable(false);
+            } else if (!workingQA.getWorkmanshipCheck()) {
+                QAWorkmanshipCheckFailRb.setSelected(true);
+                QAWorkmanshipFailText.setText(workingQA.getWorkmanshipFailComment());
+                QAWorkmanshipFailText.setEditable(true);
+            }
+            if (!workingQA.getContentCheck()
+                    || !workingQA.getMediaCheck()
+                    || !workingQA.getMediaFinishCheck()
+                    || !workingQA.getWorkmanshipCheck()) {
+                QACorrectiveActionText.setText(workingQA.getCorrectiveActionComment());
+            }
+            QAVerifiedByLbl.setText("Verified By: " + OrderVerify.getOVby("ORDERID",
+                    workingQA.getOrder().getORDID()).getVerifiedBy().getFirstName()
+                    + " " + OrderVerify.getOVby(("ORDERID"), workingQA.getOrder().
+                    getORDID()).getVerifiedBy().getLastName());
+            QAAssignedToLbl.setText("Assigned To: "
+                    + workingQA.getOrder().getCreatedBy().getFirstName()
+                    + " " + workingQA.getOrder().getCreatedBy().getLastName());
+            //page successfully populated return true to indicate success
+            {
+                return true;
+            }
+        } catch (NullPointerException e) {
+            QAButtonLbl.setText("Record Not Found");
+            return false;
         }
-        if (workingQA.getMediaCheck()) {
-            QAMediaCheckPassRb.setSelected(true);
-            QAMediaFailText.setEditable(false);
-        } else if (!workingQA.getMediaCheck()) {
-            QAMediaCheckFailRb.setSelected(true);
-            QAMediaFailText.setText(workingQA.getMediaFailComment());
-            QAMediaFailText.setEditable(true);
-        }
-        if (workingQA.getMediaFinishCheck()) {
-            QAMediaFinishCheckPassRb.setSelected(true);
-            QAMediaFinishFailText.setEditable(false);
-        } else if (!workingQA.getMediaFinishCheck()) {
-            QAMediaFinishCheckFailRb.setSelected(true);
-            QAMediaFinishFailText.setText(workingQA.getMediaFinishFailComment());
-            QAMediaFinishFailText.setEditable(true);
-        }
-        if (workingQA.getWorkmanshipCheck()) {
-            QAWorkmanshipCheckPassRb.setSelected(true);
-            QAWorkmanshipFailText.setEditable(false);
-        } else if (!workingQA.getWorkmanshipCheck()) {
-            QAWorkmanshipCheckFailRb.setSelected(true);
-            QAWorkmanshipFailText.setText(workingQA.getWorkmanshipFailComment());
-            QAWorkmanshipFailText.setEditable(true);
-        }
-        //page successfully populated return true to indicate success
-        return true;
     }
 
     //</editor-fold>
@@ -2646,42 +2690,42 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
         } else if (OVCorrectNameFailRb.isSelected()) {
             nameCheck = Boolean.FALSE;
             nameComment = OVNameFailText.getText();
-            correctiveActionComment += ("/n Incorrect Name: " + nameComment);
+            correctiveActionComment += ("\n Incorrect Name: " + nameComment);
         }
         if (OVAcctNumPassRb.isSelected()) {
             accountCheck = Boolean.TRUE;
         } else if (OVAcctNumFailRb.isSelected()) {
             accountCheck = Boolean.FALSE;
             accountComment = OVAcctNumFailText.getText();
-            correctiveActionComment += ("/n Account issue: " + accountComment);
+            correctiveActionComment += ("\n Account issue: " + accountComment);
         }
         if (OVMediaNumPassRb.isSelected()) {
             mediaCheck = Boolean.TRUE;
         } else if (OVMediaNumFailRb.isSelected()) {
             mediaCheck = Boolean.FALSE;
             mediaComment = OVMediaFailText.getText();
-            correctiveActionComment += ("/n Media issue: " + mediaComment);
+            correctiveActionComment += ("\n Media issue: " + mediaComment);
         }
         if (OVContentPassRb.isSelected()) {
             contentCheck = (Boolean.TRUE);
         } else if (OVContentFailRb.isSelected()) {
             contentCheck = (Boolean.FALSE);
             contentComment = (OVContentFailText.getText());
-            correctiveActionComment += ("/n Content issue: " + contentComment);
+            correctiveActionComment += ("\n Content issue: " + contentComment);
         }
         if (OVPayTypePassRb.isSelected()) {
             paymentCheck = (Boolean.TRUE);
         } else if (OVPayTypeFailRb.isSelected()) {
             paymentCheck = (Boolean.FALSE);
             paymentComment = (OVPayTypeFailText.getText());
-            correctiveActionComment += ("/n Payment issue: " + paymentComment);
+            correctiveActionComment += ("\n Payment issue: " + paymentComment);
         }
         if (OVDepositPassRb.isSelected()) {
             depositCheck = (Boolean.TRUE);
         } else if (OVDepositFailRb.isSelected()) {
             depositCheck = (Boolean.FALSE);
             depositComment = (OVDepositFailText.getText());
-            correctiveActionComment += ("/n Deposit issue: " + depositComment);
+            correctiveActionComment += ("\n Deposit issue: " + depositComment);
         }
         //Create new OV object with screen data to be passed to insertOrUpdateOV()
         OrderVerify newOV = new OrderVerify((Integer.parseInt(OVerIDText.getText())), Login.emp,
@@ -2706,7 +2750,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
             popOV();
             OVButtonLbl.setText("Create/Update Successful");
             if (!nameCheck || !accountCheck || !mediaCheck || !contentCheck || !paymentCheck || !depositCheck) {
-                correctiveActionComment += ("/n We will be contacting you shortly to"
+                correctiveActionComment += ("\n We will be contacting you shortly to"
                         + " resolve these issues.");
                 String opsManMsg = "Call " + newOV.getOrder().getCustomer().getCustFName()
                         + " " + newOV.getOrder().getCustomer().getCustLName() + " at "
