@@ -948,7 +948,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
     OrderVerifyPanelLayout.setHorizontalGroup(
         OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
-            .addGap(99, 99, 99)
+            .addGap(105, 105, 105)
             .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -997,7 +997,7 @@ CustStateCB.addActionListener(new java.awt.event.ActionListener() {
                                 .addComponent(OVPayTypeFailText, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVDepositFailText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(OVReasonLbl))
-                            .addContainerGap(145, Short.MAX_VALUE))))
+                            .addContainerGap(139, Short.MAX_VALUE))))
                 .addGroup(OrderVerifyPanelLayout.createSequentialGroup()
                     .addGroup(OrderVerifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(OVButtonLbl)
